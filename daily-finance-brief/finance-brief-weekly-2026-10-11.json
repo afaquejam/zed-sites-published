@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-11",
+  "generatedAt": "2026-10-11T08:00:00Z",
+  "sections": [
+    {
+      "key": "usa",
+      "label": "USA",
+      "items": [
+        {
+          "emoji": "📈",
+          "detail": "The **S&P 500** gained about 1.2% on the week to 7,811.54, and the Nasdaq rose about 0.7% to 27,366.17, after both set records Tuesday.",
+          "why": "Fading Fed hike bets after the jobs miss lifted tech early, and an oil spike midweek cut the gains."
+        },
+        {
+          "emoji": "🛢️",
+          "detail": "Brent swung from below $100 to about **$106** Thursday, then eased to near $103 Friday, and still finished the week higher.",
+          "why": "Iranian attacks on Hormuz shipping and US strike fears hit supply until Trump ruled out strikes before the midterms."
+        },
+        {
+          "emoji": "🤖",
+          "detail": "AI chip stocks dragged the Nasdaq down **1.25%** Thursday, then recovered Friday, while strong auctions pulled the 10-year yield back from 5.35%, its highest since 2002.",
+          "why": "A report that OpenAI's revenue was overstated hit chips until OpenAI said it expects $70 billion by year-end."
+        }
+      ]
+    },
+    {
+      "key": "emsmallcaps",
+      "label": "Emerging Markets and Small Caps",
+      "items": [
+        {
+          "emoji": "🌏",
+          "detail": "Emerging markets rallied early in the week, then the selloff hit Asia, with **Korea's Kospi** falling three straight days before Hong Kong bounced 1.79% Friday.",
+          "why": "Higher oil and a stronger dollar from Hormuz tensions hurt oil-importing emerging markets until Friday's relief."
+        },
+        {
+          "emoji": "🏦",
+          "detail": "The **Nifty** ended about 0.4% higher at 22,520.45, after hitting a 52-week low Thursday, as the RBI raised rates to 5.5%.",
+          "why": "The RBI's first hike since 2023, higher crude and steady foreign selling weighed until oil eased Friday."
+        },
+        {
+          "emoji": "📉",
+          "detail": "The US **Russell 2000** fell about 0.9% on the week to 2,806.98, lagging record-setting large caps and staying about 9% below its August high.",
+          "why": "Long-term Treasury yields near 24-year highs hit debt-heavy small companies harder than megacap tech."
+        }
+      ]
+    },
+    {
+      "key": "crypto",
+      "label": "Crypto",
+      "items": [
+        {
+          "emoji": "₿",
+          "detail": "**Bitcoin** failed twice to break $87,000, then slid four straight days to about **$82,600**, briefly dipping below $81,000.",
+          "why": "Spot bitcoin ETFs lost about $729 million over two sessions, the biggest outflows since June."
+        },
+        {
+          "emoji": "💎",
+          "detail": "**Ether** fell from about $2,716 to around **$2,500**, after touching a midweek low near $2,406.",
+          "why": "Eight straight days of ether ETF outflows outweighed the Glamsterdam upgrade's successful testnet launch."
+        },
+        {
+          "emoji": "☀️",
+          "detail": "**Solana** broke out of its $120 range and slid to about **$110** by Friday.",
+          "why": "Bitcoin's slide, steady Solana ETF outflows and Standard Chartered cutting its target to $250 from $310 drove the drop."
+        }
+      ]
+    },
+    {
+      "key": "commodities",
+      "label": "Commodities",
+      "items": [
+        {
+          "emoji": "🥇",
+          "detail": "**Spot gold** hit a two-month low of $4,104 Tuesday, then recovered to near **$4,194** Friday, briefly topping $4,200.",
+          "why": "Gold fell as yields hit 2002 highs, then gained as yields eased, the dollar weakened and Iran fears returned."
+        }
+      ]
+    }
+  ],
+  "crossCuttingTheme": "Oil moved every market this week: the Hormuz attacks pushed Brent and inflation fears up, which kept long-term yields near 2002 highs, and stocks, emerging markets and gold recovered only when Trump's Iran pledge brought crude back down."
+}

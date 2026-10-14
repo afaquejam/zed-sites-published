@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-14",
+  "generatedAt": "2026-10-14T08:00:00Z",
+  "sections": [
+    {
+      "key": "usa",
+      "label": "USA",
+      "items": [
+        {
+          "emoji": "📉",
+          "detail": "The **Nasdaq** slipped 0.15% to 27,204.38 Tuesday, extending Monday's loss, while the S&P 500 was flat at 7,805.45.",
+          "why": "Chip stocks fell for a fifth straight session, and Applied Materials sank almost 7% on lingering memory-chip worries.",
+          "sourceName": "Reuters via Lufkin Daily News",
+          "sourceUrl": "https://lufkindailynews.com/news_reuters/business/s-p-500-dow-futures-muted-after-big-bank-earnings-chip-slide-weighs/article_b3a15960-795f-538e-a608-8ad5e42df21c.html"
+        },
+        {
+          "emoji": "🏦",
+          "detail": "Bank earnings got a cool reception: **Citigroup** fell 5.6% and Wells Fargo 3.1%, while JPMorgan's $5.57 a share missed estimates.",
+          "why": "Wells Fargo's interest income fell short, and investors sold Citi even though its profit beat estimates.",
+          "sourceName": "CNBC",
+          "sourceUrl": "https://www.cnbc.com/2026/10/13/bank-earnings-live-updates.html"
+        },
+        {
+          "emoji": "🛢️",
+          "detail": "Brent eased 0.9% to **$105.69** Tuesday, still near three-year highs, ahead of today's CPI report.",
+          "why": "Traders took profits after three days of gains as Saudi pipeline flows to the Red Sea resumed.",
+          "sourceName": "CNBC",
+          "sourceUrl": "https://www.cnbc.com/2026/10/13/oil-prices-today-brent-wti-hormuz.html"
+        }
+      ]
+    },
+    {
+      "key": "emsmallcaps",
+      "label": "Emerging Markets and Small Caps",
+      "items": [
+        {
+          "emoji": "🇰🇷",
+          "detail": "Korea's **Kospi** rebounded about 1.8% to 6,146 early Wednesday, after closing Tuesday down 5.46% at 6,035.35.",
+          "why": "Bargain hunters bought back Samsung and SK Hynix, though worries about Chinese memory-chip competition still limit confidence.",
+          "sourceName": "Sunday Guardian",
+          "sourceUrl": "https://sundayguardianlive.com/business/korea-stock-market-krx-today-october-14-why-is-korean-stock-market-up-today-kospi-rebounds-18-after-546-crash-as-samsung-electronics-and-sk-hynix-recover-check-kosdaq-top-gainers-losers-305261/"
+        },
+        {
+          "emoji": "💻",
+          "detail": "The **Nifty** jumped 1.6% to 22,721.95 Tuesday, more than reversing Monday's fall, as the Sensex climbed 1,109 points.",
+          "why": "HCL Tech's strong results lifted IT stocks 5.2%, and the finance minister offered to hear views on capital-gains taxes.",
+          "sourceName": "Business Standard",
+          "sourceUrl": "https://www.business-standard.com/amp/markets/news/stock-market-live-october-13-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-q2-results-ipo-today-126101300081_1.html"
+        },
+        {
+          "emoji": "🐢",
+          "detail": "India's **Nifty Smallcap** gained only about **0.1%** Tuesday as the large-cap Nifty rallied 1.6%, flipping Monday's small-cap outperformance.",
+          "why": "The rally was driven by large IT companies, so most of the buying went to big stocks.",
+          "sourceName": "HDFC Sky",
+          "sourceUrl": "https://hdfcsky.com/news/market-close-report-today-october-13-2026-nifty-sensex-stage-sharp-recovery-as-it-stocks-rally"
+        }
+      ]
+    },
+    {
+      "key": "crypto",
+      "label": "Crypto",
+      "items": [
+        {
+          "emoji": "₿",
+          "detail": "**Bitcoin** recovered to about **$83,400** Tuesday, up from $81,950 early that day, though it is still stuck below $84,000 ahead of today's CPI.",
+          "why": "Dip buyers stepped in, but traders are wary of risk before the inflation data, which keeps gains limited.",
+          "sourceName": "Fortune",
+          "sourceUrl": "https://fortune.com/article/price-of-bitcoin-10-13-2026"
+        },
+        {
+          "emoji": "🔷",
+          "detail": "**Ether** bounced to about **$2,533** Tuesday after dipping to near $2,411, just above last week's low.",
+          "why": "Leverage in ether futures has fallen 16% in five days, which eased the forced selling.",
+          "sourceName": "CryptoTicker",
+          "sourceUrl": "https://cryptoticker.io/en/ethereum-price-leverage-open-interest-october-2026/"
+        },
+        {
+          "emoji": "☀️",
+          "detail": "**Solana** held near **$107**, back above its 50-day average after Tuesday's dip.",
+          "why": "A second Hong Kong spot Solana ETF and more asset tokenization on the network helped support the price.",
+          "sourceName": "FXStreet",
+          "sourceUrl": "https://fxstreet.com/cryptocurrencies/news/solana-price-forecast-sol-reclaims-50-day-ema-amid-tokenization-expansion-202610130751"
+        }
+      ]
+    },
+    {
+      "key": "commodities",
+      "label": "Commodities",
+      "items": [
+        {
+          "emoji": "🥇",
+          "detail": "**Gold** ended Tuesday near **$4,155**, down about $5, giving up a midday rise to around $4,187.",
+          "why": "A firm dollar and caution before today's US inflation report outweighed the early dip in yields.",
+          "sourceName": "CNBC",
+          "sourceUrl": "https://www.cnbc.com/amp/2026/10/13/gold-eases-on-firm-dollar-spotlight-on-us-inflation-data.html"
+        }
+      ]
+    }
+  ],
+  "crossCuttingTheme": "Today's CPI report is the key test: with Brent above $105, a hot reading would raise the odds of another Fed hike, which is why gold and crypto are holding back while chip stocks keep sliding."
+}

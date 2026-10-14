@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Finance News — 2026-09-09</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400..700&display=swap" rel="stylesheet" />
+<style>
+  /* ---------- Material Design 3 — dark by default, light on OS preference ---------- */
+  :root {
+    --md-sys-color-surface: #0e1116;
+    --md-sys-color-surface-container-low: #161b22;
+    --md-sys-color-surface-container: #1b212b;
+    --md-sys-color-surface-container-high: #252d3a;
+    --md-sys-color-surface-container-highest: #303a49;
+    --md-sys-color-on-surface: #e3e8ef;
+    --md-sys-color-on-surface-variant: #c0c8d4;
+    --md-sys-color-outline: #8b94a3;
+    --md-sys-color-outline-variant: #3a4250;
+    --md-sys-color-primary: #5b9bff;
+    --md-sys-color-on-primary: #002d6e;
+    --md-sys-color-primary-container: #0a4bb0;
+    --md-sys-color-on-primary-container: #d8e6ff;
+    --md-sys-color-secondary-container: #243352;
+    --md-sys-color-on-secondary-container: #d8e6ff;
+    --finance-gain: #57d98a;
+    --finance-loss: #ff8a9b;
+    color-scheme: dark;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --md-sys-color-surface: #fbfcff;
+      --md-sys-color-surface-container-low: #f1f4fb;
+      --md-sys-color-surface-container: #e9eef8;
+      --md-sys-color-surface-container-high: #e3e9f4;
+      --md-sys-color-surface-container-highest: #dde4f1;
+      --md-sys-color-on-surface: #191c22;
+      --md-sys-color-on-surface-variant: #414855;
+      --md-sys-color-outline: #717988;
+      --md-sys-color-outline-variant: #c1c8d6;
+      --md-sys-color-primary: #0b57d0;
+      --md-sys-color-on-primary: #ffffff;
+      --md-sys-color-primary-container: #d8e6ff;
+      --md-sys-color-on-primary-container: #001a41;
+      --md-sys-color-secondary-container: #dce6ff;
+      --md-sys-color-on-secondary-container: #101d34;
+      --finance-gain: #0f7a3d;
+      --finance-loss: #c4183c;
+      color-scheme: light;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+    font-family: "Roboto Flex", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-optical-sizing: auto;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 840px; margin: 0 auto; padding: 0 16px 56px; }
+
+  /* ---------- Top app bar ---------- */
+  .app-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--md-sys-color-surface);
+    padding: 28px 0 12px;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+  }
+  .app-bar-inner { max-width: 840px; margin: 0 auto; padding: 0 16px; }
+  .eyebrow {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--md-sys-color-primary);
+    margin: 0 0 4px;
+  }
+  h1 {
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0;
+    color: var(--md-sys-color-on-surface);
+  }
+  h1 .date { color: var(--md-sys-color-primary); }
+  /* ---------- Day nav (the only nav: 7 rolling days, MD3 chips) ----------
+     One chip per published date. Tue–Sat are dailies; the Sunday chip is that
+     week's wrap and the Monday chip the week-ahead outlook, both flagged by a
+     third `.kind` line. `align-items: stretch` (the flex default) keeps the
+     two- and three-line chips the same height. */
+  nav.chip-nav {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 16px 0 4px;
+    margin: 0 0 8px;
+    scrollbar-width: none;
+  }
+  nav.chip-nav::-webkit-scrollbar { display: none; }
+  .chip {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 64px;
+    padding: 8px 14px;
+    border-radius: 16px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    background: transparent;
+    color: var(--md-sys-color-on-surface-variant);
+    text-decoration: none;
+    transition: background 0.15s ease, border-color 0.15s ease;
+  }
+  .chip:hover { background: var(--md-sys-color-surface-container-high); }
+  .chip .dow { font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+  .chip .dom { font-size: 0.9375rem; font-weight: 600; white-space: nowrap; }
+  .chip .kind {
+    margin-top: 2px;
+    font-size: 0.625rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: var(--md-sys-color-primary);
+  }
+  .chip.active {
+    background: var(--md-sys-color-primary-container);
+    border-color: transparent;
+    color: var(--md-sys-color-on-primary-container);
+    pointer-events: none;
+  }
+  .chip.active .kind { color: inherit; opacity: 0.75; }
+
+  /* ---------- Section cards ---------- */
+  section.brief-section {
+    background: var(--md-sys-color-surface-container-low);
+    border-radius: 24px;
+    padding: 20px 24px 8px;
+    margin-bottom: 16px;
+  }
+  section.brief-section h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.375rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    margin: 0 0 4px;
+    color: var(--md-sys-color-on-surface);
+  }
+  section.brief-section h2::before {
+    content: "";
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--md-sys-color-primary);
+  }
+  ul.items { list-style: none; margin: 0; padding: 0; }
+  ul.items li {
+    padding: 16px 0;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+  }
+  ul.items li:first-child { border-top: none; }
+  .detail {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--md-sys-color-on-surface);
+    line-height: 1.45;
+    font-variant-numeric: tabular-nums;
+  }
+  .detail .emoji {
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 1.15em;
+    line-height: 1;
+    /* keep multicolor emoji from being tinted and align nicely */
+    font-variant-numeric: normal;
+  }
+  .detail strong, .cross-cutting strong {
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+  }
+  .why {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    background: var(--md-sys-color-surface-container-high);
+    font-size: 0.875rem;
+    color: var(--md-sys-color-on-surface-variant);
+    font-variant-numeric: tabular-nums;
+  }
+  .why-label {
+    flex: 0 0 auto;
+    color: var(--md-sys-color-primary);
+    font-weight: 700;
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding-top: 2px;
+  }
+  .source { margin-top: 8px; font-size: 0.75rem; }
+  .source a {
+    color: var(--md-sys-color-primary);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .source a:hover { text-decoration: underline; }
+
+  /* ---------- Cross-cutting insight banner ---------- */
+  .cross-cutting {
+    display: flex;
+    gap: 12px;
+    background: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+    border-radius: 20px;
+    padding: 18px 20px;
+    margin-top: 24px;
+    font-size: 0.9375rem;
+  }
+  .cross-cutting .ct-label {
+    font-weight: 700;
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding-top: 2px;
+  }
+  footer {
+    margin-top: 32px;
+    color: var(--md-sys-color-outline);
+    font-size: 0.75rem;
+    text-align: center;
+  }
+
+  /* ---------- Mobile ---------- */
+  @media (max-width: 600px) {
+    .app-bar { padding-top: 20px; }
+    .wrap { padding: 0 14px 40px; }
+    .app-bar-inner { padding: 0 14px; }
+    section.brief-section { padding: 16px 16px 4px; border-radius: 20px; }
+    section.brief-section h2 { font-size: 1.25rem; }
+    .cross-cutting { flex-direction: column; gap: 6px; }
+  }
+</style>
+</head>
+<body>
+  <div class="app-bar">
+    <div class="app-bar-inner">
+      <p class="eyebrow">Daily Market Brief</p>
+      <h1>Finance News: <span class="date">September 9, 2026</span></h1>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <nav class="chip-nav day-nav" aria-label="Recent briefs">
+      <a class="chip" href="finance-brief-2026-10-14.html"><span class="dow">Wed</span><span class="dom">Oct 14</span></a>
+      <a class="chip" href="finance-brief-2026-10-13.html"><span class="dow">Tue</span><span class="dom">Oct 13</span></a>
+      <a class="chip" href="finance-brief-outlook-2026-10-12.html"><span class="dow">Mon</span><span class="dom">Oct 12</span><span class="kind">Week ahead</span></a>
+      <a class="chip" href="finance-brief-weekly-2026-10-11.html"><span class="dow">Sun</span><span class="dom">Oct 11</span><span class="kind">Wrap</span></a>
+      <a class="chip" href="finance-brief-2026-10-10.html"><span class="dow">Sat</span><span class="dom">Oct 10</span></a>
+      <a class="chip" href="finance-brief-2026-10-09.html"><span class="dow">Fri</span><span class="dom">Oct 9</span></a>
+      <a class="chip" href="finance-brief-2026-10-08.html"><span class="dow">Thu</span><span class="dom">Oct 8</span></a>
+    </nav>
+
+    <section class="brief-section" id="usa">
+    <h2>S&amp;P 500</h2>
+    <ul class="items">
+      <li>
+    <div class="detail"><span class="emoji">📉</span>The holiday-delayed reopening was as ugly as futures signalled — the <strong>S&amp;P 500 fell 0.58% to 7,673.52</strong>, the <strong>Dow tumbled 628.18 points (1.18%) to 52,786.07</strong> and the Nasdaq slipped 0.32% to 26,421.41, a second straight loss for each index.</div>
+    <div class="why"><span class="why-label">Why</span> Two shocks landed at once: crude pushed toward $100 after Houthi strikes halted Saudi energy operations, and Canada&#39;s retaliatory tariffs on more than 700 US goods took effect the same morning, both feeding the inflation print due Friday.</div>
+    <div class="source"><a href="https://finance.yahoo.com/markets/live/stock-market-today-tuesday-september-8-dow-sp-500-nasdaq-080440338.html" target="_blank" rel="noopener noreferrer">Yahoo Finance</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">🛢️</span>The oil driver rotated from Iranian tankers to Saudi infrastructure — <strong>Brent settled up about 1% near $98</strong> after touching close to <strong>$100</strong> intraday, and <strong>WTI closed near $93</strong>, a sixth consecutive advance and its longest run since March.</div>
+    <div class="why"><span class="why-label">Why</span> Iran-aligned Houthi forces launched ballistic missiles and drones at Aramco sites in Jizan, Abha and Najran, wounding 73 people and forcing Riyadh to suspend operations at several facilities including the 400,000 barrel-a-day Jazan refinery, while Tehran said an agreement with Oman to manage Hormuz shipping was nearing completion.</div>
+    <div class="source"><a href="https://www.cnbc.com/2026/09/08/oil-prices-today-brent-wti-hormuz-iran-war.html" target="_blank" rel="noopener noreferrer">CNBC</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">🇨🇦</span>A second front opened that had nothing to do with the Gulf — <strong>Canada&#39;s countertariffs of 15% to 50% on over 700 American products took effect September 8</strong>, covering roughly <strong>$20 billion</strong> of annual US exports and doubling duties on US steel and aluminium to <strong>50%</strong>.</div>
+    <div class="why"><span class="why-label">Why</span> Ottawa moved to match US tariffs dollar for dollar after trade talks collapsed in August, targeting steel, dairy, appliances, agricultural equipment, pulp and paper and electronics.</div>
+    <div class="source"><a href="https://www.aljazeera.com/news/2026/8/23/canada-to-hit-us-with-retaliatory-tariffs-as-trade-war-escalates" target="_blank" rel="noopener noreferrer">Al Jazeera</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">🤖</span>Megacap tech carried the index lower rather than cushioning it — <strong>Apple fell 2.55%, Alphabet 2.10% and Microsoft 2.05%</strong>, while the day&#39;s gainers were industrials and staples: Caterpillar +1.65%, Honeywell +0.95%, Home Depot +0.88%.</div>
+    <div class="why"><span class="why-label">Why</span> Long-duration growth names take the largest hit when an energy-driven inflation scare pushes rate-hike odds up, whereas industrials benefit from the tariff and defence-spending backdrop.</div>
+    <div class="source"><a href="https://investrade.com/market-review-september-08-2026/" target="_blank" rel="noopener noreferrer">Investrade</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">🥇</span>Gold gave back Monday&#39;s safe-haven bounce entirely — <strong>December futures opened at $4,451.60, down 0.6%</strong>, and slid to <strong>near $4,350</strong> during the session despite crude approaching $100.</div>
+    <div class="why"><span class="why-label">Why</span> The oil spike is now read as an inflation shock that raises the odds of a Fed hike rather than as a pure geopolitical risk event, so higher expected real rates outweighed the haven bid.</div>
+    <div class="source"><a href="https://www.fxstreet.com/news/gold-slumps-to-near-4-350-amid-oil-driven-inflation-fears-us-inflation-data-in-focus-202609082332" target="_blank" rel="noopener noreferrer">FXStreet</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">🏦</span>The bond market has now fully joined the repricing — the <strong>10-year Treasury yield briefly ticked back above 4.8%</strong> before easing to around <strong>4.77%</strong>, with <strong>August PPI due Thursday forecast at +0.4% month-on-month</strong> ahead of Friday&#39;s CPI.</div>
+    <div class="why"><span class="why-label">Why</span> Traders are marking up inflation expectations directly off the energy move, and a hot PPI on Thursday would pre-confirm the CPI acceleration four days before the September 15-16 FOMC.</div>
+    <div class="source"><a href="https://www.cnbc.com/2026/09/08/us-treasury-yields-bonds.html" target="_blank" rel="noopener noreferrer">CNBC</a></div>
+  </li>
+    </ul>
+  </section>
+<section class="brief-section" id="emsmallcaps">
+    <h2>NIFTY 50</h2>
+    <ul class="items">
+      <li>
+    <div class="detail"><span class="emoji">📉</span>Tuesday&#39;s weak open turned into a full second-day decline — the <strong>Sensex closed down 555.23 points (0.73%) at 75,577.58</strong> and the <strong>Nifty 50 fell 144.05 points (0.61%) to 23,635.10</strong>, the lowest close since mid-June.</div>
+    <div class="why"><span class="why-label">Why</span> Advancing crude, a softening rupee and thin foreign inflows combined, with investors unwilling to add risk ahead of US inflation data and next week&#39;s Fed decision.</div>
+    <div class="source"><a href="https://www.business-standard.com/markets/news/stock-market-live-september-8-nse-bse-sensex-today-nifty50-gift-nifty-brent-crude-oil-price-deepa-jewllers-ipo-listing-today-126090800082_1.html" target="_blank" rel="noopener noreferrer">Business Standard</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">⚠️</span>Wednesday made it three straight — <strong>GIFT Nifty pointed 89.10 points (0.38%) lower at 23,660.50</strong>, and by 9:18am the <strong>Sensex had dropped 580.84 points (0.77%) to 74,996.74</strong>, breaking below 75,000, with the <strong>Nifty at 23,503.75 (-0.56%)</strong> testing the 23,500 support flagged two sessions ago.</div>
+    <div class="why"><span class="why-label">Why</span> Brent rose another 1.3% to hover near $99, and an oil-importing market with a widening current-account problem has no defence against a third consecutive day of energy gains.</div>
+    <div class="source"><a href="https://www.business-standard.com/markets/news/stock-market-live-september-9-nse-bse-sensex-today-nifty50-gift-nifty-brent-crude-oil-prices-126090900115_1.html" target="_blank" rel="noopener noreferrer">Business Standard</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">💻</span>IT is no longer just the worst sector, it is accelerating — after Monday&#39;s 2.3% drop, <strong>Nifty IT fell over 3%</strong> on Wednesday morning to again be the single worst index, while Nifty Healthcare outperformed.</div>
+    <div class="why"><span class="why-label">Why</span> Every incremental rise in US rate-hike odds compresses the client technology budgets Indian services exporters depend on, and the oil-driven inflation scare has pushed those odds higher for a third session running.</div>
+    <div class="source"><a href="https://www.business-standard.com/markets/news/stock-market-live-september-9-nse-bse-sensex-today-nifty50-gift-nifty-brent-crude-oil-prices-126090900115_1.html" target="_blank" rel="noopener noreferrer">Business Standard</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">🛡️</span>One pocket ran hard against the tape — defence stocks jumped up to <strong>13%</strong> on Tuesday, with <strong>MIDHANI up 12.93% to ₹474.90</strong>, Data Patterns +6.19%, HAL +4%, Apollo Micro +3.89% and Paras Defence +3.38%.</div>
+    <div class="why"><span class="why-label">Why</span> The Defence Acquisition Council cleared roughly ₹1.1 lakh crore (about $11 billion) of procurement and Jefferies initiated coverage on several names the same day, giving the sector a domestic order-book catalyst independent of the oil story.</div>
+    <div class="source"><a href="https://www.businesstoday.in/markets/stocks/story/midhani-data-patterns-paras-apollo-micro-hal-why-defence-stocks-are-rising-today-553873-2026-09-08" target="_blank" rel="noopener noreferrer">Business Today</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">💱</span>The rupee slipped back to around <strong>₹94.61 per dollar</strong>, retreating from the two-month highs the RBI&#39;s estimated $8 billion-plus of intervention had bought last week.</div>
+    <div class="why"><span class="why-label">Why</span> Oil importers ramped up dollar hedging as Brent approached $100, and that demand is now arriving faster than the central bank&#39;s selling can absorb it.</div>
+    <div class="source"><a href="https://tradingeconomics.com/india/currency" target="_blank" rel="noopener noreferrer">Trading Economics</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">🔄</span>The sector split has inverted from Monday — on Tuesday <strong>Media, Pharma and Healthcare led</strong> while <strong>Financial Services, private banks and Oil &amp; Gas were the biggest drags</strong>, a rotation into domestic defensives and out of anything rate- or crude-sensitive.</div>
+    <div class="why"><span class="why-label">Why</span> Investors are positioning for sustained high crude to squeeze refiner margins and keep the RBI from easing, which hits banks and oil marketers first while pharma benefits from the weaker rupee on export realisations.</div>
+    <div class="source"><a href="https://www.business-standard.com/markets/news/stock-market-live-september-8-nse-bse-sensex-today-nifty50-gift-nifty-brent-crude-oil-price-deepa-jewllers-ipo-listing-today-126090800082_1.html" target="_blank" rel="noopener noreferrer">Business Standard</a></div>
+  </li>
+    </ul>
+  </section>
+<section class="brief-section" id="crypto">
+    <h2>Crypto</h2>
+    <ul class="items">
+      <li>
+    <div class="detail"><span class="emoji">₿</span>The $79,000 floor mentioned yesterday did not hold — <strong>Bitcoin dipped below $78,000 to a low of $77,603</strong> on Tuesday before a relief rally back toward <strong>$78,600</strong>, ending the US session near <strong>$78,741</strong>; <strong>ETH slipped to $2,473.66</strong> from a $2,489.84 open.</div>
+    <div class="why"><span class="why-label">Why</span> Crude approaching $100 after the Houthi strikes on Saudi energy facilities revived inflation fears one week before the Fed meets, and crypto traded as a pure rates-sensitive risk asset rather than a hedge.</div>
+    <div class="source"><a href="https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-tuesday-september-8-2026-crypto-prices-sliding-as-us-iran-fighting-continues-113441984.html" target="_blank" rel="noopener noreferrer">Yahoo Finance</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">💥</span>Leverage was flushed one-directionally this time — <strong>$264 million of total crypto liquidations</strong>, including <strong>$79 million in Bitcoin positions</strong>, with <strong>roughly 90% on the long side</strong>, a cleaner wipeout than Monday&#39;s two-way squeeze.</div>
+    <div class="why"><span class="why-label">Why</span> Thin post-Labor Day liquidity meant relatively small spot selling cascaded through long liquidation clusters, pushing spot to a floor near $78,180 with no shorts left to squeeze in the other direction.</div>
+    <div class="source"><a href="https://news.bitcoin.com/market-updates/crypto-liquidations-hit-264m-as-bitcoin-price-slides-ahead-of-cpi-data/" target="_blank" rel="noopener noreferrer">Bitcoin.com News</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">🕵️</span>The privacy-coin leadership trade has stalled — <strong>ZEC has pulled back to roughly $1,120-$1,155, down about 8-10%</strong> from this week&#39;s <strong>$1,249</strong> spike, after first clearing $1,000 on September 4 in a 20% jump that cost short sellers <strong>$34 million</strong>.</div>
+    <div class="why"><span class="why-label">Why</span> The Grayscale spot-ETF catalyst that drove the run is now fully in the price, so the sector is giving back gains alongside the broader risk-off move rather than continuing to decouple.</div>
+    <div class="source"><a href="https://www.disruptionbanking.com/2026/09/08/zcash-cracks-1000-with-its-first-spot-etf-and-small-privacy-coins-are-chasing-the-move/" target="_blank" rel="noopener noreferrer">Disruption Banking</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">📊</span>The ETF story looks weaker on a full-year view than the weekly inflow headlines suggest — despite <strong>$3.52 billion in August</strong> and <strong>$770.15 million so far in September</strong>, US spot Bitcoin ETFs remain <strong>about $1 billion short of breaking even for 2026</strong>.</div>
+    <div class="why"><span class="why-label">Why</span> Heavy first-half redemptions have not yet been recovered, so the recent three-week inflow streak is repairing earlier damage rather than representing genuinely new marginal demand.</div>
+    <div class="source"><a href="https://www.coindesk.com/daybook-us/2026/09/08/bitcoin-etfs-are-still-usd1-billion-shy-of-breaking-even-in-2026" target="_blank" rel="noopener noreferrer">CoinDesk</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">🎯</span>Traders now treat <strong>$78,000-$78,500 as the primary support band</strong>, with a break opening a path toward <strong>$76,000</strong>; the wider consolidation range is $77,500-$82,200 with overhead resistance at $80,600-$83,200.</div>
+    <div class="why"><span class="why-label">Why</span> Liquidation clusters sit immediately below the $78,000 shelf, so a decisive break would mechanically accelerate rather than find buyers, and Thursday&#39;s PPI and Friday&#39;s CPI are the events most likely to trigger it.</div>
+    <div class="source"><a href="https://crypto.news/bitcoin-price-risks-76k-drop-as-78k-support-weakens/" target="_blank" rel="noopener noreferrer">crypto.news</a></div>
+  </li>
+    </ul>
+  </section>
+
+    <div class="cross-cutting"><span class="ct-label">Common thread</span><span>The energy shock changed source but not direction: Houthi missile and drone strikes that halted operations at Saudi Aramco&#39;s Jizan, Abha and Najran facilities pushed Brent to settle near $98 after touching $100 and WTI to a sixth straight gain near $93, and because that now reads as an inflation impulse rather than a geopolitical risk event, it drove yields above 4.8%, knocked the S&amp;P 500 to 7,673.52 with megacaps leading losses, sent gold down to near $4,350 instead of up, pushed the Nifty through 23,500 with IT off more than 3% and the rupee back to ₹94.61, and broke Bitcoin below $78,000 — with Thursday&#39;s PPI and Friday&#39;s CPI now the only things standing between this and a Fed hike on September 16.</span></div>
+
+    <footer>Generated automatically by the finance-brief pipeline &middot; 2026-09-09T04:20:00Z</footer>
+  </div>
+</body>
+</html>

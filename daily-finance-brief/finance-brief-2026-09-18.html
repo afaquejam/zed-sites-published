@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Finance News — 2026-09-18</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400..700&display=swap" rel="stylesheet" />
+<style>
+  /* ---------- Material Design 3 — dark by default, light on OS preference ---------- */
+  :root {
+    --md-sys-color-surface: #0e1116;
+    --md-sys-color-surface-container-low: #161b22;
+    --md-sys-color-surface-container: #1b212b;
+    --md-sys-color-surface-container-high: #252d3a;
+    --md-sys-color-surface-container-highest: #303a49;
+    --md-sys-color-on-surface: #e3e8ef;
+    --md-sys-color-on-surface-variant: #c0c8d4;
+    --md-sys-color-outline: #8b94a3;
+    --md-sys-color-outline-variant: #3a4250;
+    --md-sys-color-primary: #5b9bff;
+    --md-sys-color-on-primary: #002d6e;
+    --md-sys-color-primary-container: #0a4bb0;
+    --md-sys-color-on-primary-container: #d8e6ff;
+    --md-sys-color-secondary-container: #243352;
+    --md-sys-color-on-secondary-container: #d8e6ff;
+    --finance-gain: #57d98a;
+    --finance-loss: #ff8a9b;
+    color-scheme: dark;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --md-sys-color-surface: #fbfcff;
+      --md-sys-color-surface-container-low: #f1f4fb;
+      --md-sys-color-surface-container: #e9eef8;
+      --md-sys-color-surface-container-high: #e3e9f4;
+      --md-sys-color-surface-container-highest: #dde4f1;
+      --md-sys-color-on-surface: #191c22;
+      --md-sys-color-on-surface-variant: #414855;
+      --md-sys-color-outline: #717988;
+      --md-sys-color-outline-variant: #c1c8d6;
+      --md-sys-color-primary: #0b57d0;
+      --md-sys-color-on-primary: #ffffff;
+      --md-sys-color-primary-container: #d8e6ff;
+      --md-sys-color-on-primary-container: #001a41;
+      --md-sys-color-secondary-container: #dce6ff;
+      --md-sys-color-on-secondary-container: #101d34;
+      --finance-gain: #0f7a3d;
+      --finance-loss: #c4183c;
+      color-scheme: light;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+    font-family: "Roboto Flex", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-optical-sizing: auto;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 840px; margin: 0 auto; padding: 0 16px 56px; }
+
+  /* ---------- Top app bar ---------- */
+  .app-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--md-sys-color-surface);
+    padding: 28px 0 12px;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+  }
+  .app-bar-inner { max-width: 840px; margin: 0 auto; padding: 0 16px; }
+  .eyebrow {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--md-sys-color-primary);
+    margin: 0 0 4px;
+  }
+  h1 {
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0;
+    color: var(--md-sys-color-on-surface);
+  }
+  h1 .date { color: var(--md-sys-color-primary); }
+  /* ---------- Day nav (the only nav: 7 rolling days, MD3 chips) ----------
+     One chip per published date. Tue–Sat are dailies; the Sunday chip is that
+     week's wrap and the Monday chip the week-ahead outlook, both flagged by a
+     third `.kind` line. `align-items: stretch` (the flex default) keeps the
+     two- and three-line chips the same height. */
+  nav.chip-nav {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 16px 0 4px;
+    margin: 0 0 8px;
+    scrollbar-width: none;
+  }
+  nav.chip-nav::-webkit-scrollbar { display: none; }
+  .chip {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 64px;
+    padding: 8px 14px;
+    border-radius: 16px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    background: transparent;
+    color: var(--md-sys-color-on-surface-variant);
+    text-decoration: none;
+    transition: background 0.15s ease, border-color 0.15s ease;
+  }
+  .chip:hover { background: var(--md-sys-color-surface-container-high); }
+  .chip .dow { font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+  .chip .dom { font-size: 0.9375rem; font-weight: 600; white-space: nowrap; }
+  .chip .kind {
+    margin-top: 2px;
+    font-size: 0.625rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: var(--md-sys-color-primary);
+  }
+  .chip.active {
+    background: var(--md-sys-color-primary-container);
+    border-color: transparent;
+    color: var(--md-sys-color-on-primary-container);
+    pointer-events: none;
+  }
+  .chip.active .kind { color: inherit; opacity: 0.75; }
+
+  /* ---------- Section cards ---------- */
+  section.brief-section {
+    background: var(--md-sys-color-surface-container-low);
+    border-radius: 24px;
+    padding: 20px 24px 8px;
+    margin-bottom: 16px;
+  }
+  section.brief-section h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.375rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    margin: 0 0 4px;
+    color: var(--md-sys-color-on-surface);
+  }
+  section.brief-section h2::before {
+    content: "";
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--md-sys-color-primary);
+  }
+  ul.items { list-style: none; margin: 0; padding: 0; }
+  ul.items li {
+    padding: 16px 0;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+  }
+  ul.items li:first-child { border-top: none; }
+  .detail {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--md-sys-color-on-surface);
+    line-height: 1.45;
+    font-variant-numeric: tabular-nums;
+  }
+  .detail .emoji {
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 1.15em;
+    line-height: 1;
+    /* keep multicolor emoji from being tinted and align nicely */
+    font-variant-numeric: normal;
+  }
+  .detail strong, .cross-cutting strong {
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+  }
+  .why {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    background: var(--md-sys-color-surface-container-high);
+    font-size: 0.875rem;
+    color: var(--md-sys-color-on-surface-variant);
+    font-variant-numeric: tabular-nums;
+  }
+  .why-label {
+    flex: 0 0 auto;
+    color: var(--md-sys-color-primary);
+    font-weight: 700;
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding-top: 2px;
+  }
+  .source { margin-top: 8px; font-size: 0.75rem; }
+  .source a {
+    color: var(--md-sys-color-primary);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .source a:hover { text-decoration: underline; }
+
+  /* ---------- Cross-cutting insight banner ---------- */
+  .cross-cutting {
+    display: flex;
+    gap: 12px;
+    background: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+    border-radius: 20px;
+    padding: 18px 20px;
+    margin-top: 24px;
+    font-size: 0.9375rem;
+  }
+  .cross-cutting .ct-label {
+    font-weight: 700;
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding-top: 2px;
+  }
+  footer {
+    margin-top: 32px;
+    color: var(--md-sys-color-outline);
+    font-size: 0.75rem;
+    text-align: center;
+  }
+
+  /* ---------- Mobile ---------- */
+  @media (max-width: 600px) {
+    .app-bar { padding-top: 20px; }
+    .wrap { padding: 0 14px 40px; }
+    .app-bar-inner { padding: 0 14px; }
+    section.brief-section { padding: 16px 16px 4px; border-radius: 20px; }
+    section.brief-section h2 { font-size: 1.25rem; }
+    .cross-cutting { flex-direction: column; gap: 6px; }
+  }
+</style>
+</head>
+<body>
+  <div class="app-bar">
+    <div class="app-bar-inner">
+      <p class="eyebrow">Daily Market Brief</p>
+      <h1>Finance News: <span class="date">September 18, 2026</span></h1>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <nav class="chip-nav day-nav" aria-label="Recent briefs">
+      <a class="chip" href="finance-brief-2026-10-14.html"><span class="dow">Wed</span><span class="dom">Oct 14</span></a>
+      <a class="chip" href="finance-brief-2026-10-13.html"><span class="dow">Tue</span><span class="dom">Oct 13</span></a>
+      <a class="chip" href="finance-brief-outlook-2026-10-12.html"><span class="dow">Mon</span><span class="dom">Oct 12</span><span class="kind">Week ahead</span></a>
+      <a class="chip" href="finance-brief-weekly-2026-10-11.html"><span class="dow">Sun</span><span class="dom">Oct 11</span><span class="kind">Wrap</span></a>
+      <a class="chip" href="finance-brief-2026-10-10.html"><span class="dow">Sat</span><span class="dom">Oct 10</span></a>
+      <a class="chip" href="finance-brief-2026-10-09.html"><span class="dow">Fri</span><span class="dom">Oct 9</span></a>
+      <a class="chip" href="finance-brief-2026-10-08.html"><span class="dow">Thu</span><span class="dom">Oct 8</span></a>
+    </nav>
+
+    <section class="brief-section" id="usa">
+    <h2>S&amp;P 500</h2>
+    <ul class="items">
+      <li>
+    <div class="detail"><span class="emoji">📈</span>The post-Fed selloff reversed in a single session — the <strong>S&amp;P 500 jumped 85.90 points (1.14%) to 7,637.71</strong>, the <strong>Nasdaq surged 439.87 points (1.69%) to 26,418.30</strong> and the <strong>Dow added 317.95 points (0.62%) to 51,779.85</strong>, snapping a three-session losing streak and erasing Wednesday&#39;s 631-point Dow loss.</div>
+    <div class="why"><span class="why-label">Why</span> Dip-buyers stepped in once bonds rallied and crude fell for a second day, which flipped the read on Wednesday&#39;s hike from a hawkish shock into evidence the Fed can actually cap inflation.</div>
+    <div class="source"><a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-17-2026" target="_blank" rel="noopener noreferrer">TheStreet</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">🏦</span>The long end broke its streak — after closing above <strong>5% for the first time since 2007</strong>, the 10-year yield slipped more than 6bp to <strong>4.93%</strong>, ending an eight-day rise, while the 2-year touched <strong>4.744%, its highest since July 2024</strong>.</div>
+    <div class="why"><span class="why-label">Why</span> A unanimous hike plus a second straight drop in crude convinced traders the inflation path is being capped, so they bought duration while the front end stayed anchored to the dot plot&#39;s higher-for-longer path — extending the curve flattening rather than reversing it.</div>
+    <div class="source"><a href="https://investrade.com/market-review-september-17-2026/" target="_blank" rel="noopener noreferrer">Investrade</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">🤖</span>Chips did the heavy lifting rather than the broad tape — a closely watched <strong>semiconductor gauge climbed 3%</strong>, with <strong>Intel, Micron, AMD, Arm, Marvell and Corning</strong> leading the advance on heavy call activity in Intel.</div>
+    <div class="why"><span class="why-label">Why</span> Falling long yields lift the valuation of long-duration growth names first, and the bid came specifically from AI-capex worries receding after a week in which rate fears, not demand fears, had driven the selling.</div>
+    <div class="source"><a href="https://tradingstrategyguides.com/chip-stocks-rally-stock-market-recap-september-17-2026/" target="_blank" rel="noopener noreferrer">Trading Strategy Guides</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">🛢️</span>Crude extended its retreat for a second session — <strong>Brent lost $1.01 to settle at $104.82</strong> and <strong>WTI shed 52 cents to $101.91</strong>, now roughly $6 below this week&#39;s four-month high.</div>
+    <div class="why"><span class="why-label">Why</span> Saudi Arabia is rerouting barrels around the damaged East–West pipeline and expects to recover about half its capacity within days and full operations within six weeks, steadily removing the supply premium rather than in one headline jump.</div>
+    <div class="source"><a href="https://www.cnbc.com/2026/09/17/oil-prices-today-wti-brent-hormuz-iran-war.html" target="_blank" rel="noopener noreferrer">CNBC</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">⚖️</span>Crypto-linked equities were among the day&#39;s cleanest winners on an SEC order — <strong>Coinbase rose 3.74% to $170.40</strong>, <strong>Circle gained 4.2% to $83.81</strong> and <strong>Robinhood climbed 3.25% to $107.12</strong>, with Bullish and Securitize also higher.</div>
+    <div class="why"><span class="why-label">Why</span> The SEC&#39;s new five-year &#39;innovation exemption&#39; lets tokenized-stock venues operate without registering as exchanges, handing these platforms a US market they had been forced to run offshore and recovering ground lost when the CLARITY Act died in the Senate.</div>
+    <div class="source"><a href="https://finance.yahoo.com/markets/crypto/articles/coinbase-circle-recover-sec-opens-175155962.html" target="_blank" rel="noopener noreferrer">Yahoo Finance</a></div>
+  </li>
+    </ul>
+  </section>
+<section class="brief-section" id="emsmallcaps">
+    <h2>NIFTY 50</h2>
+    <ul class="items">
+      <li>
+    <div class="detail"><span class="emoji">📊</span>Thursday&#39;s session closed split but with far better internals than the headline — the <strong>Sensex slipped 21.86 points (0.03%) to 74,314.59</strong> while the <strong>Nifty added 53 points (0.23%) to 23,270.60</strong>, and breadth turned decisively positive with <strong>2,480 advances against 1,487 declines</strong>, the <strong>Midcap 100 up 0.9%</strong> and <strong>Smallcap 100 up 0.8%</strong>.</div>
+    <div class="why"><span class="why-label">Why</span> Realty and pharma both gained more than 1.5% and offset weakness in banks, as money rotated into domestic-facing sectors once it became clear the Fed&#39;s hike had pulled US long yields down rather than up.</div>
+    <div class="source"><a href="https://hdfcsky.com/news/market-close-report-today-september-17-2026-nifty-sensex-end-mixed-amid-fed-hike-nse-ipo" target="_blank" rel="noopener noreferrer">HDFC Sky</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">💱</span>The rupee&#39;s eight-session slide finally broke — it <strong>rebounded 16 paise to 95.73</strong> in early Friday trade after a two-month low, with the <strong>Sensex up 122.18 points to 74,436.77</strong> and the <strong>Nifty at 23,294.15</strong>; GIFT Nifty had pointed higher at 23,343.</div>
+    <div class="why"><span class="why-label">Why</span> Brent retreating below $104 directly shrinks India&#39;s import bill, and with US bond yields falling back from their 2007 highs the rate-differential pressure that forced suspected RBI intervention on Thursday eased for the first time in over a week.</div>
+    <div class="source"><a href="https://www.business-standard.com/finance/news/rupee-rises-16-paise-to-95-73-against-us-dollar-during-early-trade-126091800198_1.html" target="_blank" rel="noopener noreferrer">Business Standard</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">💸</span>Foreign selling re-accelerated even as the index held — <strong>FIIs net sold ₹3,208.76 crore</strong> on Thursday against <strong>DII buying of ₹3,617.75 crore</strong>, taking FIIs to roughly <strong>₹17,810 crore of net sales in September</strong> so far.</div>
+    <div class="why"><span class="why-label">Why</span> FII outflows jumped by more than half from Wednesday&#39;s ₹2,032.60 crore as the higher US terminal rate was digested, and domestic institutions only just covered them — a much thinner cushion than Wednesday&#39;s roughly ₹1,876 crore of net absorption.</div>
+    <div class="source"><a href="https://upstox.com/news/market-news/stocks/nifty-50-sensex-today-wall-street-cues-fii-activity-key-things-to-know-before-markets-open-on-september-18/article-200467/" target="_blank" rel="noopener noreferrer">Upstox</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">🇯🇵</span>The Bank of Japan delivered the hike Asia was braced for — a <strong>25bp move to 1.25%, the highest since 1995</strong>, but on a <strong>split 7–2 vote</strong> with board members Toichiro Asada and Ayano Sato dissenting, and it came just <strong>three months after the last increase</strong> versus six months previously.</div>
+    <div class="why"><span class="why-label">Why</span> The BOJ cited the risk that inflation deviates upward beyond its 2% target, and the compressed gap between hikes signals a quickening normalisation cycle rather than the gradual path markets had assumed.</div>
+    <div class="source"><a href="https://www.cnbc.com/2026/09/18/japan-raises-rates-30-year-high-yen-jgb.html" target="_blank" rel="noopener noreferrer">CNBC</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">📉</span>Tokyo went into the decision on the front foot — the <strong>Nikkei 225 closed up 213.25 points at 64,136</strong> on Thursday on buying in tech, pharma, insurance and consumer names, with the <strong>10-year JGB yield near 2.93%</strong>, its highest since 1996.</div>
+    <div class="why"><span class="why-label">Why</span> Japanese equities took the same cue as Wall Street from the Fed, though gains were capped by renewed yen weakness and caution ahead of Governor Ueda&#39;s press conference, where guidance on the December and 2027 path matters more than the hike itself.</div>
+    <div class="source"><a href="https://newsonjapan.com/article/150790.php" target="_blank" rel="noopener noreferrer">News On Japan</a></div>
+  </li>
+    </ul>
+  </section>
+<section class="brief-section" id="crypto">
+    <h2>Crypto</h2>
+    <ul class="items">
+      <li>
+    <div class="detail"><span class="emoji">⚖️</span>The SEC replaced the dead CLARITY Act with its own order — a first-of-its-kind <strong>&quot;Innovation Exemption&quot;</strong> granting Tokenized Securities Venues <strong>five years</strong> of conditional relief from the Exchange Act&#39;s definition of an exchange, letting them trade <strong>tokenized NMS stock</strong> through permissioned automated market makers and liquidity pools, effective immediately, with tokenized shares required to carry the same <strong>dividend and voting rights</strong> as the underlying.</div>
+    <div class="why"><span class="why-label">Why</span> Chair Paul Atkins moved administratively within 48 hours of the Senate bill stalling, framing the order as a bridge toward durable rulemaking, which turns a legislative dead end into a live US market for platforms that until now could only offer tokenized equities offshore.</div>
+    <div class="source"><a href="https://www.sec.gov/newsroom/press-releases/2026-90-sec-issues-innovation-exemption-facilitate-trading-tokenized-nms-stock-request-comment" target="_blank" rel="noopener noreferrer">SEC</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">🚀</span>Majors reclaimed their post-CLARITY losses — <strong>Bitcoin rose 1.37% to about $77,400</strong>, back above the $75,000–$76,500 band it defended through the Fed decision, with <strong>Ether up 1.68% to $2,475.80</strong> and <strong>Solana the standout, up 6.05% to $105.37</strong>.</div>
+    <div class="why"><span class="why-label">Why</span> Falling US long yields removed the macro headwind on the same day the SEC order landed, and SOL led because the network already carries billions in weekly tokenized-equity volume, making it the most direct beneficiary of a US tokenized-stock regime.</div>
+    <div class="source"><a href="https://www.cryptotimes.io/2026/09/18/solana-rises-above-100-as-traders-watch-105-breakout-level/" target="_blank" rel="noopener noreferrer">Crypto Times</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">🔄</span>The ETF bleed all but stopped — US spot Bitcoin funds posted a net outflow of just <strong>$51.28 million on September 17</strong>, against <strong>$746.3 million over the prior two sessions combined</strong>, and the split flipped: <strong>BlackRock&#39;s IBIT took in $150 million</strong>, its largest single-day inflow of the stretch, while <strong>Fidelity&#39;s FBTC lost $116 million</strong>.</div>
+    <div class="why"><span class="why-label">Why</span> IBIT&#39;s allocators returned as soon as BTC held $75,000 through the Fed decision, while Fidelity&#39;s kept redeeming — so the aggregate number understates a genuine reversal at the largest issuer rather than a market-wide pause.</div>
+    <div class="source"><a href="https://www.forbes.com/sites/boazsobrado/2026/09/17/fed-hike-shock-blackrock-leads-746-million-bitcoin-etf-exodus/" target="_blank" rel="noopener noreferrer">Forbes</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">🏛️</span>Wednesday&#39;s outflow was the bridge between the two extremes — spot Bitcoin ETFs shed <strong>$295.98 million on September 16</strong>, with <strong>IBIT down $144.11 million</strong>, <strong>ARKB $84.4 million</strong> and <strong>FBTC $52.72 million</strong>, leaving Morgan Stanley&#39;s MSBT the only fund with an inflow at $3.47 million.</div>
+    <div class="why"><span class="why-label">Why</span> That was a third consecutive redemption day but roughly a third smaller than September 15&#39;s $450.4 million, meaning the selling was decaying into the Fed decision rather than intensifying on it.</div>
+    <div class="source"><a href="https://www.kucoin.com/news/flash/us-bitcoin-spot-etfs-see-296m-net-outflow-on-sept-16" target="_blank" rel="noopener noreferrer">KuCoin</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">🪙</span>Solana&#39;s institutional rails kept building through the drawdown — its <strong>US spot ETFs took in $836,930 on September 16</strong>, and the SEC formally named <strong>SOL a core ETF asset alongside BTC and ETH on September 5</strong>, clearing it for commodity-based trusts.</div>
+    <div class="why"><span class="why-label">Why</span> That designation plus this week&#39;s tokenization order gives SOL a regulatory path that does not depend on Congress, which is why it outperformed the majors by roughly 4 percentage points on a day when the whole complex rallied.</div>
+    <div class="source"><a href="https://www.cryptotimes.io/2026/09/18/solana-rises-above-100-as-traders-watch-105-breakout-level/" target="_blank" rel="noopener noreferrer">Crypto Times</a></div>
+  </li>
+    </ul>
+  </section>
+
+    <div class="cross-cutting"><span class="ct-label">Common thread</span><span>Cheaper crude is now unwinding the exact trade the Fed&#39;s dot plot set off: Brent&#39;s second straight drop to $104.82 on the Saudi pipeline restart pulled the 10-year back from its 5% 2007 high to 4.93%, and that single move let chips drive a 1.69% Nasdaq rebound, let the rupee snap an eight-session slide to 95.73 as India&#39;s import bill eased, and let Bitcoin reclaim $77,000 — but the 2-year at 4.744% and the BOJ&#39;s split hike to 1.25% show global policy still tightening into an inflation impulse that is already receding.</span></div>
+
+    <footer>Generated automatically by the finance-brief pipeline &middot; 2026-09-18T14:05:00Z</footer>
+  </div>
+</body>
+</html>

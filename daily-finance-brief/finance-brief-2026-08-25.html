@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Finance News — 2026-08-25</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400..700&display=swap" rel="stylesheet" />
+<style>
+  /* ---------- Material Design 3 — dark by default, light on OS preference ---------- */
+  :root {
+    --md-sys-color-surface: #0e1116;
+    --md-sys-color-surface-container-low: #161b22;
+    --md-sys-color-surface-container: #1b212b;
+    --md-sys-color-surface-container-high: #252d3a;
+    --md-sys-color-surface-container-highest: #303a49;
+    --md-sys-color-on-surface: #e3e8ef;
+    --md-sys-color-on-surface-variant: #c0c8d4;
+    --md-sys-color-outline: #8b94a3;
+    --md-sys-color-outline-variant: #3a4250;
+    --md-sys-color-primary: #5b9bff;
+    --md-sys-color-on-primary: #002d6e;
+    --md-sys-color-primary-container: #0a4bb0;
+    --md-sys-color-on-primary-container: #d8e6ff;
+    --md-sys-color-secondary-container: #243352;
+    --md-sys-color-on-secondary-container: #d8e6ff;
+    --finance-gain: #57d98a;
+    --finance-loss: #ff8a9b;
+    color-scheme: dark;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --md-sys-color-surface: #fbfcff;
+      --md-sys-color-surface-container-low: #f1f4fb;
+      --md-sys-color-surface-container: #e9eef8;
+      --md-sys-color-surface-container-high: #e3e9f4;
+      --md-sys-color-surface-container-highest: #dde4f1;
+      --md-sys-color-on-surface: #191c22;
+      --md-sys-color-on-surface-variant: #414855;
+      --md-sys-color-outline: #717988;
+      --md-sys-color-outline-variant: #c1c8d6;
+      --md-sys-color-primary: #0b57d0;
+      --md-sys-color-on-primary: #ffffff;
+      --md-sys-color-primary-container: #d8e6ff;
+      --md-sys-color-on-primary-container: #001a41;
+      --md-sys-color-secondary-container: #dce6ff;
+      --md-sys-color-on-secondary-container: #101d34;
+      --finance-gain: #0f7a3d;
+      --finance-loss: #c4183c;
+      color-scheme: light;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+    font-family: "Roboto Flex", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-optical-sizing: auto;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 840px; margin: 0 auto; padding: 0 16px 56px; }
+
+  /* ---------- Top app bar ---------- */
+  .app-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--md-sys-color-surface);
+    padding: 28px 0 12px;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+  }
+  .app-bar-inner { max-width: 840px; margin: 0 auto; padding: 0 16px; }
+  .eyebrow {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--md-sys-color-primary);
+    margin: 0 0 4px;
+  }
+  h1 {
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0;
+    color: var(--md-sys-color-on-surface);
+  }
+  h1 .date { color: var(--md-sys-color-primary); }
+  /* ---------- Day nav (the only nav: 7 rolling days, MD3 chips) ----------
+     One chip per published date. Tue–Sat are dailies; the Sunday chip is that
+     week's wrap and the Monday chip the week-ahead outlook, both flagged by a
+     third `.kind` line. `align-items: stretch` (the flex default) keeps the
+     two- and three-line chips the same height. */
+  nav.chip-nav {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 16px 0 4px;
+    margin: 0 0 8px;
+    scrollbar-width: none;
+  }
+  nav.chip-nav::-webkit-scrollbar { display: none; }
+  .chip {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 64px;
+    padding: 8px 14px;
+    border-radius: 16px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    background: transparent;
+    color: var(--md-sys-color-on-surface-variant);
+    text-decoration: none;
+    transition: background 0.15s ease, border-color 0.15s ease;
+  }
+  .chip:hover { background: var(--md-sys-color-surface-container-high); }
+  .chip .dow { font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+  .chip .dom { font-size: 0.9375rem; font-weight: 600; white-space: nowrap; }
+  .chip .kind {
+    margin-top: 2px;
+    font-size: 0.625rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: var(--md-sys-color-primary);
+  }
+  .chip.active {
+    background: var(--md-sys-color-primary-container);
+    border-color: transparent;
+    color: var(--md-sys-color-on-primary-container);
+    pointer-events: none;
+  }
+  .chip.active .kind { color: inherit; opacity: 0.75; }
+
+  /* ---------- Section cards ---------- */
+  section.brief-section {
+    background: var(--md-sys-color-surface-container-low);
+    border-radius: 24px;
+    padding: 20px 24px 8px;
+    margin-bottom: 16px;
+  }
+  section.brief-section h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.375rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    margin: 0 0 4px;
+    color: var(--md-sys-color-on-surface);
+  }
+  section.brief-section h2::before {
+    content: "";
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--md-sys-color-primary);
+  }
+  ul.items { list-style: none; margin: 0; padding: 0; }
+  ul.items li {
+    padding: 16px 0;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+  }
+  ul.items li:first-child { border-top: none; }
+  .detail {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--md-sys-color-on-surface);
+    line-height: 1.45;
+    font-variant-numeric: tabular-nums;
+  }
+  .detail .emoji {
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 1.15em;
+    line-height: 1;
+    /* keep multicolor emoji from being tinted and align nicely */
+    font-variant-numeric: normal;
+  }
+  .detail strong, .cross-cutting strong {
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+  }
+  .why {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    background: var(--md-sys-color-surface-container-high);
+    font-size: 0.875rem;
+    color: var(--md-sys-color-on-surface-variant);
+    font-variant-numeric: tabular-nums;
+  }
+  .why-label {
+    flex: 0 0 auto;
+    color: var(--md-sys-color-primary);
+    font-weight: 700;
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding-top: 2px;
+  }
+  .source { margin-top: 8px; font-size: 0.75rem; }
+  .source a {
+    color: var(--md-sys-color-primary);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .source a:hover { text-decoration: underline; }
+
+  /* ---------- Cross-cutting insight banner ---------- */
+  .cross-cutting {
+    display: flex;
+    gap: 12px;
+    background: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+    border-radius: 20px;
+    padding: 18px 20px;
+    margin-top: 24px;
+    font-size: 0.9375rem;
+  }
+  .cross-cutting .ct-label {
+    font-weight: 700;
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding-top: 2px;
+  }
+  footer {
+    margin-top: 32px;
+    color: var(--md-sys-color-outline);
+    font-size: 0.75rem;
+    text-align: center;
+  }
+
+  /* ---------- Mobile ---------- */
+  @media (max-width: 600px) {
+    .app-bar { padding-top: 20px; }
+    .wrap { padding: 0 14px 40px; }
+    .app-bar-inner { padding: 0 14px; }
+    section.brief-section { padding: 16px 16px 4px; border-radius: 20px; }
+    section.brief-section h2 { font-size: 1.25rem; }
+    .cross-cutting { flex-direction: column; gap: 6px; }
+  }
+</style>
+</head>
+<body>
+  <div class="app-bar">
+    <div class="app-bar-inner">
+      <p class="eyebrow">Daily Market Brief</p>
+      <h1>Finance News: <span class="date">August 25, 2026</span></h1>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <nav class="chip-nav day-nav" aria-label="Recent briefs">
+      <a class="chip" href="finance-brief-2026-10-14.html"><span class="dow">Wed</span><span class="dom">Oct 14</span></a>
+      <a class="chip" href="finance-brief-2026-10-13.html"><span class="dow">Tue</span><span class="dom">Oct 13</span></a>
+      <a class="chip" href="finance-brief-outlook-2026-10-12.html"><span class="dow">Mon</span><span class="dom">Oct 12</span><span class="kind">Week ahead</span></a>
+      <a class="chip" href="finance-brief-weekly-2026-10-11.html"><span class="dow">Sun</span><span class="dom">Oct 11</span><span class="kind">Wrap</span></a>
+      <a class="chip" href="finance-brief-2026-10-10.html"><span class="dow">Sat</span><span class="dom">Oct 10</span></a>
+      <a class="chip" href="finance-brief-2026-10-09.html"><span class="dow">Fri</span><span class="dom">Oct 9</span></a>
+      <a class="chip" href="finance-brief-2026-10-08.html"><span class="dow">Thu</span><span class="dom">Oct 8</span></a>
+    </nav>
+
+    <section class="brief-section" id="usa">
+    <h2>S&amp;P 500</h2>
+    <ul class="items">
+      <li>
+    <div class="detail"><span class="emoji">💾</span>The bond market finally gave stocks relief and equities sold off anyway — the <strong>S&amp;P 500 fell 21.51 points (-0.3%) to 7,652.86</strong> and the <strong>Nasdaq dropped 200.26 points (-0.8%) to 25,980.19</strong> on Monday, while the <strong>Dow rose 140.15 points (+0.3%) to 53,417.16</strong> on the rotation out of tech.</div>
+    <div class="why"><span class="why-label">Why</span> Bloomberg reported over the weekend that Nvidia has notified customers of price increases above 15% on AI servers because of soaring memory costs, which hit the entire semiconductor complex and pulled the tech-heavy indexes down even as Treasury yields fell.</div>
+    <div class="source"><a href="https://www.washingtonpost.com/business/2026/08/24/wall-street-stocks-dow-nasdaq/27d744ee-9ff9-11f1-8606-1d40ad00172e_story.html" target="_blank" rel="noopener noreferrer">Associated Press / Washington Post</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">🤖</span>A new inflation channel opened inside the AI trade itself — Nvidia told customers that servers built on <strong>Vera Rubin and Grace Blackwell</strong> platforms shipping in <strong>early 2027 will cost more than 15% extra</strong>, sending the <strong>Philadelphia Semiconductor Index down 2.4%</strong> and the <strong>SPDR S&amp;P Semiconductor ETF down 3.1%</strong>, with <strong>Nvidia itself off more than 2% for a seventh straight decline — its worst streak since September 2022</strong> — days before it reports.</div>
+    <div class="why"><span class="why-label">Why</span> High-bandwidth memory and server DRAM prices are climbing at record rates as Samsung, SK Hynix and Micron divert capacity to high-margin AI parts, so the cost is being passed straight through to buyers and investors are marking down the margin assumptions embedded across the AI supply chain.</div>
+    <div class="source"><a href="https://www.bloomberg.com/news/articles/2026-08-22/nvidia-customers-notified-about-ai-related-price-hikes-above-15" target="_blank" rel="noopener noreferrer">Bloomberg</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">⚔️</span>The Iran campaign trailed since Thursday finally landed with a name — Bessent launched <strong>&quot;Operation Economic Outcast&quot;</strong> on Monday, calling it <strong>&quot;the single greatest financial offensive ever marshaled against an adversary,&quot;</strong> expanding secondary-sanctions categories across <strong>digital assets, gold, aviation, technology and shipping</strong>, giving foreign governments an unspecified deadline to shut down Iran-related activity and warning that <strong>at least one major financial institution could be designated this week</strong>.</div>
+    <div class="why"><span class="why-label">Why</span> Bessent said explicitly that no one would be exempt including China, but Treasury stopped short of sanctioning the large Chinese banks that finance the more than 80% of Iran&#39;s seaborne crude Beijing buys, so the package read as narrower in practice than the rhetoric that preceded it.</div>
+    <div class="source"><a href="https://www.cnbc.com/2026/08/24/trump-iran-economy-sanctions-china-bessent.html" target="_blank" rel="noopener noreferrer">CNBC</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">🏦</span>The long end caught a bid for the first time since the buyback round-trip — the <strong>30-year yield fell more than 2 basis points to 5.2497%</strong> on Monday after CNBC reported the Treasury may tap the <strong>General Account</strong> to fund its expanded buyback operations.</div>
+    <div class="why"><span class="why-label">Why</span> Funding the buybacks out of the cash balance rather than incremental issuance would mean the Treasury is retiring duration without adding new supply, which is the first version of the intervention that addresses the actual buyer&#39;s strike instead of just adding liquidity.</div>
+    <div class="source"><a href="https://www.cnbc.com/2026/08/23/stock-market-today-live-updates.html" target="_blank" rel="noopener noreferrer">CNBC</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">📊</span>Two binary events now sit inside 72 hours — <strong>Nvidia reports fiscal Q2 on Wednesday, August 26</strong> with Visible Alpha consensus at <strong>$92.2 billion</strong> in revenue (street range <strong>$93-95 billion</strong>, roughly <strong>96% year-over-year growth</strong>) and <strong>adjusted EPS of $2.09 versus $1.05</strong> a year ago, followed by <strong>Kevin Warsh&#39;s first Jackson Hole keynote as Fed chair on Friday, August 28</strong>, with futures pricing roughly a <strong>one-in-three chance of a September rate hike</strong> rather than a cut.</div>
+    
+    <div class="source"><a href="https://seekingalpha.com/article/4939733-nvidia-earnings-preview-q2-2027" target="_blank" rel="noopener noreferrer">Seeking Alpha</a></div>
+  </li>
+    </ul>
+  </section>
+<section class="brief-section" id="emsmallcaps">
+    <h2>NIFTY 50</h2>
+    <ul class="items">
+      <li>
+    <div class="detail"><span class="emoji">🚢</span>The two-session bounce ended on Monday — the <strong>Nifty 50 lost 32.95 points (-0.14%) to 24,219.05</strong> and the <strong>Sensex shed 171.72 points (-0.22%) to 77,369.11</strong>, with the Nifty briefly breaking below <strong>24,200</strong> intraday before reclaiming it.</div>
+    <div class="why"><span class="why-label">Why</span> Iran escalated ahead of the US announcement by threatening to seize vessels and unilaterally change transit rules for the Strait of Hormuz, which sent traders to cut positions rather than hold risk into an unquantified shipping threat on India&#39;s main crude route.</div>
+    <div class="source"><a href="https://www.business-standard.com/markets/capital-market-news/sensex-settles-172-pts-lower-nifty-ends-below-24-250-126082400749_1.html" target="_blank" rel="noopener noreferrer">Business Standard</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">🏛️</span>The damage was concentrated in financials rather than broad — <strong>PSU banks, media and private banks</strong> dragged, with the <strong>Nifty PSU Bank index down 0.93% to 8,539.75</strong>, while <strong>metals, realty and IT</strong> all advanced and the broader market split with <strong>Midcap 100 up 0.13%</strong> against <strong>Smallcap 100 down 0.26%</strong>.</div>
+    <div class="why"><span class="why-label">Why</span> Metals extended Friday&#39;s leadership on the same commodity-inflation impulse while IT joined them on the drop in US long-end yields, leaving banks to absorb the geopolitical risk premium as the sector most exposed to a domestic rate path that an oil shock would push higher.</div>
+    <div class="source"><a href="https://theindianawaaz.com/aug-24-sensex-slips-172-pts-nifty-ends-below-24250-as-banks-drag-metals-rally/" target="_blank" rel="noopener noreferrer">The Indian Awaaz</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">🛢️</span>The sanctions arrived and crude fell hard — <strong>Brent dropped 2.5% to $92.06 a barrel</strong> and <strong>WTI fell about 2.5% to $84.89</strong>, reversing a chunk of the two-week, 12% run-up on the very day the toughest-ever Iran package was unveiled.</div>
+    <div class="why"><span class="why-label">Why</span> Traders had positioned for measures that would physically remove Iranian barrels, but Washington&#39;s decision to spare the major Chinese banks that clear Beijing&#39;s purchases signalled the flows will largely continue, so the risk premium built up over the prior fortnight was unwound.</div>
+    <div class="source"><a href="https://www.cnbc.com/2026/08/24/oil-price-today-wti-brent-us-sanctions-iran.html" target="_blank" rel="noopener noreferrer">CNBC</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">💱</span>Foreign money quietly flipped sides in the cash market — <strong>FIIs bought ₹1,182 crore</strong> of equities on Monday after two straight sessions of selling, but simultaneously carried a <strong>net short index-futures position of 2,19,383 contracts</strong>.</div>
+    <div class="why"><span class="why-label">Why</span> The combination is a hedged re-entry rather than a conviction bid: foreign desks are buying cash at levels they consider cheap while paying for downside cover through futures, because Monday&#39;s sanctions detail and Warsh&#39;s Jackson Hole debut both land before they can reassess.</div>
+    <div class="source"><a href="https://craytheon.com/charts/fii-dii-data/" target="_blank" rel="noopener noreferrer">Craytheon</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">🇮🇳</span>The rupee broke slightly out of its week-long cage but only just — it settled <strong>3 paise weaker at 95.74</strong>, having opened at <strong>95.65</strong> and traded a <strong>95.64-95.75</strong> band, its weakest close of the recent range.</div>
+    <div class="why"><span class="why-label">Why</span> A firmer dollar and persistent importer hedging demand ahead of the sanctions announcement outweighed the intraday drop in crude, which came too late in the Indian session to help the currency.</div>
+    <div class="source"><a href="https://www.dailyexcelsior.com/rupee-falls-3-paise-to-close-at-95-74-against-us-dollar/" target="_blank" rel="noopener noreferrer">Daily Excelsior</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">⏳</span>Tuesday sets up flat to soft — <strong>GIFT Nifty was down about 0.13%</strong> ahead of the open, pointing to another rangebound session with no domestic trigger before Nvidia&#39;s results and Jackson Hole.</div>
+    
+    <div class="source"><a href="https://www.5paisa.com/blog/sensex-nifty-stock-market-live-updates-august-25-2026" target="_blank" rel="noopener noreferrer">5paisa</a></div>
+  </li>
+    </ul>
+  </section>
+<section class="brief-section" id="crypto">
+    <h2>Crypto</h2>
+    <ul class="items">
+      <li>
+    <div class="detail"><span class="emoji">₿</span>The level that stopped the rally on Friday gave way — <strong>Bitcoin cleared $80,000 for the first time since May 15</strong>, rising as much as <strong>2.9% to $81,257</strong> in Tuesday&#39;s Asian session after breaking through late Monday, a three-month high.</div>
+    <div class="why"><span class="why-label">Why</span> The Treasury&#39;s signal that it may fund buybacks from the General Account pushed the 30-year yield below 5.25% and weakened the dollar, giving the squeeze the fresh macro catalyst it needed to break a round number that had drawn heavy profit-taking three sessions earlier.</div>
+    <div class="source"><a href="https://www.bloomberg.com/news/articles/2026-08-25/bitcoin-reaches-three-month-high-of-80-000-as-momentum-returns" target="_blank" rel="noopener noreferrer">Bloomberg</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">💥</span>The forced-covering engine is running out of fuel — the break above $80,000 triggered just <strong>$220 million of crypto short liquidations</strong> in 24 hours, a fraction of the <strong>$1 billion a day</strong> that powered Wednesday and Thursday&#39;s legs.</div>
+    <div class="why"><span class="why-label">Why</span> More than $4 billion of bearish positions were already stopped out earlier in the rally, so there is far less crowded short interest left to squeeze — meaning this leg is being carried much more by spot and ETF demand than the last one.</div>
+    <div class="source"><a href="https://www.tradingview.com/news/cointelegraph:c16c477a1094b:0-bitcoin-price-hits-80k-as-24-hour-crypto-short-liquidations-pass-220m/" target="_blank" rel="noopener noreferrer">Cointelegraph</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">📈</span>The full week&#39;s ETF tally landed and it was the biggest in ten months — US spot bitcoin funds pulled <strong>$1.918 billion</strong> between August 17 and 21, ether funds <strong>$697 million</strong>, <strong>XRP $39.78 million</strong> and <strong>Solana $28.34 million</strong>, with the combined bitcoin-plus-ether <strong>$2.6 billion</strong> the strongest week since <strong>October 2025</strong> and the largest of 2026 for both. Friday alone added <strong>$307.45 million</strong> for a fifth straight inflow day, <strong>IBIT taking $239.3 million</strong> of it.</div>
+    <div class="why"><span class="why-label">Why</span> The daily pace decelerated from Thursday&#39;s $606 million into Friday&#39;s $307 million even as prices kept rising, which tells you allocators were still adding but no longer chasing — a healthier flow profile than the panic-buying at the top of the move.</div>
+    <div class="source"><a href="https://www.theblock.co/news/markets/2026-08-22-bitcoin-and-ether-etfs-draw-2-6-billion-in-strongest-inflow-week-since-october-tripling-volume-412531" target="_blank" rel="noopener noreferrer">The Block</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">🔻</span>Last week&#39;s leader is now the laggard — <strong>XRP has fallen back to about $1.48, down 2.2%</strong> in 24 hours after spiking to roughly <strong>$1.69-1.70</strong> during the rally, even as <strong>Solana held $96.55 (+0.8%)</strong> and <strong>Ether traded near $2,470</strong>.</div>
+    <div class="why"><span class="why-label">Why</span> XRP ran roughly 50% in a week on the Clarity Act&#39;s September 15 Senate procedural vote, and with no further regulatory headline since, holders are booking a move that outran every other major token.</div>
+    <div class="source"><a href="https://sundayguardianlive.com/business/xrp-price-today-25-august-why-is-xrp-down-today-xrp-holds-near-148-after-50-weekly-rally-check-latest-prices-in-usd-inr-gbp-euro-jpy-269256/" target="_blank" rel="noopener noreferrer">Sunday Guardian</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">🗓️</span>The scale of the run is now historic on two measures — Bitcoin gained <strong>23% in the seven days through Sunday</strong>, its biggest weekly jump in about three years, and is <strong>up 25% month-to-date for its best August since 2017</strong>, breaking a month that is historically the asset&#39;s weakest.</div>
+    <div class="why"><span class="why-label">Why</span> The Treasury buyback intervention, a softer dollar, the Clarity Act push and more than $4 billion of short liquidations arrived within the same fortnight, compressing what would normally be months of catalysts into a single seasonal dead zone.</div>
+    <div class="source"><a href="https://www.coindesk.com/markets/2026/08/24/bitcoin-hits-usd80-000-for-the-first-time-since-may-as-crypto-recovery-accelerates" target="_blank" rel="noopener noreferrer">CoinDesk</a></div>
+  </li>
+    </ul>
+  </section>
+
+    <div class="cross-cutting"><span class="ct-label">Common thread</span><span>Monday inverted last week&#39;s entire macro setup: the Iran sanctions everyone feared arrived as &quot;Operation Economic Outcast&quot; but spared the major Chinese banks that clear Beijing&#39;s purchases of 80% of Iran&#39;s seaborne crude, so Brent fell 2.5% to $92.06 instead of spiking, that de-escalation plus a report the Treasury may fund buybacks from the General Account pulled the 30-year to 5.2497%, and the yield relief carried Bitcoin through $80,000 for the first time since May — yet US equities still fell, because the new drag is not geopolitics at all but AI-flation, with Nvidia&#39;s above-15% AI-server price hike knocking 2.4% off the semiconductor index and 0.8% off the Nasdaq, while India, closest to the shipping risk, slipped to 24,219 on Iran&#39;s threat to seize vessels in Hormuz before the oil selloff could help it.</span></div>
+
+    <footer>Generated automatically by the finance-brief pipeline &middot; 2026-08-25T05:05:00Z</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Finance News — 2026-08-28</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400..700&display=swap" rel="stylesheet" />
+<style>
+  /* ---------- Material Design 3 — dark by default, light on OS preference ---------- */
+  :root {
+    --md-sys-color-surface: #0e1116;
+    --md-sys-color-surface-container-low: #161b22;
+    --md-sys-color-surface-container: #1b212b;
+    --md-sys-color-surface-container-high: #252d3a;
+    --md-sys-color-surface-container-highest: #303a49;
+    --md-sys-color-on-surface: #e3e8ef;
+    --md-sys-color-on-surface-variant: #c0c8d4;
+    --md-sys-color-outline: #8b94a3;
+    --md-sys-color-outline-variant: #3a4250;
+    --md-sys-color-primary: #5b9bff;
+    --md-sys-color-on-primary: #002d6e;
+    --md-sys-color-primary-container: #0a4bb0;
+    --md-sys-color-on-primary-container: #d8e6ff;
+    --md-sys-color-secondary-container: #243352;
+    --md-sys-color-on-secondary-container: #d8e6ff;
+    --finance-gain: #57d98a;
+    --finance-loss: #ff8a9b;
+    color-scheme: dark;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --md-sys-color-surface: #fbfcff;
+      --md-sys-color-surface-container-low: #f1f4fb;
+      --md-sys-color-surface-container: #e9eef8;
+      --md-sys-color-surface-container-high: #e3e9f4;
+      --md-sys-color-surface-container-highest: #dde4f1;
+      --md-sys-color-on-surface: #191c22;
+      --md-sys-color-on-surface-variant: #414855;
+      --md-sys-color-outline: #717988;
+      --md-sys-color-outline-variant: #c1c8d6;
+      --md-sys-color-primary: #0b57d0;
+      --md-sys-color-on-primary: #ffffff;
+      --md-sys-color-primary-container: #d8e6ff;
+      --md-sys-color-on-primary-container: #001a41;
+      --md-sys-color-secondary-container: #dce6ff;
+      --md-sys-color-on-secondary-container: #101d34;
+      --finance-gain: #0f7a3d;
+      --finance-loss: #c4183c;
+      color-scheme: light;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+    font-family: "Roboto Flex", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-optical-sizing: auto;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 840px; margin: 0 auto; padding: 0 16px 56px; }
+
+  /* ---------- Top app bar ---------- */
+  .app-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--md-sys-color-surface);
+    padding: 28px 0 12px;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+  }
+  .app-bar-inner { max-width: 840px; margin: 0 auto; padding: 0 16px; }
+  .eyebrow {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--md-sys-color-primary);
+    margin: 0 0 4px;
+  }
+  h1 {
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0;
+    color: var(--md-sys-color-on-surface);
+  }
+  h1 .date { color: var(--md-sys-color-primary); }
+  /* ---------- Day nav (the only nav: 7 rolling days, MD3 chips) ----------
+     One chip per published date. Tue–Sat are dailies; the Sunday chip is that
+     week's wrap and the Monday chip the week-ahead outlook, both flagged by a
+     third `.kind` line. `align-items: stretch` (the flex default) keeps the
+     two- and three-line chips the same height. */
+  nav.chip-nav {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 16px 0 4px;
+    margin: 0 0 8px;
+    scrollbar-width: none;
+  }
+  nav.chip-nav::-webkit-scrollbar { display: none; }
+  .chip {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 64px;
+    padding: 8px 14px;
+    border-radius: 16px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    background: transparent;
+    color: var(--md-sys-color-on-surface-variant);
+    text-decoration: none;
+    transition: background 0.15s ease, border-color 0.15s ease;
+  }
+  .chip:hover { background: var(--md-sys-color-surface-container-high); }
+  .chip .dow { font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+  .chip .dom { font-size: 0.9375rem; font-weight: 600; white-space: nowrap; }
+  .chip .kind {
+    margin-top: 2px;
+    font-size: 0.625rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: var(--md-sys-color-primary);
+  }
+  .chip.active {
+    background: var(--md-sys-color-primary-container);
+    border-color: transparent;
+    color: var(--md-sys-color-on-primary-container);
+    pointer-events: none;
+  }
+  .chip.active .kind { color: inherit; opacity: 0.75; }
+
+  /* ---------- Section cards ---------- */
+  section.brief-section {
+    background: var(--md-sys-color-surface-container-low);
+    border-radius: 24px;
+    padding: 20px 24px 8px;
+    margin-bottom: 16px;
+  }
+  section.brief-section h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.375rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    margin: 0 0 4px;
+    color: var(--md-sys-color-on-surface);
+  }
+  section.brief-section h2::before {
+    content: "";
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--md-sys-color-primary);
+  }
+  ul.items { list-style: none; margin: 0; padding: 0; }
+  ul.items li {
+    padding: 16px 0;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+  }
+  ul.items li:first-child { border-top: none; }
+  .detail {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--md-sys-color-on-surface);
+    line-height: 1.45;
+    font-variant-numeric: tabular-nums;
+  }
+  .detail .emoji {
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 1.15em;
+    line-height: 1;
+    /* keep multicolor emoji from being tinted and align nicely */
+    font-variant-numeric: normal;
+  }
+  .detail strong, .cross-cutting strong {
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+  }
+  .why {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    background: var(--md-sys-color-surface-container-high);
+    font-size: 0.875rem;
+    color: var(--md-sys-color-on-surface-variant);
+    font-variant-numeric: tabular-nums;
+  }
+  .why-label {
+    flex: 0 0 auto;
+    color: var(--md-sys-color-primary);
+    font-weight: 700;
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding-top: 2px;
+  }
+  .source { margin-top: 8px; font-size: 0.75rem; }
+  .source a {
+    color: var(--md-sys-color-primary);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .source a:hover { text-decoration: underline; }
+
+  /* ---------- Cross-cutting insight banner ---------- */
+  .cross-cutting {
+    display: flex;
+    gap: 12px;
+    background: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+    border-radius: 20px;
+    padding: 18px 20px;
+    margin-top: 24px;
+    font-size: 0.9375rem;
+  }
+  .cross-cutting .ct-label {
+    font-weight: 700;
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding-top: 2px;
+  }
+  footer {
+    margin-top: 32px;
+    color: var(--md-sys-color-outline);
+    font-size: 0.75rem;
+    text-align: center;
+  }
+
+  /* ---------- Mobile ---------- */
+  @media (max-width: 600px) {
+    .app-bar { padding-top: 20px; }
+    .wrap { padding: 0 14px 40px; }
+    .app-bar-inner { padding: 0 14px; }
+    section.brief-section { padding: 16px 16px 4px; border-radius: 20px; }
+    section.brief-section h2 { font-size: 1.25rem; }
+    .cross-cutting { flex-direction: column; gap: 6px; }
+  }
+</style>
+</head>
+<body>
+  <div class="app-bar">
+    <div class="app-bar-inner">
+      <p class="eyebrow">Daily Market Brief</p>
+      <h1>Finance News: <span class="date">August 28, 2026</span></h1>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <nav class="chip-nav day-nav" aria-label="Recent briefs">
+      <a class="chip" href="finance-brief-2026-10-14.html"><span class="dow">Wed</span><span class="dom">Oct 14</span></a>
+      <a class="chip" href="finance-brief-2026-10-13.html"><span class="dow">Tue</span><span class="dom">Oct 13</span></a>
+      <a class="chip" href="finance-brief-outlook-2026-10-12.html"><span class="dow">Mon</span><span class="dom">Oct 12</span><span class="kind">Week ahead</span></a>
+      <a class="chip" href="finance-brief-weekly-2026-10-11.html"><span class="dow">Sun</span><span class="dom">Oct 11</span><span class="kind">Wrap</span></a>
+      <a class="chip" href="finance-brief-2026-10-10.html"><span class="dow">Sat</span><span class="dom">Oct 10</span></a>
+      <a class="chip" href="finance-brief-2026-10-09.html"><span class="dow">Fri</span><span class="dom">Oct 9</span></a>
+      <a class="chip" href="finance-brief-2026-10-08.html"><span class="dow">Thu</span><span class="dom">Oct 8</span></a>
+    </nav>
+
+    <section class="brief-section" id="usa">
+    <h2>S&amp;P 500</h2>
+    <ul class="items">
+      <li>
+    <div class="detail"><span class="emoji">📈</span>Wednesday&#39;s stall became a broad-based breakout — the <strong>S&amp;P 500 rose 0.72% to 7,731</strong> and the <strong>Nasdaq Composite jumped 1.57% to 26,541</strong>, with <strong>Nvidia closing up 9.1%</strong> after first dropping about 4% in the immediate post-earnings reaction and then opening roughly 6% higher.</div>
+    <div class="why"><span class="why-label">Why</span> The overnight fade in Nvidia reversed once traders worked through the fiscal-2028 guide of roughly 70% revenue growth and judged the supply-constrained framing more important than the guided-down gross margin, turning Wednesday&#39;s hesitation into a chase.</div>
+    <div class="source"><a href="https://www.fool.com/coverage/stock-market-today/2026/08/27/stock-market-today-aug-27-tech-strength-powers-nasdaq-higher-as-nvidia-leads-rally/" target="_blank" rel="noopener noreferrer">The Motley Fool</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">📊</span>The bigger surprise was software, not silicon — <strong>Salesforce surged 22.6%</strong> on adjusted EPS of <strong>$5.90</strong> and revenue of <strong>$11.35 billion</strong>, while <strong>CrowdStrike rose 20.5%</strong> on its best day ever after EPS of <strong>$0.31</strong> against $0.29 expected and revenue of <strong>$1.47 billion</strong> versus $1.44 billion.</div>
+    <div class="why"><span class="why-label">Why</span> Salesforce disclosed Agentforce annual recurring revenue of $1.5 billion, up 240% year-on-year, which directly refuted the thesis that AI would cannibalise seat-based enterprise software, and CrowdStrike lifted fiscal-2027 revenue guidance to $5.99-6.01 billion against a $5.93 billion consensus on demand for securing AI workloads.</div>
+    <div class="source"><a href="https://finance.yahoo.com/technology/ai/articles/crowdstrike-shares-surge-q2-beat-101555351.html" target="_blank" rel="noopener noreferrer">Yahoo Finance</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">⚖️</span>The rally was narrower than the headline number — <strong>the tech complex lifted the S&amp;P 500 even as a majority of its constituents fell</strong>, leaving the index gain concentrated in the three AI-adjacent reporters and their read-throughs.</div>
+    <div class="why"><span class="why-label">Why</span> Money rotated into the names that had just delivered proof of AI monetisation rather than being added to the market as a whole, so the advance was a reallocation within the index rather than a broad risk-on bid.</div>
+    <div class="source"><a href="https://www.bloomberg.com/news/articles/2026-08-27/us-stock-futures-climb-as-nvidia-s-outlook-lifts-tech-sector" target="_blank" rel="noopener noreferrer">Bloomberg</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">🏦</span>The bond market refused to join the equity celebration — the <strong>30-year Treasury yield edged up to 5.19%</strong>, holding near a 19-year high, with markets pricing roughly a <strong>one-in-three chance of a September hike</strong> even as long-end rates stay elevated.</div>
+    <div class="why"><span class="why-label">Why</span> Near-term hike odds have drifted lower while the long end has not followed, which analysts read as the bond market pricing persistent inflation and term premium rather than a policy path — a warning that sits directly against Thursday&#39;s equity move.</div>
+    <div class="source"><a href="https://finance.yahoo.com/markets/article/the-bond-market-is-daring-the-fed-to-hike-chart-of-the-day-100000601.html" target="_blank" rel="noopener noreferrer">Yahoo Finance</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">🎤</span>Everything now hinges on one speech — <strong>Warsh delivers his first Jackson Hole keynote as Fed Chair at 10:00 a.m. ET Friday</strong>, with a Bank of America fund-manager survey showing <strong>69% expect a neutral tone</strong> that is already priced in.</div>
+    <div class="why"><span class="why-label">Why</span> With neutral the consensus, the asymmetry sits entirely in a surprise — Goldman Sachs has flagged that Jackson Hole keynotes historically amplify FX volatility, making this the single tiebreaker for the September decision.</div>
+    <div class="source"><a href="https://www.xtb.com/en/education/jackson-hole-2026-warsh-fed-speech" target="_blank" rel="noopener noreferrer">XTB</a></div>
+  </li>
+    </ul>
+  </section>
+<section class="brief-section" id="emsmallcaps">
+    <h2>NIFTY 50</h2>
+    <ul class="items">
+      <li>
+    <div class="detail"><span class="emoji">📉</span>Thursday&#39;s fade did not stop at mid-morning — the <strong>Sensex closed down 0.70% at 76,934</strong>, a fall of roughly <strong>539 points</strong>, with the <strong>Nifty 50 ending near 24,091</strong> and giving up the entire opening Nvidia pop.</div>
+    <div class="why"><span class="why-label">Why</span> Selling pressure persisted through the afternoon despite easing oil and firm global tech, as domestic institutions kept trimming into strength rather than adding ahead of an unpriceable Warsh keynote and Monday&#39;s GDP print.</div>
+    <div class="source"><a href="https://tradingeconomics.com/india/stock-market" target="_blank" rel="noopener noreferrer">Trading Economics</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">💻</span>Friday finally converted the US tech lead into a domestic bid — the <strong>Sensex rose 193.02 points (0.25%) to 77,126.61</strong> and the <strong>Nifty50 added 33.80 points (0.14%) to 24,124.65</strong> in early trade, with <strong>Nifty IT up over 1%</strong> and <strong>Tech Mahindra, TCS and Infosys the top Nifty gainers</strong>, while Nifty Private Bank and Financial Services lagged.</div>
+    <div class="why"><span class="why-label">Why</span> Salesforce&#39;s 22.6% jump on Agentforce ARR growth of 240% and CrowdStrike&#39;s record results were read as evidence that enterprise software budgets are expanding rather than being eaten by AI, which is the single most direct positive read-through available to Indian IT services.</div>
+    <div class="source"><a href="https://www.business-standard.com/markets/news/stock-market-live-august-28-nse-bse-sensex-today-nifty50-gift-nifty-tempsens-instruments-share-price-126082800087_1.html" target="_blank" rel="noopener noreferrer">Business Standard</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">💱</span>The rupee&#39;s best run of the crisis ended — after six straight sessions of appreciation it <strong>weakened to close at 95.55</strong> on Thursday from 95.31, before opening Friday just <strong>2 paise firmer at 95.53</strong>.</div>
+    <div class="why"><span class="why-label">Why</span> The streak broke even as crude kept falling, because the 30-year US yield holding at 5.19% into Warsh&#39;s keynote pulled the dollar higher across Asia, overwhelming the import-bill relief that had been driving the rupee for a week.</div>
+    <div class="source"><a href="https://www.business-standard.com/markets/news/stock-market-live-august-28-nse-bse-sensex-today-nifty50-gift-nifty-tempsens-instruments-share-price-126082800087_1.html" target="_blank" rel="noopener noreferrer">Business Standard</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">🛢️</span>Crude&#39;s unwind extended to a fourth straight session — <strong>Brent fell about 0.6% to $87.30 and then below $87 a barrel</strong>, continuing the slide that has taken the benchmark down from $92.06 on August 24.</div>
+    <div class="why"><span class="why-label">Why</span> Iran&#39;s military said it had reached a revenue-sharing agreement with Oman over the Strait of Hormuz — an upgrade from Wednesday&#39;s reported talks to an actual arrangement — though Tehran stressed it does not guarantee immediate reopening, which is why the fall was a fraction of the prior sessions&#39; drops.</div>
+    <div class="source"><a href="https://tradingeconomics.com/commodity/brent-crude-oil" target="_blank" rel="noopener noreferrer">Trading Economics</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">🚢</span>The physical evidence is now running ahead of the diplomacy — <strong>Trump said 10 million barrels of oil passed through Hormuz on Tuesday</strong>, reiterating that mines in the waterway have been cleared.</div>
+    <div class="why"><span class="why-label">Why</span> A verified throughput number matters more to the risk premium than a negotiating headline, because it shows the corridor already functioning at meaningful volume regardless of whether a formal reopening is announced.</div>
+    <div class="source"><a href="https://tradingeconomics.com/commodity/brent-crude-oil" target="_blank" rel="noopener noreferrer">Trading Economics</a></div>
+  </li>
+    </ul>
+  </section>
+<section class="brief-section" id="crypto">
+    <h2>Crypto</h2>
+    <ul class="items">
+      <li>
+    <div class="detail"><span class="emoji">₿</span>Wednesday&#39;s break below $79,000 was fully reversed — <strong>Bitcoin reclaimed $80,000</strong>, rising about 1.5% to roughly <strong>$79,439</strong> during the session before pushing back through the round number as US software stocks led the equity rally.</div>
+    <div class="why"><span class="why-label">Why</span> The correlation ran straight from the AI earnings trifecta into crypto: with Nvidia, Salesforce and CrowdStrike all clearing the bar, risk appetite returned to the same accounts that had taken profits on the PCE print a day earlier.</div>
+    <div class="source"><a href="https://www.coindesk.com/business/2026/08/27/live-updates-bitcoin-etf-inflows-hit-eight-straight-days-as-august-tops-usd3-billion" target="_blank" rel="noopener noreferrer">CoinDesk</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">🏛️</span>The allocator streak reached a round number — <strong>US spot bitcoin ETFs logged an eighth consecutive inflow day for $2.8 billion across the run</strong>, the longest streak since April, pushing <strong>August above $3 billion</strong> and making it the strongest month of 2026; <strong>ether ETFs added $192 million</strong> on their own seventh straight day.</div>
+    <div class="why"><span class="why-label">Why</span> The composition of the streak matters more than the total — inflows peaked at $606.3 million on August 20 and have not exceeded $340 million since, with Wednesday&#39;s $232.2 million the smallest, so the bid is decaying in size even as it persists in frequency.</div>
+    <div class="source"><a href="https://decrypt.co/376683/bitcoin-etfs-draw-2-8b-in-eight-day-streak-as-btc-tests-80k" target="_blank" rel="noopener noreferrer">Decrypt</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">🚀</span>Solana widened its lead over the majors — <strong>SOL jumped 8% to $103.86</strong>, clearing $100 for the first time in this leg after trading at $98-101 a day earlier, while <strong>Ether rose 1.6% to $2,501.60</strong>.</div>
+    <div class="why"><span class="why-label">Why</span> SOL is compounding a network-level story the other majors lack — proposed governance changes that would increase burns plus the move to double block speed — so a general risk-on day produced roughly five times Bitcoin&#39;s percentage gain rather than a matching one.</div>
+    <div class="source"><a href="https://www.coingabbar.com/en/crypto-currency-news/what-happened-in-crypto-market-today-latest-news-august-27" target="_blank" rel="noopener noreferrer">CoinGabbar</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">💥</span>The reversal was violent in both directions — <strong>99,560 traders were liquidated for $421.02 million</strong> in 24 hours, on total crypto trading volume of <strong>$88.5 billion</strong>, with Bitcoin dominance at <strong>57.5%</strong>.</div>
+    <div class="why"><span class="why-label">Why</span> Positioning had flipped short into Wednesday&#39;s pullback after the overbought RSI reading, so the move back through $80,000 forced a second round of covering on top of the roughly $6.4 billion of short liquidations already run since last Wednesday.</div>
+    <div class="source"><a href="https://www.coingabbar.com/en/crypto-currency-news/what-happened-in-crypto-market-today-latest-news-august-27" target="_blank" rel="noopener noreferrer">CoinGabbar</a></div>
+  </li>
+<li>
+    <div class="detail"><span class="emoji">⚖️</span>With the Clarity Act effectively dead, the agency route is now the only live one — the <strong>SEC&#39;s Regulation Crypto Assets proposal (file S7-2026-27)</strong> is formally out for comment, and <strong>seven spot XRP ETFs are trading with about $1 billion in assets</strong> against <strong>$1.51 billion in cumulative net inflows</strong> since launch.</div>
+    <div class="why"><span class="why-label">Why</span> The gap between $1.51 billion of inflows and $1 billion of assets is the clearest measure of how much the XRP complex has lost to price since the legislative catalyst collapsed, even as the product set kept taking in money.</div>
+    <div class="source"><a href="https://www.sec.gov/rules-regulations/2026/08/s7-2026-27" target="_blank" rel="noopener noreferrer">SEC</a></div>
+  </li>
+    </ul>
+  </section>
+
+    <div class="cross-cutting"><span class="ct-label">Common thread</span><span>Thursday&#39;s AI earnings trifecta — Nvidia up 9.1%, Salesforce up 22.6% on 240% Agentforce ARR growth, CrowdStrike up 20.5% on a record quarter — proved AI is now generating revenue rather than just consuming capex, and that single signal propagated everywhere: it lifted the S&amp;P 500 0.72% to 7,731 on narrow breadth, carried Bitcoin back above $80,000 for an eighth straight ETF inflow day, and gave Indian IT its Friday bid with Nifty IT up over 1% and TCS, Infosys and Tech Mahindra leading. The dissent is in fixed income and FX — the 30-year Treasury yield sits at 5.19% near a 19-year high with roughly one-in-three September hike odds, and that dollar strength ended the rupee&#39;s six-session winning run at 95.55 despite Brent falling a fourth straight session below $87 on Iran&#39;s revenue-sharing agreement with Oman over Hormuz — leaving Warsh&#39;s 10:00 a.m. ET keynote as the one event that can reconcile an equity market pricing an AI earnings cycle against a bond market pricing sticky inflation.</span></div>
+
+    <footer>Generated automatically by the finance-brief pipeline &middot; 2026-08-28T08:00:00+05:30</footer>
+  </div>
+</body>
+</html>
