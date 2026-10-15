@@ -356,20 +356,39 @@
   }
   .signal strong { color: var(--md-sys-color-on-surface); font-weight: 650; }
 
-  .sources {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px 12px;
-    margin-top: 8px;
+  /* The poster links to the trailer; the play badge says so. */
+  .poster-link { position: relative; display: block; align-self: start; border-radius: 10px; }
+  .poster-link .play {
+    position: absolute;
+    right: 6px;
+    bottom: 6px;
+    display: grid;
+    place-items: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    font-size: 0.6875rem;
+    padding-left: 2px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.65);
+    transition: transform 0.15s, background 0.15s;
+  }
+  .poster-link:hover .play, .poster-link:focus-visible .play { background: #f00; transform: scale(1.12); }
+  .poster-link:focus-visible { outline: 2px solid var(--md-sys-color-primary); outline-offset: 2px; }
+
+  .trailer {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 10px;
+    padding: 4px 12px;
+    border-radius: 999px;
     font-size: 0.75rem;
-  }
-  .sources a {
-    color: var(--md-sys-color-primary);
+    font-weight: 650;
     text-decoration: none;
-    font-weight: 500;
+    color: var(--md-sys-color-on-primary-container);
+    background: var(--md-sys-color-primary-container);
   }
-  .sources a::after { content: " ↗"; opacity: 0.6; }
-  .sources a:hover { text-decoration: underline; }
+  .trailer:hover, .trailer:focus-visible { text-decoration: underline; }
 
   /* ---------- How we rank ---------- */
   details.method {
@@ -461,7 +480,7 @@
       <ol class="rank-list">
         <li class="top1">
           <div class="rank"><span class="num">1</span><span class="move new">NEW</span></div>
-          <img class="poster" src="posters/celebrity-traitors.jpg" alt="The Celebrity Traitors · Series 2 poster" loading="lazy" width="342" height="513" />
+          <a class="poster-link" href="https://www.youtube.com/results?search_query=The%20Celebrity%20Traitors%20Series%202%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the The Celebrity Traitors · Series 2 trailer on YouTube"><img class="poster" src="posters/celebrity-traitors.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
             <div class="title-row"><h3 class="title">The Celebrity Traitors · Series 2</h3><span class="meta">Reality · UK · since 1 Oct</span></div>
             <div class="where"><span class="plat tv">BBC One</span><span class="plat ott">BBC iPlayer</span></div>
@@ -470,16 +489,13 @@
               <div class="signal"><span class="label">Popularity</span><strong>8.9M</strong> overnight premiere · <strong>14M+</strong> over 7 days</div>
               <div class="signal"><span class="label">Rating</span>Reality show. Ranked on audience size</div>
             </div>
-            <div class="sources">
-              <a href="https://www.irishnews.com/entertainment/celebrity-traitors-premiere-was-most-watched-debut-of-hit-show-in-uk-EJIV3CJUZRNQXLMBV2DT7HCXGU/">Irish News</a>
-              <a href="https://www.broadcastnow.co.uk/ratings">Broadcast</a>
-            </div>
+            <a class="trailer" href="https://www.youtube.com/results?search_query=The%20Celebrity%20Traitors%20Series%202%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
         <li class="top2">
           <div class="rank"><span class="num">2</span><span class="move new">NEW</span></div>
-          <img class="poster" src="posters/below.jpg" alt="Below poster" loading="lazy" width="342" height="513" />
+          <a class="poster-link" href="https://www.youtube.com/results?search_query=Below%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Below trailer on YouTube"><img class="poster" src="posters/below.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
             <div class="title-row"><h3 class="title">Below</h3><span class="meta">Horror · limited series · 6 eps · new this week</span></div>
             <div class="where"><span class="plat ott">Netflix</span></div>
@@ -488,16 +504,13 @@
               <div class="signal"><span class="label">Popularity</span><strong>#1 English show</strong> on Netflix · 17M views</div>
               <div class="signal"><span class="label">Rating</span><strong>85%</strong> Rotten Tomatoes · RogerEbert.com: one of the year's best</div>
             </div>
-            <div class="sources">
-              <a href="https://www.whats-on-netflix.com/news/top-10-reports/netflix-top-10s-josh-hartnetts-below-and-ben-afflecks-animals-top-the-charts/">Netflix Top 10</a>
-              <a href="https://variety.com/2026/tv/reviews/below-review-netflix-josh-hartnett-1236904980/">Variety</a>
-            </div>
+            <a class="trailer" href="https://www.youtube.com/results?search_query=Below%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
         <li class="top3">
           <div class="rank"><span class="num">3</span><span class="move new">NEW</span></div>
-          <img class="poster" src="posters/east-of-eden.jpg" alt="East of Eden poster" loading="lazy" width="342" height="513" />
+          <a class="poster-link" href="https://www.youtube.com/results?search_query=East%20of%20Eden%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the East of Eden trailer on YouTube"><img class="poster" src="posters/east-of-eden.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
             <div class="title-row"><h3 class="title">East of Eden</h3><span class="meta">Period drama · 7 eps · since 1 Oct</span></div>
             <div class="where"><span class="plat ott">Netflix</span></div>
@@ -506,16 +519,13 @@
               <div class="signal"><span class="label">Popularity</span><strong>#2 English show</strong> on Netflix · 12.6M views in week 2</div>
               <div class="signal"><span class="label">Rating</span>Strong reviews for Pugh (The Daily Beast, IGN)</div>
             </div>
-            <div class="sources">
-              <a href="https://www.whats-on-netflix.com/news/top-10-reports/netflix-top-10s-josh-hartnetts-below-and-ben-afflecks-animals-top-the-charts/">Netflix Top 10</a>
-              <a href="https://www.kino.de/news/definitiv-eine-serie-zum-durchsuchten-neue-mini-serie-von-netflix-landet-jetzt-auf-platz-1-der-streaming-charts--01M3Y8S1WF39QNP3DPT5D7DVQC">kino.de</a>
-            </div>
+            <a class="trailer" href="https://www.youtube.com/results?search_query=East%20of%20Eden%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
         <li>
           <div class="rank"><span class="num">4</span><span class="move">—</span></div>
-          <img class="poster" src="posters/neagley.jpg" alt="Neagley poster" loading="lazy" width="342" height="513" />
+          <a class="poster-link" href="https://www.youtube.com/results?search_query=Neagley%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Neagley trailer on YouTube"><img class="poster" src="posters/neagley.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
             <div class="title-row"><h3 class="title">Neagley</h3><span class="meta">Action · 8 eps · since 16 Sep</span></div>
             <div class="where"><span class="plat ott">Prime Video</span></div>
@@ -524,16 +534,13 @@
               <div class="signal"><span class="label">Popularity</span><strong>#3 streaming title</strong> in the US (Nielsen, 1.25B minutes)</div>
               <div class="signal"><span class="label">Rating</span><strong>94%</strong> Rotten Tomatoes · Metacritic 67</div>
             </div>
-            <div class="sources">
-              <a href="https://en.wikipedia.org/wiki/Neagley">Wikipedia</a>
-              <a href="https://www.nielsen.com/data-center/top-ten/">Nielsen</a>
-            </div>
+            <a class="trailer" href="https://www.youtube.com/results?search_query=Neagley%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
         <li>
           <div class="rank"><span class="num">5</span><span class="move">—</span></div>
-          <img class="poster" src="posters/lanterns.jpg" alt="Lanterns poster" loading="lazy" width="342" height="513" />
+          <a class="poster-link" href="https://www.youtube.com/results?search_query=Lanterns%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Lanterns trailer on YouTube"><img class="poster" src="posters/lanterns.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
             <div class="title-row"><h3 class="title">Lanterns</h3><span class="meta">DC superhero drama · 2026</span></div>
             <div class="where"><span class="plat ott">HBO Max</span></div>
@@ -542,16 +549,13 @@
               <div class="signal"><span class="label">Popularity</span><strong>546M minutes</strong> in the US (Nielsen)</div>
               <div class="signal"><span class="label">Rating</span><strong>95%</strong> Rotten Tomatoes</div>
             </div>
-            <div class="sources">
-              <a href="https://comicbookmovie.com/tv/dc/lanterns/lanterns-rotten-tomatoes-score-is-in-and-it-settles-whether-dcs-gamble-paid-off-a229358">ComicBookMovie</a>
-              <a href="https://www.nielsen.com/data-center/top-ten/">Nielsen</a>
-            </div>
+            <a class="trailer" href="https://www.youtube.com/results?search_query=Lanterns%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
         <li>
           <div class="rank"><span class="num">6</span><span class="move">—</span></div>
-          <img class="poster" src="posters/ludwig.jpg" alt="Ludwig · Series 2 poster" loading="lazy" width="342" height="513" />
+          <a class="poster-link" href="https://www.youtube.com/results?search_query=Ludwig%20Series%202%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Ludwig · Series 2 trailer on YouTube"><img class="poster" src="posters/ludwig.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
             <div class="title-row"><h3 class="title">Ludwig · Series 2</h3><span class="meta">Comedy-crime · UK</span></div>
             <div class="where"><span class="plat tv">BBC One</span><span class="plat ott">BBC iPlayer</span><span class="plat ott">BritBox from 13 Oct</span></div>
@@ -560,16 +564,13 @@
               <div class="signal"><span class="label">Popularity</span>Averaged <strong>5.7M</strong> viewers per episode (7-day)</div>
               <div class="signal"><span class="label">Rating</span>Its premiere was the UK's most-watched scripted show of 2026</div>
             </div>
-            <div class="sources">
-              <a href="https://www.broadcastnow.co.uk/ratings">Broadcast</a>
-              <a href="https://www.countryandtownhouse.com/culture/new-tv-shows/">Country &amp; Town House</a>
-            </div>
+            <a class="trailer" href="https://www.youtube.com/results?search_query=Ludwig%20Series%202%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
         <li>
           <div class="rank"><span class="num">7</span><span class="move">—</span></div>
-          <img class="poster" src="posters/monster-lizzie.jpg" alt="Monster: The Lizzie Borden Story poster" loading="lazy" width="342" height="513" />
+          <a class="poster-link" href="https://www.youtube.com/results?search_query=Monster%3A%20The%20Lizzie%20Borden%20Story%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Monster: The Lizzie Borden Story trailer on YouTube"><img class="poster" src="posters/monster-lizzie.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
             <div class="title-row"><h3 class="title">Monster: The Lizzie Borden Story</h3><span class="meta">True-crime anthology · 8 eps</span></div>
             <div class="where"><span class="plat ott">Netflix</span></div>
@@ -578,16 +579,13 @@
               <div class="signal"><span class="label">Popularity</span><strong>#2 streaming title</strong> in the US (Nielsen, 1.36B minutes)</div>
               <div class="signal"><span class="label">Rating</span>Still in Netflix's top 10 after 4 weeks</div>
             </div>
-            <div class="sources">
-              <a href="https://www.nielsen.com/data-center/top-ten/">Nielsen</a>
-              <a href="https://www.whats-on-netflix.com/news/top-10-reports/netflix-top-10s-josh-hartnetts-below-and-ben-afflecks-animals-top-the-charts/">Netflix Top 10</a>
-            </div>
+            <a class="trailer" href="https://www.youtube.com/results?search_query=Monster%3A%20The%20Lizzie%20Borden%20Story%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
         <li>
           <div class="rank"><span class="num">8</span><span class="move">—</span></div>
-          <img class="poster" src="posters/ted-lasso.jpg" alt="Ted Lasso · Season 4 poster" loading="lazy" width="342" height="513" />
+          <a class="poster-link" href="https://www.youtube.com/results?search_query=Ted%20Lasso%20Season%204%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Ted Lasso · Season 4 trailer on YouTube"><img class="poster" src="posters/ted-lasso.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
             <div class="title-row"><h3 class="title">Ted Lasso · Season 4</h3><span class="meta">Comedy · since 5 Aug</span></div>
             <div class="where"><span class="plat ott">Apple TV</span></div>
@@ -596,16 +594,13 @@
               <div class="signal"><span class="label">Popularity</span><strong>842M minutes</strong> in the US (Nielsen)</div>
               <div class="signal"><span class="label">Rating</span><strong>78–89%</strong> Rotten Tomatoes, the show's lowest score yet</div>
             </div>
-            <div class="sources">
-              <a href="https://www.comicbasics.com/?p=179797">Comic Basics</a>
-              <a href="https://www.nielsen.com/data-center/top-ten/">Nielsen</a>
-            </div>
+            <a class="trailer" href="https://www.youtube.com/results?search_query=Ted%20Lasso%20Season%204%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
         <li>
           <div class="rank"><span class="num">9</span><span class="move">—</span></div>
-          <img class="poster" src="posters/strictly.jpg" alt="Strictly Come Dancing poster" loading="lazy" width="342" height="513" />
+          <a class="poster-link" href="https://www.youtube.com/results?search_query=Strictly%20Come%20Dancing%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Strictly Come Dancing trailer on YouTube"><img class="poster" src="posters/strictly.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
             <div class="title-row"><h3 class="title">Strictly Come Dancing</h3><span class="meta">Dance competition · UK · Saturdays</span></div>
             <div class="where"><span class="plat tv">BBC One</span><span class="plat ott">BBC iPlayer</span></div>
@@ -614,15 +609,13 @@
               <div class="signal"><span class="label">Popularity</span><strong>4.8M</strong> for the first live show · Saturday's #1</div>
               <div class="signal"><span class="label">Rating</span>Competition show. Ranked on audience size</div>
             </div>
-            <div class="sources">
-              <a href="https://www.thepinknews.com/2026/09/28/strictly-come-dancing-2026-ratings-viewers/">PinkNews</a>
-            </div>
+            <a class="trailer" href="https://www.youtube.com/results?search_query=Strictly%20Come%20Dancing%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
         <li>
           <div class="rank"><span class="num">10</span><span class="move">—</span></div>
-          <img class="poster" src="posters/the-gentlemen.jpg" alt="The Gentlemen · Season 2 poster" loading="lazy" width="342" height="513" />
+          <a class="poster-link" href="https://www.youtube.com/results?search_query=The%20Gentlemen%20Season%202%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the The Gentlemen · Season 2 trailer on YouTube"><img class="poster" src="posters/the-gentlemen.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
             <div class="title-row"><h3 class="title">The Gentlemen · Season 2</h3><span class="meta">Crime comedy · UK</span></div>
             <div class="where"><span class="plat ott">Netflix</span></div>
@@ -631,10 +624,7 @@
               <div class="signal"><span class="label">Popularity</span>Netflix top 10 for <strong>6 weeks</strong> · 456M US minutes (Nielsen)</div>
               <div class="signal"><span class="label">Rating</span>Long-runner on Netflix's chart</div>
             </div>
-            <div class="sources">
-              <a href="https://www.whats-on-netflix.com/news/top-10-reports/netflix-top-10s-josh-hartnetts-below-and-ben-afflecks-animals-top-the-charts/">Netflix Top 10</a>
-              <a href="https://www.nielsen.com/data-center/top-ten/">Nielsen</a>
-            </div>
+            <a class="trailer" href="https://www.youtube.com/results?search_query=The%20Gentlemen%20Season%202%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
       </ol>

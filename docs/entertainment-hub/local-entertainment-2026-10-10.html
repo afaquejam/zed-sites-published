@@ -356,20 +356,39 @@
   }
   .signal strong { color: var(--md-sys-color-on-surface); font-weight: 650; }
 
-  .sources {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px 12px;
-    margin-top: 8px;
+  /* The poster links to the trailer; the play badge says so. */
+  .poster-link { position: relative; display: block; align-self: start; border-radius: 10px; }
+  .poster-link .play {
+    position: absolute;
+    right: 6px;
+    bottom: 6px;
+    display: grid;
+    place-items: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    font-size: 0.6875rem;
+    padding-left: 2px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.65);
+    transition: transform 0.15s, background 0.15s;
+  }
+  .poster-link:hover .play, .poster-link:focus-visible .play { background: #f00; transform: scale(1.12); }
+  .poster-link:focus-visible { outline: 2px solid var(--md-sys-color-primary); outline-offset: 2px; }
+
+  .trailer {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 10px;
+    padding: 4px 12px;
+    border-radius: 999px;
     font-size: 0.75rem;
-  }
-  .sources a {
-    color: var(--md-sys-color-primary);
+    font-weight: 650;
     text-decoration: none;
-    font-weight: 500;
+    color: var(--md-sys-color-on-primary-container);
+    background: var(--md-sys-color-primary-container);
   }
-  .sources a::after { content: " ↗"; opacity: 0.6; }
-  .sources a:hover { text-decoration: underline; }
+  .trailer:hover, .trailer:focus-visible { text-decoration: underline; }
 
   /* ---------- How we rank ---------- */
   details.method {
@@ -425,15 +444,23 @@
     box-shadow: none;
   }
   /* ---------- Local Entertainment ---------- */
-  .fest { background: var(--md-sys-color-surface-container-low); border-radius: 20px; padding: 14px 18px; margin: 0 0 16px; }
-  .fest .label { display: block; color: var(--cat); font-weight: 700; font-size: 0.6875rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; }
-  .fest-row { display: flex; flex-wrap: wrap; gap: 6px; }
-  .fest-chip { display: inline-flex; flex-direction: column; padding: 6px 12px; border-radius: 12px; background: var(--md-sys-color-surface-container-high); font-size: 0.8125rem; line-height: 1.3; }
-  .fest-chip b { font-weight: 650; }
-  .fest-chip span { color: var(--md-sys-color-outline); font-size: 0.75rem; }
-  .fest-chip.big { background: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container); }
-  .fest-chip.big span { color: inherit; opacity: 0.8; }
+  /* Event links (the Top 10 pages show a trailer link instead). */
+  .sources {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 12px;
+    margin-top: 8px;
+    font-size: 0.75rem;
+  }
+  .sources a {
+    color: var(--md-sys-color-primary);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .sources a::after { content: " ↗"; opacity: 0.6; }
+  .sources a:hover { text-decoration: underline; }
 
+  .wrap > section.group:first-child { margin-top: 20px; }
   section.group { background: var(--md-sys-color-surface-container-low); border-radius: 24px; padding: 20px 24px 8px; margin-bottom: 16px; scroll-margin-top: 200px; }
   section.group h2 { display: flex; align-items: center; gap: 10px; font-size: 1.375rem; font-weight: 600; margin: 0 0 4px; }
   section.group h2 .ico { font-size: 1.125rem; }
@@ -478,61 +505,36 @@
         <a class="cat-chip" style="--chip-cat: var(--cat-indiantv)" href="top10-indian-tv-2026-10-10.html">Indian TV Shows</a>
         <a class="cat-chip active" style="--chip-cat: var(--cat-local)" href="local-entertainment-2026-10-10.html" aria-current="page">Local Entertainment</a>
       </nav>
-      <nav class="cat-nav" aria-label="Sections" style="padding-top:0">
-        <a class="cat-chip" style="--chip-cat: var(--cat-local)" href="#culture">Festivals &amp; Culture</a>
-        <a class="cat-chip" style="--chip-cat: var(--cat-local)" href="#food">Food</a>
-        <a class="cat-chip" style="--chip-cat: var(--cat-local)" href="#movies">Movies in Cinemas</a>
-        <a class="cat-chip" style="--chip-cat: var(--cat-local)" href="#sport">Sport to Stream</a>
-      </nav>
     </div>
   </div>
 
   <div class="wrap">
-    <nav class="chip-nav" aria-label="Recent weeks">
-      <a class="chip active" href="local-entertainment-2026-10-10.html" aria-current="page"><span class="dow">Sat</span><span class="dom">10 Oct</span></a>
-    </nav>
-
-    <div class="thread">
-      <span class="ct-label">Coming up</span>
-      <span>Durga Puja and Diwali fall in the next four weeks. The Bengali Association of Finland holds its free <strong>Durga Puja Open Day</strong> in Espoo on <strong>Sun 18 Oct</strong>. Two days earlier, on <strong>Fri 16 Oct</strong>, Espoo Cultural Centre stages the free dance-theatre show <strong><em>Ramayana – The Triumph of Light over Darkness</strong></em>. The biggest event is Espoo's free <strong>Diwali – Festival of Lights</strong> in Tapiola on <strong>Sat 31 Oct</strong>, with over 250 performers, a bazaar and food stalls. In cinemas, Rajinikanth's <strong>Jailer 2</strong> opens worldwide on <strong>15 Oct</strong> and <strong>Ramayana: Part 1</strong> on <strong>6 Nov</strong>. On TV, India play New Zealand in five T20Is from <strong>22 Oct</strong>.</span>
-    </div>
-
-    <div class="fest">
-      <span class="label">Festival calendar · Finnish dates</span>
-      <div class="fest-row">
-        <span class="fest-chip"><b>Navratri</b><span>Sun 11 – Mon 19 Oct</span></span>
-        <span class="fest-chip"><b>Durga Puja</b><span>Fri 16 – Wed 21 Oct (Shashthi to Dashami)</span></span>
-        <span class="fest-chip"><b>Dussehra / Vijayadashami</b><span>Tue 20 Oct · Vijay Muhurat 14:42–15:21</span></span>
-        <span class="fest-chip"><b>Karwa Chauth</b><span>Thu 29 Oct · moonrise 17:12</span></span>
-        <span class="fest-chip"><b>Dhanteras</b><span>Fri 6 Nov · puja 16:18–17:37</span></span>
-        <span class="fest-chip big"><b>Diwali</b><span>Sun 8 Nov · Lakshmi Puja 16:10–17:29</span></span>
-      </div>
-    </div>
-
     <section class="group" id="culture">
       <h2><span class="ico">🪔</span> Festivals &amp; Culture <span class="count">3 events</span></h2>
       <ul class="events">
         <li>
           <div class="when"><span class="dow">Fri</span><span class="day">16</span><span class="mon">Oct</span></div>
           <div>
-            <div class="title-row"><h3 class="title">Ramayana – The Triumph of Light over Darkness</h3><span class="status ok">CONFIRMED</span></div>
+            <div class="title-row"><h3 class="title">Ramayana: The Victory of Light over Darkness</h3><span class="status ok">CONFIRMED</span></div>
             <div class="facts"><span class="city">Espoo</span><span>Espoo Cultural Centre, Tapiola</span><span>19:00–20:30</span><span>Free entry</span></div>
-            <p class="blurb">A dance-theatre retelling of the Ramayana that combines classical Indian dance, music and storytelling. It is part of Espoo's Diwali 2026 programme, suits all ages and runs 90 minutes with no interval.</p>
+            <p class="blurb">Fusia Performing Arts retells the Ramayana through classical Indian dance, music and storytelling. It runs 90 minutes with no interval and is the warm-up event for Espoo's Diwali festival.</p>
             <div class="sources">
+              <a href="https://suomiintiaseura.fi/upcoming-events/">Suomi-Intia-Seura</a>
               <a href="https://www.espoo.fi/en/diwali-festival-lights">City of Espoo</a>
-              <a href="https://www.gowith.events/event/ramayana-the-triumph-of-light-over-darkness-2026">GoWith listing</a>
             </div>
           </div>
         </li>
 
         <li>
-          <div class="when"><span class="dow">Sun</span><span class="day">18</span><span class="mon">Oct</span></div>
+          <div class="when range"><span class="dow">Fri–Wed</span><span class="day">16–21</span><span class="mon">Oct</span></div>
           <div>
-            <div class="title-row"><h3 class="title">Durga Puja 2026 Open Day</h3><span class="status ok">CONFIRMED</span></div>
-            <div class="facts"><span class="city">Espoo</span><span>Espoo International School, Lillhemtintie 1</span><span>11:00–19:00</span><span>Free entry</span></div>
-            <p class="blurb">The Bengali Association of Finland has run the capital region's oldest and largest Durga Puja since 1999. The open day welcomes everyone, Bengali or not.</p>
+            <div class="title-row"><h3 class="title">Durga Puja</h3><span class="status wait">NOT ANNOUNCED YET</span></div>
+            <div class="facts"><span class="city">Espoo · Vantaa · Helsinki</span><span>Bengali Association of Finland · Pujari Finland · Mohamaya (Kivikko)</span></div>
+            <p class="blurb">The Helsinki area has held Durga Puja every year since 1999. BAF's 2024 puja was at <strong>Espoo International School</strong>. None of the three groups has posted 2026 dates yet, and they usually announce only a few weeks ahead.</p>
             <div class="sources">
-              <a href="https://bafin.fi/">Bengali Association of Finland</a>
+              <a href="https://bafin.fi/durga-puja/">BAF</a>
+              <a href="https://wiki.aineetonkulttuuriperinto.fi/wiki/Indian_Durga_Puja_in_Finland">Living Heritage wiki</a>
+              <a href="https://www.drikpanchang.com/navratri/durga-puja/durga-puja-calendar.html?geoname-id=658225">Dates: Drik Panchang</a>
             </div>
           </div>
         </li>
@@ -541,11 +543,11 @@
           <div class="when"><span class="dow">Sat</span><span class="day">31</span><span class="mon">Oct</span></div>
           <div>
             <div class="title-row"><h3 class="title">Diwali – Festival of Lights</h3><span class="status ok">CONFIRMED</span></div>
-            <div class="facts"><span class="city">Espoo</span><span>Espoo Cultural Centre &amp; Kulttuuriaukio, Tapiola</span><span>13:00–20:00 (stage programme 14:00–18:30)</span><span>Free entry</span></div>
-            <p class="blurb">The capital region's biggest Diwali event, run by CultureEspoo and Suomi-Intia-Seura, with dance and music from over 250 performers. There are also a bazaar, henna, games and workshops for all ages. Nearly 12,000 people came last year.</p>
+            <div class="facts"><span class="city">Espoo</span><span>Espoo Cultural Centre &amp; Kulttuuriaukio, Tapiola</span><span>13:00–20:00</span><span>Free entry</span></div>
+            <p class="blurb">The capital region's biggest Diwali event, run by Suomi-Intia-Seura with the City of Espoo. It has dance and music from <strong>250+ performers</strong>, Indian food stalls, and games and workshops for all ages.</p>
             <div class="sources">
               <a href="https://www.espoo.fi/en/diwali-festival-lights">City of Espoo</a>
-              <a href="https://www.espoo.fi/en/events/espooevents:agqhxh2tuy">Espoo event listing</a>
+              <a href="https://suomiintiaseura.fi/upcoming-events/">Suomi-Intia-Seura</a>
             </div>
           </div>
         </li>
@@ -553,35 +555,48 @@
     </section>
 
     <section class="group" id="food">
-      <h2><span class="ico">🍛</span> Food <span class="count">1 pick</span></h2>
+      <h2><span class="ico">🍛</span> Food <span class="count">2 picks</span></h2>
       <ul class="events">
+        <li>
+          <div class="when weekly"><span class="dow">Every</span><span class="day">Sun</span><span class="mon">Weekly</span></div>
+          <div>
+            <div class="title-row"><h3 class="title">ISKCON Sunday Feast</h3><span class="status check">CHECK TIMES</span></div>
+            <div class="facts"><span class="city">Helsinki</span><span>Malmi Manor, Malmi</span></div>
+            <p class="blurb">A weekly vegetarian feast with kirtan at the Hare Krishna temple, with <strong>Govinda's restaurant</strong> next door. Expect special menus around Diwali and Govardhan Puja (Annakut).</p>
+            <div class="sources">
+              <a href="https://centres.iskcon.org/centre/iskcon-finland-malmi-manor/">ISKCON Finland</a>
+            </div>
+          </div>
+        </li>
+
         <li>
           <div class="when"><span class="dow">Sat</span><span class="day">31</span><span class="mon">Oct</span></div>
           <div>
-            <div class="title-row"><h3 class="title">Diwali food stalls and bazaar</h3><span class="status ok">CONFIRMED</span></div>
-            <div class="facts"><span class="city">Espoo</span><span>Espoo Cultural Centre &amp; Kulttuuriaukio, Tapiola</span><span>13:00–20:00</span><span>Free entry; food paid separately</span></div>
-            <p class="blurb">At the Diwali – Festival of Lights event, food stalls sell savoury snacks and sweets, and the bazaar sells handicrafts, jewellery and festival items.</p>
+            <div class="title-row"><h3 class="title">Diwali food stalls</h3><span class="status ok">CONFIRMED</span></div>
+            <div class="facts"><span class="city">Espoo</span><span>Kulttuuriaukio, Tapiola</span><span>13:00–20:00</span></div>
+            <p class="blurb">Indian food stalls are part of the Diwali festival above, which makes it the best Indian street-food day of the autumn.</p>
             <div class="sources">
-              <a href="https://www.espoo.fi/en/events/espooevents:agqhxh2tuy">Espoo event listing</a>
+              <a href="https://www.espoo.fi/en/diwali-festival-lights">City of Espoo</a>
             </div>
           </div>
         </li>
       </ul>
-      <p class="note">I found no standalone Indian food festival or pop-up in Helsinki, Espoo or Vantaa in this window. The Diwali stalls in Espoo are the main festival food.</p>
+      <p class="note">There are no other Indian food events listed in the capital region before Diwali. Helsinki's India Day food festival was on 16 Aug.</p>
     </section>
 
     <section class="group" id="movies">
       <h2><span class="ico">🎬</span> Movies in Cinemas <span class="count">3 releases</span></h2>
-      <p class="note">Big Indian films often open in Finland on the same day as in India, usually at Finnkino Kinopalatsi or Tennispalatsi in Helsinki. Finnish screenings could not be confirmed for any of these, so check Finnkino before you go.</p>
+      <p class="note">Big Indian films often open in Finland on the same day as in India, at Finnkino Kinopalatsi and Tennispalatsi in Helsinki. None of the screenings below is confirmed yet, so check Finnkino before you go.</p>
       <ul class="events">
         <li>
           <div class="when"><span class="dow">Thu</span><span class="day">15</span><span class="mon">Oct</span></div>
           <div>
             <div class="title-row"><h3 class="title">Jailer 2</h3><span class="status check">CHECK FINNKINO</span></div>
-            <div class="facts"><span class="city">Tamil</span><span>Rajinikanth · directed by Nelson</span><span>Worldwide release 15 Oct</span><span>Finnish screenings not confirmed</span></div>
-            <p class="blurb">Rajinikanth's sequel to the 2023 blockbuster <em>Jailer</em>, released by Sun Pictures for the Navratri holidays. This is the biggest South Indian release of the month.</p>
+            <div class="facts"><span class="city">Tamil</span><span>Rajinikanth · dir. Nelson Dilipkumar</span><span>Worldwide release</span></div>
+            <p class="blurb">The biggest Indian release of the month. Kerala pre-sales passed ₹1.61 crore within an hour of opening.</p>
             <div class="sources">
-              <a href="https://www.dtnext.in/entertainment/cinema/jailer-2-release-date-reconfirmed-for-october">DT Next</a>
+              <a href="https://www.onmanorama.com/entertainment/entertainment-news/2026/10/11/jailer-2-pre-booking-sales-kerala-rajinikanth-mohanlal-nelson-dilipkumar.html">Onmanorama</a>
+              <a href="https://www.finnkino.fi/">Finnkino</a>
             </div>
           </div>
         </li>
@@ -589,23 +604,24 @@
         <li>
           <div class="when"><span class="dow">Fri</span><span class="day">16</span><span class="mon">Oct</span></div>
           <div>
-            <div class="title-row"><h3 class="title">Om: Chapter 1</h3><span class="status check">CHECK FINNKINO</span></div>
-            <div class="facts"><span class="city">Tamil</span><span>Dhanush</span><span>Release 16 Oct</span><span>Finnish screenings not confirmed</span></div>
-            <p class="blurb">Dhanush's new film opens the day after <em>Jailer 2</em>, during the Navratri holidays.</p>
+            <div class="title-row"><h3 class="title">Ranabaali</h3><span class="status check">CHECK FINNKINO</span></div>
+            <div class="facts"><span class="city">Telugu</span><span>Vijay Deverakonda · Rashmika Mandanna</span></div>
+            <p class="blurb">A big Telugu release with two of the industry's most popular young stars. Telugu films have been among Finnkino's most regular Indian screenings.</p>
             <div class="sources">
-              <a href="https://www.dtnext.in/entertainment/cinema/jailer-2-release-date-reconfirmed-for-october">DT Next</a>
+              <a href="https://www.filmibeat.com/bollywood/movies/october-2026.html">Filmibeat</a>
+              <a href="https://yle.fi/a/74-20137673">Yle: Indian films in Finland</a>
             </div>
           </div>
         </li>
 
         <li>
-          <div class="when"><span class="dow">Fri</span><span class="day">6</span><span class="mon">Nov</span></div>
+          <div class="when"><span class="dow">Fri</span><span class="day">16</span><span class="mon">Oct</span></div>
           <div>
-            <div class="title-row"><h3 class="title">Ramayana: Part 1</h3><span class="status check">CHECK FINNKINO</span></div>
-            <div class="facts"><span class="city">Hindi</span><span>Ranbir Kapoor, Sai Pallavi, Yash · directed by Nitesh Tiwari</span><span>Worldwide release 6 Nov</span><span>Finnish screenings not confirmed</span></div>
-            <p class="blurb">Nitesh Tiwari's big-budget epic, with Sunny Deol as Hanuman, opens worldwide on Dhanteras, two days before Diwali. It is a natural family outing for the festival weekend.</p>
+            <div class="title-row"><h3 class="title">Raftaar</h3><span class="status check">CHECK FINNKINO</span></div>
+            <div class="facts"><span class="city">Hindi</span><span>Rajkummar Rao · Keerthy Suresh</span></div>
+            <p class="blurb">The main Hindi release of the week. <em>Dhoom 4</em> is listed for 31 Oct.</p>
             <div class="sources">
-              <a href="https://www.etvbharat.com/en/entertainment/ramayana-release-date-locked-with-english-trailer-makers-confirm-when-ranbir-kapoor-and-yash-starrer-will-hit-big-screens-enn26080601419">ETV Bharat</a>
+              <a href="https://www.filmibeat.com/bollywood/movies/october-2026.html">Filmibeat</a>
             </div>
           </div>
         </li>
@@ -613,101 +629,30 @@
     </section>
 
     <section class="group" id="sport">
-      <h2><span class="ico">🏏</span> Sport to Stream <span class="count">8 fixtures</span></h2>
-      <p class="note">Times are Finnish time: EEST (UTC+3) until Sun 25 Oct, EET (UTC+2) after. I couldn't confirm any channel or streaming service in Finland for these matches.</p>
+      <h2><span class="ico">🏏</span> Sport to Stream <span class="count">2 fixtures</span></h2>
+      <p class="note">Times are Finnish time. I couldn't confirm which service streams these matches in Finland, because published rights lists cover India, the UK, the US and a few other markets, but not Finland.</p>
       <ul class="events">
         <li>
           <div class="when"><span class="dow">Sat</span><span class="day">17</span><span class="mon">Oct</span></div>
           <div>
-            <div class="title-row"><h3 class="title">India v West Indies – 5th T20I</h3><span class="status ok">16:30 FINNISH TIME</span></div>
-            <div class="facts"><span class="city">Bengaluru, India</span><span>T20I, last match of the series</span><span>16:30 Finnish time</span><span>Where to watch in Finland not confirmed</span></div>
-            <p class="blurb">The last match of the home T20I series against West Indies, a good Saturday-afternoon watch.</p>
+            <div class="title-row"><h3 class="title">India vs West Indies, 5th T20I</h3><span class="status ok">16:30 FINNISH TIME</span></div>
+            <div class="facts"><span class="city">Bengaluru</span><span>M. Chinnaswamy Stadium</span><span>19:00 IST</span></div>
+            <p class="blurb">The last match of the five-game T20I series. It starts on a Saturday afternoon in Finland, which makes it an easy one to watch with friends.</p>
             <div class="sources">
-              <a href="https://www.espn.com/cricket/scores/team/6/india">ESPN</a>
+              <a href="https://www.espn.in/cricket/scores/series/24289?type=t20i">ESPNcricinfo fixtures</a>
+              <a href="https://www.wisden.com/series/india-vs-west-indies-m-2026/cricket-news/ind-vs-wi-t20is-live-streaming-and-tv-channels-where-to-watch-live-and-match-timings-for-west-indies-tour-of-india">Wisden: where to watch</a>
             </div>
           </div>
         </li>
 
         <li>
-          <div class="when"><span class="dow">Thu</span><span class="day">22</span><span class="mon">Oct</span></div>
+          <div class="when range"><span class="dow">From Sat</span><span class="day">7 Nov</span><span class="mon">to 1 Dec</span></div>
           <div>
-            <div class="title-row"><h3 class="title">New Zealand v India – 1st T20I</h3><span class="status ok">10:00 FINNISH TIME</span></div>
-            <div class="facts"><span class="city">Christchurch, New Zealand</span><span>T20I 1 of 5</span><span>10:00 Finnish time</span><span>Where to watch in Finland not confirmed</span></div>
-            <p class="blurb">India's tour of New Zealand opens with a five-match T20I series. All the evening matches in New Zealand fall on Finnish mornings.</p>
+            <div class="title-row"><h3 class="title">India tour of New Zealand</h3><span class="status check">EARLY MORNINGS</span></div>
+            <div class="facts"><span class="city">New Zealand</span><span>5 ODIs (2nd ODI Wellington, 7 Nov) · Tests from 19 Nov</span></div>
+            <p class="blurb">New Zealand is 11 hours ahead of Finland, so day-night ODIs will start in the very early hours here.</p>
             <div class="sources">
-              <a href="https://www.espn.com.au/cricket/scores/series/24469">ESPN</a>
-            </div>
-          </div>
-        </li>
-
-        <li>
-          <div class="when"><span class="dow">Sat</span><span class="day">24</span><span class="mon">Oct</span></div>
-          <div>
-            <div class="title-row"><h3 class="title">New Zealand v India – 2nd T20I</h3><span class="status ok">10:00 FINNISH TIME</span></div>
-            <div class="facts"><span class="city">Christchurch, New Zealand</span><span>T20I 2 of 5</span><span>10:00 Finnish time</span><span>Where to watch in Finland not confirmed</span></div>
-            <p class="blurb">A Saturday-morning match, the easiest of the series for families in Finland to watch.</p>
-            <div class="sources">
-              <a href="https://www.espn.com.au/cricket/scores/series/24469">ESPN</a>
-            </div>
-          </div>
-        </li>
-
-        <li>
-          <div class="when"><span class="dow">Tue</span><span class="day">27</span><span class="mon">Oct</span></div>
-          <div>
-            <div class="title-row"><h3 class="title">New Zealand v India – 3rd T20I</h3><span class="status ok">09:00 FINNISH TIME</span></div>
-            <div class="facts"><span class="city">Wellington, New Zealand</span><span>T20I 3 of 5</span><span>09:00 Finnish time</span><span>Where to watch in Finland not confirmed</span></div>
-            <p class="blurb">Clocks in Finland go back on 25 Oct, so the start is an hour earlier from here on.</p>
-            <div class="sources">
-              <a href="https://www.espn.com.au/cricket/scores/series/24469">ESPN</a>
-            </div>
-          </div>
-        </li>
-
-        <li>
-          <div class="when"><span class="dow">Fri</span><span class="day">30</span><span class="mon">Oct</span></div>
-          <div>
-            <div class="title-row"><h3 class="title">New Zealand v India – 4th T20I</h3><span class="status ok">09:00 FINNISH TIME</span></div>
-            <div class="facts"><span class="city">Auckland, New Zealand</span><span>T20I 4 of 5</span><span>09:00 Finnish time</span><span>Where to watch in Finland not confirmed</span></div>
-            <p class="blurb">The fourth T20I, at Eden Park.</p>
-            <div class="sources">
-              <a href="https://www.espn.com.au/cricket/scores/series/24469">ESPN</a>
-            </div>
-          </div>
-        </li>
-
-        <li>
-          <div class="when"><span class="dow">Sun</span><span class="day">1</span><span class="mon">Nov</span></div>
-          <div>
-            <div class="title-row"><h3 class="title">New Zealand v India – 5th T20I</h3><span class="status ok">09:00 FINNISH TIME</span></div>
-            <div class="facts"><span class="city">Hamilton, New Zealand</span><span>T20I 5 of 5</span><span>09:00 Finnish time</span><span>Where to watch in Finland not confirmed</span></div>
-            <p class="blurb">The last T20I falls on a Sunday morning in Finland.</p>
-            <div class="sources">
-              <a href="https://www.espn.com.au/cricket/scores/series/24469">ESPN</a>
-            </div>
-          </div>
-        </li>
-
-        <li>
-          <div class="when"><span class="dow">Wed</span><span class="day">4</span><span class="mon">Nov</span></div>
-          <div>
-            <div class="title-row"><h3 class="title">New Zealand v India – 1st ODI</h3><span class="status ok">04:00 FINNISH TIME</span></div>
-            <div class="facts"><span class="city">Auckland, New Zealand</span><span>ODI 1 of 5</span><span>04:00 Finnish time</span><span>Where to watch in Finland not confirmed</span></div>
-            <p class="blurb">The ODI series starts with a very early morning in Finland. Catch the second half before work.</p>
-            <div class="sources">
-              <a href="https://www.espn.com.au/cricket/scores/series/24469">ESPN</a>
-            </div>
-          </div>
-        </li>
-
-        <li>
-          <div class="when"><span class="dow">Sat</span><span class="day">7</span><span class="mon">Nov</span></div>
-          <div>
-            <div class="title-row"><h3 class="title">New Zealand v India – 2nd ODI</h3><span class="status ok">04:00 FINNISH TIME</span></div>
-            <div class="facts"><span class="city">Wellington, New Zealand</span><span>ODI 2 of 5</span><span>04:00 Finnish time</span><span>Where to watch in Finland not confirmed</span></div>
-            <p class="blurb">A Saturday ODI that starts before dawn in Finland and runs through the morning.</p>
-            <div class="sources">
-              <a href="https://www.espn.com.au/cricket/scores/series/24469">ESPN</a>
+              <a href="https://www.espn.com.au/cricket/scores/series/24469">ESPN fixtures</a>
             </div>
           </div>
         </li>
@@ -726,7 +671,7 @@
 
     <footer>
       Sources: organisers' own pages · City of Espoo · Drik Panchang · Filmibeat · ESPNcricinfo<br />
-      Entertainment Hub · updated every Saturday · generated 14 Oct 2026, 21:10
+      Entertainment Hub · updated every Saturday · generated 14 Oct 2026, 15:00
     </footer>
   </div>
 </body>

@@ -356,20 +356,39 @@
   }
   .signal strong { color: var(--md-sys-color-on-surface); font-weight: 650; }
 
-  .sources {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px 12px;
-    margin-top: 8px;
+  /* The poster links to the trailer; the play badge says so. */
+  .poster-link { position: relative; display: block; align-self: start; border-radius: 10px; }
+  .poster-link .play {
+    position: absolute;
+    right: 6px;
+    bottom: 6px;
+    display: grid;
+    place-items: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    font-size: 0.6875rem;
+    padding-left: 2px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.65);
+    transition: transform 0.15s, background 0.15s;
+  }
+  .poster-link:hover .play, .poster-link:focus-visible .play { background: #f00; transform: scale(1.12); }
+  .poster-link:focus-visible { outline: 2px solid var(--md-sys-color-primary); outline-offset: 2px; }
+
+  .trailer {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 10px;
+    padding: 4px 12px;
+    border-radius: 999px;
     font-size: 0.75rem;
-  }
-  .sources a {
-    color: var(--md-sys-color-primary);
+    font-weight: 650;
     text-decoration: none;
-    font-weight: 500;
+    color: var(--md-sys-color-on-primary-container);
+    background: var(--md-sys-color-primary-container);
   }
-  .sources a::after { content: " ↗"; opacity: 0.6; }
-  .sources a:hover { text-decoration: underline; }
+  .trailer:hover, .trailer:focus-visible { text-decoration: underline; }
 
   /* ---------- How we rank ---------- */
   details.method {
@@ -449,7 +468,7 @@
 
     <div class="thread">
       <span class="ct-label">This week</span>
-      <span><strong>Bigg Boss 20</strong> leads both TV and streaming. It is #1 on FMN's TV chart, and Ormax counted 21M viewers in one week. <strong>The Great Indian Kapil Show</strong> is the big streaming hit, with 12.88M viewers on Netflix in five days. <strong>Dupahiya</strong> Season 2 is the best-reviewed new show this week. Netflix's <em>Shaque</em> is popular despite poor reviews.</span>
+      <span><strong>Bigg Boss 20</strong> is the biggest show in the country, on TV and on JioHotstar. On streaming, <strong>Waiting Hai</strong> had the best opening week of any Indian web series this year. Two new shows, <strong>Hunkkaar</strong> and <strong>Dupahiya S2</strong>, got good reviews and both made the list.</span>
     </div>
 
     <section class="chart">
@@ -461,181 +480,151 @@
       <ol class="rank-list">
         <li class="top1">
           <div class="rank"><span class="num">1</span><span class="move">—</span></div>
-          <img class="poster" src="posters/bigg-boss.jpg" alt="Bigg Boss · Season 20 poster" loading="lazy" width="342" height="513" />
+          <a class="poster-link" href="https://www.youtube.com/results?search_query=Bigg%20Boss%2020%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Bigg Boss 20 trailer on YouTube"><img class="poster" src="posters/bigg-boss.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
-            <div class="title-row"><h3 class="title">Bigg Boss · Season 20</h3><span class="meta">Reality show · Colors / JioHotstar · since 6 Sep</span></div>
-            <div class="where"><span class="plat tv">Colors</span><span class="plat ott">JioHotstar</span></div>
-            <p class="blurb">Salman Khan hosts the 20th season of the house-arrest reality show. Ormax says it was the first show other than cricket to pass 20M viewers in one week this year.</p>
+            <div class="title-row"><h3 class="title">Bigg Boss 20</h3><span class="meta">Reality · Hindi · since 6 Sep</span></div>
+            <div class="where"><span class="plat tv">Colors TV</span><span class="plat ott">JioHotstar</span></div>
+            <p class="blurb">Salman Khan is back as host for the show's <strong>20th season</strong>. Each episode streams first on JioHotstar at 9 pm and then airs on Colors at 10:30 pm, so it shows up on both the TV and streaming charts.</p>
             <div class="signals">
-              <div class="signal"><span class="label">Popularity</span><strong>#1</strong> FMN Week 40 (837) · <strong>21M</strong> viewers in a week (Ormax)</div>
-              <div class="signal"><span class="label">Rating</span>Reality show · ranked on audience size</div>
+              <div class="signal"><span class="label">Popularity</span><strong>#1 on TV</strong>: FMN Week 40, score 837</div>
+              <div class="signal"><span class="label">Rating</span>Reality show. Ranked on audience buzz, not reviews</div>
             </div>
-            <div class="sources">
-              <a href="https://www.filmymasalanow.in/hindi-t-v-serials-trp/">FilmyMasalaNow</a>
-              <a href="https://www.freepressjournal.in/entertainment/bigg-boss-20-salman-khans-shirtless-episode-breaks-viewership-record-crosses-20-million-views-as-he-takes-a-stand-against-body-shaming">Free Press Journal</a>
-              <a href="https://www.medianews4u.com/bigg-boss-s20-draws-42-35-mn-viewers-in-opening-window-on-jiohotstar-chrome-dm-cott/">medianews4u</a>
-            </div>
+            <a class="trailer" href="https://www.youtube.com/results?search_query=Bigg%20Boss%2020%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
         <li class="top2">
           <div class="rank"><span class="num">2</span><span class="move new">NEW</span></div>
-          <img class="poster" src="posters/the-great-indian-kapil-show.jpg" alt="The Great Indian Kapil Show · Season 5 poster" loading="lazy" width="342" height="513" />
+          <a class="poster-link" href="https://www.youtube.com/results?search_query=Waiting%20Hai%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Waiting Hai trailer on YouTube"><img class="poster" src="posters/waiting-hai.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
-            <div class="title-row"><h3 class="title">The Great Indian Kapil Show · Season 5</h3><span class="meta">Comedy talk show · Netflix · since 26 Sep</span></div>
-            <div class="where"><span class="plat ott">Netflix</span></div>
-            <p class="blurb">Kapil Sharma is back with Sunil Grover, Krushna Abhishek and Archana Puran Singh, and a new episode drops every Saturday. Ajay Devgn and the <em>Drishyam</em> cast opened the season.</p>
+            <div class="title-row"><h3 class="title">Waiting Hai</h3><span class="meta">Crime-comedy · Hindi · 7 eps · 16 Sep</span></div>
+            <div class="where"><span class="plat ott">Prime Video</span><span class="plat ott">MX Player (free)</span></div>
+            <p class="blurb">A railway police constable (<strong>Divyenndu</strong>) goes after a tech whiz (<strong>Bhuvan Arora</strong>) who runs a Tatkal train-ticket scam. Directed by Sameer Vidwans.</p>
             <div class="signals">
-              <div class="signal"><span class="label">Popularity</span><strong>12.88M</strong> viewers 4–8 Oct (Chrome DM COTT) · in Netflix India top 10</div>
-              <div class="signal"><span class="label">Rating</span>Comedy talk show · ranked on audience size</div>
+              <div class="signal"><span class="label">Popularity</span><strong>5.8M viewers</strong> in week 1, the best Indian web-series opening of 2026 (Ormax)</div>
+              <div class="signal"><span class="label">Rating</span><strong>4/5</strong> Flickonclick · M9 praises Divyenndu</div>
             </div>
-            <div class="sources">
-              <a href="https://mediabrief.com/kapil-show-s5-draws-12-88mn-viewers-over-oct-4-8-cott/">MediaBrief</a>
-              <a href="https://www.whats-on-netflix.com/most-popular/">What's on Netflix</a>
-            </div>
+            <a class="trailer" href="https://www.youtube.com/results?search_query=Waiting%20Hai%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
         <li class="top3">
-          <div class="rank"><span class="num">3</span><span class="move">—</span></div>
-          <img class="poster" src="posters/oh-humnava-tum-dena-saath-mera.jpg" alt="Oh Humnava Tum Dena Saath Mera poster" loading="lazy" width="342" height="513" />
+          <div class="rank"><span class="num">3</span><span class="move new">NEW</span></div>
+          <a class="poster-link" href="https://www.youtube.com/results?search_query=Hunkkaar%3A%20The%20Roar%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Hunkkaar: The Roar trailer on YouTube"><img class="poster" src="posters/hunkkaar.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
-            <div class="title-row"><h3 class="title">Oh Humnava Tum Dena Saath Mera</h3><span class="meta">Romantic drama · Star Plus · since 20 Apr</span></div>
-            <div class="where"><span class="plat tv">Star Plus</span><span class="plat ott">JioHotstar</span></div>
-            <p class="blurb">Sriti Jha and Shabir Ahluwalia, the couple from <em>Kumkum Bhagya</em>, are back together as an artist and a reserved businessman. It is the top daily soap on FMN's chart this week.</p>
+            <div class="title-row"><h3 class="title">Hunkkaar: The Roar</h3><span class="meta">Courtroom drama · Hindi · 6 eps · 25 Sep</span></div>
+            <div class="where"><span class="plat ott">JioHotstar</span></div>
+            <p class="blurb"><strong>Aneet Padda</strong> (<em>Saiyaara</em>) plays a frightened, angry teenager who takes on a powerful godman in court. <strong>Fatima Sana Shaikh</strong> plays the investigating officer.</p>
             <div class="signals">
-              <div class="signal"><span class="label">Popularity</span><strong>#2</strong> FMN Week 40 (830) · top daily soap</div>
-              <div class="signal"><span class="label">Rating</span>Daily soap · ranked on audience size</div>
+              <div class="signal"><span class="label">Popularity</span>Big new JioHotstar release, helped by Padda's success in <em>Saiyaara</em></div>
+              <div class="signal"><span class="label">Rating</span><strong>4/5</strong> Free Press Journal · &quot;compelling&quot;, Onmanorama</div>
             </div>
-            <div class="sources">
-              <a href="https://www.filmymasalanow.in/hindi-t-v-serials-trp/">FilmyMasalaNow</a>
-              <a href="https://en.wikipedia.org/wiki/Oh_Humnava_Tum_Dena_Saath_Mera">Wikipedia</a>
-            </div>
+            <a class="trailer" href="https://www.youtube.com/results?search_query=Hunkkaar%3A%20The%20Roar%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
         <li>
-          <div class="rank"><span class="num">4</span><span class="move">—</span></div>
-          <img class="poster" src="posters/seher-hone-ko-hai.jpg" alt="Seher Hone Ko Hai poster" loading="lazy" width="342" height="513" />
+          <div class="rank"><span class="num">4</span><span class="move new">NEW</span></div>
+          <a class="poster-link" href="https://www.youtube.com/results?search_query=Dupahiya%20Season%202%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Dupahiya Season 2 trailer on YouTube"><img class="poster" src="posters/dupahiya-s2.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
-            <div class="title-row"><h3 class="title">Seher Hone Ko Hai</h3><span class="meta">Family drama · Colors · since 2 Dec 2025</span></div>
-            <div class="where"><span class="plat tv">Colors</span><span class="plat ott">JioHotstar</span></div>
-            <p class="blurb">A Lucknow drama about a mother who will not let her daughter be married off young, as she was. After a seven-year leap, Bhavika Sharma plays the new Seher opposite Parth Samthaan.</p>
+            <div class="title-row"><h3 class="title">Dupahiya Season 2</h3><span class="meta">Comedy · Hindi · 1 Oct</span></div>
+            <div class="where"><span class="plat ott">Prime Video</span></div>
+            <p class="blurb">The village comedy is back with more chaos and new problems. Critics say it keeps the first season's charm, but it no longer feels as fresh.</p>
             <div class="signals">
-              <div class="signal"><span class="label">Popularity</span><strong>#3</strong> FMN Week 40 (828) · Colors' top soap</div>
-              <div class="signal"><span class="label">Rating</span>Daily soap · ranked on audience size</div>
+              <div class="signal"><span class="label">Popularity</span>Prime Video's main Hindi release in October</div>
+              <div class="signal"><span class="label">Rating</span><strong>3/5</strong> Pinkvilla · THR India positive</div>
             </div>
-            <div class="sources">
-              <a href="https://www.filmymasalanow.in/hindi-t-v-serials-trp/">FilmyMasalaNow</a>
-              <a href="https://en.wikipedia.org/wiki/Seher_%E2%80%93_Hone_Ko_Hai">Wikipedia</a>
-            </div>
+            <a class="trailer" href="https://www.youtube.com/results?search_query=Dupahiya%20Season%202%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
         <li>
           <div class="rank"><span class="num">5</span><span class="move">—</span></div>
-          <img class="poster" src="posters/tumm-se-tumm-tak.jpg" alt="Tumm Se Tumm Tak poster" loading="lazy" width="342" height="513" />
+          <a class="poster-link" href="https://www.youtube.com/results?search_query=Oh%20Humnava%20TDSM%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Oh Humnava TDSM trailer on YouTube"><img class="poster" src="posters/oh-humnava.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
-            <div class="title-row"><h3 class="title">Tumm Se Tumm Tak</h3><span class="meta">Romantic drama · Zee TV · since 7 Jul 2025</span></div>
-            <div class="where"><span class="plat tv">Zee TV</span><span class="plat ott">ZEE5</span></div>
-            <p class="blurb">Sharad Kelkar plays a 46-year-old tycoon who falls for a 19-year-old, played by Niharika Chouksey. It is still Zee TV's strongest show, more than a year after launch.</p>
+            <div class="title-row"><h3 class="title">Oh Humnava TDSM</h3><span class="meta">Daily drama · Hindi</span></div>
+            <div class="where"><span class="plat tv">Star Plus</span><span class="plat ott">JioHotstar</span></div>
+            <p class="blurb">Star Plus's top daily drama this week, just behind Bigg Boss on FMN's TV chart.</p>
             <div class="signals">
-              <div class="signal"><span class="label">Popularity</span><strong>#4</strong> FMN Week 40 (826) · Zee TV's top show</div>
-              <div class="signal"><span class="label">Rating</span>Daily soap · ranked on audience size</div>
+              <div class="signal"><span class="label">Popularity</span><strong>#2 on TV</strong>: FMN Week 40, score 830</div>
+              <div class="signal"><span class="label">Rating</span>Daily soap. Ranked on audience buzz</div>
             </div>
-            <div class="sources">
-              <a href="https://www.filmymasalanow.in/hindi-t-v-serials-trp/">FilmyMasalaNow</a>
-              <a href="https://filmibeat.com/television/news/2025/tumm-se-tumm-tak-premiere-date-time-slot-sharad-kelkar-niharika-chouksey-to-play-aryavardhan-a-468189.html">Filmibeat</a>
-            </div>
+            <a class="trailer" href="https://www.youtube.com/results?search_query=Oh%20Humnava%20TDSM%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
         <li>
           <div class="rank"><span class="num">6</span><span class="move">—</span></div>
-          <img class="poster" src="posters/yeh-fitoor-tera.jpg" alt="Yeh Fitoor Tera poster" loading="lazy" width="342" height="513" />
+          <a class="poster-link" href="https://www.youtube.com/results?search_query=Seher%20Hone%20Ko%20Hai%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Seher Hone Ko Hai trailer on YouTube"><img class="poster" src="posters/seher-hone-ko-hai.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
-            <div class="title-row"><h3 class="title">Yeh Fitoor Tera</h3><span class="meta">Romantic drama · Star Plus · since 5 Aug</span></div>
+            <div class="title-row"><h3 class="title">Seher Hone Ko Hai</h3><span class="meta">Daily drama · Hindi</span></div>
+            <div class="where"><span class="plat tv">Colors TV</span><span class="plat ott">JioHotstar</span></div>
+            <p class="blurb">Colors' strongest daily drama, third on FMN's TV chart this week.</p>
+            <div class="signals">
+              <div class="signal"><span class="label">Popularity</span><strong>#3 on TV</strong>: FMN Week 40, score 828</div>
+              <div class="signal"><span class="label">Rating</span>Daily soap. Ranked on audience buzz</div>
+            </div>
+            <a class="trailer" href="https://www.youtube.com/results?search_query=Seher%20Hone%20Ko%20Hai%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
+          </div>
+        </li>
+
+        <li>
+          <div class="rank"><span class="num">7</span><span class="move">—</span></div>
+          <a class="poster-link" href="https://www.youtube.com/results?search_query=Kaun%20Banega%20Crorepati%2018%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Kaun Banega Crorepati 18 trailer on YouTube"><img class="poster" src="posters/kbc.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
+          <div class="body">
+            <div class="title-row"><h3 class="title">Kaun Banega Crorepati 18</h3><span class="meta">Quiz · Hindi · Mon–Fri 9 pm · since 10 Aug</span></div>
+            <div class="where"><span class="plat tv">Sony TV</span><span class="plat ott">SonyLIV</span></div>
+            <p class="blurb"><strong>Amitabh Bachchan</strong> is back as host. This season's theme, &quot;Sochna Padega&quot;, is about thinking a question through rather than just remembering the answer. More than 25 sponsors signed up before it began.</p>
+            <div class="signals">
+              <div class="signal"><span class="label">Popularity</span>Watched on both TV and SonyLIV. In August it was in Boxoffy's streaming top 25</div>
+              <div class="signal"><span class="label">Rating</span>Quiz show. Ranked on audience buzz</div>
+            </div>
+            <a class="trailer" href="https://www.youtube.com/results?search_query=Kaun%20Banega%20Crorepati%2018%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
+          </div>
+        </li>
+
+        <li>
+          <div class="rank"><span class="num">8</span><span class="move">—</span></div>
+          <a class="poster-link" href="https://www.youtube.com/results?search_query=Anupamaa%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Anupamaa trailer on YouTube"><img class="poster" src="posters/anupamaa.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
+          <div class="body">
+            <div class="title-row"><h3 class="title">Anupamaa</h3><span class="meta">Family drama · Hindi</span></div>
             <div class="where"><span class="plat tv">Star Plus</span><span class="plat ott">JioHotstar</span></div>
-            <p class="blurb">Debchandrima Singha Roy and Ishaan Dhawan lead a love story, and Aman Verma returns to Star Plus in it. Two months after launch, it already beats <em>Anupamaa</em> and <em>Yeh Rishta</em> on FMN's chart.</p>
+            <p class="blurb">Rupali Ganguly's long-running family drama. For years it has never really left the top 10.</p>
             <div class="signals">
-              <div class="signal"><span class="label">Popularity</span><strong>#5</strong> FMN Week 40 (823)</div>
-              <div class="signal"><span class="label">Rating</span>Daily soap · ranked on audience size</div>
+              <div class="signal"><span class="label">Popularity</span>In FMN's TV top 10 for Week 40</div>
+              <div class="signal"><span class="label">Rating</span>Daily soap. Ranked on audience buzz</div>
             </div>
-            <div class="sources">
-              <a href="https://www.filmymasalanow.in/hindi-t-v-serials-trp/">FilmyMasalaNow</a>
-              <a href="https://filmibeat.com/television/news/2026/yeh-fitoor-tera-full-cast-launch-date-debchandrima-singha-roy-ishaan-dhawan-star-plus-time-udne-ki-522433.html">Filmibeat</a>
-            </div>
-          </div>
-        </li>
-
-        <li>
-          <div class="rank"><span class="num">7</span><span class="move new">NEW</span></div>
-          <img class="poster" src="posters/family-full-house.jpg" alt="Family Full House with Rohit Sharma poster" loading="lazy" width="342" height="513" />
-          <div class="body">
-            <div class="title-row"><h3 class="title">Family Full House with Rohit Sharma</h3><span class="meta">Family game show · Sony / SonyLIV · since 19 Sep</span></div>
-            <div class="where"><span class="plat tv">Sony Entertainment Television</span><span class="plat ott">SonyLIV</span></div>
-            <p class="blurb">Cricketer Rohit Sharma makes his TV debut as host of a family game show. It drew 7.62M viewers in its first three days.</p>
-            <div class="signals">
-              <div class="signal"><span class="label">Popularity</span><strong>7.62M</strong> viewers 19–21 Sep (Chrome DM COTT)</div>
-              <div class="signal"><span class="label">Rating</span>Game show · ranked on audience size</div>
-            </div>
-            <div class="sources">
-              <a href="https://www.medianews4u.com/family-full-house-with-rohit-sharma-records-7-62-mn-viewers-on-sonyliv-chrome-dm-cott/">medianews4u</a>
-            </div>
-          </div>
-        </li>
-
-        <li>
-          <div class="rank"><span class="num">8</span><span class="move new">NEW</span></div>
-          <img class="poster" src="posters/dupahiya.jpg" alt="Dupahiya · Season 2 poster" loading="lazy" width="342" height="513" />
-          <div class="body">
-            <div class="title-row"><h3 class="title">Dupahiya · Season 2</h3><span class="meta">Village comedy · Prime Video · since 1 Oct</span></div>
-            <div class="where"><span class="plat ott">Prime Video</span></div>
-            <p class="blurb">Gajraj Rao and Renuka Shahane return to the village comedy. This season is about an exam paper leak, and Nirahua joins the cast. It is the best-reviewed new Hindi series this week.</p>
-            <div class="signals">
-              <div class="signal"><span class="label">Popularity</span><strong>New</strong> on Prime Video 1 Oct · no viewer numbers yet</div>
-              <div class="signal"><span class="label">Rating</span><strong>3/5</strong> Pinkvilla · <strong>3/5</strong> Flickonclick · positive Hollywood Reporter India review</div>
-            </div>
-            <div class="sources">
-              <a href="https://www.hollywoodreporterindia.com/reviews/streaming/dupahiya-season-2-series-review-all-grown-up-and-free-from-the-panchayat-baggage">Hollywood Reporter India</a>
-              <a href="https://www.flickonclick.com/dupahiya-season-2-review/">Flickonclick</a>
-            </div>
+            <a class="trailer" href="https://www.youtube.com/results?search_query=Anupamaa%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
         <li>
           <div class="rank"><span class="num">9</span><span class="move">—</span></div>
-          <img class="poster" src="posters/chumbak.jpg" alt="Chumbak poster" loading="lazy" width="342" height="513" />
+          <a class="poster-link" href="https://www.youtube.com/results?search_query=Tum%20Se%20Tum%20Tak%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Tum Se Tum Tak trailer on YouTube"><img class="poster" src="posters/tum-se-tum-tak.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
-            <div class="title-row"><h3 class="title">Chumbak</h3><span class="meta">Sitcom · Netflix · since early Sep</span></div>
-            <div class="where"><span class="plat ott">Netflix</span></div>
-            <p class="blurb">Neena Gupta leads a 16-episode sitcom about five families in one housing colony. It comes from Jamnadas Majethia, co-creator of <em>Sarabhai vs Sarabhai</em>. It has stayed in Netflix India's top 10 for weeks.</p>
+            <div class="title-row"><h3 class="title">Tum Se Tum Tak</h3><span class="meta">Romantic drama · Hindi</span></div>
+            <div class="where"><span class="plat tv">Zee TV</span><span class="plat ott">ZEE5</span></div>
+            <p class="blurb">Zee TV's top show this week. It is fourth on FMN's TV chart.</p>
             <div class="signals">
-              <div class="signal"><span class="label">Popularity</span><strong>In Netflix India top 10</strong> shows</div>
-              <div class="signal"><span class="label">Rating</span>Mixed reviews · Hollywood Reporter India: &quot;relentless silliness&quot;</div>
+              <div class="signal"><span class="label">Popularity</span><strong>#4 on TV</strong>: FMN Week 40</div>
+              <div class="signal"><span class="label">Rating</span>Daily soap. Ranked on audience buzz</div>
             </div>
-            <div class="sources">
-              <a href="https://www.hollywoodreporterindia.com/reviews/streaming/chumbak-series-review-relentless-silliness-in-neena-guptas-netflix-sitcom">Hollywood Reporter India</a>
-              <a href="https://www.whats-on-netflix.com/most-popular/">What's on Netflix</a>
-            </div>
+            <a class="trailer" href="https://www.youtube.com/results?search_query=Tum%20Se%20Tum%20Tak%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
         <li>
-          <div class="rank"><span class="num">10</span><span class="move new">NEW</span></div>
-          <img class="poster" src="posters/shaque-trust-no-one.jpg" alt="Shaque: Trust No One poster" loading="lazy" width="342" height="513" />
+          <div class="rank"><span class="num">10</span><span class="move">—</span></div>
+          <a class="poster-link" href="https://www.youtube.com/results?search_query=Pritam%20and%20Pedro%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Pritam and Pedro trailer on YouTube"><img class="poster" src="posters/pritam-and-pedro.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
-            <div class="title-row"><h3 class="title">Shaque: Trust No One</h3><span class="meta">Psychological thriller · Netflix · since 24 Sep</span></div>
-            <div class="where"><span class="plat ott">Netflix</span></div>
-            <p class="blurb">Parineeti Chopra and Jennifer Winget lead a seven-episode mystery directed by Rensil D'Silva. Viewers are watching it, but critics say the plot falls apart.</p>
+            <div class="title-row"><h3 class="title">Pritam and Pedro</h3><span class="meta">Comedy-thriller · Hindi · since 3 Jul</span></div>
+            <div class="where"><span class="plat ott">JioHotstar</span></div>
+            <p class="blurb">Rajkumar Hirani's first series, starring <strong>Arshad Warsi</strong> and Vir Hirani. It is still bringing in new viewers three months after release.</p>
             <div class="signals">
-              <div class="signal"><span class="label">Popularity</span><strong>In Netflix India top 10</strong> shows</div>
-              <div class="signal"><span class="label">Rating</span><strong>25%</strong> Rotten Tomatoes (12 reviews) · 3/5 Business Upturn</div>
+              <div class="signal"><span class="label">Popularity</span><strong>23M viewers</strong>, the most-watched Indian web series of 2026 so far (Ormax)</div>
+              <div class="signal"><span class="label">Rating</span>Ormax expects it to reach about 27M viewers</div>
             </div>
-            <div class="sources">
-              <a href="https://www.rottentomatoes.com/tv/shaque_trust_no_one">Rotten Tomatoes</a>
-              <a href="https://www.whats-on-netflix.com/most-popular/">What's on Netflix</a>
-            </div>
+            <a class="trailer" href="https://www.youtube.com/results?search_query=Pritam%20and%20Pedro%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
       </ol>
@@ -647,14 +636,14 @@
         <li><strong>Popularity:</strong> Ormax StreamView for streaming (unique viewers in India who watched at least 30 minutes). For TV, BARC weekly ratings are the main source, with FMN's weekly rating as the fallback.</li>
         <li><strong>Ratings:</strong> critic scores from major Indian outlets for scripted shows. Reality, quiz and daily shows are ranked on popularity alone.</li>
         <li><strong>One list for TV and streaming:</strong> a show that is on both counts once.</li>
-        <li><strong>This week:</strong> BARC weekly TV ratings are still paused during a policy change, so the TV rankings use FMN's Week 40 chart. Ormax's weekly StreamView lists are not public, so streaming uses Chrome DM COTT viewer data and Netflix India's top 10.</li>
+        <li><strong>This week:</strong> BARC weekly TV ratings are paused because of a policy change at BARC, so the TV rankings use FMN's Week 40 chart.</li>
         <li><strong>NEW:</strong> with a previous week to compare, NEW marks a title new to the list; on a list's first week, a title released in the last 3 weeks.</li>
       </ul>
     </details>
 
     <footer>
       Posters: TMDB · Sources: Ormax Media · BARC · FMN Rating · Hollywood Reporter India · Free Press Journal · Flickonclick<br />
-      Entertainment Hub · updated every Saturday · generated 14 Oct 2026, 21:11
+      Entertainment Hub · updated every Saturday · generated 14 Oct 2026, 15:00
     </footer>
   </div>
 </body>

@@ -356,20 +356,39 @@
   }
   .signal strong { color: var(--md-sys-color-on-surface); font-weight: 650; }
 
-  .sources {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px 12px;
-    margin-top: 8px;
+  /* The poster links to the trailer; the play badge says so. */
+  .poster-link { position: relative; display: block; align-self: start; border-radius: 10px; }
+  .poster-link .play {
+    position: absolute;
+    right: 6px;
+    bottom: 6px;
+    display: grid;
+    place-items: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    font-size: 0.6875rem;
+    padding-left: 2px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.65);
+    transition: transform 0.15s, background 0.15s;
+  }
+  .poster-link:hover .play, .poster-link:focus-visible .play { background: #f00; transform: scale(1.12); }
+  .poster-link:focus-visible { outline: 2px solid var(--md-sys-color-primary); outline-offset: 2px; }
+
+  .trailer {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 10px;
+    padding: 4px 12px;
+    border-radius: 999px;
     font-size: 0.75rem;
-  }
-  .sources a {
-    color: var(--md-sys-color-primary);
+    font-weight: 650;
     text-decoration: none;
-    font-weight: 500;
+    color: var(--md-sys-color-on-primary-container);
+    background: var(--md-sys-color-primary-container);
   }
-  .sources a::after { content: " ↗"; opacity: 0.6; }
-  .sources a:hover { text-decoration: underline; }
+  .trailer:hover, .trailer:focus-visible { text-decoration: underline; }
 
   /* ---------- How we rank ---------- */
   details.method {
@@ -461,7 +480,7 @@
       <ol class="rank-list">
         <li class="top1">
           <div class="rank"><span class="num">1</span><span class="move new">NEW</span></div>
-          <img class="poster" src="posters/toy-story-5.jpg" alt="Toy Story 5 poster" loading="lazy" width="342" height="513" />
+          <a class="poster-link" href="https://www.youtube.com/results?search_query=Toy%20Story%205%202026%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Toy Story 5 trailer on YouTube"><img class="poster" src="posters/toy-story-5.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
             <div class="title-row"><h3 class="title">Toy Story 5</h3><span class="meta">Pixar · on Disney+ since 23 Sep</span></div>
             <div class="where"><span class="plat ott">Disney+</span></div>
@@ -470,16 +489,13 @@
               <div class="signal"><span class="label">Popularity</span><strong>#1 streaming title</strong> in the US (Nielsen, 1.54B minutes) · $1.13B worldwide</div>
               <div class="signal"><span class="label">Rating</span><strong>93%</strong> Rotten Tomatoes · <strong>A</strong> CinemaScore</div>
             </div>
-            <div class="sources">
-              <a href="https://au.variety.com/2026/film/news/toy-story-5-disney-plus-release-date-streaming-how-to-watch-39780/">Variety</a>
-              <a href="https://www.nielsen.com/data-center/top-ten/">Nielsen</a>
-            </div>
+            <a class="trailer" href="https://www.youtube.com/results?search_query=Toy%20Story%205%202026%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
         <li class="top2">
           <div class="rank"><span class="num">2</span><span class="move new">NEW</span></div>
-          <img class="poster" src="posters/forgotten-island.jpg" alt="Forgotten Island poster" loading="lazy" width="342" height="513" />
+          <a class="poster-link" href="https://www.youtube.com/results?search_query=Forgotten%20Island%202026%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Forgotten Island trailer on YouTube"><img class="poster" src="posters/forgotten-island.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
             <div class="title-row"><h3 class="title">Forgotten Island</h3><span class="meta">DreamWorks · in cinemas since late Sep</span></div>
             <div class="where"><span class="plat cinema">In cinemas</span></div>
@@ -488,16 +504,13 @@
               <div class="signal"><span class="label">Popularity</span><strong>$30.5M</strong> US total · #6 this weekend</div>
               <div class="signal"><span class="label">Rating</span><strong>95%</strong> Rotten Tomatoes · 96% audience</div>
             </div>
-            <div class="sources">
-              <a href="https://slashfilm.com/2271162/forgotten-island-acclaimed-2026-animated-movie-box-office-flop">SlashFilm</a>
-              <a href="https://www.khaleejtimes.com/dreamworks-filipino-animation-forgotten-island-100-percent-rotten-tomatoes">Khaleej Times</a>
-            </div>
+            <a class="trailer" href="https://www.youtube.com/results?search_query=Forgotten%20Island%202026%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
         <li class="top3">
           <div class="rank"><span class="num">3</span><span class="move">—</span></div>
-          <img class="poster" src="posters/hoppers.jpg" alt="Hoppers poster" loading="lazy" width="342" height="513" />
+          <a class="poster-link" href="https://www.youtube.com/results?search_query=Hoppers%202026%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Hoppers trailer on YouTube"><img class="poster" src="posters/hoppers.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
             <div class="title-row"><h3 class="title">Hoppers</h3><span class="meta">Pixar · on Disney+ since 3 Jun</span></div>
             <div class="where"><span class="plat ott">Disney+</span></div>
@@ -506,16 +519,13 @@
               <div class="signal"><span class="label">Popularity</span>~$380M worldwide · #8 streaming film in the US (Nielsen)</div>
               <div class="signal"><span class="label">Rating</span><strong>94%</strong> Rotten Tomatoes</div>
             </div>
-            <div class="sources">
-              <a href="https://www.aol.com/lifestyle/pixars-hoppers-opens-88-million-134237623.html">AOL</a>
-              <a href="https://www.nielsen.com/data-center/top-ten/">Nielsen</a>
-            </div>
+            <a class="trailer" href="https://www.youtube.com/results?search_query=Hoppers%202026%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
         <li>
           <div class="rank"><span class="num">4</span><span class="move new">NEW</span></div>
-          <img class="poster" src="posters/ice-age.jpg" alt="Ice Age (the whole series) poster" loading="lazy" width="342" height="513" />
+          <a class="poster-link" href="https://www.youtube.com/results?search_query=Ice%20Age%202002%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Ice Age (the whole series) trailer on YouTube"><img class="poster" src="posters/ice-age.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
             <div class="title-row"><h3 class="title">Ice Age (the whole series)</h3><span class="meta">Blue Sky · 2002–2016 · new to Netflix</span></div>
             <div class="where"><span class="plat ott">Netflix</span></div>
@@ -524,15 +534,13 @@
               <div class="signal"><span class="label">Popularity</span><strong>5 films</strong> in Netflix's English film top 10 · Ice Age 11.2M views</div>
               <div class="signal"><span class="label">Rating</span>Family classic</div>
             </div>
-            <div class="sources">
-              <a href="https://www.whats-on-netflix.com/news/top-10-reports/netflix-top-10s-josh-hartnetts-below-and-ben-afflecks-animals-top-the-charts/">Netflix Top 10</a>
-            </div>
+            <a class="trailer" href="https://www.youtube.com/results?search_query=Ice%20Age%202002%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
         <li>
           <div class="rank"><span class="num">5</span><span class="move">—</span></div>
-          <img class="poster" src="posters/puss-in-boots.jpg" alt="Puss in Boots: The Last Wish poster" loading="lazy" width="342" height="513" />
+          <a class="poster-link" href="https://www.youtube.com/results?search_query=Puss%20in%20Boots%3A%20The%20Last%20Wish%202022%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Puss in Boots: The Last Wish trailer on YouTube"><img class="poster" src="posters/puss-in-boots.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
             <div class="title-row"><h3 class="title">Puss in Boots: The Last Wish</h3><span class="meta">DreamWorks · 2022</span></div>
             <div class="where"><span class="plat ott">Netflix</span></div>
@@ -541,15 +549,13 @@
               <div class="signal"><span class="label">Popularity</span>#9 streaming film in the US (Nielsen)</div>
               <div class="signal"><span class="label">Rating</span>Oscar nominee, Best Animated Feature</div>
             </div>
-            <div class="sources">
-              <a href="https://www.nielsen.com/data-center/top-ten/">Nielsen</a>
-            </div>
+            <a class="trailer" href="https://www.youtube.com/results?search_query=Puss%20in%20Boots%3A%20The%20Last%20Wish%202022%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
         <li>
           <div class="rank"><span class="num">6</span><span class="move">—</span></div>
-          <img class="poster" src="posters/mario-galaxy.jpg" alt="The Super Mario Galaxy Movie poster" loading="lazy" width="342" height="513" />
+          <a class="poster-link" href="https://www.youtube.com/results?search_query=The%20Super%20Mario%20Galaxy%20Movie%202026%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the The Super Mario Galaxy Movie trailer on YouTube"><img class="poster" src="posters/mario-galaxy.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
             <div class="title-row"><h3 class="title">The Super Mario Galaxy Movie</h3><span class="meta">Illumination · on Peacock since 30 Jul</span></div>
             <div class="where"><span class="plat ott">Peacock</span></div>
@@ -558,15 +564,13 @@
               <div class="signal"><span class="label">Popularity</span><strong>$1B+</strong> worldwide</div>
               <div class="signal"><span class="label">Rating</span>Biggest animated hit of the year in cinemas</div>
             </div>
-            <div class="sources">
-              <a href="https://tribune.com.pk/story/2615820/super-mario-galaxy-movie-lands-streaming-date-after-1b-box-office-run">Tribune</a>
-            </div>
+            <a class="trailer" href="https://www.youtube.com/results?search_query=The%20Super%20Mario%20Galaxy%20Movie%202026%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
         <li>
           <div class="rank"><span class="num">7</span><span class="move">—</span></div>
-          <img class="poster" src="posters/zootopia-2.jpg" alt="Zootopia 2 poster" loading="lazy" width="342" height="513" />
+          <a class="poster-link" href="https://www.youtube.com/results?search_query=Zootopia%202%202025%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Zootopia 2 trailer on YouTube"><img class="poster" src="posters/zootopia-2.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
             <div class="title-row"><h3 class="title">Zootopia 2</h3><span class="meta">Disney · 2025</span></div>
             <div class="where"><span class="plat ott">Disney+</span></div>
@@ -575,15 +579,13 @@
               <div class="signal"><span class="label">Popularity</span><strong>#1 kids' film</strong> of H1 2026 (Nielsen)</div>
               <div class="signal"><span class="label">Rating</span>Year-long favourite</div>
             </div>
-            <div class="sources">
-              <a href="https://www.nielsen.com/news-center/2026/stranger-things-bluey-the-pitt-top-nielsens-streaming-charts-through-first-half-of-2026/">Nielsen</a>
-            </div>
+            <a class="trailer" href="https://www.youtube.com/results?search_query=Zootopia%202%202025%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
         <li>
           <div class="rank"><span class="num">8</span><span class="move new">NEW</span></div>
-          <img class="poster" src="posters/paw-patrol-dino.jpg" alt="PAW Patrol: The Dino Movie poster" loading="lazy" width="342" height="513" />
+          <a class="poster-link" href="https://www.youtube.com/results?search_query=PAW%20Patrol%3A%20The%20Dino%20Movie%202026%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the PAW Patrol: The Dino Movie trailer on YouTube"><img class="poster" src="posters/paw-patrol-dino.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
             <div class="title-row"><h3 class="title">PAW Patrol: The Dino Movie</h3><span class="meta">Preschool · digital since 29 Sep</span></div>
             <div class="where"><span class="plat ott">Rent / buy digital</span></div>
@@ -592,16 +594,13 @@
               <div class="signal"><span class="label">Popularity</span>Opened in 620 UK cinemas, the franchise's widest release there</div>
               <div class="signal"><span class="label">Rating</span>Made for preschoolers</div>
             </div>
-            <div class="sources">
-              <a href="https://www.screendaily.com/news/uk-ireland-box-office-preview-paw-patrol-the-dino-movie-eli-roths-ice-cream-man-lead-new-releases/5219193.article">Screen Daily</a>
-              <a href="https://www.boxofficemojo.com/release/rl73039873">Box Office Mojo</a>
-            </div>
+            <a class="trailer" href="https://www.youtube.com/results?search_query=PAW%20Patrol%3A%20The%20Dino%20Movie%202026%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
         <li>
           <div class="rank"><span class="num">9</span><span class="move new">NEW</span></div>
-          <img class="poster" src="posters/doraemon-undersea.jpg" alt="Doraemon: Nobita and the Castle of the Undersea Devil poster" loading="lazy" width="342" height="513" />
+          <a class="poster-link" href="https://www.youtube.com/results?search_query=Doraemon%20Castle%20of%20the%20Undersea%20Devil%202026%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Doraemon: Nobita and the Castle of the Undersea Devil trailer on YouTube"><img class="poster" src="posters/doraemon-undersea.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
             <div class="title-row"><h3 class="title">Doraemon: Nobita and the Castle of the Undersea Devil</h3><span class="meta">Anime · Hindi dub · since 2 Oct</span></div>
             <div class="where"><span class="plat cinema">In Indian cinemas</span></div>
@@ -610,15 +609,13 @@
               <div class="signal"><span class="label">Popularity</span><strong>₹20 crore</strong> in India so far</div>
               <div class="signal"><span class="label">Rating</span>Family favourite in India</div>
             </div>
-            <div class="sources">
-              <a href="https://www.sacnilk.com/entertainmenttopbar/Box_Office_Collection">Sacnilk</a>
-            </div>
+            <a class="trailer" href="https://www.youtube.com/results?search_query=Doraemon%20Castle%20of%20the%20Undersea%20Devil%202026%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
         <li>
           <div class="rank"><span class="num">10</span><span class="move new">NEW</span></div>
-          <img class="poster" src="posters/monster-mia.jpg" alt="Monster Mia poster" loading="lazy" width="342" height="513" />
+          <a class="poster-link" href="https://www.youtube.com/results?search_query=Monster%20Mia%202026%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Monster Mia trailer on YouTube"><img class="poster" src="posters/monster-mia.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
             <div class="title-row"><h3 class="title">Monster Mia</h3><span class="meta">Halloween animation · limited release</span></div>
             <div class="where"><span class="plat cinema">Cinemas (limited)</span></div>
@@ -627,10 +624,7 @@
               <div class="signal"><span class="label">Popularity</span>Small Halloween release</div>
               <div class="signal"><span class="label">Rating</span><strong>7/10</strong> Geek Vibes Nation · &quot;enjoyable Halloween watch&quot;</div>
             </div>
-            <div class="sources">
-              <a href="https://geekvibesnation.com/monster-mia-review/">Geek Vibes Nation</a>
-              <a href="https://www.seattleschild.com/monster-mia-movie-review-kids/">Seattle's Child</a>
-            </div>
+            <a class="trailer" href="https://www.youtube.com/results?search_query=Monster%20Mia%202026%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
       </ol>
