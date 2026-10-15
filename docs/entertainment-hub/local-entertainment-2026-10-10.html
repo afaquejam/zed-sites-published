@@ -181,27 +181,6 @@
   }
   .chip.empty { opacity: 0.45; pointer-events: none; }
 
-  /* ---------- The week's thread (lead banner) ---------- */
-  .thread {
-    display: flex;
-    gap: 12px;
-    background: var(--md-sys-color-secondary-container);
-    color: var(--md-sys-color-on-secondary-container);
-    border-radius: 20px;
-    padding: 18px 20px;
-    margin: 8px 0 20px;
-    font-size: 0.9375rem;
-  }
-  .thread .ct-label {
-    font-weight: 700;
-    font-size: 0.6875rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    white-space: nowrap;
-    padding-top: 3px;
-  }
-  .thread strong { font-weight: 700; }
-
   /* ---------- The chart ---------- */
   section.chart {
     background: var(--md-sys-color-surface-container-low);
@@ -421,7 +400,6 @@
     .app-bar-inner { padding: 0 14px; }
     section.chart { padding: 16px 16px 4px; border-radius: 20px; }
     section.chart h2 { font-size: 1.25rem; }
-    .thread { flex-direction: column; gap: 6px; }
     ol.rank-list > li { grid-template-columns: 28px 60px 1fr; gap: 10px; }
     .poster { width: 60px; }
     .poster { border-radius: 8px; }

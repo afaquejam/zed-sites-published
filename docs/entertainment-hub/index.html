@@ -181,27 +181,6 @@
   }
   .chip.empty { opacity: 0.45; pointer-events: none; }
 
-  /* ---------- The week's thread (lead banner) ---------- */
-  .thread {
-    display: flex;
-    gap: 12px;
-    background: var(--md-sys-color-secondary-container);
-    color: var(--md-sys-color-on-secondary-container);
-    border-radius: 20px;
-    padding: 18px 20px;
-    margin: 8px 0 20px;
-    font-size: 0.9375rem;
-  }
-  .thread .ct-label {
-    font-weight: 700;
-    font-size: 0.6875rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    white-space: nowrap;
-    padding-top: 3px;
-  }
-  .thread strong { font-weight: 700; }
-
   /* ---------- The chart ---------- */
   section.chart {
     background: var(--md-sys-color-surface-container-low);
@@ -421,7 +400,6 @@
     .app-bar-inner { padding: 0 14px; }
     section.chart { padding: 16px 16px 4px; border-radius: 20px; }
     section.chart h2 { font-size: 1.25rem; }
-    .thread { flex-direction: column; gap: 6px; }
     ol.rank-list > li { grid-template-columns: 28px 60px 1fr; gap: 10px; }
     .poster { width: 60px; }
     .poster { border-radius: 8px; }
@@ -466,11 +444,6 @@
       <a class="chip active" href="top10-hollywood-movies-2026-10-10.html" aria-current="page"><span class="dow">Sat</span><span class="dom">10 Oct</span></a>
     </nav>
 
-    <div class="thread">
-      <span class="ct-label">This week</span>
-      <span><strong>Resident Evil</strong> and <strong>The Odyssey</strong> are both hits with critics and audiences. <strong>Other Mommy</strong> won the weekend despite terrible reviews. On streaming, Netflix's <strong>Animals</strong> was the most-watched film of the week.</span>
-    </div>
-
     <section class="chart">
       <h2>Top 10 Hollywood Movies <span class="count">cinemas + streaming</span></h2>
       <div class="legend">
@@ -480,7 +453,7 @@
       <ol class="rank-list">
         <li class="top1">
           <div class="rank"><span class="num">1</span><span class="move">—</span></div>
-          <a class="poster-link" href="https://www.youtube.com/results?search_query=Resident%20Evil%202026%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Resident Evil trailer on YouTube"><img class="poster" src="posters/resident-evil.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
+          <a class="poster-link" href="https://www.youtube.com/watch?v=mNd1gb19A-c" target="_blank" rel="noopener" aria-label="Watch the Resident Evil trailer on YouTube"><img class="poster" src="posters/resident-evil.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
             <div class="title-row"><h3 class="title">Resident Evil</h3><span class="meta">Horror · Sony · since 18 Sep</span></div>
             <div class="where"><span class="plat cinema">In cinemas</span></div>
@@ -489,13 +462,13 @@
               <div class="signal"><span class="label">Popularity</span><strong>$138.7M</strong> US total · #3 this weekend, in week 4</div>
               <div class="signal"><span class="label">Rating</span><strong>95%</strong> Rotten Tomatoes · <strong>B+</strong> CinemaScore</div>
             </div>
-            <a class="trailer" href="https://www.youtube.com/results?search_query=Resident%20Evil%202026%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
+            <a class="trailer" href="https://www.youtube.com/watch?v=mNd1gb19A-c" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
         <li class="top2">
           <div class="rank"><span class="num">2</span><span class="move">—</span></div>
-          <a class="poster-link" href="https://www.youtube.com/results?search_query=The%20Odyssey%202026%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the The Odyssey trailer on YouTube"><img class="poster" src="posters/the-odyssey.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
+          <a class="poster-link" href="https://www.youtube.com/watch?v=Mzw2ttJD2qQ" target="_blank" rel="noopener" aria-label="Watch the The Odyssey trailer on YouTube"><img class="poster" src="posters/the-odyssey.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
             <div class="title-row"><h3 class="title">The Odyssey</h3><span class="meta">Epic · Universal · since 17 Jul</span></div>
             <div class="where"><span class="plat cinema">In cinemas</span></div>
@@ -504,13 +477,13 @@
               <div class="signal"><span class="label">Popularity</span><strong>$623M</strong> to date · still in the US top 10</div>
               <div class="signal"><span class="label">Rating</span><strong>94%</strong> Rotten Tomatoes · 97% audience, Nolan's best</div>
             </div>
-            <a class="trailer" href="https://www.youtube.com/results?search_query=The%20Odyssey%202026%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
+            <a class="trailer" href="https://www.youtube.com/watch?v=Mzw2ttJD2qQ" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
         <li class="top3">
           <div class="rank"><span class="num">3</span><span class="move new">NEW</span></div>
-          <a class="poster-link" href="https://www.youtube.com/results?search_query=Primetime%202026%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Primetime trailer on YouTube"><img class="poster" src="posters/primetime.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
+          <a class="poster-link" href="https://www.youtube.com/watch?v=5fHXyqQOKL8" target="_blank" rel="noopener" aria-label="Watch the Primetime trailer on YouTube"><img class="poster" src="posters/primetime.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
             <div class="title-row"><h3 class="title">Primetime</h3><span class="meta">True-crime drama · A24 · since 25 Sep</span></div>
             <div class="where"><span class="plat cinema">In cinemas</span></div>
@@ -519,13 +492,13 @@
               <div class="signal"><span class="label">Popularity</span><strong>$41.5M</strong> US total · #7 this weekend</div>
               <div class="signal"><span class="label">Rating</span><strong>86%</strong> Rotten Tomatoes · Certified Fresh</div>
             </div>
-            <a class="trailer" href="https://www.youtube.com/results?search_query=Primetime%202026%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
+            <a class="trailer" href="https://www.youtube.com/watch?v=5fHXyqQOKL8" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
         <li>
           <div class="rank"><span class="num">4</span><span class="move new">NEW</span></div>
-          <a class="poster-link" href="https://www.youtube.com/results?search_query=Other%20Mommy%202026%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Other Mommy trailer on YouTube"><img class="poster" src="posters/other-mommy.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
+          <a class="poster-link" href="https://www.youtube.com/watch?v=bEpTgowZ1dI" target="_blank" rel="noopener" aria-label="Watch the Other Mommy trailer on YouTube"><img class="poster" src="posters/other-mommy.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
             <div class="title-row"><h3 class="title">Other Mommy</h3><span class="meta">Horror thriller · opened 9 Oct</span></div>
             <div class="where"><span class="plat cinema">In cinemas</span></div>
@@ -534,13 +507,13 @@
               <div class="signal"><span class="label">Popularity</span><strong>#1 this weekend</strong> · $27.5M opening</div>
               <div class="signal"><span class="label">Rating</span><strong>19%</strong> Rotten Tomatoes · <strong>D+</strong> CinemaScore</div>
             </div>
-            <a class="trailer" href="https://www.youtube.com/results?search_query=Other%20Mommy%202026%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
+            <a class="trailer" href="https://www.youtube.com/watch?v=bEpTgowZ1dI" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
         <li>
           <div class="rank"><span class="num">5</span><span class="move new">NEW</span></div>
-          <a class="poster-link" href="https://www.youtube.com/results?search_query=Verity%202026%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Verity trailer on YouTube"><img class="poster" src="posters/verity.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
+          <a class="poster-link" href="https://www.youtube.com/watch?v=xdPMKhjMSFs" target="_blank" rel="noopener" aria-label="Watch the Verity trailer on YouTube"><img class="poster" src="posters/verity.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
             <div class="title-row"><h3 class="title">Verity</h3><span class="meta">Thriller · since 2 Oct</span></div>
             <div class="where"><span class="plat cinema">In cinemas</span></div>
@@ -549,13 +522,13 @@
               <div class="signal"><span class="label">Popularity</span><strong>$54.4M</strong> US total in 2 weeks · #2 this weekend</div>
               <div class="signal"><span class="label">Rating</span><strong>33%</strong> Rotten Tomatoes · 70% audience · C+ CinemaScore</div>
             </div>
-            <a class="trailer" href="https://www.youtube.com/results?search_query=Verity%202026%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
+            <a class="trailer" href="https://www.youtube.com/watch?v=xdPMKhjMSFs" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
         <li>
           <div class="rank"><span class="num">6</span><span class="move new">NEW</span></div>
-          <a class="poster-link" href="https://www.youtube.com/results?search_query=Heart%20of%20the%20Beast%202026%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Heart of the Beast trailer on YouTube"><img class="poster" src="posters/heart-of-the-beast.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
+          <a class="poster-link" href="https://www.youtube.com/watch?v=JFQcDFhNh4o" target="_blank" rel="noopener" aria-label="Watch the Heart of the Beast trailer on YouTube"><img class="poster" src="posters/heart-of-the-beast.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
             <div class="title-row"><h3 class="title">Heart of the Beast</h3><span class="meta">Survival thriller · Paramount · since 25 Sep</span></div>
             <div class="where"><span class="plat cinema">In cinemas</span></div>
@@ -564,13 +537,13 @@
               <div class="signal"><span class="label">Popularity</span><strong>$50.0M</strong> US total · #4 this weekend</div>
               <div class="signal"><span class="label">Rating</span>Generally positive reviews</div>
             </div>
-            <a class="trailer" href="https://www.youtube.com/results?search_query=Heart%20of%20the%20Beast%202026%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
+            <a class="trailer" href="https://www.youtube.com/watch?v=JFQcDFhNh4o" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
         <li>
           <div class="rank"><span class="num">7</span><span class="move new">NEW</span></div>
-          <a class="poster-link" href="https://www.youtube.com/results?search_query=The%20Love%20Hypothesis%202026%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the The Love Hypothesis trailer on YouTube"><img class="poster" src="posters/love-hypothesis.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
+          <a class="poster-link" href="https://www.youtube.com/watch?v=xwdamnfS6IM" target="_blank" rel="noopener" aria-label="Watch the The Love Hypothesis trailer on YouTube"><img class="poster" src="posters/love-hypothesis.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
             <div class="title-row"><h3 class="title">The Love Hypothesis</h3><span class="meta">Rom-com · since 23 Sep</span></div>
             <div class="where"><span class="plat ott">Prime Video</span></div>
@@ -579,13 +552,13 @@
               <div class="signal"><span class="label">Popularity</span><strong>#2 streaming film</strong> in the US (Nielsen, 414M minutes)</div>
               <div class="signal"><span class="label">Rating</span><strong>74%</strong> Rotten Tomatoes · Metacritic 59</div>
             </div>
-            <a class="trailer" href="https://www.youtube.com/results?search_query=The%20Love%20Hypothesis%202026%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
+            <a class="trailer" href="https://www.youtube.com/watch?v=xwdamnfS6IM" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
         <li>
           <div class="rank"><span class="num">8</span><span class="move new">NEW</span></div>
-          <a class="poster-link" href="https://www.youtube.com/results?search_query=Animals%202026%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Animals trailer on YouTube"><img class="poster" src="posters/animals.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
+          <a class="poster-link" href="https://www.youtube.com/watch?v=mlBfQJ8oxB0" target="_blank" rel="noopener" aria-label="Watch the Animals trailer on YouTube"><img class="poster" src="posters/animals.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
             <div class="title-row"><h3 class="title">Animals</h3><span class="meta">Crime thriller · since 9 Oct</span></div>
             <div class="where"><span class="plat ott">Netflix</span></div>
@@ -594,13 +567,13 @@
               <div class="signal"><span class="label">Popularity</span><strong>#1 English film</strong> on Netflix · 23.8M views</div>
               <div class="signal"><span class="label">Rating</span>Mostly negative (IndieWire, TheWrap, Forbes)</div>
             </div>
-            <a class="trailer" href="https://www.youtube.com/results?search_query=Animals%202026%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
+            <a class="trailer" href="https://www.youtube.com/watch?v=mlBfQJ8oxB0" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
         <li>
           <div class="rank"><span class="num">9</span><span class="move new">NEW</span></div>
-          <a class="poster-link" href="https://www.youtube.com/results?search_query=Doing%20Life%202026%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Doing Life trailer on YouTube"><img class="poster" src="posters/doing-life.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
+          <a class="poster-link" href="https://www.youtube.com/watch?v=zrOtmDQawas" target="_blank" rel="noopener" aria-label="Watch the Doing Life trailer on YouTube"><img class="poster" src="posters/doing-life.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
             <div class="title-row"><h3 class="title">Doing Life</h3><span class="meta">Romance drama · since 2 Oct</span></div>
             <div class="where"><span class="plat ott">Netflix</span></div>
@@ -609,13 +582,13 @@
               <div class="signal"><span class="label">Popularity</span><strong>#2 English film</strong> on Netflix · 18.2M views</div>
               <div class="signal"><span class="label">Rating</span>Mixed reviews</div>
             </div>
-            <a class="trailer" href="https://www.youtube.com/results?search_query=Doing%20Life%202026%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
+            <a class="trailer" href="https://www.youtube.com/watch?v=zrOtmDQawas" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
         <li>
           <div class="rank"><span class="num">10</span><span class="move new">NEW</span></div>
-          <a class="poster-link" href="https://www.youtube.com/results?search_query=The%20Social%20Reckoning%202026%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the The Social Reckoning trailer on YouTube"><img class="poster" src="posters/social-reckoning.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
+          <a class="poster-link" href="https://www.youtube.com/watch?v=gM4LkaXwGuY" target="_blank" rel="noopener" aria-label="Watch the The Social Reckoning trailer on YouTube"><img class="poster" src="posters/social-reckoning.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
             <div class="title-row"><h3 class="title">The Social Reckoning</h3><span class="meta">Drama · opened 9 Oct</span></div>
             <div class="where"><span class="plat cinema">In cinemas</span></div>
@@ -624,7 +597,7 @@
               <div class="signal"><span class="label">Popularity</span>$5.5M opening · #5 this weekend</div>
               <div class="signal"><span class="label">Rating</span><strong>54–59%</strong> Rotten Tomatoes · B– CinemaScore</div>
             </div>
-            <a class="trailer" href="https://www.youtube.com/results?search_query=The%20Social%20Reckoning%202026%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
+            <a class="trailer" href="https://www.youtube.com/watch?v=gM4LkaXwGuY" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
       </ol>

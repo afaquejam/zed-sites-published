@@ -181,27 +181,6 @@
   }
   .chip.empty { opacity: 0.45; pointer-events: none; }
 
-  /* ---------- The week's thread (lead banner) ---------- */
-  .thread {
-    display: flex;
-    gap: 12px;
-    background: var(--md-sys-color-secondary-container);
-    color: var(--md-sys-color-on-secondary-container);
-    border-radius: 20px;
-    padding: 18px 20px;
-    margin: 8px 0 20px;
-    font-size: 0.9375rem;
-  }
-  .thread .ct-label {
-    font-weight: 700;
-    font-size: 0.6875rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    white-space: nowrap;
-    padding-top: 3px;
-  }
-  .thread strong { font-weight: 700; }
-
   /* ---------- The chart ---------- */
   section.chart {
     background: var(--md-sys-color-surface-container-low);
@@ -421,7 +400,6 @@
     .app-bar-inner { padding: 0 14px; }
     section.chart { padding: 16px 16px 4px; border-radius: 20px; }
     section.chart h2 { font-size: 1.25rem; }
-    .thread { flex-direction: column; gap: 6px; }
     ol.rank-list > li { grid-template-columns: 28px 60px 1fr; gap: 10px; }
     .poster { width: 60px; }
     .poster { border-radius: 8px; }
@@ -466,11 +444,6 @@
       <a class="chip active" href="top10-bollywood-movies-2026-10-10.html" aria-current="page"><span class="dow">Sat</span><span class="dom">10 Oct</span></a>
     </nav>
 
-    <div class="thread">
-      <span class="ct-label">This week</span>
-      <span><strong>Drishyam: The Conclusion</strong> rules cinemas with ₹324 crore. <strong>Hanuman Ansh</strong> is the year's surprise hit: ₹424 crore worldwide from a ₹2 crore budget. On streaming, <strong>Awarapan 2</strong> is now free on Prime Video and Parineeti Chopra's <strong>Reporting Live</strong> has arrived on Netflix.</span>
-    </div>
-
     <section class="chart">
       <h2>Top 10 Bollywood Movies <span class="count">cinemas + streaming</span></h2>
       <div class="legend">
@@ -480,7 +453,7 @@
       <ol class="rank-list">
         <li class="top1">
           <div class="rank"><span class="num">1</span><span class="move new">NEW</span></div>
-          <a class="poster-link" href="https://www.youtube.com/results?search_query=Drishyam%20The%20Conclusion%202026%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Drishyam: The Conclusion trailer on YouTube"><img class="poster" src="posters/drishyam-3.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
+          <a class="poster-link" href="https://www.youtube.com/watch?v=MFQFxsDWbA8" target="_blank" rel="noopener" aria-label="Watch the Drishyam: The Conclusion trailer on YouTube"><img class="poster" src="posters/drishyam-3.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
             <div class="title-row"><h3 class="title">Drishyam: The Conclusion</h3><span class="meta">Crime thriller · since 2 Oct</span></div>
             <div class="where"><span class="plat cinema">In cinemas</span></div>
@@ -489,13 +462,13 @@
               <div class="signal"><span class="label">Popularity</span><strong>₹324 crore</strong> India net, the biggest Hindi film of October</div>
               <div class="signal"><span class="label">Rating</span><strong>71/100</strong> Sacnilk critics · 4.5/5 Taran Adarsh · 3/5 Hindustan Times</div>
             </div>
-            <a class="trailer" href="https://www.youtube.com/results?search_query=Drishyam%20The%20Conclusion%202026%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
+            <a class="trailer" href="https://www.youtube.com/watch?v=MFQFxsDWbA8" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
         <li class="top2">
           <div class="rank"><span class="num">2</span><span class="move">—</span></div>
-          <a class="poster-link" href="https://www.youtube.com/results?search_query=Hanuman%20Ansh%202026%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Hanuman Ansh trailer on YouTube"><img class="poster" src="posters/hanuman-ansh.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
+          <a class="poster-link" href="https://www.youtube.com/watch?v=YpGhCA2X3gU" target="_blank" rel="noopener" aria-label="Watch the Hanuman Ansh trailer on YouTube"><img class="poster" src="posters/hanuman-ansh.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
             <div class="title-row"><h3 class="title">Hanuman Ansh</h3><span class="meta">Devotional drama · since 7 Aug</span></div>
             <div class="where"><span class="plat cinema">In cinemas</span></div>
@@ -504,7 +477,7 @@
               <div class="signal"><span class="label">Popularity</span><strong>₹424 crore</strong> worldwide on a ₹2 crore budget</div>
               <div class="signal"><span class="label">Rating</span>3/5 Deccan Chronicle</div>
             </div>
-            <a class="trailer" href="https://www.youtube.com/results?search_query=Hanuman%20Ansh%202026%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
+            <a class="trailer" href="https://www.youtube.com/watch?v=YpGhCA2X3gU" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
@@ -525,7 +498,7 @@
 
         <li>
           <div class="rank"><span class="num">4</span><span class="move new">NEW</span></div>
-          <a class="poster-link" href="https://www.youtube.com/results?search_query=Awarapan%202%202026%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Awarapan 2 trailer on YouTube"><img class="poster" src="posters/awarapan-2.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
+          <a class="poster-link" href="https://www.youtube.com/watch?v=1ya87ENCRj0" target="_blank" rel="noopener" aria-label="Watch the Awarapan 2 trailer on YouTube"><img class="poster" src="posters/awarapan-2.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
             <div class="title-row"><h3 class="title">Awarapan 2</h3><span class="meta">Romantic action · free on Prime Video from 9 Oct</span></div>
             <div class="where"><span class="plat ott">Prime Video</span></div>
@@ -534,13 +507,13 @@
               <div class="signal"><span class="label">Popularity</span>About <strong>₹150 crore</strong> worldwide in cinemas</div>
               <div class="signal"><span class="label">Rating</span>Mixed reviews</div>
             </div>
-            <a class="trailer" href="https://www.youtube.com/results?search_query=Awarapan%202%202026%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
+            <a class="trailer" href="https://www.youtube.com/watch?v=1ya87ENCRj0" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
         <li>
           <div class="rank"><span class="num">5</span><span class="move new">NEW</span></div>
-          <a class="poster-link" href="https://www.youtube.com/results?search_query=Reporting%20Live%202026%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Reporting Live trailer on YouTube"><img class="poster" src="posters/reporting-live.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
+          <a class="poster-link" href="https://www.youtube.com/watch?v=GgGNG9XEJds" target="_blank" rel="noopener" aria-label="Watch the Reporting Live trailer on YouTube"><img class="poster" src="posters/reporting-live.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
             <div class="title-row"><h3 class="title">Reporting Live</h3><span class="meta">Crime thriller · since 9 Oct</span></div>
             <div class="where"><span class="plat ott">Netflix</span></div>
@@ -549,7 +522,7 @@
               <div class="signal"><span class="label">Popularity</span>New on Netflix this week</div>
               <div class="signal"><span class="label">Rating</span>Mixed: engaging but predictable (NewsBytes)</div>
             </div>
-            <a class="trailer" href="https://www.youtube.com/results?search_query=Reporting%20Live%202026%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
+            <a class="trailer" href="https://www.youtube.com/watch?v=GgGNG9XEJds" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
@@ -570,7 +543,7 @@
 
         <li>
           <div class="rank"><span class="num">7</span><span class="move new">NEW</span></div>
-          <a class="poster-link" href="https://www.youtube.com/results?search_query=Ohh%20My%20Dog%202026%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Ohh My Dog trailer on YouTube"><img class="poster" src="posters/ohh-my-dog.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
+          <a class="poster-link" href="https://www.youtube.com/watch?v=Hkv1-F5-EaI" target="_blank" rel="noopener" aria-label="Watch the Ohh My Dog trailer on YouTube"><img class="poster" src="posters/ohh-my-dog.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
             <div class="title-row"><h3 class="title">Ohh My Dog</h3><span class="meta">Family drama · on Netflix since 1 Oct</span></div>
             <div class="where"><span class="plat ott">Netflix</span></div>
@@ -579,13 +552,13 @@
               <div class="signal"><span class="label">Popularity</span>In Netflix India's top 10 in early October</div>
               <div class="signal"><span class="label">Rating</span>Positive with reservations (Film Information, Filmy Sasi)</div>
             </div>
-            <a class="trailer" href="https://www.youtube.com/results?search_query=Ohh%20My%20Dog%202026%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
+            <a class="trailer" href="https://www.youtube.com/watch?v=Hkv1-F5-EaI" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
         <li>
           <div class="rank"><span class="num">8</span><span class="move new">NEW</span></div>
-          <a class="poster-link" href="https://www.youtube.com/results?search_query=Pooja%20Meri%20Jaan%202026%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Pooja Meri Jaan trailer on YouTube"><img class="poster" src="posters/pooja-meri-jaan.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
+          <a class="poster-link" href="https://www.youtube.com/watch?v=urDzsrt17IQ" target="_blank" rel="noopener" aria-label="Watch the Pooja Meri Jaan trailer on YouTube"><img class="poster" src="posters/pooja-meri-jaan.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
             <div class="title-row"><h3 class="title">Pooja Meri Jaan</h3><span class="meta">Crime thriller · since 2 Oct</span></div>
             <div class="where"><span class="plat ott">ZEE5</span></div>
@@ -594,13 +567,13 @@
               <div class="signal"><span class="label">Popularity</span>ZEE5's main Hindi film release this month</div>
               <div class="signal"><span class="label">Rating</span>No major reviews yet</div>
             </div>
-            <a class="trailer" href="https://www.youtube.com/results?search_query=Pooja%20Meri%20Jaan%202026%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
+            <a class="trailer" href="https://www.youtube.com/watch?v=urDzsrt17IQ" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
         <li>
           <div class="rank"><span class="num">9</span><span class="move">—</span></div>
-          <a class="poster-link" href="https://www.youtube.com/results?search_query=Alpha%202026%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Alpha trailer on YouTube"><img class="poster" src="posters/alpha.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
+          <a class="poster-link" href="https://www.youtube.com/watch?v=YP1uSAggr6Y" target="_blank" rel="noopener" aria-label="Watch the Alpha trailer on YouTube"><img class="poster" src="posters/alpha.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
             <div class="title-row"><h3 class="title">Alpha</h3><span class="meta">Spy thriller · on Netflix since 28 Aug</span></div>
             <div class="where"><span class="plat ott">Netflix</span></div>
@@ -609,13 +582,13 @@
               <div class="signal"><span class="label">Popularity</span>Missed ₹100 crore worldwide in cinemas</div>
               <div class="signal"><span class="label">Rating</span>2.5/5 India Today</div>
             </div>
-            <a class="trailer" href="https://www.youtube.com/results?search_query=Alpha%202026%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
+            <a class="trailer" href="https://www.youtube.com/watch?v=YP1uSAggr6Y" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
 
         <li>
           <div class="rank"><span class="num">10</span><span class="move new">NEW</span></div>
-          <a class="poster-link" href="https://www.youtube.com/results?search_query=Saale%20Aashiq%202025%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Saale Aashiq trailer on YouTube"><img class="poster" src="posters/saale-aashiq.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
+          <a class="poster-link" href="https://www.youtube.com/watch?v=SNbQPZ8jWX4" target="_blank" rel="noopener" aria-label="Watch the Saale Aashiq trailer on YouTube"><img class="poster" src="posters/saale-aashiq.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
           <div class="body">
             <div class="title-row"><h3 class="title">Saale Aashiq</h3><span class="meta">Drama · new on JioHotstar</span></div>
             <div class="where"><span class="plat ott">JioHotstar</span></div>
@@ -624,7 +597,7 @@
               <div class="signal"><span class="label">Popularity</span>Newly streaming on JioHotstar</div>
               <div class="signal"><span class="label">Rating</span>3/5 Flickonclick · &quot;brave but uneven&quot;</div>
             </div>
-            <a class="trailer" href="https://www.youtube.com/results?search_query=Saale%20Aashiq%202025%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
+            <a class="trailer" href="https://www.youtube.com/watch?v=SNbQPZ8jWX4" target="_blank" rel="noopener">▶ Trailer</a>
           </div>
         </li>
       </ol>
