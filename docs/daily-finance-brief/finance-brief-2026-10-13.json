@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-13",
+  "generatedAt": "2026-10-13T08:00:00-04:00",
+  "sections": [
+    {
+      "key": "usa",
+      "label": "USA",
+      "items": [
+        {
+          "emoji": "📉",
+          "detail": "The **Nasdaq** fell 0.44% to 27,245.90 Monday while the S&P 500 barely moved, slipping 0.06% to 7,807.24, as tech was the weakest sector.",
+          "why": "Micron dropped about 3.9% on fears that Chinese rival CXMT is catching up in memory chips.",
+          "sourceName": "Yahoo Finance",
+          "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-oct-12-212311190.html"
+        },
+        {
+          "emoji": "🛢️",
+          "detail": "Energy led the S&P 500 as Brent climbed about 1% to just over **$105**, undoing Friday's dip on Trump's Iran comments.",
+          "why": "Deadly Houthi attacks on Saudi Arabia's main airport, and Trump weighing US strikes in Yemen, revived supply fears.",
+          "sourceName": "CBS News",
+          "sourceUrl": "https://cbsnews.com/live-updates/iran-war-us-trump-saudi-arabia-houthi"
+        },
+        {
+          "emoji": "🏦",
+          "detail": "Big-bank earnings kick off this week, and Wednesday's **CPI report** is the main test of whether higher oil is feeding back into inflation.",
+          "why": "A hot print would strengthen the case for another Fed hike after September's increase.",
+          "sourceName": "Charles Schwab",
+          "sourceUrl": "https://www.schwab.com/learn/story/stock-market-update-open"
+        }
+      ]
+    },
+    {
+      "key": "emsmallcaps",
+      "label": "Emerging Markets and Small Caps",
+      "items": [
+        {
+          "emoji": "💥",
+          "detail": "Korea's **Kospi** plunged about 7% below 6,000 Tuesday as it reopened from the holiday, with SK Hynix down over 9%. Taiwan fell about 2%.",
+          "why": "China's CXMT showed a denser DRAM design, and foreigners dumped Samsung and SK Hynix on fears for memory profits.",
+          "sourceName": "KED Global",
+          "sourceUrl": "https://www.kedglobal.com/korean-stock-market/newsView/ked202610130001"
+        },
+        {
+          "emoji": "🇮🇳",
+          "detail": "The **Nifty** fell 0.70% to 22,363.35 Monday, giving back Friday's rebound, after the Sensex swung more than 1,200 points from its intraday high.",
+          "why": "Crude above $105, a three-year high in bond yields and ₹1,708 crore of foreign selling weighed on banks and FMCG.",
+          "sourceName": "ThePrint",
+          "sourceUrl": "https://theprint.in/economy/stock-markets-tumble-on-oil-price-spike-fii-outflows-sensex-drops-548-points/3069429/"
+        },
+        {
+          "emoji": "🔀",
+          "detail": "India's **Nifty Smallcap 100** bucked the selloff and rose **1.42%** Monday, even as the large-cap Nifty fell 0.7%.",
+          "why": "Domestic investors bought about ₹3,045 crore and focused on smaller stocks, offsetting foreign selling of large caps.",
+          "sourceName": "Kotak Neo",
+          "sourceUrl": "https://www.kotakneo.com/news/market-news/sensex-and-nifty-50-close-lower/"
+        }
+      ]
+    },
+    {
+      "key": "crypto",
+      "label": "Crypto",
+      "items": [
+        {
+          "emoji": "₿",
+          "detail": "**Bitcoin** slipped about 2% to near **$81,950** early Tuesday after briefly reaching $84,150 Monday, so the bounce from its sub-$81,000 low faded.",
+          "why": "A firmer dollar before Wednesday's CPI and $681 million of weekly spot ETF outflows weighed on prices.",
+          "sourceName": "Goodreturns",
+          "sourceUrl": "https://www.goodreturns.in/news/crypto-prices-crash-bitcoin-falls-below-82-000-why-cryptos-are-nervous-for-us-cpi-inflation-dollar-1540979.html"
+        },
+        {
+          "emoji": "🔻",
+          "detail": "**Ether** fell about 3.7% to around **$2,450** early Tuesday, slipping back toward last week's low near $2,406.",
+          "why": "Spot ether ETFs extended their outflow streak to nine days, losing $542 million last week.",
+          "sourceName": "CoinGabbar",
+          "sourceUrl": "https://coingabbar.com/en/crypto-news-today-october-13-2026-bitcoin-ethereum-price"
+        },
+        {
+          "emoji": "☀️",
+          "detail": "**Solana** dropped about 5% to near **$106** Tuesday, below Friday's $110, even as a new Solana ETF launched in Hong Kong.",
+          "why": "US Solana ETFs posted their biggest weekly outflow since launch, ending a 14-week run of inflows.",
+          "sourceName": "MetaMask",
+          "sourceUrl": "https://metamask.io/price/solana"
+        }
+      ]
+    },
+    {
+      "key": "commodities",
+      "label": "Commodities",
+      "items": [
+        {
+          "emoji": "🥇",
+          "detail": "**Gold** fell about $24 to **$4,169.50** Monday, slipping back from Friday's brief move above $4,200.",
+          "why": "Traders cut positions before Wednesday's US inflation data, and higher oil added to fears of more rate hikes.",
+          "sourceName": "Kitco",
+          "sourceUrl": "http://www.kitco.com/charts/gold"
+        }
+      ]
+    }
+  ],
+  "crossCuttingTheme": "China's CXMT memory-chip breakthrough is hitting the AI hardware trade from Micron to the Kospi, while Brent back above $105 is lifting rate-hike fears before CPI, dragging on gold and crypto."
+}
