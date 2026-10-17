@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Top 10 Kids &amp; Animated Movies — Week of 17 Oct 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400..800&display=swap" rel="stylesheet" />
+<style>
+  /* ---------- Material Design 3 — dark by default, light on OS preference ----------
+     Same system as the finance and tech briefs; a warm rose/amber primary so the
+     entertainment hub reads as a sibling but is never confused with them.
+     Each category has its own accent (--cat). */
+  :root {
+    --md-sys-color-surface: #141012;
+    --md-sys-color-surface-container-low: #1d171a;
+    --md-sys-color-surface-container: #241d21;
+    --md-sys-color-surface-container-high: #2f262b;
+    --md-sys-color-surface-container-highest: #3a3036;
+    --md-sys-color-on-surface: #efe6ea;
+    --md-sys-color-on-surface-variant: #d4c6cc;
+    --md-sys-color-outline: #9d8f95;
+    --md-sys-color-outline-variant: #4a3e44;
+    --md-sys-color-primary: #ff8fb1;
+    --md-sys-color-primary-container: #7a1f45;
+    --md-sys-color-on-primary-container: #ffd9e4;
+    --md-sys-color-secondary-container: #3a2a1f;
+    --md-sys-color-on-secondary-container: #ffdcc2;
+    --gold: #ffcf5c;
+    --silver: #cfd6e0;
+    --bronze: #e8a87c;
+    --cat-hollywood: #ffb35c;
+    --cat-usuktv: #5bb4ff;
+    --cat-kids: #57d9a3;
+    --cat-bollywood: #ff8fb1;
+    --cat-indiantv: #c59bff;
+    --cat-local: #4fd8d0;
+    --cat: var(--cat-kids); /* overridden per page */
+    color-scheme: dark;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --md-sys-color-surface: #fffbfc;
+      --md-sys-color-surface-container-low: #fbf1f4;
+      --md-sys-color-surface-container: #f5e8ed;
+      --md-sys-color-surface-container-high: #efe1e7;
+      --md-sys-color-surface-container-highest: #e9dae1;
+      --md-sys-color-on-surface: #22191d;
+      --md-sys-color-on-surface-variant: #524349;
+      --md-sys-color-outline: #84737a;
+      --md-sys-color-outline-variant: #d8c2ca;
+      --md-sys-color-primary: #a8295a;
+      --md-sys-color-primary-container: #ffd9e4;
+      --md-sys-color-on-primary-container: #3e0020;
+      --md-sys-color-secondary-container: #ffdcc2;
+      --md-sys-color-on-secondary-container: #2e1500;
+      --gold: #9a6b00;
+      --silver: #5b6675;
+      --bronze: #9a5a2e;
+      --cat-hollywood: #b35a00;
+      --cat-usuktv: #0b5fb0;
+      --cat-kids: #0f7a52;
+      --cat-bollywood: #a8295a;
+      --cat-indiantv: #6a3fd6;
+      --cat-local: #00736d;
+      color-scheme: light;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+    font-family: "Roboto Flex", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-optical-sizing: auto;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 840px; margin: 0 auto; padding: 0 16px 56px; }
+
+  /* ---------- Top app bar ---------- */
+  .app-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--md-sys-color-surface);
+    padding: 28px 0 0;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+  }
+  .app-bar-inner { max-width: 840px; margin: 0 auto; padding: 0 16px; }
+  .eyebrow {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--md-sys-color-primary);
+    margin: 0 0 4px;
+  }
+  .eyebrow .sample {
+    margin-left: 8px;
+    padding: 1px 8px;
+    border-radius: 6px;
+    background: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+    letter-spacing: 0.06em;
+  }
+  h1 {
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  h1 .date { color: var(--md-sys-color-primary); }
+
+  /* ---------- Category nav — wraps, never scrolls sideways ---------- */
+  nav.cat-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 12px 0;
+  }
+  .cat-chip {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .cat-chip::before {
+    content: "";
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--chip-cat);
+  }
+  .cat-chip:hover { background: var(--md-sys-color-surface-container-high); }
+  .cat-chip.active {
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+    border-color: transparent;
+    font-weight: 650;
+  }
+
+  /* ---------- Week nav (last 8 Saturdays) ---------- */
+  nav.chip-nav {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 16px 0 4px;
+    margin: 0 0 8px;
+    scrollbar-width: none;
+  }
+  nav.chip-nav::-webkit-scrollbar { display: none; }
+  .chip {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 64px;
+    padding: 8px 14px;
+    border-radius: 16px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    color: var(--md-sys-color-on-surface-variant);
+    text-decoration: none;
+  }
+  .chip .dow { font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; white-space: nowrap; }
+  .chip .dom { font-size: 0.9375rem; font-weight: 600; white-space: nowrap; }
+  .chip.active {
+    background: var(--md-sys-color-primary-container);
+    border-color: transparent;
+    color: var(--md-sys-color-on-primary-container);
+  }
+  .chip.empty { opacity: 0.45; pointer-events: none; }
+
+  /* ---------- The chart ---------- */
+  section.chart {
+    background: var(--md-sys-color-surface-container-low);
+    border-radius: 24px;
+    padding: 20px 24px 8px;
+    margin-bottom: 16px;
+  }
+  section.chart h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.375rem;
+    font-weight: 600;
+    margin: 0 0 4px;
+  }
+  section.chart h2::before {
+    content: "";
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--cat);
+  }
+  section.chart h2 .count {
+    margin-left: auto;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--md-sys-color-outline);
+  }
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 14px;
+    font-size: 0.75rem;
+    color: var(--md-sys-color-outline);
+    margin: 0 0 8px;
+  }
+
+  ol.rank-list { list-style: none; margin: 0; padding: 0; }
+  ol.rank-list > li {
+    display: grid;
+    grid-template-columns: 44px 84px 1fr;
+    gap: 14px;
+    align-items: start;
+    padding: 18px 0;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+  }
+  ol.rank-list > li:first-child { border-top: none; }
+
+  .rank {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+  .rank .num {
+    font-size: 2.25rem;
+    font-weight: 800;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+    color: var(--md-sys-color-on-surface-variant);
+  }
+  li.top1 .rank .num { color: var(--gold); }
+  li.top2 .rank .num { color: var(--silver); }
+  li.top3 .rank .num { color: var(--bronze); }
+  .move {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 2px 6px;
+    border-radius: 6px;
+    white-space: nowrap;
+    background: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-on-surface-variant);
+  }
+  .move.new { background: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container); }
+
+  .poster {
+    width: 84px;
+    height: auto;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border-radius: 10px;
+    background: var(--md-sys-color-surface-container-high);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.35);
+  }
+  .body { min-width: 0; }
+
+  .title-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px 10px;
+    margin: 0 0 6px;
+  }
+  .title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0;
+  }
+  .meta {
+    font-size: 0.8125rem;
+    color: var(--md-sys-color-outline);
+  }
+
+  .where {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 0 0 8px;
+  }
+  .plat {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 2px 9px;
+    border-radius: 999px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    color: var(--md-sys-color-on-surface);
+    white-space: nowrap;
+  }
+  .plat.tv::before { content: "📺 "; }
+  .plat.ott::before { content: "▶ "; color: var(--cat); }
+
+  .blurb {
+    font-size: 0.9375rem;
+    color: var(--md-sys-color-on-surface-variant);
+    margin: 0;
+  }
+  .blurb strong { color: var(--md-sys-color-on-surface); font-weight: 650; }
+
+  .signals {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  .signal {
+    padding: 8px 12px;
+    border-radius: 12px;
+    background: var(--md-sys-color-surface-container-high);
+    font-size: 0.8125rem;
+    color: var(--md-sys-color-on-surface-variant);
+    line-height: 1.4;
+  }
+  .signal .label {
+    display: block;
+    color: var(--cat);
+    font-weight: 700;
+    font-size: 0.625rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+  .signal strong { color: var(--md-sys-color-on-surface); font-weight: 650; }
+
+  /* The poster links to the trailer; the play badge says so. */
+  .poster-link { position: relative; display: block; align-self: start; border-radius: 10px; }
+  .poster-link .play {
+    position: absolute;
+    right: 6px;
+    bottom: 6px;
+    display: grid;
+    place-items: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    font-size: 0.6875rem;
+    padding-left: 2px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.65);
+    transition: transform 0.15s, background 0.15s;
+  }
+  .poster-link:hover .play, .poster-link:focus-visible .play { background: #f00; transform: scale(1.12); }
+  .poster-link:focus-visible { outline: 2px solid var(--md-sys-color-primary); outline-offset: 2px; }
+
+  .trailer {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 10px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 650;
+    text-decoration: none;
+    color: var(--md-sys-color-on-primary-container);
+    background: var(--md-sys-color-primary-container);
+  }
+  .trailer:hover, .trailer:focus-visible { text-decoration: underline; }
+
+  /* ---------- How we rank ---------- */
+  details.method {
+    background: var(--md-sys-color-surface-container-low);
+    border-radius: 20px;
+    padding: 14px 20px;
+    font-size: 0.875rem;
+    color: var(--md-sys-color-on-surface-variant);
+  }
+  details.method summary {
+    cursor: pointer;
+    font-weight: 650;
+    color: var(--md-sys-color-on-surface);
+  }
+  details.method ul { margin: 10px 0 4px; padding-left: 18px; }
+  details.method li { margin-bottom: 4px; }
+
+  footer {
+    margin-top: 32px;
+    color: var(--md-sys-color-outline);
+    font-size: 0.75rem;
+    text-align: center;
+    line-height: 1.7;
+  }
+
+  /* ---------- Mobile ---------- */
+  @media (max-width: 600px) {
+    .app-bar { padding-top: 20px; position: static; }
+    .wrap { padding: 0 14px 40px; }
+    .app-bar-inner { padding: 0 14px; }
+    section.chart { padding: 16px 16px 4px; border-radius: 20px; }
+    section.chart h2 { font-size: 1.25rem; }
+    ol.rank-list > li { grid-template-columns: 28px 60px 1fr; gap: 10px; }
+    .poster { width: 60px; }
+    .poster { border-radius: 8px; }
+    .rank .num { font-size: 1.75rem; }
+    .signals { grid-template-columns: 1fr; }
+  }
+  .plat.cinema::before { content: "🎟 "; }
+  /* Shown when no poster could be found for a title. */
+  .poster.none {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    color: var(--md-sys-color-on-surface-variant);
+    background: var(--md-sys-color-surface-container-highest);
+    box-shadow: none;
+  }
+</style>
+</head>
+<body>
+  <div class="app-bar">
+    <div class="app-bar-inner">
+      <p class="eyebrow">Entertainment Hub · Weekly Top 10</p>
+      <h1>Kids &amp; Animated: <span class="date">Week of 17 Oct 2026</span></h1>
+      <nav class="cat-nav" aria-label="Categories">
+        <a class="cat-chip" style="--chip-cat: var(--cat-hollywood)" href="top10-hollywood-movies-2026-10-17.html">Hollywood Movies</a>
+        <a class="cat-chip" style="--chip-cat: var(--cat-usuktv)" href="top10-usuk-tv-2026-10-17.html">USA/UK TV Shows</a>
+        <a class="cat-chip active" style="--chip-cat: var(--cat-kids)" href="top10-kids-animated-2026-10-17.html" aria-current="page">Kids &amp; Animated</a>
+        <a class="cat-chip" style="--chip-cat: var(--cat-bollywood)" href="top10-bollywood-movies-2026-10-17.html">Bollywood Movies</a>
+        <a class="cat-chip" style="--chip-cat: var(--cat-indiantv)" href="top10-indian-tv-2026-10-17.html">Indian TV Shows</a>
+        <a class="cat-chip" style="--chip-cat: var(--cat-local)" href="local-entertainment-2026-10-17.html">Local Entertainment</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <nav class="chip-nav" aria-label="Recent weeks">
+      <a class="chip active" href="top10-kids-animated-2026-10-17.html" aria-current="page"><span class="dow">Sat</span><span class="dom">17 Oct</span></a>
+      <a class="chip" href="top10-kids-animated-2026-10-10.html"><span class="dow">Sat</span><span class="dom">10 Oct</span></a>
+    </nav>
+
+    <section class="chart">
+      <h2>Top 10 Kids &amp; Animated Movies <span class="count">cinemas + streaming</span></h2>
+      <div class="legend">
+        <span>🎟 In cinemas</span><span>▶ Streaming</span><span>▲▼ = change since last week</span><span>NEW = new on the list</span>
+      </div>
+
+      <ol class="rank-list">
+        <li class="top1">
+          <div class="rank"><span class="num">1</span><span class="move">—</span></div>
+          <a class="poster-link" href="https://www.youtube.com/watch?v=c51ND9Hdbw0" target="_blank" rel="noopener" aria-label="Watch the Toy Story 5 trailer on YouTube"><img class="poster" src="posters/toy-story-5-2026.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
+          <div class="body">
+            <div class="title-row"><h3 class="title">Toy Story 5</h3><span class="meta">Animated adventure · Pixar / Disney · on Disney+</span></div>
+            <div class="where"><span class="plat ott">Disney+</span></div>
+            <p class="blurb">Woody, Buzz and the gang return in Pixar's fifth Toy Story. For a second week it was the most-watched film on US streaming, after more than $1.1B in cinemas.</p>
+            <div class="signals">
+              <div class="signal"><span class="label">Popularity</span><strong>687M minutes</strong> · #1 streaming film in the US (Nielsen) · $1.15B worldwide</div>
+              <div class="signal"><span class="label">Rating</span><strong>93%</strong> Rotten Tomatoes · Certified Fresh · <strong>A</strong> CinemaScore</div>
+            </div>
+            <a class="trailer" href="https://www.youtube.com/watch?v=c51ND9Hdbw0" target="_blank" rel="noopener">▶ Trailer</a>
+          </div>
+        </li>
+
+        <li class="top2">
+          <div class="rank"><span class="num">2</span><span class="move" title="was #4">▲2</span></div>
+          <a class="poster-link" href="https://www.youtube.com/watch?v=i4noiCRJRoE" target="_blank" rel="noopener" aria-label="Watch the Ice Age (the whole series) trailer on YouTube"><img class="poster" src="posters/ice-age-2002.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
+          <div class="body">
+            <div class="title-row"><h3 class="title">Ice Age (the whole series)</h3><span class="meta">Animated comedy · Blue Sky / 20th Century · on Netflix</span></div>
+            <div class="where"><span class="plat ott">Netflix</span></div>
+            <p class="blurb">Manny, Sid, Diego and Scrat came to Netflix through a licensing deal with Disney. Five Ice Age films made up half of Netflix's English film top 10.</p>
+            <div class="signals">
+              <div class="signal"><span class="label">Popularity</span><strong>42.8M views</strong> across 5 films (Netflix) · Ice Age #3 with 11.2M</div>
+              <div class="signal"><span class="label">Rating</span><strong>77%</strong> Rotten Tomatoes (<em>Ice Age</em>, 2002)</div>
+            </div>
+            <a class="trailer" href="https://www.youtube.com/watch?v=i4noiCRJRoE" target="_blank" rel="noopener">▶ Trailer</a>
+          </div>
+        </li>
+
+        <li class="top3">
+          <div class="rank"><span class="num">3</span><span class="move" title="was #2">▼1</span></div>
+          <a class="poster-link" href="https://www.youtube.com/watch?v=a8RHqN93qfo" target="_blank" rel="noopener" aria-label="Watch the Forgotten Island trailer on YouTube"><img class="poster" src="posters/forgotten-island-2026.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
+          <div class="body">
+            <div class="title-row"><h3 class="title">Forgotten Island</h3><span class="meta">Animated fantasy · DreamWorks / Universal · since 25 Sep</span></div>
+            <div class="where"><span class="plat cinema">In cinemas</span></div>
+            <p class="blurb">Two friends get pulled into a world of creatures from Filipino folklore, voiced by H.E.R., Liza Soberano, Dave Franco and Lea Salonga. It is one of the best-reviewed animated films of the year, but it has been slow in cinemas.</p>
+            <div class="signals">
+              <div class="signal"><span class="label">Popularity</span><strong>$32.9M</strong> US total · #6 last weekend</div>
+              <div class="signal"><span class="label">Rating</span><strong>94%</strong> Rotten Tomatoes · 95% audience score</div>
+            </div>
+            <a class="trailer" href="https://www.youtube.com/watch?v=a8RHqN93qfo" target="_blank" rel="noopener">▶ Trailer</a>
+          </div>
+        </li>
+
+        <li>
+          <div class="rank"><span class="num">4</span><span class="move new">NEW</span></div>
+          <a class="poster-link" href="https://www.youtube.com/watch?v=seX6WMONCkU" target="_blank" rel="noopener" aria-label="Watch the Demon Slayer: Kimetsu no Yaiba Infinity Castle trailer on YouTube"><img class="poster" src="posters/demon-slayer-kimetsu-no-yaiba-infinity-castle-2025.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
+          <div class="body">
+            <div class="title-row"><h3 class="title">Demon Slayer: Kimetsu no Yaiba Infinity Castle</h3><span class="meta">Anime action · Ufotable / Crunchyroll · streaming since 28 Sep</span></div>
+            <div class="where"><span class="plat ott">Netflix</span><span class="plat ott">Prime Video</span><span class="plat ott">Disney+</span></div>
+            <p class="blurb">Tanjiro and the Demon Slayer Corps storm Muzan's fortress in the highest-grossing anime film ever. It is for teens rather than young children, and it is now in the US streaming top 10 across four services.</p>
+            <div class="signals">
+              <div class="signal"><span class="label">Popularity</span><strong>220M minutes</strong> · #8 streaming film in the US (Nielsen)</div>
+              <div class="signal"><span class="label">Rating</span><strong>98%</strong> Rotten Tomatoes</div>
+            </div>
+            <a class="trailer" href="https://www.youtube.com/watch?v=seX6WMONCkU" target="_blank" rel="noopener">▶ Trailer</a>
+          </div>
+        </li>
+
+        <li>
+          <div class="rank"><span class="num">5</span><span class="move new">NEW</span></div>
+          <a class="poster-link" href="https://www.youtube.com/watch?v=vlv4yzsmwyI" target="_blank" rel="noopener" aria-label="Watch the Coraline trailer on YouTube"><img class="poster" src="posters/coraline-2009.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
+          <div class="body">
+            <div class="title-row"><h3 class="title">Coraline</h3><span class="meta">Stop-motion fantasy · Laika · on HBO Max, Hulu, Peacock</span></div>
+            <div class="where"><span class="plat ott">HBO Max</span><span class="plat ott">Hulu</span><span class="plat ott">Peacock</span></div>
+            <p class="blurb">Laika's spooky stop-motion classic about a girl who finds a creepy 'Other Mother' behind a hidden door. Families are watching it again for Halloween.</p>
+            <div class="signals">
+              <div class="signal"><span class="label">Popularity</span><strong>198M minutes</strong> · #9 streaming film in the US (Nielsen)</div>
+              <div class="signal"><span class="label">Rating</span><strong>90%</strong> Rotten Tomatoes · Certified Fresh</div>
+            </div>
+            <a class="trailer" href="https://www.youtube.com/watch?v=vlv4yzsmwyI" target="_blank" rel="noopener">▶ Trailer</a>
+          </div>
+        </li>
+
+        <li>
+          <div class="rank"><span class="num">6</span><span class="move" title="was #9">▲3</span></div>
+          <a class="poster-link" href="https://www.youtube.com/results?search_query=Doraemon%3A%20Nobita%20and%20the%20Castle%20of%20the%20Undersea%20Devil%202026%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Doraemon: Nobita and the Castle of the Undersea Devil trailer on YouTube"><img class="poster" src="posters/doraemon-nobita-and-the-castle-of-the-undersea-devil-2026.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
+          <div class="body">
+            <div class="title-row"><h3 class="title">Doraemon: Nobita and the Castle of the Undersea Devil</h3><span class="meta">Anime adventure · Hindi-dubbed release · since 2 Oct</span></div>
+            <div class="where"><span class="plat cinema">In Indian cinemas</span></div>
+            <p class="blurb">Doraemon and Nobita dive under the sea in a remake of a classic 1983 adventure, released in India in Hindi. It has become one of the five biggest anime films ever in India.</p>
+            <div class="signals">
+              <div class="signal"><span class="label">Popularity</span><strong>₹23 crore</strong> India gross after 15 days (Sacnilk)</div>
+              <div class="signal"><span class="label">Rating</span>No major reviews · A top-5 anime release in India</div>
+            </div>
+            <a class="trailer" href="https://www.youtube.com/results?search_query=Doraemon%3A%20Nobita%20and%20the%20Castle%20of%20the%20Undersea%20Devil%202026%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
+          </div>
+        </li>
+
+        <li>
+          <div class="rank"><span class="num">7</span><span class="move new">NEW</span></div>
+          <a class="poster-link" href="https://www.youtube.com/watch?v=UZ46Smi6mOw" target="_blank" rel="noopener" aria-label="Watch the Shaun the Sheep: The Beast of Mossy Bottom trailer on YouTube"><img class="poster" src="posters/shaun-the-sheep-the-beast-of-mossy-bottom-2026.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
+          <div class="body">
+            <div class="title-row"><h3 class="title">Shaun the Sheep: The Beast of Mossy Bottom</h3><span class="meta">Stop-motion comedy · Aardman · since 18 Sep</span></div>
+            <div class="where"><span class="plat cinema">In cinemas</span><span class="plat ott">Sky Cinema</span></div>
+            <p class="blurb">Aardman's third Shaun film gives Mossy Bottom Farm a monster scare, just in time for Halloween. Critics rate it above the two earlier films.</p>
+            <div class="signals">
+              <div class="signal"><span class="label">Popularity</span><strong>$3.2M</strong> US total · small US release</div>
+              <div class="signal"><span class="label">Rating</span><strong>100%</strong> Rotten Tomatoes (early reviews)</div>
+            </div>
+            <a class="trailer" href="https://www.youtube.com/watch?v=UZ46Smi6mOw" target="_blank" rel="noopener">▶ Trailer</a>
+          </div>
+        </li>
+
+        <li>
+          <div class="rank"><span class="num">8</span><span class="move">—</span></div>
+          <a class="poster-link" href="https://www.youtube.com/watch?v=xgI5iYmOf5Q" target="_blank" rel="noopener" aria-label="Watch the PAW Patrol: The Dino Movie trailer on YouTube"><img class="poster" src="posters/paw-patrol-the-dino-movie-2026.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
+          <div class="body">
+            <div class="title-row"><h3 class="title">PAW Patrol: The Dino Movie</h3><span class="meta">Animated adventure · Paramount / Spin Master · since 14 Aug</span></div>
+            <div class="where"><span class="plat cinema">In cinemas</span></div>
+            <p class="blurb">Chase, Skye and the pups take on dinosaurs in the third PAW Patrol film. Two months in, it is still showing in 180 US cinemas.</p>
+            <div class="signals">
+              <div class="signal"><span class="label">Popularity</span><strong>$53.2M</strong> US total</div>
+              <div class="signal"><span class="label">Rating</span><strong>81%</strong> Rotten Tomatoes · <strong>A</strong> CinemaScore</div>
+            </div>
+            <a class="trailer" href="https://www.youtube.com/watch?v=xgI5iYmOf5Q" target="_blank" rel="noopener">▶ Trailer</a>
+          </div>
+        </li>
+
+        <li>
+          <div class="rank"><span class="num">9</span><span class="move new">NEW</span></div>
+          <a class="poster-link" href="https://www.youtube.com/watch?v=HvuO0lK3U10" target="_blank" rel="noopener" aria-label="Watch the Horton Hears a Who! trailer on YouTube"><img class="poster" src="posters/horton-hears-a-who-2008.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
+          <div class="body">
+            <div class="title-row"><h3 class="title">Horton Hears a Who!</h3><span class="meta">Animated comedy · Blue Sky / 20th Century · on Netflix</span></div>
+            <div class="where"><span class="plat ott">Netflix</span></div>
+            <p class="blurb">Jim Carrey voices the kind-hearted elephant and Steve Carell the Mayor of Whoville in this Dr. Seuss film. It arrived on Netflix alongside the Ice Age films and joined them in the US top 10.</p>
+            <div class="signals">
+              <div class="signal"><span class="label">Popularity</span><strong>#7</strong> film in Netflix's US top 10 this week</div>
+              <div class="signal"><span class="label">Rating</span><strong>79%</strong> Rotten Tomatoes</div>
+            </div>
+            <a class="trailer" href="https://www.youtube.com/watch?v=HvuO0lK3U10" target="_blank" rel="noopener">▶ Trailer</a>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <details class="method">
+      <summary>How this list is ranked</summary>
+      <ul>
+        <li><strong>Popularity:</strong> Nielsen's US streaming chart, Netflix's weekly Top 10, and box office for films in cinemas.</li>
+        <li><strong>Ratings:</strong> Rotten Tomatoes critics' score and CinemaScore where available.</li>
+        <li><strong>What counts:</strong> animated films and films made for children, in cinemas or streaming.</li>
+        <li><strong>This week:</strong> Nielsen's latest US streaming chart covers 28 Sep–4 Oct, and no UK box office figures for family films could be found this week, so UK cinemas aren't reflected.</li>
+        <li><strong>NEW:</strong> with a previous week to compare, NEW marks a title new to the list; on a list's first week, a title released in the last 3 weeks.</li>
+      </ul>
+    </details>
+
+    <footer>
+      Posters: TMDB · Sources: Nielsen · Netflix Top 10 · The Numbers · Sacnilk · Rotten Tomatoes<br />
+      Entertainment Hub · updated every Saturday · generated 17 Oct 2026, 10:55
+    </footer>
+  </div>
+</body>
+</html>
