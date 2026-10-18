@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-18",
+  "generatedAt": "2026-10-18T06:00:00Z",
+  "sections": [
+    {
+      "key": "usa",
+      "label": "USA",
+      "items": [
+        {
+          "emoji": "📉",
+          "detail": "The **Nasdaq** fell **4.5%** this week, its worst week since June, while the S&P 500 lost about 2%, both closing near their lows Friday.",
+          "why": "Fears about debt-funded AI spending, focused on CoreWeave, and China's progress in memory chips hit chipmakers hardest."
+        },
+        {
+          "emoji": "⛽",
+          "detail": "Inflation data came in hot midweek: September consumer prices rose **3.7%** from a year earlier, and producer prices jumped **6.3%**.",
+          "why": "Oil prices driven by the Iran war kept Brent above $105 and pushed gasoline sharply higher."
+        },
+        {
+          "emoji": "🏦",
+          "detail": "Odds of an October Fed hike neared even after the CPI report, then fell to about **15%** by Friday, with the 10-year yield near 5.08%.",
+          "why": "Money moved from tech stocks into bonds, and Fed Chair Warsh refused to signal another hike."
+        }
+      ]
+    },
+    {
+      "key": "emsmallcaps",
+      "label": "Emerging Markets and Small Caps",
+      "items": [
+        {
+          "emoji": "🌏",
+          "detail": "The **MSCI Emerging Markets** index had its steepest weekly drop since March, led by Korea's Kospi, which fell below **6,000** in two separate 7% routs.",
+          "why": "China's memory-chip advance and doubts about AI spending led foreigners to dump Samsung and SK Hynix."
+        },
+        {
+          "emoji": "🇮🇳",
+          "detail": "The **Nifty** gained about **2.8%** this week to close at 23,146, defying the global selloff after a weak Monday.",
+          "why": "Strong results from HCL Tech, Wipro and Tech Mahindra lifted IT stocks, and cheaper crude helped late in the week."
+        },
+        {
+          "emoji": "🐢",
+          "detail": "The US **Russell 2000** fell about **3%** this week and entered a correction on Wednesday, erasing Thursday's bounce by Friday.",
+          "why": "Yields above 5% hurt small companies with floating-rate debt, and the AI selloff spread to them."
+        }
+      ]
+    },
+    {
+      "key": "crypto",
+      "label": "Crypto",
+      "items": [
+        {
+          "emoji": "₿",
+          "detail": "**Bitcoin** ended the week near **$81,500**, failing to break higher but holding $80,000 support after the hot CPI report.",
+          "why": "Fed hike fears and ETF outflows capped rallies, while Warsh's silence on hikes steadied buyers."
+        },
+        {
+          "emoji": "💎",
+          "detail": "**Ether** ended the week near **$2,409**, after a brief bounce to $2,533 faded and it briefly fell below $2,400.",
+          "why": "Leveraged bets were wiped out after CPI, and US spot ether ETFs saw outflows again late in the week."
+        },
+        {
+          "emoji": "☀️",
+          "detail": "**Solana** fell about **5%** this week to near **$104**, just above $100 ahead of Tuesday's Alpenglow upgrade.",
+          "why": "US Solana ETFs saw nine straight days of outflows, outweighing excitement about the upgrade."
+        }
+      ]
+    },
+    {
+      "key": "commodities",
+      "label": "Commodities",
+      "items": [
+        {
+          "emoji": "🥇",
+          "detail": "**Gold** slipped about **0.5%** this week to near **$4,167**, as Thursday's rebound recovered most of a midweek slide.",
+          "why": "The hot CPI report lifted yields and the dollar, then hot producer prices and falling yields drew inflation-hedge buyers."
+        }
+      ]
+    }
+  ],
+  "crossCuttingTheme": "Doubts about debt-funded AI spending, plus Iran-war oil pushing inflation to 3.7%, kept yields above 5% and Fed hike fears alive, hitting chipmakers from the Nasdaq to Seoul, along with small caps and crypto."
+}
