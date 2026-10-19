@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-19",
+  "generatedAt": "2026-10-19T08:30:00Z",
+  "sections": [
+    {
+      "key": "usa",
+      "label": "USA",
+      "items": [
+        {
+          "emoji": "🤖",
+          "detail": "**Meta and Tesla** report after Wednesday's close, the week's big test for the Nasdaq after last week's **4.5%** drop on AI-spending fears.",
+          "why": "Bigger AI spending plans without matching revenue would deepen the selloff; reassuring guidance could spark a relief rally.",
+          "sourceName": "Meta Investor Relations",
+          "sourceUrl": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-to-Announce-Third-Quarter-2026-Results/default.aspx"
+        },
+        {
+          "emoji": "🏦",
+          "detail": "The Fed has gone quiet before its Oct. 27–28 meeting, so Friday's **flash PMIs** and consumer inflation expectations are the week's only notable US data.",
+          "why": "Hot price readings would revive rate-hike bets and push the 10-year yield further above 5%.",
+          "sourceName": "Kiplinger",
+          "sourceUrl": "https://www.kiplinger.com/investing/economy/this-weeks-economic-calendar"
+        },
+        {
+          "emoji": "📊",
+          "detail": "Chip-equipment maker **Lam Research** also reports Wednesday after the close, with the **S&P 500** starting the week at 7,659.",
+          "why": "Chipmakers led last week's losses, so Lam's China and memory-chip outlook will show whether that damage spreads.",
+          "sourceName": "FXEmpire",
+          "sourceUrl": "https://www.fxempire.com/forecasts/article/the-week-ahead-meta-tesla-and-chip-earnings-put-ai-trade-to-the-test-1638768"
+        }
+      ]
+    },
+    {
+      "key": "emsmallcaps",
+      "label": "Emerging Markets and Small Caps",
+      "items": [
+        {
+          "emoji": "🏦",
+          "detail": "The **Bank of Korea** decides rates Thursday, and 19 of 20 economists polled expect it to hold at **3.00%** after hikes in July and August.",
+          "why": "A surprise hike would add to pressure on a Kospi already below 6,000; a hold that hints at November keeps chip stocks cautious.",
+          "sourceName": "Seoul Economic Daily",
+          "sourceUrl": "https://en.sedaily.com/finance/2026/10/19/95-percent-of-experts-expect-bank-of-korea-to-hold-rate-in"
+        },
+        {
+          "emoji": "🇮🇳",
+          "detail": "Indian markets close Tuesday for Dussehra, and the **₹30,213 crore Jio Platforms IPO** takes bids Wednesday to Friday, with the Nifty starting at 23,146.",
+          "why": "India's biggest-ever IPO could pull cash away from other stocks, while crude prices and foreign selling remain the main risks.",
+          "sourceName": "Angel One",
+          "sourceUrl": "https://www.angelone.in/news/market-updates/are-banks-and-stock-market-open-tomorrow-on-dussehra-october-20-2026"
+        },
+        {
+          "emoji": "📉",
+          "detail": "The US **Russell 2000** starts the week in a correction, about **11%** below its August record, with Friday's flash PMIs the main scheduled test.",
+          "why": "Small companies with floating-rate debt suffer most if hot price data keeps yields above 5%.",
+          "sourceName": "CNBC",
+          "sourceUrl": "https://www.cnbc.com/2026/10/15/small-cap-stocks-slide-into-correction-territory.html"
+        }
+      ]
+    },
+    {
+      "key": "crypto",
+      "label": "Crypto",
+      "items": [
+        {
+          "emoji": "₿",
+          "detail": "**Bitcoin** starts near **$81,500** and is holding $80,000 support, with Wednesday's Meta and Tesla results the main risk event in a week with no Fed speakers.",
+          "why": "Another tech selloff or rising yields could break $80,000, especially after ETF outflows of about $228 million last week.",
+          "sourceName": "The CC Press",
+          "sourceUrl": "https://theccpress.com/ethereum-etfs-lose-320-million-week-bitcoin-outflows-slow"
+        },
+        {
+          "emoji": "💸",
+          "detail": "**Ether** starts near **$2,409**, and the key thing to watch is whether US spot ether ETF outflows continue after about $320 million left last week.",
+          "why": "Continued outflows with no upgrade this week leave $2,400 at risk; a halt would steady prices.",
+          "sourceName": "TokenPost",
+          "sourceUrl": "https://www.tokenpost.com/news/investing/34098"
+        },
+        {
+          "emoji": "⚡",
+          "detail": "Solana's **Alpenglow** upgrade goes live on mainnet Wednesday at about 14:50 UTC, aiming to cut transaction finality to roughly 150 milliseconds, with **SOL** near $104.",
+          "why": "A smooth launch could stop the ETF outflows; problems or another delay could push SOL below $100.",
+          "sourceName": "CoinMarketCap",
+          "sourceUrl": "https://coinmarketcap.com/academy/article/solana-alpenglow-mainnet-oct-21-anza"
+        }
+      ]
+    },
+    {
+      "key": "commodities",
+      "label": "Commodities",
+      "items": [
+        {
+          "emoji": "🥇",
+          "detail": "**Gold** starts near **$4,180**, and Friday's flash PMIs and inflation expectations are the week's main test, with oil near $110.",
+          "why": "Hot price data would lift yields and the dollar, hurting gold; a soft reading would bring back inflation-hedge buying.",
+          "sourceName": "FinanceFeeds",
+          "sourceUrl": "https://financefeeds.com/gold-price-4166-week-ahead-oil-110-fed-october-meeting-bull-4330-bear-3970/"
+        }
+      ]
+    }
+  ],
+  "crossCuttingTheme": "With the Fed silent, Wednesday's Meta, Tesla and Lam results test whether heavy AI spending can be justified, while oil near $110 keeps yields above 5%, setting the tone for chips, small caps, crypto and gold."
+}
