@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-20",
+  "generatedAt": "2026-10-20T06:00:00Z",
+  "sections": [
+    {
+      "key": "usa",
+      "label": "USA",
+      "items": [
+        {
+          "emoji": "📈",
+          "detail": "The **Nasdaq** rose 1.11% to 26,430.89 Monday, and the S&P 500 gained 0.41% to 7,690.73, bouncing back from last week's tech selloff.",
+          "why": "Buyers returned to chipmakers, and the chip index ended an eight-day losing streak, its longest in 18 years.",
+          "sourceName": "Invezz",
+          "sourceUrl": "https://invezz.com/news/2026/10/19/nasdaq-rises-1-1-as-chip-stocks-rebound-after-last-weeks-ai-selloff/"
+        },
+        {
+          "emoji": "🤖",
+          "detail": "**CoreWeave** fell another 1.5% Monday even as Micron and Nvidia each rose about 2%, so the AI debt worry is still there.",
+          "why": "CoreWeave's roughly $50 billion of debt is still the focus, and big tech earnings are the next test of AI spending.",
+          "sourceName": "The Detroit News",
+          "sourceUrl": "https://www.detroitnews.com/story/business/2026/10/19/sp-500-nasdaq-climb-as-ai-linked-stocks-recover-ahead-of-earnings/92330574007/"
+        },
+        {
+          "emoji": "🏦",
+          "detail": "The **10-year Treasury yield** rose to about 5.10% and the 2-year to 4.75%, even though traders now expect the Fed to pause in October.",
+          "why": "Inflation risks keep futures traders betting the Fed will raise rates again by December.",
+          "sourceName": "Kitco",
+          "sourceUrl": "http://www.kitco.com/news/article/2026-10-19/gold-falls-dollar-treasury-yields-rise-silver-holds-modest-gains-kitco-pm"
+        }
+      ]
+    },
+    {
+      "key": "emsmallcaps",
+      "label": "Emerging Markets and Small Caps",
+      "items": [
+        {
+          "emoji": "🇰🇷",
+          "detail": "South Korea's **Kospi** fell about 2.7% midday Tuesday, wiping out Monday's 1.8% rebound, and SK Hynix headed for its lowest close since April.",
+          "why": "Worries about AI spending hit Korean chipmakers again ahead of big tech earnings.",
+          "sourceName": "Investing.com",
+          "sourceUrl": "https://www.investing.com/news/stock-market-news/asia-stocks-slump-as-ai-jitters-hammer-korean-chipmakers-ahead-of-tech-earnings-4958731"
+        },
+        {
+          "emoji": "📉",
+          "detail": "The **Sensex** fell 876 points to 73,852.90 Monday and the Nifty slipped below 23,000 to 22,888.95, with Indian markets closed Tuesday for Dussehra.",
+          "why": "Disappointing Axis Bank results, weaker IT stocks and oil near $108 ended a two-day winning streak.",
+          "sourceName": "Business Standard",
+          "sourceUrl": "https://www.business-standard.com/amp/markets/news/stock-market-live-october-19-nse-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-bond-yields-q2-results-hind-zinc-share-price-today-ipo-today-126101900052_1.html"
+        },
+        {
+          "emoji": "🔻",
+          "detail": "The US **Russell 2000** is still about 11% below its August record of 3,068.42, which keeps it in correction territory.",
+          "why": "About 40% of small companies' debt has floating rates, so 10-year yields near 5.1% hurt them directly.",
+          "sourceName": "Bloomberg",
+          "sourceUrl": "https://www.bloomberg.com/quote/RTY:IND"
+        }
+      ]
+    },
+    {
+      "key": "crypto",
+      "label": "Crypto",
+      "items": [
+        {
+          "emoji": "₿",
+          "detail": "**Bitcoin** slipped back to about $81,500 Tuesday after failing to break $83,000 on Monday.",
+          "why": "Sellers held the $82,000–$83,000 range even as tech stocks rebounded, and greed readings cooled.",
+          "sourceName": "KuCoin",
+          "sourceUrl": "https://www.kucoin.com/news/articles/crypto-daily-market-report-october-20-2026"
+        },
+        {
+          "emoji": "💧",
+          "detail": "**Ether** fell 1.1% to about **$2,396**, slipping back below $2,400.",
+          "why": "Ether ETFs lost $320 million last week, putting October outflows near $1 billion.",
+          "sourceName": "Cointelegraph",
+          "sourceUrl": "https://cointelegraph.com/markets/bitcoin-ether-etfs-549-million-weekly-outflows"
+        },
+        {
+          "emoji": "⚡",
+          "detail": "**Solana** held near **$104**, a day before Wednesday's Alpenglow upgrade, which aims to confirm transactions in 150 milliseconds.",
+          "why": "Continued outflows from US Solana ETFs are offsetting hopes for the upgrade, keeping SOL between $100 and $110.",
+          "sourceName": "Bitcoin.com News",
+          "sourceUrl": "https://news.bitcoin.com/crypto-news/solanas-alpenglow-arrives-oct-21-major-speed-boost/"
+        }
+      ]
+    },
+    {
+      "key": "commodities",
+      "label": "Commodities",
+      "items": [
+        {
+          "emoji": "🥇",
+          "detail": "**Gold** fell about 0.5% Monday and traded near **$4,138** Tuesday morning, below the $4,150 level it had been testing.",
+          "why": "A firmer dollar and a 5.10% 10-year Treasury yield made non-yielding bullion less attractive.",
+          "sourceName": "Kitco",
+          "sourceUrl": "http://www.kitco.com/news/article/2026-10-19/gold-falls-dollar-treasury-yields-rise-silver-holds-modest-gains-kitco-pm"
+        }
+      ]
+    }
+  ],
+  "crossCuttingTheme": "The AI-chip rebound looks fragile: US chipmakers bounced Monday but Korean chipmakers fell again Tuesday, while 10-year yields near 5.1% held back gold, small caps and bitcoin."
+}
