@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-22",
+  "generatedAt": "2026-10-22T08:15:00+03:00",
+  "sections": [
+    {
+      "key": "usa",
+      "label": "USA",
+      "items": [
+        {
+          "emoji": "📈",
+          "detail": "The **Nasdaq** jumped **1.05%** to 26,702.86 Wednesday, leading the S&P 500 up 0.58% to a 7,757.17 close as tech took back the lead from value stocks.",
+          "why": "Strong results from SpaceX and Super Micro brought back appetite for AI stocks, outweighing Netflix's slide.",
+          "sourceName": "Detroit News (Reuters)",
+          "sourceUrl": "https://www.detroitnews.com/story/business/2026/10/21/nasdaq-leads-gains-as-spacex-super-micro-results-improve-ai-appetite/92361548007/"
+        },
+        {
+          "emoji": "🚗",
+          "detail": "**Tesla** fell about **3%** after hours even though its quarterly results beat forecasts, with $28.05 billion in revenue, while Meta beat estimates and raised its outlook.",
+          "why": "Investors are questioning big AI spending, and Meta's plan to issue non-voting shares drew fresh doubts.",
+          "sourceName": "Stocktwits",
+          "sourceUrl": "https://stocktwits.com/news-articles/markets/equity/how-are-dow-s-and-p-500-nasdaq-futures-trading-after-meta-tsla-earnings/cZxvH4HRBwI"
+        },
+        {
+          "emoji": "🏦",
+          "detail": "With the **Fed** meeting on October 28, markets expect rates to stay on hold but are still pricing in a **December hike**.",
+          "why": "Brent pushing back above $110 has revived inflation worries and kept bets on tighter Fed policy alive.",
+          "sourceName": "USAGOLD",
+          "sourceUrl": "https://www.usagold.com/daily-precious-metals-market-report-october-21-2026/"
+        }
+      ]
+    },
+    {
+      "key": "emsmallcaps",
+      "label": "Emerging Markets and Small Caps",
+      "items": [
+        {
+          "emoji": "🇰🇷",
+          "detail": "South Korea's **Kospi** fell **2.24%** to 5,607.28 Thursday, giving back part of Wednesday's 3.3% rally as most Asian markets slipped.",
+          "why": "Doubts about AI spending after Meta's results and tension in the Gulf quickly wiped out the boost from tech earnings.",
+          "sourceName": "Kaohoon International",
+          "sourceUrl": "https://www.kaohooninternational.com/markets/593069"
+        },
+        {
+          "emoji": "🇮🇳",
+          "detail": "The **Nifty** fell back below 23,000 to **22,811.35** Wednesday, down 0.34%, its second losing session in a row, as India VIX jumped about 6%.",
+          "why": "Brent above $110 and weak bank stocks outweighed a sharp rally in IT shares, and midcaps did worse.",
+          "sourceName": "Business Standard",
+          "sourceUrl": "https://www.business-standard.com/amp/markets/news/stock-market-live-october-21-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-jio-platforms-ipo-today-hd-fire-protect-share-price-126102100078_1.html"
+        },
+        {
+          "emoji": "🐢",
+          "detail": "The US **Russell 2000** gained just **0.24%** to 2,783.29 Wednesday, after Tuesday's best day since August, as money moved back toward big tech.",
+          "why": "With the 10-year yield stuck near 5.11%, investors went back to AI megacaps instead of rate-sensitive small firms.",
+          "sourceName": "Benzinga",
+          "sourceUrl": "https://www.benzinga.com/markets/equities/26/10/62504696/spacex-jumps-nasdaq-100-ai-trade-netflix-att-stock-market-today"
+        }
+      ]
+    },
+    {
+      "key": "crypto",
+      "label": "Crypto",
+      "items": [
+        {
+          "emoji": "₿",
+          "detail": "**Bitcoin** held near **$83,350** Wednesday, and its volatility dropped close to its lowest level of 2026.",
+          "why": "Traders are waiting on next week's Fed decision and the US midterms before making big bets.",
+          "sourceName": "The Block",
+          "sourceUrl": "https://www.theblock.co/news/markets/2026-10-21-bitcoin-volatility-nears-2026-lows-as-traders-brace-for-fed-decision-and-us-midterms-421524"
+        },
+        {
+          "emoji": "💎",
+          "detail": "**Ether** briefly climbed back above **$2,500** Wednesday for the first time in over a week, before easing to around $2,490.",
+          "why": "The tech-stock rally lifted ETH, though October outflows from Ether ETFs near $1.08 billion keep holding it back.",
+          "sourceName": "FXStreet",
+          "sourceUrl": "https://www.fxstreet.com/cryptocurrencies/news/ethereum-retests-2-500-as-spacex-surge-lifts-tech-stocks-202610211958"
+        },
+        {
+          "emoji": "⚡",
+          "detail": "**Solana** traded near **$106** after its Alpenglow upgrade went live Wednesday, cutting transaction finality to about 150 milliseconds.",
+          "why": "Ongoing outflows from US Solana funds and a large corporate SOL sale have so far blunted any lift from the upgrade.",
+          "sourceName": "KuCoin News",
+          "sourceUrl": "https://www.kucoin.com/news/flash/solana-s-alpenglow-upgrade-activates-for-150ms-transaction-finality"
+        }
+      ]
+    },
+    {
+      "key": "commodities",
+      "label": "Commodities",
+      "items": [
+        {
+          "emoji": "🥇",
+          "detail": "**Gold** ended a four-day losing streak, with spot up 0.3% to about **$4,138** Wednesday, before slipping to around $4,127 Thursday.",
+          "why": "A second straight dip in the 10-year yield helped, but Brent above $110 is keeping Fed hike bets alive.",
+          "sourceName": "Marketscreener (Reuters)",
+          "sourceUrl": "https://www.marketscreener.com/news/gold-edges-higher-as-yields-retreat-fed-decision-in-focus-ce785cd9dd8bf623"
+        }
+      ]
+    }
+  ],
+  "crossCuttingTheme": "Brent back above $110 is keeping US yields near 5.1% and December Fed hike bets alive, which is weighing on India, gold and small caps while AI earnings alone decide whether tech rallies."
+}
