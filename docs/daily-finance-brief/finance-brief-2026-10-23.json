@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-23",
+  "generatedAt": "2026-10-23T05:30:00Z",
+  "sections": [
+    {
+      "key": "usa",
+      "label": "USA",
+      "items": [
+        {
+          "emoji": "📉",
+          "detail": "The **Nasdaq** sank **2.60%** to 26,008.86 Thursday, its steepest drop since June, dragging the S&P 500 down 1.21% to 7,663.43.",
+          "why": "Meta fell nearly 7% after posting its first cash outflow in over a decade, reviving fears about AI spending.",
+          "sourceName": "Closing Look (Substack)",
+          "sourceUrl": "https://cappnotes.substack.com/p/closing-look-thursday-october-22"
+        },
+        {
+          "emoji": "🤖",
+          "detail": "Chip stocks led the rout, with the **Philadelphia Semiconductor Index** down **6.72%** and AMD off 8.1%, while Tesla slid 3.1% despite surprise positive free cash flow.",
+          "why": "A supply warning from Lam Research hit chipmakers already under pressure from doubts about AI payoffs.",
+          "sourceName": "Closing Look (Substack)",
+          "sourceUrl": "https://cappnotes.substack.com/p/closing-look-thursday-october-22"
+        },
+        {
+          "emoji": "🏦",
+          "detail": "With the **Fed** meeting next week on October 27–28, Brent near **$112** is keeping a later rate hike firmly on the table.",
+          "why": "Reports of planned new strikes on Iran pushed oil to its highest since May, stoking inflation fears.",
+          "sourceName": "BNN Bloomberg",
+          "sourceUrl": "https://bnnbloomberg.ca/markets/2026/10/22/ai-stocks-drag-markets-down-worldwide-as-oil-prices-climb-to-their-highest-since-may"
+        }
+      ]
+    },
+    {
+      "key": "emsmallcaps",
+      "label": "Emerging Markets and Small Caps",
+      "items": [
+        {
+          "emoji": "🇰🇷",
+          "detail": "South Korea's **Kospi** fell more than **4%** early Friday, briefly touching the 5,300 level, after closing Thursday down 3.52% at 5,533.77.",
+          "why": "The US chip selloff over AI costs hit Samsung and SK Hynix, which foreigners have been dumping all month.",
+          "sourceName": "Bloomingbit",
+          "sourceUrl": "https://en.bloomingbit.io/feed/news/122779"
+        },
+        {
+          "emoji": "🛢️",
+          "detail": "The **Nifty** fell 0.54% to **22,687.65** Thursday, a third straight loss, while the Sensex lost 460 points to 73,249.39.",
+          "why": "Crude above $110 and weak Asian markets sparked broad selling, with IT, energy and FMCG among the worst sectors.",
+          "sourceName": "Business Standard",
+          "sourceUrl": "https://www.business-standard.com/amp/markets/news/stock-market-live-october-22-nse-bse-sensex-today-nifty50-gift-nifty-jio-ipo-today-126102200085_1.html"
+        },
+        {
+          "emoji": "🛡️",
+          "detail": "The US **Russell 2000** edged up **0.11%** to 2,784.03 Thursday, staying positive while the Nasdaq dropped 2.6%.",
+          "why": "Investors running from AI megacaps moved into smaller US companies that have little exposure to chip spending.",
+          "sourceName": "Closing Look (Substack)",
+          "sourceUrl": "https://cappnotes.substack.com/p/closing-look-thursday-october-22"
+        }
+      ]
+    },
+    {
+      "key": "crypto",
+      "label": "Crypto",
+      "items": [
+        {
+          "emoji": "₿",
+          "detail": "**Bitcoin** slid about **3.3%** to roughly $81,400 early Friday, wiping out this week's calm and testing key support near $81,500.",
+          "why": "The tech selloff dragged crypto down with it, even after spot bitcoin ETFs took in about $1.08 billion over three sessions.",
+          "sourceName": "Seoul Economic Daily",
+          "sourceUrl": "https://en.sedaily.com/finance/2026/10/23/bitcoin-slides-to-81000-as-us-tech-selloff-deepens"
+        },
+        {
+          "emoji": "🔻",
+          "detail": "**Ether** fell back below $2,500, dropping about **3.6%** to around $2,381 Thursday and losing more than bitcoin.",
+          "why": "ETH tends to swing harder with tech stocks, and the steady drain from Ether ETFs leaves little buying support.",
+          "sourceName": "The Motley Fool",
+          "sourceUrl": "https://www.fool.com/coverage/stock-market-today/2026/10/22/crypto-market-today-oct-22-bitcoin-and-altcoins-slide-as-wall-street-fears-spill-into-crypto-markets/"
+        },
+        {
+          "emoji": "🌐",
+          "detail": "**Solana** fell about **3.3%** to near $103 Thursday, giving up its post-Alpenglow level around $106.",
+          "why": "Broad risk-off selling across crypto outweighed any lift from the faster network upgrade.",
+          "sourceName": "The Motley Fool",
+          "sourceUrl": "https://www.fool.com/coverage/stock-market-today/2026/10/22/crypto-market-today-oct-22-bitcoin-and-altcoins-slide-as-wall-street-fears-spill-into-crypto-markets/"
+        }
+      ]
+    },
+    {
+      "key": "commodities",
+      "label": "Commodities",
+      "items": [
+        {
+          "emoji": "🥇",
+          "detail": "**Gold** broke below $4,100 and fell about **2.6%** to near $4,033 Thursday, wiping out Wednesday's rebound and heading for an October loss.",
+          "why": "Brent near $112 boosted inflation fears and bets on a Fed hike, while yields stayed near 5.1%.",
+          "sourceName": "Business Today",
+          "sourceUrl": "https://www.businesstoday.in/latest/economy/story/gold-falls-below-4100-silver-slides-4-5-as-brent-nears-112-will-fed-rate-hike-fears-trigger-more-losses-563169-2026-10-22"
+        }
+      ]
+    }
+  ],
+  "crossCuttingTheme": "Meta's AI-spending shock sent chip stocks, Korea and crypto lower together, while Brent near $112 kept Fed hike bets alive, hurting gold and India and leaving only US small caps standing."
+}
