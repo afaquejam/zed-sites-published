@@ -36,6 +36,7 @@
     --cat-bollywood: #ff8fb1;
     --cat-indiantv: #c59bff;
     --cat-local: #4fd8d0;
+    --cat-games: #ff7a6b;
     --cat: var(--cat-bollywood); /* overridden per page */
     color-scheme: dark;
   }
@@ -64,6 +65,7 @@
       --cat-bollywood: #a8295a;
       --cat-indiantv: #6a3fd6;
       --cat-local: #00736d;
+      --cat-games: #b8261a;
       color-scheme: light;
     }
   }
@@ -265,6 +267,8 @@
     background: var(--md-sys-color-surface-container-high);
     box-shadow: 0 1px 3px rgba(0,0,0,0.35);
   }
+  /* Game box art is 3:4, not a film poster's 2:3. */
+  .poster.game { aspect-ratio: 3 / 4; }
   .body { min-width: 0; }
 
   .title-row {
@@ -302,6 +306,8 @@
   }
   .plat.tv::before { content: "📺 "; }
   .plat.ott::before { content: "▶ "; color: var(--cat); }
+  .plat.console::before { content: "🎮 "; }
+  .plat.sub::before { content: "➕ "; }
 
   .blurb {
     font-size: 0.9375rem;
@@ -434,6 +440,7 @@
         <a class="cat-chip" style="--chip-cat: var(--cat-kids)" href="top10-kids-animated-2026-10-24.html">Kids &amp; Animated</a>
         <a class="cat-chip active" style="--chip-cat: var(--cat-bollywood)" href="top10-bollywood-movies-2026-10-24.html" aria-current="page">Bollywood Movies</a>
         <a class="cat-chip" style="--chip-cat: var(--cat-indiantv)" href="top10-indian-tv-2026-10-24.html">Indian TV Shows</a>
+        <a class="cat-chip" style="--chip-cat: var(--cat-games)" href="top10-console-games-2026-10-24.html">Console Games</a>
         <a class="cat-chip" style="--chip-cat: var(--cat-local)" href="local-entertainment-2026-10-24.html">Local Entertainment</a>
       </nav>
     </div>
