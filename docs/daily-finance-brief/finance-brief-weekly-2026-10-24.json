@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-24",
+  "generatedAt": "2026-10-24T09:00:00Z",
+  "sections": [
+    {
+      "key": "usa",
+      "label": "USA",
+      "items": [
+        {
+          "emoji": "📉",
+          "detail": "The **S&P 500** fell **0.5%** on the week to 7,623.68 and the Nasdaq lost 0.7% to 25,955.34, a second straight weekly decline.",
+          "why": "Doubts about AI spending returned after Meta's results, while rising oil kept fears of high interest rates alive.",
+          "sourceName": "Reuters via Lufkin Daily News",
+          "sourceUrl": "https://lufkindailynews.com/news_reuters/business/s-p-500-closes-lower-to-end-rocky-week/article_2d734e8a-a795-5453-8c12-6ad085c6c302.html"
+        },
+        {
+          "emoji": "🤖",
+          "detail": "Meta sank about **7%** Thursday, which gave the Nasdaq its worst day since June and helped push communication services down roughly 6% on the week.",
+          "why": "Meta reported negative free cash flow for the quarter as AI capex reached about $35 billion.",
+          "sourceName": "Yahoo Finance",
+          "sourceUrl": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-october-22-dow-sp-500-nasdaq-tesla-meta-112217857.html"
+        },
+        {
+          "emoji": "🛢️",
+          "detail": "Energy was the week's winner as the S&P 500 energy sector hit a record high, with **Brent** climbing to about **$114.50** a barrel.",
+          "why": "Houthi strikes on Saudi Arabia raised fears that Gulf oil supply could be disrupted.",
+          "sourceName": "TheStreet",
+          "sourceUrl": "https://thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-23-2026"
+        }
+      ]
+    },
+    {
+      "key": "emsmallcaps",
+      "label": "Emerging Markets and Small Caps",
+      "items": [
+        {
+          "emoji": "🌍",
+          "detail": "MSCI's emerging-markets index was heading for a **fourth straight weekly loss**, and Turkey's main and bank indexes each fell 2.4% on Friday alone.",
+          "why": "Oil at five-month highs hit importers, and Turkey's new fund-liquidation law raised talk of an MSCI downgrade.",
+          "sourceName": "Finimize",
+          "sourceUrl": "https://finimize.com/content/emerging-markets-struggle-with-oil-ai-nerves-and-budget-math"
+        },
+        {
+          "emoji": "🇮🇳",
+          "detail": "The **NIFTY 50** fell **2.4%** on the week and the Sensex lost 2.1%, with 43 of the 50 NIFTY stocks finishing lower.",
+          "why": "Brent's jump toward $117 threatens India's import bill and inflation, and foreign investors kept selling most days.",
+          "sourceName": "Upstox",
+          "sourceUrl": "https://upstox.com/news/market-news/stocks/market-weekly-wrap-sensex-nifty-50-snap-winning-streak-fall-2-as-crude-oil-prices-hit-117-bbl-adani-ent-shriram-finance-top-losers/article-202330/"
+        },
+        {
+          "emoji": "🔻",
+          "detail": "India's **NIFTY Smallcap 100** dropped **7.3%** on the week, far more than large caps, and the Midcap 100 lost 5.6%.",
+          "why": "When oil spikes, investors dump the riskiest, most rate-sensitive stocks first, and Indian small caps took the biggest hit.",
+          "sourceName": "Upstox",
+          "sourceUrl": "https://upstox.com/news/market-news/stocks/market-weekly-wrap-sensex-nifty-50-snap-winning-streak-fall-2-as-crude-oil-prices-hit-117-bbl-adani-ent-shriram-finance-top-losers/article-202330/"
+        }
+      ]
+    },
+    {
+      "key": "crypto",
+      "label": "Crypto",
+      "items": [
+        {
+          "emoji": "₿",
+          "detail": "Bitcoin ended the week around **$81,500**, stuck below $82,000 after three days of ETF inflows were followed by a **$635 million** outflow on Thursday.",
+          "why": "Thursday's tech selloff pulled money out of risk assets, and BlackRock and Fidelity funds led the ETF withdrawals.",
+          "sourceName": "crypto.news",
+          "sourceUrl": "https://crypto.news/why-is-bitcoin-price-down-today-etf-outflows/"
+        },
+        {
+          "emoji": "💎",
+          "detail": "Ether slipped about **1.6%** over the week to roughly **$2,400**, a little worse than bitcoin.",
+          "why": "Ether ETFs kept losing money and have shed more than $1 billion in October.",
+          "sourceName": "Cointelegraph",
+          "sourceUrl": "https://cointelegraph.com/markets/ether-etf-outflows-near-1-1-billion-october"
+        },
+        {
+          "emoji": "☀️",
+          "detail": "Solana finished roughly flat at about **$103**, though it lost about 4% on Thursday along with ether.",
+          "why": "The Meta-led risk-off hit altcoins, and spot SOL ETFs are still losing money after a 14-week inflow run.",
+          "sourceName": "Coinbase",
+          "sourceUrl": "https://www.coinbase.com/price/solana"
+        }
+      ]
+    },
+    {
+      "key": "commodities",
+      "label": "Commodities",
+      "items": [
+        {
+          "emoji": "🥇",
+          "detail": "Spot gold fell about **3.5%** on the week to near **$4,020** an ounce, its steepest weekly loss since June.",
+          "why": "Higher oil prices raised inflation risk and bets that the Fed keeps rates high, which hurts gold since it pays no interest.",
+          "sourceName": "CNBC (Reuters)",
+          "sourceUrl": "https://www.cnbc.com/amp/2026/10/23/gold-heads-for-steep-weekly-loss-as-oil-prices-fuel-fed-rate-concerns.html"
+        }
+      ]
+    }
+  ],
+  "crossCuttingTheme": "Houthi attacks on Saudi Arabia pushed Brent toward $115, fuelling fears of inflation and higher rates that hit oil-importing India and emerging markets, AI-heavy tech, and even gold."
+}
