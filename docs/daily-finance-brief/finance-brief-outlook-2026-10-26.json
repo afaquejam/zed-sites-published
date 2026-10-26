@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-26",
+  "generatedAt": "2026-10-26T08:00:00Z",
+  "sections": [
+    {
+      "key": "usa",
+      "label": "USA",
+      "items": [
+        {
+          "emoji": "🏦",
+          "detail": "The **Fed decides Wednesday** and is widely expected to hold, with futures pricing hold odds near **87%**, so the press conference matters more than the decision.",
+          "why": "Hints of a December hike would hurt rate-sensitive tech, while calmer words could ease oil-driven rate fears.",
+          "sourceName": "Business Standard",
+          "sourceUrl": "https://www.business-standard.com/amp/markets/news/gold-silver-face-fresh-test-as-oil-surge-puts-fed-policy-decision-in-focus-126102500493_1.html"
+        },
+        {
+          "emoji": "🤖",
+          "detail": "**Microsoft and Alphabet report Wednesday** after the close and **Amazon on Thursday**, the first megacap test since Meta's **7%** drop over AI spending.",
+          "why": "Heavy capex without clear returns would deepen the Nasdaq's slide, while proof of AI revenue could halt it.",
+          "sourceName": "StockTitan",
+          "sourceUrl": "https://www.stocktitan.net/articles/earnings-calendar-week-of-october-26-2026"
+        },
+        {
+          "emoji": "📉",
+          "detail": "Thursday morning brings **Q3 GDP** and **September core PCE**, the Fed's preferred inflation gauge, with core forecast to rise **0.3%** on the month.",
+          "why": "A hotter print the day after the Fed would revive hike bets and pressure both stocks and bonds.",
+          "sourceName": "FXEmpire",
+          "sourceUrl": "https://www.fxempire.com/forecasts/article/the-week-ahead-fed-ai-earnings-and-pce-data-test-stock-market-strength-1640174"
+        }
+      ]
+    },
+    {
+      "key": "emsmallcaps",
+      "label": "Emerging Markets and Small Caps",
+      "items": [
+        {
+          "emoji": "💾",
+          "detail": "**SK hynix reports Wednesday** and **Samsung Thursday**, as MSCI's emerging-markets index tries to snap a **four-week losing streak** and Korea's Q3 GDP lands Tuesday.",
+          "why": "Strong memory-chip outlooks could lift Korea and Taiwan, EM's heavyweights, even as oil hurts importers.",
+          "sourceName": "ING Think",
+          "sourceUrl": "https://think.ing.com/articles/asia-week-ahead-231026"
+        },
+        {
+          "emoji": "📊",
+          "detail": "**L&T and Maruti Suzuki report Tuesday** in a heavy Q2 week, with the **NIFTY 50** starting near **22,600** after last week's 2.4% fall.",
+          "why": "Solid results could slow foreign selling, but Brent near $115 keeps pressure on India's import bill.",
+          "sourceName": "Business Upturn",
+          "sourceUrl": "https://businessupturn.com/finance/stock-market/quarterly-results/top-q2-results-next-week-october-26-30-l-t-asian-paints-maruti-suzuki-trent-paytm-tata-consumer-products-among-companies-to-report-earnings/"
+        },
+        {
+          "emoji": "🔬",
+          "detail": "The US **Russell 2000** heads into Wednesday's Fed decision after a **2%** weekly gain, while India's **NIFTY Smallcap 100** enters as the global laggard after a 7.3% drop.",
+          "why": "Debt-heavy small caps need lower yields, so a hawkish Fed or hot PCE would hit them hardest.",
+          "sourceName": "Opening Bell Daily",
+          "sourceUrl": "https://www.openingbelldailynews.com/p/small-caps-week-oct-24-2026"
+        }
+      ]
+    },
+    {
+      "key": "crypto",
+      "label": "Crypto",
+      "items": [
+        {
+          "emoji": "₿",
+          "detail": "Bitcoin starts near **$80,500**, right around ETF buyers' **$81,300** average cost, with Wednesday's Fed and Big Tech results as the week's tests.",
+          "why": "Staying below ETF buyers' cost could trigger more fund selling after Thursday's large outflow.",
+          "sourceName": "investingLive",
+          "sourceUrl": "https://investinglive.com/cryptocurrency/bitcoin-etf-inflows-fade-as-price-pressure-tests-etf-buyers-81-300-cost-basis/"
+        },
+        {
+          "emoji": "🔷",
+          "detail": "Ether enters near **$2,400** with no upgrade catalyst after developers postponed Monday's Hoodi testnet upgrade, and its ETFs are on **four straight weeks** of outflows.",
+          "why": "With no protocol news, ether trades on the Fed and tech mood, and fund outflows keep it lagging.",
+          "sourceName": "FinanceFeeds",
+          "sourceUrl": "https://financefeeds.com/crypto-etf-flows-this-week-bitcoin-funds-net-301-million-despite-636-million-thursday-exit-where-ether-xrp-and-solana-landed/"
+        },
+        {
+          "emoji": "⚡",
+          "detail": "Solana starts near **$103** in its first full week after the **Alpenglow upgrade** went live, with spot SOL ETF flows the gauge to watch.",
+          "why": "The upgrade has not lifted the price yet, and renewed ETF buying would be the first sign it is working.",
+          "sourceName": "CoinCentral",
+          "sourceUrl": "https://coincentral.com/solana-sol-price-dip-buys-record-network-activity-and-alpenglow-upgrade-put-sol-in-focus"
+        }
+      ]
+    },
+    {
+      "key": "commodities",
+      "label": "Commodities",
+      "items": [
+        {
+          "emoji": "🥇",
+          "detail": "Gold starts near **$4,010** an ounce, and **Wednesday's Fed decision**, followed by Thursday's PCE, decides whether its steepest weekly drop since June extends.",
+          "why": "A hawkish Fed lifts yields and the dollar, which hurts gold, while softer guidance could revive buying.",
+          "sourceName": "FXStreet",
+          "sourceUrl": "https://www.fxstreet.com/analysis/gold-price-forecast-xag-usd-gains-at-start-of-feds-policy-week-202610260326"
+        }
+      ]
+    }
+  ],
+  "crossCuttingTheme": "Wednesday's Fed decision and Thursday's PCE meet Brent near $115: if oil-driven inflation keeps hike bets alive, higher yields hit AI megacaps, small caps, emerging markets, crypto and gold together."
+}
