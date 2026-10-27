@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-27",
+  "generatedAt": "2026-10-27T05:00:00Z",
+  "sections": [
+    {
+      "key": "usa",
+      "label": "USA",
+      "items": [
+        {
+          "emoji": "🤖",
+          "detail": "The **Nasdaq** rose 0.82% to 26,169.38 Monday and the S&P 500 gained 0.70% to 7,676.77, after two straight weekly losses.",
+          "why": "Anthropic's IPO filing revived the AI trade, and chip stocks jumped nearly 3% to lead the gains.",
+          "sourceName": "Invezz",
+          "sourceUrl": "https://invezz.com/news/2026/10/26/nasdaq-closes-0-8-higher-as-anthropic-ipo-filing-boosts-ai-stocks/"
+        },
+        {
+          "emoji": "🛢️",
+          "detail": "Oil eased from a four-year high, with **Brent** down 1.4% to about $110, which helped the Dow add 0.28% after Friday's sharp drop.",
+          "why": "Saudi Arabia's defense minister held talks in Tehran, raising hopes that US-Iran tensions will cool.",
+          "sourceName": "The Star (Reuters)",
+          "sourceUrl": "https://www.thestar.com.my/business/business-news/2026/10/27/world-stocks-gain-ahead-of-039formidable039-week-for-risk-oil-prices-fall"
+        },
+        {
+          "emoji": "🏦",
+          "detail": "The **Fed** meeting begins today, and a hold is widely expected Wednesday, so the real question is whether it signals a December hike.",
+          "why": "Futures put roughly 80% odds on a December increase, and Microsoft and Alphabet report the same day.",
+          "sourceName": "FXStreet",
+          "sourceUrl": "https://fxstreet.com/news/gold-reclaims-4-000-as-oil-eases-fed-decision-tests-recovery-202610261742"
+        }
+      ]
+    },
+    {
+      "key": "emsmallcaps",
+      "label": "Emerging Markets and Small Caps",
+      "items": [
+        {
+          "emoji": "🇰🇷",
+          "detail": "South Korea's **Kospi** opened **3.46%** higher at 5,658.65 Tuesday, reversing Monday's 1.46% drop to a seven-month low.",
+          "why": "News of Anthropic's IPO sent foreigners back into Samsung and SK hynix ahead of their earnings this week.",
+          "sourceName": "Seoul Economic Daily",
+          "sourceUrl": "https://en.sedaily.com/finance/2026/10/27/foreign-buying-lifts-samsung-sk-hynix-as-kospi-retakes-5700"
+        },
+        {
+          "emoji": "🇮🇳",
+          "detail": "The **Nifty** rose 0.68% to **22,753.20** Monday, ending a four-day losing streak, but slipped near 22,700 at Tuesday's open.",
+          "why": "Brent near $115 and IT stock selling weighed, and foreign investors sold Rs 1,462 crore of shares Monday.",
+          "sourceName": "HDFC Sky",
+          "sourceUrl": "https://hdfcsky.com/news/bse-nse-sensex-october-27-2026-open-report-markets-slip-as-oil-it-drag"
+        },
+        {
+          "emoji": "📈",
+          "detail": "The US **Russell 2000** gained **0.4%** to 2,786.42 Monday, recovering from Friday's oil-driven slip.",
+          "why": "Softer oil and easing Treasury yields helped small companies, which are very sensitive to borrowing costs.",
+          "sourceName": "ad-hoc-news (AP)",
+          "sourceUrl": "https://ad-hoc-news.de/boerse/news/marktberichte/russell-2000-closes-0-4-percent-higher-as-fed-nears/70416684"
+        }
+      ]
+    },
+    {
+      "key": "crypto",
+      "label": "Crypto",
+      "items": [
+        {
+          "emoji": "₿",
+          "detail": "**Bitcoin** fell below **$80,000** Monday, touching about $79,300, its third break under that level since Friday.",
+          "why": "Spot bitcoin ETFs lost about $773 million over two sessions, and traders cut risk before the Fed.",
+          "sourceName": "KuCoin News",
+          "sourceUrl": "https://www.kucoin.com/news/flash/bitcoin-falls-below-80k-for-third-time-in-three-days-as-market-awaits-fed-decision"
+        },
+        {
+          "emoji": "🔷",
+          "detail": "**Ether** fell almost 3% to just above **$2,300** Monday, missing out on the stock market's AI rally.",
+          "why": "Ether ETFs have lost money for four straight weeks, and forced selling of leveraged bets added pressure.",
+          "sourceName": "Crypto.news",
+          "sourceUrl": "https://crypto.news/why-is-bitcoin-price-down-today-fed-etf-outflows/"
+        },
+        {
+          "emoji": "☀️",
+          "detail": "**Solana** dipped below $100 Monday before closing at **$101.46**, leaving it down about 14% in October.",
+          "why": "Rising Treasury yields and continued Solana ETF outflows hurt altcoins more than bitcoin.",
+          "sourceName": "24/7 Wall St.",
+          "sourceUrl": "https://247wallst.com/investing/cryptocurrency/2026/10/26/solana-price-prediction-sol-is-down-14-in-october-the-most-of-the-big-four-how-low-could-it-go/"
+        }
+      ]
+    },
+    {
+      "key": "commodities",
+      "label": "Commodities",
+      "items": [
+        {
+          "emoji": "🥇",
+          "detail": "**Gold** got back above $4,000 Monday, bouncing to about **$4,020** from a dip to $3,978, and Comex futures opened near $4,033 Tuesday.",
+          "why": "Cheaper oil and lower Treasury yields eased fears that the Fed will have to keep raising rates.",
+          "sourceName": "FXStreet",
+          "sourceUrl": "https://fxstreet.com/news/gold-reclaims-4-000-as-oil-eases-fed-decision-tests-recovery-202610261742"
+        }
+      ]
+    }
+  ],
+  "crossCuttingTheme": "Oil easing on Saudi-Iran talks lowered yields and lifted stocks, small caps and gold, while Anthropic's IPO revived chips from Seoul to Nasdaq. Crypto missed out as ETF money kept leaving ahead of Wednesday's Fed decision."
+}
