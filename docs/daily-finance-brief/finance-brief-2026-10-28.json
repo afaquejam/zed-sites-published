@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-28",
+  "generatedAt": "2026-10-28T08:30:00+02:00",
+  "sections": [
+    {
+      "key": "usa",
+      "label": "USA",
+      "items": [
+        {
+          "emoji": "🤖",
+          "detail": "The **Nasdaq** rose 1.18% to 26,477.81 Tuesday and the S&P 500 added 0.6% to 7,722.60, a second straight winning day for both.",
+          "why": "Chip stocks rallied 3.6% for a third session as Anthropic's IPO plans kept AI enthusiasm running.",
+          "sourceName": "Detroit News (AP)",
+          "sourceUrl": "https://www.detroitnews.com/story/business/2026/10/27/sp-500-nasdaq-advance-as-oil-eases-ahead-of-fed-decision/92459851007/"
+        },
+        {
+          "emoji": "🛢️",
+          "detail": "The Dow lagged, edging up just **0.03%** to 52,377.57, with energy the weakest sector of the day.",
+          "why": "Oil slipped on Gulf diplomacy, dragging energy shares while money rotated into chipmakers.",
+          "sourceName": "HDFC Sky",
+          "sourceUrl": "https://hdfcsky.com/news/nasdaq-jumps-1-2percent-as-chip-stocks-rally-oil-slides-and-fed-meeting-begins-october-28-2026"
+        },
+        {
+          "emoji": "🏦",
+          "detail": "The **Fed** decides at 2 p.m. ET today, and with a hold nearly certain, Chair Kevin Warsh's hints about December are what markets will trade.",
+          "why": "Futures price about 84% odds of a December hike while oil near $115 keeps inflation fears alive.",
+          "sourceName": "Business Recorder",
+          "sourceUrl": "https://www.brecorder.com/news/40446276/gold-slips-on-oil-fuelled-inflation-fears-ahead-of-fed-meeting"
+        }
+      ]
+    },
+    {
+      "key": "emsmallcaps",
+      "label": "Emerging Markets and Small Caps",
+      "items": [
+        {
+          "emoji": "🚀",
+          "detail": "South Korea's **Kospi** jumped as much as **6.5%** Wednesday and topped 6,000 during the session, then settled back into the 5,900s.",
+          "why": "SK hynix posted a record quarterly profit and a huge shareholder payout plan, lifting Samsung and memory chipmakers too.",
+          "sourceName": "CNBC",
+          "sourceUrl": "https://www.cnbc.com/2026/10/28/sk-hynix-third-quarter-profit.html"
+        },
+        {
+          "emoji": "📉",
+          "detail": "The **Sensex** fell nearly 900 points Wednesday and the Nifty dropped close to **22,500**, after closing flat at 22,749.75 Tuesday.",
+          "why": "Brent climbed back toward $115 on reports of new US strikes on Iran, while IT stocks and Fed caution added pressure.",
+          "sourceName": "Business Standard",
+          "sourceUrl": "https://www.business-standard.com/markets/news/stock-market-live-oct-28-nse-bse-sensex-today-nifty-gift-nifty-us-iran-tension-iran-strikes-brent-crude-ipos-jio-listing-jio-share-price-it-stocks-maruti-share-price-q1-result-today-share-market-today-126102800114_1.html"
+        },
+        {
+          "emoji": "📈",
+          "detail": "Small caps rallied in two markets Tuesday: the US **Russell 2000** rose 1.16% to 2,818.87, and India's Nifty Smallcap 100 jumped **2.7%**.",
+          "why": "Softer oil and the revived AI trade drew buyers into smaller, riskier stocks even as big benchmarks lagged.",
+          "sourceName": "TheStreet",
+          "sourceUrl": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-27-2026"
+        }
+      ]
+    },
+    {
+      "key": "crypto",
+      "label": "Crypto",
+      "items": [
+        {
+          "emoji": "₿",
+          "detail": "**Bitcoin** rose nearly 2% to just under **$81,000** early Wednesday, recovering from a dip to about $79,400.",
+          "why": "Spot bitcoin ETFs took in $110 million Monday, ending a run of heavy outflows ahead of the Fed.",
+          "sourceName": "CoinDesk",
+          "sourceUrl": "https://www.coindesk.com/markets/2026/10/28/bitcoin-nears-usd81-000-ahead-of-fed-decision-as-zec-jumps-8"
+        },
+        {
+          "emoji": "🔻",
+          "detail": "**Ether** slipped 1.5% to about **$2,312** Tuesday, sitting right on its 200-day moving average, a level traders watch closely.",
+          "why": "Spot ether ETFs lost another $88.6 million Monday, mostly from BlackRock's fund.",
+          "sourceName": "TradingNews",
+          "sourceUrl": "https://www.tradingnews.com/news/ethereum-2312-usd-lags-bitcoin-and-ai-stocks-bitmine-nears-its-5-percent-cap-break-of-2295-usd-opens-2200-usd"
+        },
+        {
+          "emoji": "⚖️",
+          "detail": "**Solana** held just above **$100** into Wednesday, with buyers defending that level for a third straight session.",
+          "why": "Solana ETFs saw $19.2 million of outflows Tuesday, adding to $72 million already withdrawn in October.",
+          "sourceName": "KuCoin News",
+          "sourceUrl": "https://www.kucoin.com/news/flash/sol-spot-etf-sees-19-15m-net-outflow-in-single-day"
+        }
+      ]
+    },
+    {
+      "key": "commodities",
+      "label": "Commodities",
+      "items": [
+        {
+          "emoji": "🥇",
+          "detail": "**Gold** slipped 0.3% to about **$4,045** early Wednesday, giving back part of Tuesday's climb above $4,060.",
+          "why": "Oil pushing back toward $115 revived fears the Fed will signal a December hike, which hurts gold.",
+          "sourceName": "Business Recorder",
+          "sourceUrl": "https://www.brecorder.com/news/40446276/gold-slips-on-oil-fuelled-inflation-fears-ahead-of-fed-meeting"
+        }
+      ]
+    }
+  ],
+  "crossCuttingTheme": "AI chip earnings and Anthropic's IPO lifted stocks from Nasdaq to Seoul, but Brent stuck near $115 on Iran strike fears keeps December hike odds high, weighing on India, gold and crypto before today's Fed decision."
+}
