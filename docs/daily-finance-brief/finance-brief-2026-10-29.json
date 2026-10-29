@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-29",
+  "generatedAt": "2026-10-29T06:30:00Z",
+  "sections": [
+    {
+      "key": "usa",
+      "label": "USA",
+      "items": [
+        {
+          "emoji": "📈",
+          "detail": "The **S&P 500** rose 0.28% to 7,743.98 and the Nasdaq added 0.27% to 26,549.85, a third straight gain for both after the Fed held rates.",
+          "why": "The rate hold was expected, and Oracle jumping about 11% kept the AI trade going.",
+          "sourceName": "BBN Times",
+          "sourceUrl": "https://www.bbntimes.com/global-economy/s-p-500-rises-to-7-743-98-for-a-third-straight-gain-as-the-fed-holds-rates-in-a-split-10-2-vote-and-oracle-surges-11"
+        },
+        {
+          "emoji": "🏦",
+          "detail": "The Fed held rates at 3.75%–4.00%, but two officials voted for a hike, and the odds of a December hike rose to **85%** from 78%.",
+          "why": "With oil near $115 keeping inflation high, Cook and Hammack wanted a hike now, which was a hawkish surprise.",
+          "sourceName": "CNN",
+          "sourceUrl": "https://cnn.com/2026/10/28/business/live-news/federal-reserve-interest-rate-october"
+        },
+        {
+          "emoji": "🤖",
+          "detail": "**Alphabet** fell about 9% after hours and Nasdaq-100 futures dropped about 0.8%, while Microsoft rose roughly 3% on strong Azure growth.",
+          "why": "Alphabet's quarterly AI spending hit $51.4 billion and pushed free cash flow negative, reviving worries about AI costs.",
+          "sourceName": "CNBC",
+          "sourceUrl": "https://www.cnbc.com/2026/10/28/stock-market-today-live-updates.html"
+        }
+      ]
+    },
+    {
+      "key": "emsmallcaps",
+      "label": "Emerging Markets and Small Caps",
+      "items": [
+        {
+          "emoji": "📉",
+          "detail": "South Korea's **Kospi** fell about 3% to 5,831.67 Thursday, giving back much of this week's chip rally as Samsung Electronics dropped nearly 6%.",
+          "why": "Samsung's record profit didn't calm doubts that the AI chip boom can last, and Alphabet's spending shock made them worse.",
+          "sourceName": "TokenPost",
+          "sourceUrl": "https://www.tokenpost.com/news/investing/43123"
+        },
+        {
+          "emoji": "🇮🇳",
+          "detail": "The **Sensex** rose about 500 points Thursday morning and the Nifty moved back above **22,800**, after closing 0.22% lower at 22,698.85 Wednesday.",
+          "why": "PSU banks and FMCG stocks led a rebound as the Fed held rates as expected and Brent eased toward $114.",
+          "sourceName": "Business Standard",
+          "sourceUrl": "https://www.business-standard.com/markets/news/stock-market-live-oct-29-nse-bse-sensex-today-nifty-gift-nifty-jpl-share-price-ipo-today-126102900090_1.html"
+        },
+        {
+          "emoji": "🧩",
+          "detail": "The US **Russell 2000** rose 0.41% to 2,830.51 Wednesday, its third straight gain, slightly beating the S&P 500.",
+          "why": "The Fed hold calmed nerves, but small caps rose less than Tuesday because December hike odds went up.",
+          "sourceName": "Yahoo Finance",
+          "sourceUrl": "https://finance.yahoo.com/quote/%5ERUT/history/"
+        }
+      ]
+    },
+    {
+      "key": "crypto",
+      "label": "Crypto",
+      "items": [
+        {
+          "emoji": "₿",
+          "detail": "**Bitcoin** climbed back above $81,000 after the Fed decision, briefly touching about $81,700, before settling into a tight range.",
+          "why": "Spot bitcoin ETFs took in about $176 million Tuesday, but the hawkish dissents capped the bounce.",
+          "sourceName": "CoinDesk",
+          "sourceUrl": "https://www.coindesk.com/business/2026/10/28/live-updates-bitcoin-climbs-above-usd81-000-as-majors-rally-ahead-of-fed-decision"
+        },
+        {
+          "emoji": "💎",
+          "detail": "**Ether** rose about 1% to roughly **$2,350** after the Fed hold, moving back above its 200-day average.",
+          "why": "A well-telegraphed hold eased nerves, but weak US demand on Coinbase, at its lowest since February, held gains back.",
+          "sourceName": "FXStreet",
+          "sourceUrl": "https://www.fxstreet.com/cryptocurrencies/news/ethereum-gains-1-after-fed-hold-as-coinbase-premium-stays-negative-202610282115"
+        },
+        {
+          "emoji": "☀️",
+          "detail": "**Solana** rose 1.3% to about **$102.60**, pulling further away from the $100 level buyers had defended for three sessions.",
+          "why": "Relief that the Fed didn't hike lifted altcoins along with bitcoin, despite continued Solana ETF outflows.",
+          "sourceName": "The Motley Fool",
+          "sourceUrl": "https://www.fool.com/coverage/stock-market-today/2026/10/28/crypto-market-today-oct-28-bitcoin-and-altcoins-gain-as-fed-decision-clears-the-way-for-big-tech-earnings/"
+        }
+      ]
+    },
+    {
+      "key": "commodities",
+      "label": "Commodities",
+      "items": [
+        {
+          "emoji": "🥇",
+          "detail": "**Gold** slipped toward **$4,040** Thursday morning after the Fed hold, with traders watching whether it can stay above $4,000.",
+          "why": "Two votes for a hike raised December hike odds, and that hurts gold, which pays no interest. Thursday's PCE inflation data is next.",
+          "sourceName": "VT Markets",
+          "sourceUrl": "https://www.vtmarkets.com/en-asia/analysis/gold-slips-towards-4040-after-fed-hold-pce-in-focus/"
+        }
+      ]
+    }
+  ],
+  "crossCuttingTheme": "A hawkish Fed hold, with two votes for a hike and 85% December odds, plus Alphabet's AI spending shock, is denting the chip rally from Nasdaq futures to Seoul and pressing on gold before Thursday's PCE data."
+}
