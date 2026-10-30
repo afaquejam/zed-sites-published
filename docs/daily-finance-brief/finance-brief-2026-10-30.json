@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-30",
+  "generatedAt": "2026-10-30T07:30:00Z",
+  "sections": [
+    {
+      "key": "usa",
+      "label": "USA",
+      "items": [
+        {
+          "emoji": "📉",
+          "detail": "The **Nasdaq** fell 1.2% to 26,230.07 Thursday and the S&P 500 slipped 0.3%, as Alphabet sank about 12% in its worst day since listing in 2004.",
+          "why": "Weak search ad sales and negative free cash flow from heavy AI spending revived fears that AI costs outrun returns.",
+          "sourceName": "Reuters via The Detroit News",
+          "sourceUrl": "https://www.detroitnews.com/story/business/2026/10/29/nasdaq-slides-over-1-as-alphabet-results-revive-ai-spending-fears/92495558007/"
+        },
+        {
+          "emoji": "🔥",
+          "detail": "Prices rose **0.5%** in September by the Fed's preferred PCE gauge, and the economy grew faster than expected last quarter, firming bets on a December rate hike.",
+          "why": "High oil is pushing up inflation while growth stays strong, so the Fed has little reason to wait.",
+          "sourceName": "FXStreet",
+          "sourceUrl": "https://www.fxstreet.com/news/gold-falls-to-near-4-000-as-us-pce-data-reinforces-december-fed-hike-odds-202610292318"
+        },
+        {
+          "emoji": "🤖",
+          "detail": "Nasdaq-100 futures slid about **1.9%** Friday after Amazon dropped roughly 7% after hours and Intel plunged more than 20%.",
+          "why": "Amazon's deeply negative free cash flow and Intel's weak PC outlook added new doubts about AI spending paying off.",
+          "sourceName": "Investing.com",
+          "sourceUrl": "https://www.investing.com/news/stock-market-news/us-stock-futures-sink-nasdaq-down-2-as-amazon-intel-earnings-underwhelm-4985675"
+        }
+      ]
+    },
+    {
+      "key": "emsmallcaps",
+      "label": "Emerging Markets and Small Caps",
+      "items": [
+        {
+          "emoji": "🇰🇷",
+          "detail": "South Korea's **Kospi** sank about 5% Friday, triggering a brief trading halt and extending Thursday's selloff, while Hong Kong's Hang Seng rose 1.4% against the trend.",
+          "why": "Amazon and Intel results deepened worries about AI spending and hit chipmakers, and oil rose on a Hormuz ship fire.",
+          "sourceName": "investingLive",
+          "sourceUrl": "https://investinglive.com/news/investinglive-asia-pacific-market-news-binance-hack-shakes-crypto"
+        },
+        {
+          "emoji": "🇮🇳",
+          "detail": "The **Nifty** jumped 1.05% to 22,936.75 Thursday and held near that level early Friday, despite the selloff across Asia.",
+          "why": "Banks, consumer staples and IT stocks led Thursday's rally, but Brent above $116 capped gains Friday.",
+          "sourceName": "Kotak Neo",
+          "sourceUrl": "https://www.kotakneo.com/news/market-news/sensex-nifty-50-close-higher-on-positive-developments/"
+        },
+        {
+          "emoji": "🔄",
+          "detail": "The US **Russell 2000** rose 1.01% to 2,859.22 Thursday, a fourth straight gain, even as the Nasdaq fell.",
+          "why": "Investors moved money out of megacap tech after Alphabet's drop, and strong GDP growth supported US-focused companies.",
+          "sourceName": "ad-hoc-news",
+          "sourceUrl": "https://www.ad-hoc-news.de/boerse/news/marktberichte/russell-2000-closes-1-01-prozent-higher-at-2-859-22/70430426"
+        }
+      ]
+    },
+    {
+      "key": "crypto",
+      "label": "Crypto",
+      "items": [
+        {
+          "emoji": "₿",
+          "detail": "**Bitcoin** fell below $77,000, its first drop under that level in over a month, after Binance reported a hack it estimates at $6.3 billion.",
+          "why": "The record exchange hack and Wall Street's tech selloff triggered more than $1 billion in futures liquidations.",
+          "sourceName": "CoinDesk",
+          "sourceUrl": "https://www.coindesk.com/markets/2026/10/30/usd6-billion-binance-hack-sends-bitcoin-ether-tumbling-standard-chartered-sees-more-losses-ahead"
+        },
+        {
+          "emoji": "🔓",
+          "detail": "**Ether** slid about 5% to near **$2,200**, erasing its gains from after the Fed decision.",
+          "why": "Roughly $2.8 billion was drained from a Binance hot wallet on Ethereum, which set off forced selling.",
+          "sourceName": "CryptoTicker",
+          "sourceUrl": "https://cryptoticker.io/en/crypto-crash-binance-hack-timeline-liquidations/"
+        },
+        {
+          "emoji": "⚠️",
+          "detail": "**Solana** broke below $100, the level buyers had defended all week, and touched a low near **$95.64**.",
+          "why": "No SOL was stolen, but Binance is a major SOL trading venue and the selling spread through its pairs.",
+          "sourceName": "CryptoTicker",
+          "sourceUrl": "https://cryptoticker.io/en/solana-crash-below-100-binance-hack-sol-80/"
+        }
+      ]
+    },
+    {
+      "key": "commodities",
+      "label": "Commodities",
+      "items": [
+        {
+          "emoji": "🥇",
+          "detail": "**Gold** fell about 1.1% Thursday and traded near $4,015 early Friday, testing the $4,000 support level.",
+          "why": "Hot PCE inflation data strengthened December hike bets, which raises the cost of holding gold because it pays no interest.",
+          "sourceName": "FXStreet",
+          "sourceUrl": "https://www.fxstreet.com/news/gold-falls-to-near-4-000-as-us-pce-data-reinforces-december-fed-hike-odds-202610292318"
+        }
+      ]
+    }
+  ],
+  "crossCuttingTheme": "Doubts that AI spending will pay off, from Alphabet to Amazon and Intel, are hitting tech and Korean chips as money rotates into small caps, while hot inflation firms December hike bets that weigh on gold and crypto."
+}
