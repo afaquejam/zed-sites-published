@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-31",
+  "generatedAt": "2026-10-31T09:00:00Z",
+  "sections": [
+    {
+      "key": "usa",
+      "label": "USA",
+      "items": [
+        {
+          "emoji": "📉",
+          "detail": "The **S&P 500** slipped about **0.6%** on the week to roughly 7,580, while the Nasdaq fell to 25,437 after Friday's 2.9% plunge.",
+          "why": "Big Tech earnings showed AI spending racing ahead of profits, so investors sold the biggest tech names.",
+          "sourceName": "CNN",
+          "sourceUrl": "https://www.cnn.com/2026/10/30/investing/us-stocks-ai-investment"
+        },
+        {
+          "emoji": "🤖",
+          "detail": "**Alphabet** lost more than 12% Thursday and **Intel** about 29% Friday, Intel's worst day since 1974.",
+          "why": "Alphabet's spending plans worried investors, and Intel's weak fourth-quarter outlook raised doubts about chip demand.",
+          "sourceName": "Quartz",
+          "sourceUrl": "https://qz.com/intel-stock-plunges-amazon-nasdaq-100-sell-off-103026"
+        },
+        {
+          "emoji": "🏦",
+          "detail": "The Fed held rates at **3.75%–4.00%** Wednesday, but two officials voted for a hike.",
+          "why": "Higher oil prices keep inflation sticky, so markets still expect a rate hike in December.",
+          "sourceName": "Kitco",
+          "sourceUrl": "https://www.kitco.com/news/article/2026-10-28/gold-steadies-silver-falls-fed-holds-rates-two-officials-favor-hike-kitco"
+        }
+      ]
+    },
+    {
+      "key": "emsmallcaps",
+      "label": "Emerging Markets and Small Caps",
+      "items": [
+        {
+          "emoji": "🌏",
+          "detail": "**MSCI's emerging-market index** fell again this week, closing in on a **7%+** monthly drop, its worst since the Iran war began.",
+          "why": "Doubts about AI payoffs hit chip-heavy Korea and Taiwan, and rising oil kept inflation fears alive.",
+          "sourceName": "Finimize",
+          "sourceUrl": "https://finimize.com/content/emerging-markets-stumble-as-ai-doubts-spread"
+        },
+        {
+          "emoji": "🇮🇳",
+          "detail": "The **Nifty 50** rose **2%** on the week to 23,053, recovering the previous week's losses.",
+          "why": "Buying in IT, pharma and healthcare stocks lifted the benchmarks despite higher crude prices.",
+          "sourceName": "CNBC-TV18 via TradingView",
+          "sourceUrl": "https://www.tradingview.com/news/cnbctv:45870e486094b:0/"
+        },
+        {
+          "emoji": "🚀",
+          "detail": "India's **Nifty Smallcap** index gained more than **4%** on the week, beating the large-cap benchmarks.",
+          "why": "Bargain hunters returned to smaller stocks that had been hit hardest in the previous week's selloff.",
+          "sourceName": "Kotak Neo",
+          "sourceUrl": "https://www.kotakneo.com/news/market-news/sensex-and-nifty-50-close-higher-amid-global-headwinds/"
+        }
+      ]
+    },
+    {
+      "key": "crypto",
+      "label": "Crypto",
+      "items": [
+        {
+          "emoji": "₿",
+          "detail": "**Bitcoin** fell about **4%** on the week to roughly $77,290, with most of the loss coming Thursday.",
+          "why": "Binance reported a hack and the Fed sounded hawkish, which set off about $1.5 billion of forced selling.",
+          "sourceName": "CryptoTicker",
+          "sourceUrl": "https://cryptoticker.io/en/crypto-weekly-recap-week-44-2026-binance-hack-stock-crash/"
+        },
+        {
+          "emoji": "💎",
+          "detail": "**Ether** fell **5.2%** on the week to about $2,246, briefly dropping below $2,200 during Thursday's selloff.",
+          "why": "The Binance hack wiped out leveraged bets on ether, and ether ETFs saw outflows for a fourth straight week.",
+          "sourceName": "FXStreet",
+          "sourceUrl": "https://www.fxstreet.com/cryptocurrencies/news/bitcoin-ether-and-xrp-selloff-wipes-out-15-billion-in-leveraged-crypto-bets-202610301225"
+        },
+        {
+          "emoji": "☀️",
+          "detail": "**Solana** fell **5.6%** on the week to about $96, back below $100.",
+          "why": "The Binance hack hit riskier coins hardest, and Solana funds had a third straight week of outflows.",
+          "sourceName": "CryptoTicker",
+          "sourceUrl": "https://cryptoticker.io/en/solana-crash-below-100-binance-hack-sol-80/"
+        }
+      ]
+    },
+    {
+      "key": "commodities",
+      "label": "Commodities",
+      "items": [
+        {
+          "emoji": "🥇",
+          "detail": "**Spot gold** fell nearly **3%** on the week to about $3,880, a one-year low, after a 3.5% drop on Friday.",
+          "why": "Rising oil prices strengthened bets on more Fed rate hikes, and investors sold gold even as the dollar weakened.",
+          "sourceName": "Kitco",
+          "sourceUrl": "https://kitco.com/news/article/2026-10-30/gold-prices-plunge-one-year-low-below-3900-higher-oil-prices-fuel-fears"
+        }
+      ]
+    }
+  ],
+  "crossCuttingTheme": "Big Tech's AI spending running ahead of profits hit chip stocks from Nasdaq to Seoul, while rising oil kept the Fed leaning toward hikes, which pulled down gold and crypto too."
+}
