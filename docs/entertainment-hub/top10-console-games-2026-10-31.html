@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Top 10 PlayStation Games — Week of 31 Oct 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400..800&display=swap" rel="stylesheet" />
+<style>
+  /* ---------- Material Design 3 — dark by default, light on OS preference ----------
+     Same system as the finance and tech briefs; a warm rose/amber primary so the
+     entertainment hub reads as a sibling but is never confused with them.
+     Each category has its own accent (--cat). */
+  :root {
+    --md-sys-color-surface: #141012;
+    --md-sys-color-surface-container-low: #1d171a;
+    --md-sys-color-surface-container: #241d21;
+    --md-sys-color-surface-container-high: #2f262b;
+    --md-sys-color-surface-container-highest: #3a3036;
+    --md-sys-color-on-surface: #efe6ea;
+    --md-sys-color-on-surface-variant: #d4c6cc;
+    --md-sys-color-outline: #9d8f95;
+    --md-sys-color-outline-variant: #4a3e44;
+    --md-sys-color-primary: #ff8fb1;
+    --md-sys-color-primary-container: #7a1f45;
+    --md-sys-color-on-primary-container: #ffd9e4;
+    --md-sys-color-secondary-container: #3a2a1f;
+    --md-sys-color-on-secondary-container: #ffdcc2;
+    --gold: #ffcf5c;
+    --silver: #cfd6e0;
+    --bronze: #e8a87c;
+    --cat-hollywood: #ffb35c;
+    --cat-usuktv: #5bb4ff;
+    --cat-kids: #57d9a3;
+    --cat-bollywood: #ff8fb1;
+    --cat-indiantv: #c59bff;
+    --cat-local: #4fd8d0;
+    --cat-games: #ff7a6b;
+    --cat: var(--cat-games); /* overridden per page */
+    color-scheme: dark;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --md-sys-color-surface: #fffbfc;
+      --md-sys-color-surface-container-low: #fbf1f4;
+      --md-sys-color-surface-container: #f5e8ed;
+      --md-sys-color-surface-container-high: #efe1e7;
+      --md-sys-color-surface-container-highest: #e9dae1;
+      --md-sys-color-on-surface: #22191d;
+      --md-sys-color-on-surface-variant: #524349;
+      --md-sys-color-outline: #84737a;
+      --md-sys-color-outline-variant: #d8c2ca;
+      --md-sys-color-primary: #a8295a;
+      --md-sys-color-primary-container: #ffd9e4;
+      --md-sys-color-on-primary-container: #3e0020;
+      --md-sys-color-secondary-container: #ffdcc2;
+      --md-sys-color-on-secondary-container: #2e1500;
+      --gold: #9a6b00;
+      --silver: #5b6675;
+      --bronze: #9a5a2e;
+      --cat-hollywood: #b35a00;
+      --cat-usuktv: #0b5fb0;
+      --cat-kids: #0f7a52;
+      --cat-bollywood: #a8295a;
+      --cat-indiantv: #6a3fd6;
+      --cat-local: #00736d;
+      --cat-games: #b8261a;
+      color-scheme: light;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+    font-family: "Roboto Flex", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-optical-sizing: auto;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 840px; margin: 0 auto; padding: 0 16px 56px; }
+
+  /* ---------- Top app bar ---------- */
+  .app-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--md-sys-color-surface);
+    padding: 28px 0 0;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+  }
+  .app-bar-inner { max-width: 840px; margin: 0 auto; padding: 0 16px; }
+  .eyebrow {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--md-sys-color-primary);
+    margin: 0 0 4px;
+  }
+  .eyebrow .sample {
+    margin-left: 8px;
+    padding: 1px 8px;
+    border-radius: 6px;
+    background: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+    letter-spacing: 0.06em;
+  }
+  h1 {
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  h1 .date { color: var(--md-sys-color-primary); }
+
+  /* ---------- Category nav — wraps, never scrolls sideways ---------- */
+  nav.cat-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 12px 0;
+  }
+  .cat-chip {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .cat-chip::before {
+    content: "";
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--chip-cat);
+  }
+  .cat-chip:hover { background: var(--md-sys-color-surface-container-high); }
+  .cat-chip.active {
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+    border-color: transparent;
+    font-weight: 650;
+  }
+
+  /* ---------- Week nav (last 8 Saturdays) ---------- */
+  nav.chip-nav {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 16px 0 4px;
+    margin: 0 0 8px;
+    scrollbar-width: none;
+  }
+  nav.chip-nav::-webkit-scrollbar { display: none; }
+  .chip {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 64px;
+    padding: 8px 14px;
+    border-radius: 16px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    color: var(--md-sys-color-on-surface-variant);
+    text-decoration: none;
+  }
+  .chip .dow { font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; white-space: nowrap; }
+  .chip .dom { font-size: 0.9375rem; font-weight: 600; white-space: nowrap; }
+  .chip.active {
+    background: var(--md-sys-color-primary-container);
+    border-color: transparent;
+    color: var(--md-sys-color-on-primary-container);
+  }
+  .chip.empty { opacity: 0.45; pointer-events: none; }
+
+  /* ---------- The chart ---------- */
+  section.chart {
+    background: var(--md-sys-color-surface-container-low);
+    border-radius: 24px;
+    padding: 20px 24px 8px;
+    margin-bottom: 16px;
+  }
+  section.chart h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.375rem;
+    font-weight: 600;
+    margin: 0 0 4px;
+  }
+  section.chart h2::before {
+    content: "";
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--cat);
+  }
+  section.chart h2 .count {
+    margin-left: auto;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--md-sys-color-outline);
+  }
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 14px;
+    font-size: 0.75rem;
+    color: var(--md-sys-color-outline);
+    margin: 0 0 8px;
+  }
+
+  ol.rank-list { list-style: none; margin: 0; padding: 0; }
+  ol.rank-list > li {
+    display: grid;
+    grid-template-columns: 44px 84px 1fr;
+    gap: 14px;
+    align-items: start;
+    padding: 18px 0;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+  }
+  ol.rank-list > li:first-child { border-top: none; }
+
+  .rank {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+  .rank .num {
+    font-size: 2.25rem;
+    font-weight: 800;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+    color: var(--md-sys-color-on-surface-variant);
+  }
+  li.top1 .rank .num { color: var(--gold); }
+  li.top2 .rank .num { color: var(--silver); }
+  li.top3 .rank .num { color: var(--bronze); }
+  .move {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 2px 6px;
+    border-radius: 6px;
+    white-space: nowrap;
+    background: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-on-surface-variant);
+  }
+  .move.new { background: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container); }
+
+  .poster {
+    width: 84px;
+    height: auto;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border-radius: 10px;
+    background: var(--md-sys-color-surface-container-high);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.35);
+  }
+  /* Game box art is 3:4, not a film poster's 2:3. */
+  .poster.game { aspect-ratio: 3 / 4; }
+  .body { min-width: 0; }
+
+  .title-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px 10px;
+    margin: 0 0 6px;
+  }
+  .title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0;
+  }
+  .meta {
+    font-size: 0.8125rem;
+    color: var(--md-sys-color-outline);
+  }
+
+  .where {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 0 0 8px;
+  }
+  .plat {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 2px 9px;
+    border-radius: 999px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    color: var(--md-sys-color-on-surface);
+    white-space: nowrap;
+  }
+  .plat.tv::before { content: "📺 "; }
+  .plat.ott::before { content: "▶ "; color: var(--cat); }
+  .plat.console::before { content: "🎮 "; }
+  .plat.sub::before { content: "➕ "; }
+
+  .blurb {
+    font-size: 0.9375rem;
+    color: var(--md-sys-color-on-surface-variant);
+    margin: 0;
+  }
+  .blurb strong { color: var(--md-sys-color-on-surface); font-weight: 650; }
+
+  .signals {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  .signal {
+    padding: 8px 12px;
+    border-radius: 12px;
+    background: var(--md-sys-color-surface-container-high);
+    font-size: 0.8125rem;
+    color: var(--md-sys-color-on-surface-variant);
+    line-height: 1.4;
+  }
+  .signal .label {
+    display: block;
+    color: var(--cat);
+    font-weight: 700;
+    font-size: 0.625rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+  .signal strong { color: var(--md-sys-color-on-surface); font-weight: 650; }
+
+  /* The poster links to the trailer; the play badge says so. */
+  .poster-link { position: relative; display: block; align-self: start; border-radius: 10px; }
+  .poster-link .play {
+    position: absolute;
+    right: 6px;
+    bottom: 6px;
+    display: grid;
+    place-items: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    font-size: 0.6875rem;
+    padding-left: 2px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.65);
+    transition: transform 0.15s, background 0.15s;
+  }
+  .poster-link:hover .play, .poster-link:focus-visible .play { background: #f00; transform: scale(1.12); }
+  .poster-link:focus-visible { outline: 2px solid var(--md-sys-color-primary); outline-offset: 2px; }
+
+  .trailer {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 10px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 650;
+    text-decoration: none;
+    color: var(--md-sys-color-on-primary-container);
+    background: var(--md-sys-color-primary-container);
+  }
+  .trailer:hover, .trailer:focus-visible { text-decoration: underline; }
+
+  /* ---------- How we rank ---------- */
+  details.method {
+    background: var(--md-sys-color-surface-container-low);
+    border-radius: 20px;
+    padding: 14px 20px;
+    font-size: 0.875rem;
+    color: var(--md-sys-color-on-surface-variant);
+  }
+  details.method summary {
+    cursor: pointer;
+    font-weight: 650;
+    color: var(--md-sys-color-on-surface);
+  }
+  details.method ul { margin: 10px 0 4px; padding-left: 18px; }
+  details.method li { margin-bottom: 4px; }
+
+  footer {
+    margin-top: 32px;
+    color: var(--md-sys-color-outline);
+    font-size: 0.75rem;
+    text-align: center;
+    line-height: 1.7;
+  }
+
+  /* ---------- Mobile ---------- */
+  @media (max-width: 600px) {
+    .app-bar { padding-top: 20px; position: static; }
+    .wrap { padding: 0 14px 40px; }
+    .app-bar-inner { padding: 0 14px; }
+    section.chart { padding: 16px 16px 4px; border-radius: 20px; }
+    section.chart h2 { font-size: 1.25rem; }
+    ol.rank-list > li { grid-template-columns: 28px 60px 1fr; gap: 10px; }
+    .poster { width: 60px; }
+    .poster { border-radius: 8px; }
+    .rank .num { font-size: 1.75rem; }
+    .signals { grid-template-columns: 1fr; }
+  }
+  .plat.cinema::before { content: "🎟 "; }
+  /* Shown when no poster could be found for a title. */
+  .poster.none {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    color: var(--md-sys-color-on-surface-variant);
+    background: var(--md-sys-color-surface-container-highest);
+    box-shadow: none;
+  }
+</style>
+</head>
+<body>
+  <div class="app-bar">
+    <div class="app-bar-inner">
+      <p class="eyebrow">Entertainment Hub · Weekly Top 10</p>
+      <h1>Console Games: <span class="date">Week of 31 Oct 2026</span></h1>
+      <nav class="cat-nav" aria-label="Categories">
+        <a class="cat-chip" style="--chip-cat: var(--cat-hollywood)" href="top10-hollywood-movies-2026-10-31.html">Hollywood Movies</a>
+        <a class="cat-chip" style="--chip-cat: var(--cat-usuktv)" href="top10-usuk-tv-2026-10-31.html">USA/UK TV Shows</a>
+        <a class="cat-chip" style="--chip-cat: var(--cat-kids)" href="top10-kids-animated-2026-10-31.html">Kids &amp; Animated</a>
+        <a class="cat-chip" style="--chip-cat: var(--cat-bollywood)" href="top10-bollywood-movies-2026-10-31.html">Bollywood Movies</a>
+        <a class="cat-chip" style="--chip-cat: var(--cat-indiantv)" href="top10-indian-tv-2026-10-31.html">Indian TV Shows</a>
+        <a class="cat-chip active" style="--chip-cat: var(--cat-games)" href="top10-console-games-2026-10-31.html" aria-current="page">Console Games</a>
+        <a class="cat-chip" style="--chip-cat: var(--cat-local)" href="local-entertainment-2026-10-31.html">Local Entertainment</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <nav class="chip-nav" aria-label="Recent weeks">
+      <a class="chip active" href="top10-console-games-2026-10-31.html" aria-current="page"><span class="dow">Sat</span><span class="dom">31 Oct</span></a>
+      <a class="chip" href="top10-console-games-2026-10-24.html"><span class="dow">Sat</span><span class="dom">24 Oct</span></a>
+    </nav>
+
+    <section class="chart">
+      <h2>Top 10 PlayStation Games <span class="count">PS5 + PS4</span></h2>
+      <div class="legend">
+        <span>🎮 Console</span><span>▲▼ = change since last week</span><span>NEW = new on the list</span>
+      </div>
+
+      <ol class="rank-list">
+        <li class="top1">
+          <div class="rank"><span class="num">1</span><span class="move" title="was #8">▲7</span></div>
+          <a class="poster-link" href="https://www.youtube.com/results?search_query=Call%20of%20Duty%3A%20Modern%20Warfare%204%20PS5%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the Call of Duty: Modern Warfare 4 trailer on YouTube"><img class="poster game" src="posters/game-call-of-duty-modern-warfare-4-2026.png" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
+          <div class="body">
+            <div class="title-row"><h3 class="title">Call of Duty: Modern Warfare 4</h3><span class="meta">Shooter · Activision · since 23 Oct</span></div>
+            <div class="where"><span class="plat console">PS5</span></div>
+            <p class="blurb">Infinity Ward's Call of Duty is set during a war on the Korean Peninsula and brings back DMZ mode. It went straight to #1 in the UK, and 78% of the boxed copies sold there were for PS5.</p>
+            <div class="signals">
+              <div class="signal"><span class="label">Popularity</span><strong>#1</strong> UK boxed chart debut (week to 24 Oct) · <strong>12,816</strong> PS5 copies in Japan in launch week (Famitsu)</div>
+              <div class="signal"><span class="label">Rating</span><strong>83</strong> Metacritic (PS5) · <strong>85</strong> OpenCritic</div>
+            </div>
+            <a class="trailer" href="https://www.youtube.com/results?search_query=Call%20of%20Duty%3A%20Modern%20Warfare%204%20PS5%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
+          </div>
+        </li>
+
+        <li class="top2">
+          <div class="rank"><span class="num">2</span><span class="move new">NEW</span></div>
+          <a class="poster-link" href="https://www.youtube.com/watch?v=DaBVsTL8TNE" target="_blank" rel="noopener" aria-label="Watch the Final Fantasy Resonance trailer on YouTube"><img class="poster game" src="posters/game-final-fantasy-resonance-2026.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
+          <div class="body">
+            <div class="title-row"><h3 class="title">Final Fantasy Resonance</h3><span class="meta">Turn-based JRPG · Square Enix · since 22 Oct</span></div>
+            <div class="where"><span class="plat console">PS5</span></div>
+            <p class="blurb">The first Final Fantasy in the HD-2D pixel-art style, based on the mobile game Brave Exvius. Critics love the combat and the music but not the story. It sold more than 50,000 PS5 copies in Japan in its first week.</p>
+            <div class="signals">
+              <div class="signal"><span class="label">Popularity</span><strong>50,452</strong> PS5 copies in Japan in launch week (Famitsu) · #4 UK boxed chart debut (week to 24 Oct)</div>
+              <div class="signal"><span class="label">Rating</span><strong>86</strong> Metacritic (PS5) · <strong>90%</strong> of critics recommend (OpenCritic)</div>
+            </div>
+            <a class="trailer" href="https://www.youtube.com/watch?v=DaBVsTL8TNE" target="_blank" rel="noopener">▶ Trailer</a>
+          </div>
+        </li>
+
+        <li class="top3">
+          <div class="rank"><span class="num">3</span><span class="move" title="was #1">▼2</span></div>
+          <a class="poster-link" href="https://www.youtube.com/watch?v=YxPR7fEtutE" target="_blank" rel="noopener" aria-label="Watch the Marvel's Wolverine trailer on YouTube"><img class="poster game" src="posters/game-marvel-s-wolverine-2026.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
+          <div class="body">
+            <div class="title-row"><h3 class="title">Marvel's Wolverine</h3><span class="meta">Action-adventure · Sony · since 15 Sep</span></div>
+            <div class="where"><span class="plat console">PS5</span></div>
+            <p class="blurb">Insomniac's PS5 exclusive about Logan. It was the best-selling game in the US in September and the top PS5 download in the US and Canada, though its reviews are lower than the studio's Spider-Man games.</p>
+            <div class="signals">
+              <div class="signal"><span class="label">Popularity</span><strong>#1</strong> US sales in September (Circana) · #1 PS5 download in US/Canada, #2 in Europe (Sept)</div>
+              <div class="signal"><span class="label">Rating</span><strong>77</strong> Metacritic (102 reviews)</div>
+            </div>
+            <a class="trailer" href="https://www.youtube.com/watch?v=YxPR7fEtutE" target="_blank" rel="noopener">▶ Trailer</a>
+          </div>
+        </li>
+
+        <li>
+          <div class="rank"><span class="num">4</span><span class="move" title="was #2">▼2</span></div>
+          <a class="poster-link" href="https://www.youtube.com/watch?v=Gbmd6YFm5oU" target="_blank" rel="noopener" aria-label="Watch the Onimusha: Way of the Sword trailer on YouTube"><img class="poster game" src="posters/game-onimusha-way-of-the-sword-2026.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
+          <div class="body">
+            <div class="title-row"><h3 class="title">Onimusha: Way of the Sword</h3><span class="meta">Action-adventure · Capcom · since 4 Sep</span></div>
+            <div class="where"><span class="plat console">PS5</span></div>
+            <p class="blurb">Capcom's first new Onimusha in 20 years is a samurai sword-fighting game set in Kyoto. It sold over a million copies on its first day.</p>
+            <div class="signals">
+              <div class="signal"><span class="label">Popularity</span><strong>1M+</strong> sold on launch day · #7 PS5 download in US and Europe (Sept) · #7 US sales (Circana)</div>
+              <div class="signal"><span class="label">Rating</span><strong>85</strong> Metacritic (PS5) · <strong>95%</strong> of critics recommend (OpenCritic)</div>
+            </div>
+            <a class="trailer" href="https://www.youtube.com/watch?v=Gbmd6YFm5oU" target="_blank" rel="noopener">▶ Trailer</a>
+          </div>
+        </li>
+
+        <li>
+          <div class="rank"><span class="num">5</span><span class="move" title="was #3">▼2</span></div>
+          <a class="poster-link" href="https://www.youtube.com/watch?v=huZyHs-ly44" target="_blank" rel="noopener" aria-label="Watch the The Blood of Dawnwalker trailer on YouTube"><img class="poster game" src="posters/game-the-blood-of-dawnwalker-2026.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
+          <div class="body">
+            <div class="title-row"><h3 class="title">The Blood of Dawnwalker</h3><span class="meta">Dark-fantasy action RPG · Bandai Namco · since 3 Sep</span></div>
+            <div class="where"><span class="plat console">PS5</span></div>
+            <p class="blurb">The first game from Rebel Wolves, a studio started by former Witcher 3 developers. You play a hero who is half human and half vampire. It sold a million copies in three days.</p>
+            <div class="signals">
+              <div class="signal"><span class="label">Popularity</span><strong>1M+</strong> sold in 3 days · #3 PS5 download in Europe, #5 in US (Sept) · #5 US sales (Circana)</div>
+              <div class="signal"><span class="label">Rating</span><strong>83</strong> Metacritic (PS5) · <strong>94%</strong> of critics recommend (OpenCritic)</div>
+            </div>
+            <a class="trailer" href="https://www.youtube.com/watch?v=huZyHs-ly44" target="_blank" rel="noopener">▶ Trailer</a>
+          </div>
+        </li>
+
+        <li>
+          <div class="rank"><span class="num">6</span><span class="move new">NEW</span></div>
+          <a class="poster-link" href="https://www.youtube.com/watch?v=70oDGN1FgF4" target="_blank" rel="noopener" aria-label="Watch the Star Wars: Galactic Racer trailer on YouTube"><img class="poster game" src="posters/game-star-wars-galactic-racer-2026.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
+          <div class="body">
+            <div class="title-row"><h3 class="title">Star Wars: Galactic Racer</h3><span class="meta">Arcade racing · Secret Mode · since 6 Oct</span></div>
+            <div class="where"><span class="plat console">PS5</span></div>
+            <p class="blurb">An arcade racer from Fuse Games, a studio started by former Burnout developers. It is the best-reviewed Star Wars game in over 20 years, and it is still in the UK top five in its fourth week.</p>
+            <div class="signals">
+              <div class="signal"><span class="label">Popularity</span><strong>#5</strong> UK boxed chart (week to 24 Oct)</div>
+              <div class="signal"><span class="label">Rating</span><strong>88</strong> Metacritic (PS5) · <strong>87</strong> OpenCritic · 95% recommend</div>
+            </div>
+            <a class="trailer" href="https://www.youtube.com/watch?v=70oDGN1FgF4" target="_blank" rel="noopener">▶ Trailer</a>
+          </div>
+        </li>
+
+        <li>
+          <div class="rank"><span class="num">7</span><span class="move" title="was #4">▼3</span></div>
+          <a class="poster-link" href="https://www.youtube.com/watch?v=npc4mL8pAmg" target="_blank" rel="noopener" aria-label="Watch the EA Sports FC 27 trailer on YouTube"><img class="poster game" src="posters/game-ea-sports-fc-27-2026.png" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
+          <div class="body">
+            <div class="title-row"><h3 class="title">EA Sports FC 27</h3><span class="meta">Football · EA · since 25 Sep</span></div>
+            <div class="where"><span class="plat console">PS5</span><span class="plat console">PS4</span></div>
+            <p class="blurb">This year's EA football game adds a new street mode called The Grounds. Call of Duty pushed it off the top of the UK chart, but it was the top PS5 download in Europe in September.</p>
+            <div class="signals">
+              <div class="signal"><span class="label">Popularity</span><strong>#3</strong> UK boxed chart (week to 24 Oct) · #1 PS5 download in Europe (Sept) · #3 US sales (Circana)</div>
+              <div class="signal"><span class="label">Rating</span><strong>76</strong> Metacritic (PS5) · 68% of critics recommend (OpenCritic)</div>
+            </div>
+            <a class="trailer" href="https://www.youtube.com/watch?v=npc4mL8pAmg" target="_blank" rel="noopener">▶ Trailer</a>
+          </div>
+        </li>
+
+        <li>
+          <div class="rank"><span class="num">8</span><span class="move" title="was #6">▼2</span></div>
+          <a class="poster-link" href="https://www.youtube.com/watch?v=F54vGYxj0ts" target="_blank" rel="noopener" aria-label="Watch the Ace Combat 8: Wings of Theve trailer on YouTube"><img class="poster game" src="posters/game-ace-combat-8-wings-of-theve-2026.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
+          <div class="body">
+            <div class="title-row"><h3 class="title">Ace Combat 8: Wings of Theve</h3><span class="meta">Flight action · Bandai Namco · since 2 Oct</span></div>
+            <div class="where"><span class="plat console">PS5</span></div>
+            <p class="blurb">The arcade jet-fighter series returns. It is the best-reviewed Ace Combat since 2001 and the fastest-selling in the series, with a million copies sold in about a week.</p>
+            <div class="signals">
+              <div class="signal"><span class="label">Popularity</span><strong>85,729</strong> PS5 copies in Japan so far (Famitsu) · 1M+ sold in about a week</div>
+              <div class="signal"><span class="label">Rating</span><strong>87</strong> Metacritic (PS5)</div>
+            </div>
+            <a class="trailer" href="https://www.youtube.com/watch?v=F54vGYxj0ts" target="_blank" rel="noopener">▶ Trailer</a>
+          </div>
+        </li>
+
+        <li>
+          <div class="rank"><span class="num">9</span><span class="move" title="was #7">▼2</span></div>
+          <a class="poster-link" href="https://www.youtube.com/watch?v=ZRgOG0Phue8" target="_blank" rel="noopener" aria-label="Watch the Castlevania: Belmont's Curse trailer on YouTube"><img class="poster game" src="posters/game-castlevania-belmont-s-curse-2026.jpg" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
+          <div class="body">
+            <div class="title-row"><h3 class="title">Castlevania: Belmont's Curse</h3><span class="meta">Metroidvania · Konami · since 15 Oct</span></div>
+            <div class="where"><span class="plat console">PS5</span></div>
+            <p class="blurb">The first new Castlevania in 12 years. You play Trevor Belmont's daughter in Paris in 1499, in a game made with the studio behind Dead Cells. It is the series' best-reviewed game since 2005.</p>
+            <div class="signals">
+              <div class="signal"><span class="label">Popularity</span><strong>#7</strong> UK boxed chart (week to 24 Oct, down 4)</div>
+              <div class="signal"><span class="label">Rating</span><strong>86</strong> Metacritic · <strong>84</strong> OpenCritic</div>
+            </div>
+            <a class="trailer" href="https://www.youtube.com/watch?v=ZRgOG0Phue8" target="_blank" rel="noopener">▶ Trailer</a>
+          </div>
+        </li>
+
+        <li>
+          <div class="rank"><span class="num">10</span><span class="move" title="was #9">▼1</span></div>
+          <a class="poster-link" href="https://www.youtube.com/results?search_query=NBA%202K27%20PS5%20official%20trailer" target="_blank" rel="noopener" aria-label="Watch the NBA 2K27 trailer on YouTube"><img class="poster game" src="posters/game-nba-2k27-2026.png" alt="" loading="lazy" width="342" height="513" /><span class="play" aria-hidden="true">▶</span></a>
+          <div class="body">
+            <div class="title-row"><h3 class="title">NBA 2K27</h3><span class="meta">Basketball · 2K · since 4 Sep</span></div>
+            <div class="where"><span class="plat console">PS5</span></div>
+            <p class="blurb">The yearly basketball game, with Victor Wembanyama on the cover. It has passed Resident Evil Requiem as the best-selling US game of 2026.</p>
+            <div class="signals">
+              <div class="signal"><span class="label">Popularity</span><strong>#2</strong> US sales in September (Circana) · #3 PS5 download in US/Canada (Sept)</div>
+              <div class="signal"><span class="label">Rating</span><strong>78</strong> Metacritic (PS5)</div>
+            </div>
+            <a class="trailer" href="https://www.youtube.com/results?search_query=NBA%202K27%20PS5%20official%20trailer" target="_blank" rel="noopener">▶ Trailer</a>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <details class="method">
+      <summary>How this list is ranked</summary>
+      <ul>
+        <li><strong>Popularity:</strong> UK and European weekly sales charts, the PlayStation Store's monthly top downloads, Circana's US chart and Famitsu's Japan chart.</li>
+        <li><strong>Ratings:</strong> Metacritic (the PlayStation version's score where there is one) and OpenCritic.</li>
+        <li><strong>What counts:</strong> games on PS5 or PS4, including multiplatform games. Long-running games such as Fortnite or EA Sports FC take at most 3 places, so new releases have room.</li>
+        <li><strong>This week:</strong> The PlayStation Store and Circana US charts for October aren't out yet, so those figures are still from September. The UK boxed chart is for the week to 24 Oct and the Famitsu Japan chart is for 19–25 Oct.</li>
+        <li><strong>NEW:</strong> with a previous week to compare, NEW marks a title new to the list; on a list's first week, a title released in the last 3 weeks.</li>
+      </ul>
+    </details>
+
+    <footer>
+      Cover art: Wikipedia · Steam · Sources: PlayStation Blog · GfK / GSD charts · Circana · Famitsu · Metacritic · OpenCritic<br />
+      Entertainment Hub · updated every Saturday · generated 31 Oct 2026, 08:29
+    </footer>
+  </div>
+</body>
+</html>
