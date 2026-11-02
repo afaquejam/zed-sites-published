@@ -1,0 +1,101 @@
+{
+  "date": "2026-11-02",
+  "generatedAt": "2026-11-02T08:00:00Z",
+  "sections": [
+    {
+      "key": "usa",
+      "label": "USA",
+      "items": [
+        {
+          "emoji": "📉",
+          "detail": "**Friday's October jobs report** is the week's main event, with economists expecting about **55,000** new jobs and unemployment holding at 4.2%.",
+          "why": "Strong hiring would firm up the roughly 83% odds of a December rate hike, while a weak report would ease them.",
+          "sourceName": "CNBC",
+          "sourceUrl": "https://www.cnbc.com/2026/10/30/stock-market-next-week-outlook-for-nov-2-6-2026.html"
+        },
+        {
+          "emoji": "📊",
+          "detail": "**Apple** and Palantir report Monday after the close and **AMD** reports Tuesday, a fresh AI test for a Nasdaq that enters the week at **25,437**.",
+          "why": "After last week's Big Tech selloff, any sign of AI spending outrunning profits could deepen the Nasdaq's slide.",
+          "sourceName": "CNBC",
+          "sourceUrl": "https://www.cnbc.com/2026/10/30/jim-cramer-week-ahead-apple-amd-jobs-report.html"
+        },
+        {
+          "emoji": "🗳️",
+          "detail": "**Tuesday's midterm elections** decide control of Congress, with the **S&P 500** starting the week near 7,580 and Monday's ISM factory survey also due.",
+          "why": "A surprise result could shift the outlook for spending and tax policy, while rising ISM prices would add to inflation worries.",
+          "sourceName": "CNBC",
+          "sourceUrl": "https://www.cnbc.com/2026/10/30/stock-market-next-week-outlook-for-nov-2-6-2026.html"
+        }
+      ]
+    },
+    {
+      "key": "emsmallcaps",
+      "label": "Emerging Markets and Small Caps",
+      "items": [
+        {
+          "emoji": "🏦",
+          "detail": "**Brazil's central bank decides Wednesday**, with the Selic at **13.75%**: economists expect a quarter-point cut, but traders lean toward a hold.",
+          "why": "A cut while the Fed leans toward hikes would test emerging-market currencies already strained by a strong-dollar outlook.",
+          "sourceName": "The Rio Times",
+          "sourceUrl": "https://www.riotimesonline.com/key-market-events-for-the-week-of-november-2-6-2026/"
+        },
+        {
+          "emoji": "🇮🇳",
+          "detail": "**State Bank of India** reports results Tuesday in a heavy earnings week, as the **Nifty 50** tries to build on last week's 2% gain to 23,053.",
+          "why": "Foreign buyers returned last week, and solid bank earnings would help keep that money flowing into India.",
+          "sourceName": "PSU Connect",
+          "sourceUrl": "https://www.psuconnect.in/financial/sbi-to-announce-q2fy27-results-on-3-november-2026"
+        },
+        {
+          "emoji": "🐢",
+          "detail": "The US **Russell 2000** faces **Friday's jobs report** and the midterms, in a November that has historically been strong for small caps in midterm years.",
+          "why": "Small companies borrow more, so a hot jobs report that raises hike odds would hit them hardest.",
+          "sourceName": "TheStreet Pro",
+          "sourceUrl": "https://pro.thestreet.com/market-commentary/the-week-ahead-apple-midterms-and-jobs-test-a-market-on-edge"
+        }
+      ]
+    },
+    {
+      "key": "crypto",
+      "label": "Crypto",
+      "items": [
+        {
+          "emoji": "₿",
+          "detail": "**Bitcoin** starts the week near **$78,000**, still shaken by the Binance heist, with the midterms Tuesday and **Friday's jobs report** as the big tests.",
+          "why": "A strong jobs number would lift rate-hike bets and the dollar, keeping pressure on bitcoin after last week's ETF outflows.",
+          "sourceName": "Free Malaysia Today (Reuters)",
+          "sourceUrl": "https://www.freemalaysiatoday.com/category/business/2026/11/02/dollar-rangebound-ahead-of-us-midterms-bitcoin-reels-from-crypto-heist"
+        },
+        {
+          "emoji": "🧑‍💻",
+          "detail": "**Ether** enters the week near **$2,246** as Ethereum's **Devcon 8** conference runs Tuesday to Friday in Mumbai, with the delayed Glamsterdam upgrade still undated.",
+          "why": "A clear upgrade timeline could slow four straight weeks of ether ETF outflows, while more delays would weigh on sentiment.",
+          "sourceName": "CryptoTicker",
+          "sourceUrl": "https://cryptoticker.io/en/devcon-8-mumbai-what-it-means-for-eth/"
+        },
+        {
+          "emoji": "☀️",
+          "detail": "**Solana** sits near **$96** with no network event this week, after US Solana ETFs posted their biggest weekly withdrawals since launch.",
+          "why": "Without a catalyst, Solana trades on risk appetite, so Friday's jobs report and fund flows will set its direction.",
+          "sourceName": "FXStreet",
+          "sourceUrl": "https://fxstreet.com/cryptocurrencies/news/solana-price-forecast-sol-slides-below-key-emas-as-etf-outflows-peak-202611020538"
+        }
+      ]
+    },
+    {
+      "key": "commodities",
+      "label": "Commodities",
+      "items": [
+        {
+          "emoji": "🥇",
+          "detail": "**Gold** bounced to about **$3,906** Monday, just above Friday's one-year low, ahead of **Friday's US jobs report**.",
+          "why": "Weak hiring would cut December hike bets and support gold, while strong numbers could push it toward $3,800.",
+          "sourceName": "FinanceFeeds",
+          "sourceUrl": "https://financefeeds.com/gold-price-today-3875-sunday-week-ahead-midterms-3-november-jobs-6-november-bull-4000-bear-3750/"
+        }
+      ]
+    }
+  ],
+  "crossCuttingTheme": "Friday's US jobs report decides whether markets keep betting on a December Fed hike; strong hiring would lift the dollar and yields, squeezing gold, crypto, emerging markets and small caps all at once."
+}
