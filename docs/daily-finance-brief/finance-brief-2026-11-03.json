@@ -1,0 +1,101 @@
+{
+  "date": "2026-11-03",
+  "generatedAt": "2026-11-03T08:00:00+02:00",
+  "sections": [
+    {
+      "key": "usa",
+      "label": "USA",
+      "items": [
+        {
+          "emoji": "📉",
+          "detail": "The **Nasdaq** fell 1.07% to 25,164.32 Monday, pushing the Nasdaq-100 into a correction, while the S&P 500 lost 0.51% for a third straight decline.",
+          "why": "New chip selling on doubts about AI profits outweighed an early rally sparked by oil's plunge.",
+          "sourceName": "CNBC",
+          "sourceUrl": "https://www.cnbc.com/2026/11/01/stock-market-today-live-updates.html"
+        },
+        {
+          "emoji": "🛢️",
+          "detail": "US crude dropped **7.36%** to $96.46 Monday, helping lift the Dow 0.41% even as tech stocks fell.",
+          "why": "Iran's foreign minister said a deal with the US is possible, raising hopes that supply risks will ease.",
+          "sourceName": "investingLive",
+          "sourceUrl": "https://investinglive.com/news/investinglive-americas-fx-news-wrap-2-nov-it-s-a-wrap-ai-selling-overwhelms-oil-s-plunge/"
+        },
+        {
+          "emoji": "🍎",
+          "detail": "Apple beat forecasts as iPhone revenue rose **17%**, but the stock slipped after hours and S&P futures were flat on midterm election day.",
+          "why": "Rising memory-chip costs and a weaker margin outlook took the shine off the beat, ahead of Friday's payrolls.",
+          "sourceName": "9to5Mac",
+          "sourceUrl": "https://9to5mac.com/2026/11/02/apple-stock-drops-nearly-3-after-hours-following-q4-2026-results/"
+        }
+      ]
+    },
+    {
+      "key": "emsmallcaps",
+      "label": "Emerging Markets and Small Caps",
+      "items": [
+        {
+          "emoji": "🇰🇷",
+          "detail": "South Korea's **Kospi** fell as much as 3.77% to 5,638 Tuesday, wiping out Monday's 2.2% rebound, and Taiwan's index dropped about 3%.",
+          "why": "A 3.37% overnight slide in US chip stocks on AI profit doubts hit Samsung and SK Hynix.",
+          "sourceName": "BigGo Finance",
+          "sourceUrl": "https://finance.biggo.com/news/e9cb82de-07b7-46cf-a344-c221da2ba7ad"
+        },
+        {
+          "emoji": "🇮🇳",
+          "detail": "The **Nifty** jumped 1.68% to 23,440.80 Monday for a third straight gain, led by a 12% surge in Reliance, then opened higher again Tuesday.",
+          "why": "Cheaper oil helps India as a big importer, and strong earnings brought foreign buyers back.",
+          "sourceName": "Business Standard",
+          "sourceUrl": "https://www.business-standard.com/markets/news/stock-market-live-november-2-nse-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-q2-results-jio-share-price-ipo-today-126110200053_1.html"
+        },
+        {
+          "emoji": "🔻",
+          "detail": "The US **Russell 2000** slipped 0.2% to 2,805.88 Monday, now well below Thursday's 2,859 high and no longer rising as tech falls.",
+          "why": "An early lift from cheaper oil faded as chip selling dragged the whole market lower into the close.",
+          "sourceName": "ad-hoc-news (AP)",
+          "sourceUrl": "https://ad-hoc-news.de/boerse/news/marktberichte/russell-2000-closes-at-2-805-88-as-tech-rally-fades/70447808"
+        }
+      ]
+    },
+    {
+      "key": "crypto",
+      "label": "Crypto",
+      "items": [
+        {
+          "emoji": "₿",
+          "detail": "**Bitcoin** is stuck near $77,000, down about 2% over the past day, and has not recovered from last week's Binance-hack selloff.",
+          "why": "US spot bitcoin ETFs lost $399 million Monday, led by BlackRock's fund, a second big day of outflows.",
+          "sourceName": "KuCoin News",
+          "sourceUrl": "https://www.kucoin.com/news/flash/bitcoin-spot-etfs-record-399m-net-outflow-on-nov-2-ibit-leads-in-daily-outflow"
+        },
+        {
+          "emoji": "💸",
+          "detail": "**Ether** is holding near **$2,260**, only slightly above last week's post-hack low, after losing 16% in October.",
+          "why": "US spot ether ETFs saw record outflows of $1.61 billion in October, so big buyers are still pulling back.",
+          "sourceName": "FXStreet",
+          "sourceUrl": "https://www.fxstreet.com/cryptocurrencies/news/ethereum-ends-october-down-16-as-etf-outflows-hit-record-161b-202611022052"
+        },
+        {
+          "emoji": "📉",
+          "detail": "**Solana** is trading near **$94**, below its 200-day average for the first time since August, down about 22% in a month.",
+          "why": "Breaking the $100 floor set off more selling, and dip buyers have not stepped in.",
+          "sourceName": "CoinDCX",
+          "sourceUrl": "https://coindcx.com/blog/price-predictions/solana-price-weekly"
+        }
+      ]
+    },
+    {
+      "key": "commodities",
+      "label": "Commodities",
+      "items": [
+        {
+          "emoji": "🥇",
+          "detail": "**Gold** broke below $4,000, hit a yearly low near $3,870 overnight, and then recovered to about $3,950.",
+          "why": "Oil's plunge eased inflation fears and supported the bounce, but gold stays below all of its major moving averages.",
+          "sourceName": "Mitrade",
+          "sourceUrl": "https://www.mitrade.com/insights/commodity-analysis/gold/gold-oil-tumbles-diplomacy-midterms"
+        }
+      ]
+    }
+  ],
+  "crossCuttingTheme": "Doubts about AI profits are still driving selling in chip stocks from the Nasdaq to Seoul and Taipei. Meanwhile, oil's 7% drop on hopes for US-Iran talks is lifting India and helped gold rebound from its yearly low."
+}
