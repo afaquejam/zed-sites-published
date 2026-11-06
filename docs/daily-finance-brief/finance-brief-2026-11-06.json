@@ -1,0 +1,101 @@
+{
+  "date": "2026-11-06",
+  "generatedAt": "2026-11-06T08:30:00+02:00",
+  "sections": [
+    {
+      "key": "usa",
+      "label": "USA",
+      "items": [
+        {
+          "emoji": "📉",
+          "detail": "The **Nasdaq** plunged 5.52% to 24,315.00 Thursday, putting it in a correction, and the S&P 500 fell 4.36% to 7,353.73, its worst day since April 2025.",
+          "why": "Fears that a Democratic Congress will slow data-center construction wiped out Wednesday's post-election rally in AI stocks.",
+          "sourceName": "The Motley Fool",
+          "sourceUrl": "https://www.fool.com/coverage/stock-market-today/2026/11/05/stock-market-today-nov-5-nasdaq-suffers-worst-day-in-18-months-as-ai-trade-comes-under-fire/"
+        },
+        {
+          "emoji": "🤖",
+          "detail": "Chip stocks led the selloff: the **Philadelphia Semiconductor Index** plunged more than 12%, and memory maker Micron sank about 17%.",
+          "why": "Qualcomm's weak smartphone-chip outlook came on top of election fears about slower spending on AI infrastructure.",
+          "sourceName": "CNBC",
+          "sourceUrl": "https://www.cnbc.com/2026/11/05/qualcomm-earnings-chip-stocks-election.html"
+        },
+        {
+          "emoji": "🏦",
+          "detail": "Friday's **October jobs report** is next, with futures pricing about a 66% chance that the Fed raises rates in December.",
+          "why": "A strong report would make a hike more likely just as tech stocks are already under heavy pressure.",
+          "sourceName": "CNBC",
+          "sourceUrl": "https://www.cnbc.com/2026/11/05/gold-hits-two-week-high-as-dollar-yields-ease-after-us-midterms.html"
+        }
+      ]
+    },
+    {
+      "key": "emsmallcaps",
+      "label": "Emerging Markets and Small Caps",
+      "items": [
+        {
+          "emoji": "🚨",
+          "detail": "South Korea's **Kospi** plunged more than 8% Friday and tripped a circuit breaker, and Taiwan fell over 8% before officials moved to calm investors.",
+          "why": "Wall Street's AI rout hit Asia's big chip suppliers hardest: Samsung, SK Hynix and TSMC.",
+          "sourceName": "Reuters via Investing.com",
+          "sourceUrl": "https://www.investing.com/news/economy-news/asia-stocks-to-drop-after-ai-rout-rocks-us-markets-5006125"
+        },
+        {
+          "emoji": "🇮🇳",
+          "detail": "The **Nifty** jumped 2.4% to 24,536.60 Thursday, its best day in seven months, then held almost flat Friday while the rest of Asia crashed.",
+          "why": "Cheaper crude and foreign buying drove the rally, and IT stocks rose on hopes that slower AI spending helps them.",
+          "sourceName": "Upstox",
+          "sourceUrl": "https://upstox.com/news/market-news/stocks/market-wrap-nov-5-indices-post-biggest-rally-in-7-months-nifty-50-ends-at-24-536-m-cap-surges-8-lakh-crore-to-497-l-crore/article-203065/"
+        },
+        {
+          "emoji": "🔻",
+          "detail": "The US **Russell 2000** fell 4.4% to 2,729.89 Thursday, about as much as the S&P 500, as the AI selloff spread beyond the biggest stocks.",
+          "why": "Smaller companies tied to the data-center build-out were sold along with chipmakers on fears of slower AI spending.",
+          "sourceName": "ad-hoc-news",
+          "sourceUrl": "https://www.ad-hoc-news.de/boerse/news/marktberichte/russell-2000-drops-4-4-prozent-to-2-729-89-as-ai-sell-off-hits-small-caps/70466588"
+        }
+      ]
+    },
+    {
+      "key": "crypto",
+      "label": "Crypto",
+      "items": [
+        {
+          "emoji": "₿",
+          "detail": "**Bitcoin** fell about 6% to near $75,700 Thursday, wiping out Wednesday's post-election bounce above $80,000.",
+          "why": "The Wall Street tech rout spilled into crypto, forcing more than $1 billion of leveraged bets to close.",
+          "sourceName": "The Block",
+          "sourceUrl": "https://www.theblock.co/news/markets/2026-11-05-bitcoin-erases-post-election-gains-wall-street-selloff-liquidations-435434"
+        },
+        {
+          "emoji": "💧",
+          "detail": "**Ether** dropped 7.8% to about **$2,234** Thursday, giving back all of Wednesday's 5% rebound.",
+          "why": "The tech selloff hit as US spot ether ETFs posted a seventh straight day of outflows.",
+          "sourceName": "The Motley Fool",
+          "sourceUrl": "https://www.fool.com/coverage/stock-market-today/2026/11/05/crypto-market-today-nov-5-bitcoin-erases-post-election-rally-as-wall-street-suffers-worst-day-in-18-months/"
+        },
+        {
+          "emoji": "📊",
+          "detail": "**Solana** fell 6.3% to about **$89.90**, testing its 200-day average for the first time since August.",
+          "why": "About $34 million of bullish bets were forced to close as the stock rout spread, with no ETF inflows to cushion it.",
+          "sourceName": "The Crypto Times",
+          "sourceUrl": "https://www.cryptotimes.io/2026/11/06/solana-price-falls-6-3-to-89-90-as-long-liquidations-reach-34m/"
+        }
+      ]
+    },
+    {
+      "key": "commodities",
+      "label": "Commodities",
+      "items": [
+        {
+          "emoji": "🥇",
+          "detail": "**Gold** rose nearly 2% to about $4,100 Thursday, a two-week high and back above $4,000, after Wednesday's 3.4% jump.",
+          "why": "The dollar sank to its lowest since September 30 and Treasury yields fell after the Democratic wins.",
+          "sourceName": "CNBC",
+          "sourceUrl": "https://www.cnbc.com/2026/11/05/gold-hits-two-week-high-as-dollar-yields-ease-after-us-midterms.html"
+        }
+      ]
+    }
+  ],
+  "crossCuttingTheme": "Fears that a Democratic Congress will slow AI data-center spending turned into a full rout: chips led Wall Street's worst day since April 2025, Asia's chip-heavy markets and crypto followed, while a falling dollar and yields lifted gold."
+}
