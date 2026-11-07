@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tech News — 2026-11-07</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400..700&display=swap" rel="stylesheet" />
+<style>
+  /* ---------- Material Design 3 — dark by default, light on OS preference ----------
+     Same system as the finance brief; violet primary so the two sites read as
+     siblings but are never confused. Each topic has its own accent (--topic). */
+  :root {
+    --md-sys-color-surface: #0f0f15;
+    --md-sys-color-surface-container-low: #17171f;
+    --md-sys-color-surface-container: #1d1d27;
+    --md-sys-color-surface-container-high: #272733;
+    --md-sys-color-surface-container-highest: #323240;
+    --md-sys-color-on-surface: #e6e4ee;
+    --md-sys-color-on-surface-variant: #c6c3d3;
+    --md-sys-color-outline: #918ea0;
+    --md-sys-color-outline-variant: #3d3b4b;
+    --md-sys-color-primary: #b39dff;
+    --md-sys-color-primary-container: #4b2fa8;
+    --md-sys-color-on-primary-container: #ebe3ff;
+    --md-sys-color-secondary-container: #2c2645;
+    --md-sys-color-on-secondary-container: #e6defc;
+    --topic-ai: #b39dff;
+    --topic-swe: #57d9a3;
+    --topic-cloud: #5bb4ff;
+    --topic-consumer: #ffb35c;
+    --topic-business: #e3c35a;
+    --topic-other: #918ea0;
+    color-scheme: dark;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --md-sys-color-surface: #fcfbff;
+      --md-sys-color-surface-container-low: #f3f1fa;
+      --md-sys-color-surface-container: #ebe8f5;
+      --md-sys-color-surface-container-high: #e5e2f0;
+      --md-sys-color-surface-container-highest: #dfdbec;
+      --md-sys-color-on-surface: #1b1a22;
+      --md-sys-color-on-surface-variant: #46444f;
+      --md-sys-color-outline: #77748a;
+      --md-sys-color-outline-variant: #c8c4d6;
+      --md-sys-color-primary: #6a3fd6;
+      --md-sys-color-primary-container: #e8deff;
+      --md-sys-color-on-primary-container: #22005d;
+      --md-sys-color-secondary-container: #e6defc;
+      --md-sys-color-on-secondary-container: #1e1636;
+      --topic-ai: #6a3fd6;
+      --topic-swe: #0f7a52;
+      --topic-cloud: #0b5fb0;
+    --topic-consumer: #b35a00;
+      --topic-business: #876600;
+      --topic-other: #77748a;
+      color-scheme: light;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+    font-family: "Roboto Flex", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-optical-sizing: auto;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 840px; margin: 0 auto; padding: 0 16px 56px; }
+
+  /* ---------- Top app bar ---------- */
+  .app-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--md-sys-color-surface);
+    padding: 28px 0 0;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+  }
+  .app-bar-inner { max-width: 840px; margin: 0 auto; padding: 0 16px; }
+  .eyebrow {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--md-sys-color-primary);
+    margin: 0 0 4px;
+  }
+  h1 {
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  h1 .date { color: var(--md-sys-color-primary); }
+
+  /* ---------- Topic jump nav (inside the app bar) ----------
+     Chips wrap onto a second row instead of scrolling sideways, so every topic
+     stays visible and clickable at any width. */
+  nav.topic-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 12px 0;
+  }
+  .topic-chip {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .topic-chip::before {
+    content: "";
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--topic);
+  }
+  .topic-chip:hover { background: var(--md-sys-color-surface-container-high); }
+
+  /* ---------- Week nav (the last 8 weekly briefs, MD3 chips like the finance brief) ---------- */
+  nav.chip-nav {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 16px 0 4px;
+    margin: 0 0 8px;
+    scrollbar-width: none;
+  }
+  nav.chip-nav::-webkit-scrollbar { display: none; }
+  .chip {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 64px;
+    padding: 8px 14px;
+    border-radius: 16px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    color: var(--md-sys-color-on-surface-variant);
+    text-decoration: none;
+  }
+  .chip:hover { background: var(--md-sys-color-surface-container-high); }
+  .chip .dow { font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+  .chip .dom { font-size: 0.9375rem; font-weight: 600; white-space: nowrap; }
+  .chip .dow { white-space: nowrap; }
+  .chip.active {
+    background: var(--md-sys-color-primary-container);
+    border-color: transparent;
+    color: var(--md-sys-color-on-primary-container);
+    pointer-events: none;
+  }
+
+  /* ---------- The day's thread (lead banner) ---------- */
+  .thread {
+    display: flex;
+    gap: 12px;
+    background: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+    border-radius: 20px;
+    padding: 18px 20px;
+    margin: 8px 0 20px;
+    font-size: 0.9375rem;
+  }
+  .thread .ct-label {
+    font-weight: 700;
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding-top: 3px;
+  }
+  .thread strong { font-weight: 700; }
+
+  /* ---------- Topic sections ---------- */
+  section.topic {
+    background: var(--md-sys-color-surface-container-low);
+    border-radius: 24px;
+    padding: 20px 24px 8px;
+    margin-bottom: 16px;
+    /* Clear the sticky app bar when jumped to from a topic chip. */
+    scroll-margin-top: 168px;
+  }
+  section.topic h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.375rem;
+    font-weight: 600;
+    margin: 0 0 4px;
+  }
+  section.topic h2::before {
+    content: "";
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--topic);
+  }
+  section.topic h2 .count {
+    margin-left: auto;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--md-sys-color-outline);
+  }
+  ul.items { list-style: none; margin: 0; padding: 0; }
+  ul.items li {
+    padding: 16px 0;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+  }
+  ul.items li:first-child { border-top: none; }
+  .headline {
+    font-size: 1.0625rem;
+    font-weight: 650;
+    line-height: 1.35;
+    margin: 0 0 6px;
+  }
+  .detail {
+    font-size: 0.9375rem;
+    color: var(--md-sys-color-on-surface-variant);
+    line-height: 1.5;
+    font-variant-numeric: tabular-nums;
+  }
+  .detail strong { font-weight: 650; color: var(--md-sys-color-on-surface); }
+  .why {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    background: var(--md-sys-color-surface-container-high);
+    font-size: 0.875rem;
+    color: var(--md-sys-color-on-surface-variant);
+  }
+  .why-label {
+    flex: 0 0 auto;
+    color: var(--topic);
+    font-weight: 700;
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding-top: 2px;
+  }
+  .sources {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 12px;
+    margin-top: 8px;
+    font-size: 0.75rem;
+  }
+  .sources a {
+    color: var(--md-sys-color-primary);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .sources a::after { content: " ↗"; opacity: 0.6; }
+  .sources a:hover { text-decoration: underline; }
+
+  footer {
+    margin-top: 32px;
+    color: var(--md-sys-color-outline);
+    font-size: 0.75rem;
+    text-align: center;
+    line-height: 1.7;
+  }
+
+  /* ---------- Mobile ---------- */
+  @media (max-width: 600px) {
+    /* On phones the chips wrap to 2–3 rows; a sticky bar that tall would eat
+       the screen, so it scrolls away and sections need no offset. */
+    .app-bar { padding-top: 20px; position: static; }
+    section.topic { scroll-margin-top: 12px; }
+    .wrap { padding: 0 14px 40px; }
+    .app-bar-inner { padding: 0 14px; }
+    section.topic { padding: 16px 16px 4px; border-radius: 20px; }
+    section.topic h2 { font-size: 1.25rem; }
+    .thread { flex-direction: column; gap: 6px; }
+    .why { flex-direction: column; gap: 2px; }
+  }
+</style>
+</head>
+<body>
+  <div class="app-bar">
+    <div class="app-bar-inner">
+      <p class="eyebrow">Weekly Tech Brief</p>
+      <h1>Tech News: <span class="date">Oct 31 – Nov 6, 2026</span></h1>
+      <nav class="topic-nav" aria-label="Topics">
+        <a class="topic-chip" style="--topic: var(--topic-ai)" href="#ai">AI</a>
+        <a class="topic-chip" style="--topic: var(--topic-consumer)" href="#consumer">Consumer Tech</a>
+        <a class="topic-chip" style="--topic: var(--topic-business)" href="#business">Business &amp; Policy</a>
+        <a class="topic-chip" style="--topic: var(--topic-swe)" href="#swe">Software Engineering</a>
+        <a class="topic-chip" style="--topic: var(--topic-cloud)" href="#cloud">Cloud &amp; Infrastructure</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <nav class="chip-nav" aria-label="Recent weeks">
+      <span class="chip active" aria-current="page"><span class="dow">Week of</span><span class="dom">Oct 31–Nov 6</span></span>
+      <a class="chip" href="tech-brief-2026-10-31.html"><span class="dow">Week of</span><span class="dom">Oct 24–30</span></a>
+      <a class="chip" href="tech-brief-2026-10-24.html"><span class="dow">Week of</span><span class="dom">Oct 17–23</span></a>
+    </nav>
+
+    <div class="thread"><span class="ct-label">This week's thread</span><span>The money behind the AI boom started to pull back this week: the Nasdaq 100 had its biggest one-day loss ever, OpenAI and Anthropic saw their valuations cut, and voters turned against new data centers in the midterms.</span></div>
+
+    <section class="topic" id="ai" style="--topic: var(--topic-ai)">
+      <h2>AI <span class="count">3 stories</span></h2>
+      <ul class="items">
+        <li>
+          <p class="headline">Anthropic&#39;s IPO filing warns it may soon build AI that speeds its own development</p>
+          <div class="detail">Anthropic&#39;s updated <strong>S-1</strong> says it may &quot;imminently meet&quot; its threshold for <strong>recursive self-improvement</strong>, and might only notice a big speed-up after it happens. Internal data shows Claude led <strong>26%</strong> of the company&#39;s AI research work by August, up from 1% in March.</div>
+          <div class="why"><span class="why-label">Why it matters</span><span>A frontier lab is telling public investors, in a legal filing, that AI building AI may arrive in 2027.</span></div>
+          <div class="sources"><a href="https://techcrunch.com/2026/11/02/anthropic-warns-that-its-very-close-to-rsi-capability-aka-self-building-ai/" target="_blank" rel="noopener noreferrer">TechCrunch</a><a href="https://www.wsj.com/tech/ai/ai-anthropic-rsi-recursive-self-improvement-bff4e815" target="_blank" rel="noopener noreferrer">The Wall Street Journal</a></div>
+        </li>
+        <li>
+          <p class="headline">OpenAI launches GPT-6 Cyber, its strongest model yet for finding software flaws</p>
+          <div class="detail">OpenAI says <strong>GPT-6 Cyber</strong> beats its flagship <strong>GPT-6 Astra</strong> on cybersecurity benchmarks, finds more vulnerabilities and is less likely to go rogue. It is the company&#39;s latest model built just for security work.</div>
+          <div class="why"><span class="why-label">Why it matters</span><span>AI labs now ship separate security models, so attackers and defenders are racing with the same tools.</span></div>
+          <div class="sources"><a href="https://www.theverge.com/ai-artificial-intelligence/1027599/openai-gpt-6-cyber-launch" target="_blank" rel="noopener noreferrer">The Verge</a></div>
+        </li>
+        <li>
+          <p class="headline">Thinking Machines debuts Inkling 2 Small and will release its weights next week</p>
+          <div class="detail">Mira Murati&#39;s lab unveiled <strong>Inkling 2 Small</strong>, a mixture-of-experts model with <strong>594B</strong> total and 17B active parameters. It jumped 18 points to <strong>31</strong> on Artificial Analysis&#39; index but uses about four times as many tokens per task. Weights come after safety testing.</div>
+          <div class="why"><span class="why-label">Why it matters</span><span>A large, strong open-weights model gives companies another option besides paying OpenAI or Anthropic.</span></div>
+          <div class="sources"><a href="https://thinkingmachines.ai/news/inkling-2-small/" target="_blank" rel="noopener noreferrer">Thinking Machines Lab</a><a href="https://techstrong.ai/articles/thinking-machines-launches-inkling-2-small/" target="_blank" rel="noopener noreferrer">Techstrong.ai</a></div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="topic" id="consumer" style="--topic: var(--topic-consumer)">
+      <h2>Consumer Tech <span class="count">3 stories</span></h2>
+      <ul class="items">
+        <li>
+          <p class="headline">Tesla will stop making the Cybertruck in 2027 to build more Cybercabs</p>
+          <div class="detail">Elon Musk says Tesla will wind down <strong>Cybertruck</strong> production at its Texas Gigafactory around <strong>mid-2027</strong> to make room for more <strong>Cybercab</strong> robotaxis. The angular steel pickup never came close to its sales goals.</div>
+          <div class="why"><span class="why-label">Why it matters</span><span>Tesla is moving away from selling cars to people and betting its factories on robotaxis.</span></div>
+          <div class="sources"><a href="https://www.ft.com/content/8ec923a8-a581-4995-a92c-c08e16bf2e98" target="_blank" rel="noopener noreferrer">Financial Times</a><a href="https://arstechnica.com/cars/2026/11/the-cybertruck-is-dead-makes-way-for-cybercab-says-elon-musk/" target="_blank" rel="noopener noreferrer">Ars Technica</a><a href="https://techcrunch.com/2026/11/06/tesla-will-stop-making-the-cybertruck-in-2027/" target="_blank" rel="noopener noreferrer">TechCrunch</a></div>
+        </li>
+        <li>
+          <p class="headline">Google says schools that block its AI tools will also lose Search</p>
+          <div class="detail">Google&#39;s AI tools for K-12 students will be <strong>off by default in 2027</strong>. But schools that block AI completely will lose <strong>Google Search</strong> too, because Google says &quot;Search and AI are deeply integrated.&quot;</div>
+          <div class="why"><span class="why-label">Why it matters</span><span>Schools can no longer simply say no to AI, since Google has tied it to the search tool every classroom uses.</span></div>
+          <div class="sources"><a href="https://www.nytimes.com/2026/11/03/us/google-search-schools-restrict-ai.html" target="_blank" rel="noopener noreferrer">The New York Times</a></div>
+        </li>
+        <li>
+          <p class="headline">Motorola launches the $1,599 Signature 27, its first top-end slab flagship</p>
+          <div class="detail">The <strong>Signature 27</strong> has a <strong>Snapdragon 8 Elite Extreme Gen 6</strong>, a 6.8-inch Tandem OLED screen, <strong>seven years</strong> of OS updates and GrapheneOS support. At <strong>$1,599</strong> it matches the Galaxy S26 Ultra but lacks built-in Qi2 magnets.</div>
+          <div class="why"><span class="why-label">Why it matters</span><span>Motorola is taking on Samsung and Apple at the top of the market, and its GrapheneOS support should appeal to privacy-minded buyers.</span></div>
+          <div class="sources"><a href="https://9to5google.com/2026/11/05/motorola-signature-27-specs-price-release-date/" target="_blank" rel="noopener noreferrer">9to5Google</a><a href="https://www.theverge.com/gadgets/1026643/motorola-signature-27-price-specs-availability" target="_blank" rel="noopener noreferrer">The Verge</a></div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="topic" id="business" style="--topic: var(--topic-business)">
+      <h2>Business &amp; Policy <span class="count">3 stories</span></h2>
+      <ul class="items">
+        <li>
+          <p class="headline">Nasdaq 100 loses a record $2.3 trillion in one day as chip stocks crash</p>
+          <div class="detail">The <strong>Nasdaq 100</strong> fell <strong>6%</strong> on Thursday, the biggest one-day loss in value ever, as the Philadelphia chip index dropped <strong>12%</strong>. Funds that cut risk when markets swing were expected to sell about $135 billion of US stock futures.</div>
+          <div class="why"><span class="why-label">Why it matters</span><span>Investors are questioning AI spending, and that makes it harder and more expensive for tech companies to raise money.</span></div>
+          <div class="sources"><a href="https://www.bloomberg.com/news/articles/2026-11-05/us-stock-futures-diverge-as-chip-selloff-extends-into-second-day" target="_blank" rel="noopener noreferrer">Bloomberg</a></div>
+        </li>
+        <li>
+          <p class="headline">OpenAI and Anthropic face lower valuations as AI investors pull back</p>
+          <div class="detail">OpenAI raised about <strong>$11 billion</strong> at a <strong>$1.25 trillion</strong> valuation, down from the $1.4 trillion it first aimed for. Anthropic still plans to list before Thanksgiving at <strong>$1.25–1.75 trillion</strong>, though some big investors now say closer to $1 trillion.</div>
+          <div class="why"><span class="why-label">Why it matters</span><span>How these two deals price will show public investors&#39; appetite for AI and set terms for every lab raising money after them.</span></div>
+          <div class="sources"><a href="https://www.theverge.com/ai-artificial-intelligence/1029380/openai-1-25-trillion-investment-valuation" target="_blank" rel="noopener noreferrer">The Verge</a><a href="https://www.techmeme.com/261106/p21#a261106p21" target="_blank" rel="noopener noreferrer">Financial Times via Techmeme</a><a href="https://www.wsj.com/finance/major-investors-are-skeptical-anthropic-ipo-can-achieve-1-5-trillion-valuation-ca965d8b" target="_blank" rel="noopener noreferrer">The Wall Street Journal</a></div>
+        </li>
+        <li>
+          <p class="headline">Marvell agrees to buy Lumentum for $115 billion to take on Broadcom</p>
+          <div class="detail"><strong>Marvell</strong> will buy optical parts maker <strong>Lumentum</strong> in an all-stock deal worth <strong>$115 billion</strong>, and Marvell shareholders will own 67% of the combined company. The deal isn&#39;t expected to close until the first half of <strong>2028</strong>. Both stocks fell on the news.</div>
+          <div class="why"><span class="why-label">Why it matters</span><span>The fast optical links between AI chips have become a key bottleneck, and this deal puts Marvell up against Broadcom.</span></div>
+          <div class="sources"><a href="https://www.reuters.com/legal/transactional/marvell-buy-lumentum-115-billion-deal-ai-data-center-bet-2026-11-02/" target="_blank" rel="noopener noreferrer">Reuters</a><a href="https://www.bloomberg.com/news/articles/2026-11-02/marvell-reaches-115-billion-deal-for-lumentum-holdings" target="_blank" rel="noopener noreferrer">Bloomberg</a></div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="topic" id="swe" style="--topic: var(--topic-swe)">
+      <h2>Software Engineering <span class="count">3 stories</span></h2>
+      <ul class="items">
+        <li>
+          <p class="headline">Apple opens Siri AI to every app through new &quot;app skills&quot;</p>
+          <div class="detail">In the <strong>iOS 27.3</strong> betas and the other 27.3 OS betas, any developer can now use <strong>App Intents</strong> to bring their app&#39;s content and actions into <strong>Siri AI</strong>. The new app skills also let Siri carry out multi-step tasks that span several apps.</div>
+          <div class="why"><span class="why-label">Why it matters</span><span>Developers who don&#39;t build for Siri&#39;s agent risk being skipped when users start asking their phone to do things for them.</span></div>
+          <div class="sources"><a href="https://developer.apple.com/news/?id=gdk2umrf" target="_blank" rel="noopener noreferrer">Apple Developer</a><a href="https://9to5mac.com/2026/11/03/developers-can-now-create-advanced-app-skills-for-siri-ai" target="_blank" rel="noopener noreferrer">9to5Mac</a></div>
+        </li>
+        <li>
+          <p class="headline">Decade-old OpenSSH flaw lets attackers log into some Linux systems without a password</p>
+          <div class="detail">The flaw, nicknamed *<strong>\</strong>sshole<strong>, lets an attacker log into passwordless accounts by sending a password of </strong>256+ characters<strong>. It affects </strong>OpenSSH<strong> on some musl-based systems such as </strong>Alpine Linux**, which many containers use.</div>
+          <div class="why"><span class="why-label">Why it matters</span><span>Alpine is the base image for many containers, so teams need to check their images and SSH settings now.</span></div>
+          <div class="sources"><a href="https://arstechnica.com/security/2026/11/vulnerability-allows-attackers-to-log-into-some-linux-devices-sans-password/" target="_blank" rel="noopener noreferrer">Ars Technica</a><a href="https://www.techmeme.com/261106/p16#a261106p16" target="_blank" rel="noopener noreferrer">BleepingComputer via Techmeme</a></div>
+        </li>
+        <li>
+          <p class="headline">Revolut cuts AI coding costs about 90% by switching to self-hosted models</p>
+          <div class="detail"><strong>Revolut</strong> made self-hosted <strong>GLM</strong> models the default for its engineers instead of commercial tools like <strong>Claude Code</strong>. It says this cut its AI coding costs by about <strong>90%</strong> in under a year.</div>
+          <div class="why"><span class="why-label">Why it matters</span><span>Large engineering teams are finding open models good enough for daily coding, which cuts into AI labs&#39; most profitable business.</span></div>
+          <div class="sources"><a href="https://www.theregister.com/ai-and-ml/2026/11/03/british-fintech-revolut-slashes-ai-coding-costs-10x-by-cutting-out-claude-and-going-self-hosted/5307345" target="_blank" rel="noopener noreferrer">The Register</a></div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="topic" id="cloud" style="--topic: var(--topic-cloud)">
+      <h2>Cloud &amp; Infrastructure <span class="count">3 stories</span></h2>
+      <ul class="items">
+        <li>
+          <p class="headline">Midterm results put half of US AI data center plans under new scrutiny</p>
+          <div class="detail">Democrats who promised to halt data center building won governor races in <strong>Texas, Georgia and Ohio</strong>, which puts about <strong>50%</strong> of proposed AI data centers under closer review. Voters also decided <strong>41</strong> data center ballot measures. OpenAI then promised to stop using NDAs and to cut power use at peak times.</div>
+          <div class="why"><span class="why-label">Why it matters</span><span>Local approval and power are now as big a limit on AI growth as chips are.</span></div>
+          <div class="sources"><a href="https://www.bloomberg.com/news/articles/2026-11-04/ai-data-center-boom-is-set-for-upheaval-after-us-election-rout" target="_blank" rel="noopener noreferrer">Bloomberg</a><a href="https://www.ft.com/content/badd6af9-88b7-47b7-b1c2-067814e70fb5" target="_blank" rel="noopener noreferrer">Financial Times</a><a href="https://techcrunch.com/video/after-the-midterms-is-the-ai-industry-in-for-a-rough-two-years/" target="_blank" rel="noopener noreferrer">TechCrunch</a></div>
+        </li>
+        <li>
+          <p class="headline">Neoclouds are shut out of the bond market as AI debt fears grow</p>
+          <div class="detail">Lenders have effectively shut <strong>CoreWeave</strong>, <strong>Nebius</strong> and <strong>Nscale</strong> out of the bond market by demanding tougher terms. The cost of insuring debt at Amazon, Alphabet, Microsoft, Meta and Oracle against default has hit its <strong>highest level since 2021</strong>.</div>
+          <div class="why"><span class="why-label">Why it matters</span><span>Cheap borrowing paid for much of the AI build-out, and without it smaller cloud providers may have to shrink their plans.</span></div>
+          <div class="sources"><a href="https://www.wsj.com/finance/the-new-bottleneck-in-americas-ai-build-out-a-shortage-of-cheap-money-0c14c84d" target="_blank" rel="noopener noreferrer">The Wall Street Journal</a></div>
+        </li>
+        <li>
+          <p class="headline">Microsoft stops renting older Nvidia-based servers from Oracle</p>
+          <div class="detail"><strong>Microsoft</strong> has started turning off computing capacity it rented from <strong>Oracle</strong> under a <strong>2023</strong> deal. It declined to renew because the hardware uses older <strong>Nvidia</strong> chips.</div>
+          <div class="why"><span class="why-label">Why it matters</span><span>AI servers lose value fast as new chips arrive, which threatens companies that borrowed heavily to build them.</span></div>
+          <div class="sources"><a href="https://www.techmeme.com/261106/p18#a261106p18" target="_blank" rel="noopener noreferrer">Bloomberg via Techmeme</a></div>
+        </li>
+      </ul>
+    </section>
+
+    <footer>
+      Sources: Techmeme Ride Home · The Verge · AWS News Blog · Ars Technica · TechCrunch · Techmeme · Hacker News<br />
+      Generated automatically by the tech-brief pipeline &middot; 2026-11-07T06:02:13.031Z
+    </footer>
+  </div>
+</body>
+</html>
