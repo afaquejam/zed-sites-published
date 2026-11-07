@@ -1,0 +1,101 @@
+{
+  "date": "2026-11-07",
+  "generatedAt": "2026-11-07T08:30:00Z",
+  "sections": [
+    {
+      "key": "usa",
+      "label": "USA",
+      "items": [
+        {
+          "emoji": "📉",
+          "detail": "The **S&P 500** fell **2.68%** to 7,376.86 and the Nasdaq lost 3.37% to 24,579.42, despite a Friday bounce in AI shares.",
+          "why": "After Democrats swept Congress, investors feared tighter AI and data-center rules and dumped tech.",
+          "sourceName": "Benzinga",
+          "sourceUrl": "https://www.benzinga.com/markets/market-summary/26/11/63012338/nasdaq-100-worst-day-since-2020-midterm-sweep-ai-selloff-jobs-fed-this-week-on-wall-street"
+        },
+        {
+          "emoji": "🤖",
+          "detail": "On Thursday the Nasdaq fell **5.5%**, its worst day since 2020, while chip stocks lost more than 12% and Nvidia about 9%.",
+          "why": "Worries about regulation hit the most crowded AI trades hardest, including memory makers and data-center names.",
+          "sourceName": "CNN",
+          "sourceUrl": "https://www.cnn.com/2026/11/05/investing/tech-heavy-nasdaq-plunges"
+        },
+        {
+          "emoji": "🏦",
+          "detail": "Friday's jobs report showed **165,000** new jobs in October, far above forecasts, and markets now see a December Fed rate hike as likely.",
+          "why": "Strong hiring and wage growth of 0.4% suggest the economy can handle higher rates.",
+          "sourceName": "Kitco",
+          "sourceUrl": "https://www.kitco.com/news/article/2026-11-06/gold-falls-us-payrolls-surge-165000-strengthening-december-fed-hike-case"
+        }
+      ]
+    },
+    {
+      "key": "emsmallcaps",
+      "label": "Emerging Markets and Small Caps",
+      "items": [
+        {
+          "emoji": "🌏",
+          "detail": "Asian tech markets took the brunt of the global AI selloff. Taiwan had its **worst week since 2001** and entered a bear market, and Korea's KOSPI hit a circuit breaker.",
+          "why": "Fears of US limits on AI spending hit chipmakers, which make up a big share of both markets.",
+          "sourceName": "Bloomberg",
+          "sourceUrl": "https://www.bloomberg.com/news/articles/2026-11-06/ai-selloff-asian-stock-markets-nikkei-kospi-taiex-grim-milestones"
+        },
+        {
+          "emoji": "🚀",
+          "detail": "The **NIFTY 50** jumped **8.6%** to 25,030, its best week in about six years, with banks leading a seven-session winning streak.",
+          "why": "Foreign investors bought nearly $3 billion of Indian stocks as a sharp fall in oil helped the oil-importing economy.",
+          "sourceName": "Free Press Journal",
+          "sourceUrl": "https://www.freepressjournal.in/business/nifty-explodes-8-in-biggest-weekly-surge-since-2021-is-dalal-street-heading-for-a-mega-bull-run-or-a-brutal-trap"
+        },
+        {
+          "emoji": "🔻",
+          "detail": "The US **Russell 2000** fell about **2.1%** to around 2,754, after a 4.4% drop on Thursday and a partial rebound on Friday.",
+          "why": "The AI selloff spread to small caps, and higher odds of a rate hike mean tighter borrowing costs for small firms.",
+          "sourceName": "ad-hoc-news",
+          "sourceUrl": "https://www.ad-hoc-news.de/boerse/news/marktberichte/russell-2000-ends-friday-0-9-prozent-higher-at-2-754-11/70472304"
+        }
+      ]
+    },
+    {
+      "key": "crypto",
+      "label": "Crypto",
+      "items": [
+        {
+          "emoji": "₿",
+          "detail": "**Bitcoin** rose above $80,000 after the midterms, then fell back to about **$75,500**, heading for a fifth straight weekly loss of roughly 3%.",
+          "why": "Traders fear tougher crypto rules from a Democratic Congress, and the strong jobs report raised the odds of a rate hike.",
+          "sourceName": "Yahoo Finance",
+          "sourceUrl": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-slips-75k-u-regulatory-065303580.html"
+        },
+        {
+          "emoji": "🔷",
+          "detail": "**Ether** slipped about **2%** on the week to roughly $2,250 and fell below its 200-day average.",
+          "why": "Spot ether ETFs kept losing money, about $657 million over the week.",
+          "sourceName": "FXStreet",
+          "sourceUrl": "https://www.fxstreet.com/cryptocurrencies/news/ethereum-price-forecast-eth-falls-as-etf-outflows-return-202611061616"
+        },
+        {
+          "emoji": "🌞",
+          "detail": "**Solana** dropped below $100 to about **$89.65**, its sixth straight weekly decline, and is testing a long-term trendline.",
+          "why": "The selloff across risky assets after the midterms hit the more volatile coins hardest, and money flowed out of Solana ETFs.",
+          "sourceName": "FXStreet",
+          "sourceUrl": "https://fxstreet.com/cryptocurrencies/news/solana-price-forecast-warning-signs-emerge-as-sols-long-term-trendline-comes-under-pressure-202611060614"
+        }
+      ]
+    },
+    {
+      "key": "commodities",
+      "label": "Commodities",
+      "items": [
+        {
+          "emoji": "🪙",
+          "detail": "**Spot gold** rose about **5%** on the week to near $4,077, its best week in over two months, recovering from last week's one-year low.",
+          "why": "Hopes of US-Iran de-escalation pushed oil down, which eased inflation worries and weakened the dollar and bond yields.",
+          "sourceName": "CNBC",
+          "sourceUrl": "https://www.cnbc.com/amp/2026/11/06/gold-eases-on-inflation-worries-from-higher-oil-us-payrolls-data-in-focus.html"
+        }
+      ]
+    }
+  ],
+  "crossCuttingTheme": "The Democrats' midterm sweep pulled markets two ways: fears of AI regulation sank tech stocks in the US, Korea and Taiwan and dragged down crypto, while hopes of US-Iran de-escalation cut oil prices, lifting gold and oil-importing India."
+}
