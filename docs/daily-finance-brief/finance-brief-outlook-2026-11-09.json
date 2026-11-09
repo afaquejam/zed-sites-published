@@ -1,0 +1,101 @@
+{
+  "date": "2026-11-09",
+  "generatedAt": "2026-11-09T07:00:00Z",
+  "sections": [
+    {
+      "key": "usa",
+      "label": "USA",
+      "items": [
+        {
+          "emoji": "📉",
+          "detail": "**Tuesday's October CPI** is the week's main event, with prices expected to rise **0.3%** on the month and core prices 0.2%.",
+          "why": "A hotter print would firm up a December rate hike and hit the tech stocks behind last week's selloff.",
+          "sourceName": "FXEmpire",
+          "sourceUrl": "https://www.fxempire.com/forecasts/article/the-week-ahead-cpi-and-tech-earnings-test-a-fragile-stock-market-1643118"
+        },
+        {
+          "emoji": "🤖",
+          "detail": "**CoreWeave** reports after Tuesday's close and **Cisco** after Thursday's close, the first big checks on AI spending since last week's chip rout.",
+          "why": "Strong spending plans could steady the Nasdaq; weak guidance would add to fears about AI regulation.",
+          "sourceName": "Cisco Investor Relations",
+          "sourceUrl": "https://investor.cisco.com/news/news-details/2026/Cisco-Schedules-Conference-Call-for-Q1-Fiscal-Year-2027-Financial-Results/default.aspx"
+        },
+        {
+          "emoji": "🏦",
+          "detail": "The **S&P 500** starts at **7,376.86**, with traders putting the odds of a December Fed hike at about 77% after Friday's strong jobs report.",
+          "why": "With hike odds already high, any sign of cooling inflation could spark a relief rally in beaten-down stocks.",
+          "sourceName": "Discovery Alert",
+          "sourceUrl": "https://discoveryalert.com/news/gold-price-fed-hike-odds-cpi-november-2026/"
+        }
+      ]
+    },
+    {
+      "key": "emsmallcaps",
+      "label": "Emerging Markets and Small Caps",
+      "items": [
+        {
+          "emoji": "🌏",
+          "detail": "**China** reports October trade on Tuesday, after Monday's factory-gate inflation hit **5.7%**, a four-year high, while Taiwan and Korea chip stocks stay under heavy pressure.",
+          "why": "A hot US CPI would lift the dollar and add to outflows from Asian chip markets.",
+          "sourceName": "Lundgreen's Investor Insights",
+          "sourceUrl": "https://www.lundgreensinvestorinsights.com/next-week-in-china-9-13-november-2026/"
+        },
+        {
+          "emoji": "🇮🇳",
+          "detail": "India's **October CPI** comes out Thursday in a holiday-shortened week, with markets shut Tuesday. The **NIFTY 50** is testing the 25,000–25,200 zone.",
+          "why": "Low inflation and cheaper oil keep foreign buying going; an upside surprise would test the rally.",
+          "sourceName": "Equity Brew",
+          "sourceUrl": "https://equitybrew.substack.com/p/week-ahead-niftys-25000-breakout"
+        },
+        {
+          "emoji": "📏",
+          "detail": "The US **Russell 2000** starts near **2,754** and sits close to major support, and Tuesday's CPI could decide whether that level holds.",
+          "why": "Small caps are moving closely against Treasury yields, so a hot print that pushes yields up would hurt them most.",
+          "sourceName": "Forex.com",
+          "sourceUrl": "https://www.forex.com/ie/news-and-analysis/russell-2000-breaks-200-day-average-as-cpi-risk-looms/"
+        }
+      ]
+    },
+    {
+      "key": "crypto",
+      "label": "Crypto",
+      "items": [
+        {
+          "emoji": "₿",
+          "detail": "**Bitcoin** starts near **$75,500**, just above its 200-day average near $73,200, with Tuesday's US CPI the week's main test.",
+          "why": "Spot ETFs lost $1.28 billion last week; higher hike odds could push it below that support.",
+          "sourceName": "The Crypto Times",
+          "sourceUrl": "https://www.cryptotimes.io/2026/11/07/bitcoin-etfs-record-1-28b-in-weekly-outflows-ethereum-loses-365m/"
+        },
+        {
+          "emoji": "💧",
+          "detail": "**Ether** slid to about **$2,136** on Monday, its lowest since August, after spot ETFs had six straight weeks of outflows.",
+          "why": "Steady fund selling leaves little support; a soft CPI that cools hike bets is the likeliest turn.",
+          "sourceName": "The Crypto Times",
+          "sourceUrl": "https://www.cryptotimes.io/2026/11/09/ethereum-price-drops-4-4-to-2136-as-449m-eth-liquidations-hit-longs/"
+        },
+        {
+          "emoji": "☀️",
+          "detail": "**Solana** starts near **$89.65**, testing a long-term trendline after six weekly losses, with no protocol event this week to lean on.",
+          "why": "Solana ETFs keep losing money, and as the most volatile big coin it swings hardest on rate surprises.",
+          "sourceName": "Benzinga",
+          "sourceUrl": "https://www.benzinga.com/crypto/26/11/63020476/bitcoin-ethereum-and-solana-etf-outflows-jump-as-key-fear-gauge-drops-after-midterms"
+        }
+      ]
+    },
+    {
+      "key": "commodities",
+      "label": "Commodities",
+      "items": [
+        {
+          "emoji": "🥇",
+          "detail": "**Spot gold** starts near **$4,077** ahead of Tuesday's US CPI, which is forecast to rise 0.3% on the month.",
+          "why": "A soft print would weaken the dollar and yields and help gold; a hot one would firm up hike bets.",
+          "sourceName": "FXStreet",
+          "sourceUrl": "https://www.fxstreet.com/analysis/4-100-reclaimed-will-gold-buyers-succeed-ahead-of-us-inflation-test-202611090355"
+        }
+      ]
+    }
+  ],
+  "crossCuttingTheme": "Tuesday's US October CPI links every market: a hot print would lock in a December Fed hike and lift the dollar and yields, hurting tech, small caps, crypto and Asian chips, while a soft one would help gold and India."
+}
