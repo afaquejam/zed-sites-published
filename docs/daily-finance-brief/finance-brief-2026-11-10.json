@@ -1,0 +1,101 @@
+{
+  "date": "2026-11-10",
+  "generatedAt": "2026-11-10T08:30:00+02:00",
+  "sections": [
+    {
+      "key": "usa",
+      "label": "USA",
+      "items": [
+        {
+          "emoji": "📈",
+          "detail": "The **S&P 500** jumped 2.35% to 7,549.94 Monday, its best day since April, and the Nasdaq gained 2.74% to 25,253.14.",
+          "why": "Oil fell about 5% on hopes of a US-Iran deal, and chip stocks bounced back after last week's rout.",
+          "sourceName": "CNBC",
+          "sourceUrl": "https://www.cnbc.com/2026/11/08/stock-market-today-live-updates.html"
+        },
+        {
+          "emoji": "🕵️",
+          "detail": "**Nvidia** fell 4.3% against the rally, wiping out about $192 billion of market value, after its board opened an investigation into CEO Jensen Huang.",
+          "why": "The board is looking into reports that Huang was targeted by a foreign spy effort, and the FBI is also involved.",
+          "sourceName": "CNN",
+          "sourceUrl": "https://www.cnn.com/2026/11/09/investing/nvidia-stock-huang-investigation"
+        },
+        {
+          "emoji": "🏦",
+          "detail": "October payrolls rose by **165,000**, far above the roughly 65,000 expected, and October inflation data comes out today with December hike odds near 80%.",
+          "why": "Strong hiring raised the odds of a December rate hike, which makes today's inflation report the last big test before the decision.",
+          "sourceName": "Yahoo Finance",
+          "sourceUrl": "https://finance.yahoo.com/economy/policy/articles/odds-december-rate-hike-jump-173301658.html"
+        }
+      ]
+    },
+    {
+      "key": "emsmallcaps",
+      "label": "Emerging Markets and Small Caps",
+      "items": [
+        {
+          "emoji": "🔄",
+          "detail": "Taiwan's **Taiex** jumped 4.94% to 41,661.70 Monday, ending a seven-day losing streak, and South Korea's Kospi rose more than 5% early Tuesday.",
+          "why": "Taiwan curbed short selling and chip stocks bounced back, though foreign investors kept selling.",
+          "sourceName": "Investing.com",
+          "sourceUrl": "https://www.investing.com/news/stock-market-news/asia-stocks-roar-back-as-taiwan-jumps-6-nvidia-probe-rattles-ai-trade-5010437"
+        },
+        {
+          "emoji": "🏛️",
+          "detail": "The **Nifty** rose 0.23% to 25,044.65 Monday, getting back above 25,000, as state-run bank stocks jumped 3.7% while IT stocks fell.",
+          "why": "Buying in state-run banks made up for profit-taking in IT after a 10.5% gain over seven sessions.",
+          "sourceName": "DSIJ",
+          "sourceUrl": "https://insights.dsij.in/dsijarticledetail/closing-bell-nifty-50-closes-above-25000-as-sensex-gains-107-points-psu-banks-rally-373-60370"
+        },
+        {
+          "emoji": "🚀",
+          "detail": "The US **Russell 2000** rose 3.15% to 2,840.85 Monday, beating both the S&P 500 and the Nasdaq.",
+          "why": "Cheaper oil and the chip rebound brought buyers back, and smaller companies gained the most.",
+          "sourceName": "JournalArta",
+          "sourceUrl": "https://journalarta.com/en/2026/11/10/stock-market-today-sp-500-surges-2-35-to-7549-94-and-nasdaq-jumps-2-74-as-oil-falls-and-vix-drops"
+        }
+      ]
+    },
+    {
+      "key": "crypto",
+      "label": "Crypto",
+      "items": [
+        {
+          "emoji": "₿",
+          "detail": "**Bitcoin** stayed near $74,800 Monday, missing the stock rally, after falling to $73,510 late Sunday, its lowest since August.",
+          "why": "Investors pulled $1.28 billion from US spot bitcoin ETFs through November 6, which weighed on the price.",
+          "sourceName": "The Motley Fool",
+          "sourceUrl": "https://www.fool.com/coverage/stock-market-today/2026/11/09/crypto-market-today-nov-9-bitcoin-and-ethereum-lag-as-nasdaq-surges-nearly-3/"
+        },
+        {
+          "emoji": "🔷",
+          "detail": "**Ether** slipped to about $2,118 Tuesday, down roughly 5% in 24 hours, lagging behind the rebound in stocks.",
+          "why": "Investors kept pulling money from ether ETFs, and sellers outweighed buyers ahead of today's inflation data.",
+          "sourceName": "Coinbase",
+          "sourceUrl": "https://www.coinbase.com/price/ethereum"
+        },
+        {
+          "emoji": "🟣",
+          "detail": "**Solana** fell 3.85% to about $85.59 Monday, dropping below the 200-day average it tested last week.",
+          "why": "Solana ETFs had their fifth straight week of outflows, about $170 million in total.",
+          "sourceName": "FXStreet",
+          "sourceUrl": "https://www.fxstreet.com/cryptocurrencies/news/solana-price-forecast-persistent-etf-outflows-extend-downside-risk-in-sol-202611090609"
+        }
+      ]
+    },
+    {
+      "key": "commodities",
+      "label": "Commodities",
+      "items": [
+        {
+          "emoji": "🥇",
+          "detail": "**Gold** rose more than 1.5% to above $4,130 Monday, making up Friday's drop to about $4,074 after the strong jobs report.",
+          "why": "Oil's slide weakened the dollar, and that outweighed rising bets on a December Fed rate hike.",
+          "sourceName": "FXStreet",
+          "sourceUrl": "https://www.fxstreet.com/news/gold-defies-fed-hike-bets-tops-4-100-as-oil-rout-hits-the-usd-202611092026"
+        }
+      ]
+    }
+  ],
+  "crossCuttingTheme": "Oil's slide on US-Iran deal hopes weakened the dollar and sparked a relief rally in stocks, Asian chipmakers and gold, while crypto lagged as ETF outflows continued; today's inflation data, with December hike odds near 80%, is the next test."
+}
