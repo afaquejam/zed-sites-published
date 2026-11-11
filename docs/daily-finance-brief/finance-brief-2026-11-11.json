@@ -1,0 +1,101 @@
+{
+  "date": "2026-11-11",
+  "generatedAt": "2026-11-11T08:00:00Z",
+  "sections": [
+    {
+      "key": "usa",
+      "label": "USA",
+      "items": [
+        {
+          "emoji": "📉",
+          "detail": "The **S&P 500** fell 0.38% to 7,520.93 Tuesday and the Nasdaq dropped 0.74% to 25,065.87, giving back part of Monday's big rally.",
+          "why": "Hotter-than-expected October inflation raised rate-hike fears, and tech was the worst-performing sector.",
+          "sourceName": "Anadolu Agency",
+          "sourceUrl": "https://aa.com.tr/en/economy/us-stocks-close-lower-as-nvidia-slides-inflation-fuels-rate-hike-fears/4119589"
+        },
+        {
+          "emoji": "🏦",
+          "detail": "October consumer prices rose **0.4%**, above the 0.3% forecast, and core prices rose 0.3%, which leaves a December Fed hike close to fully priced in.",
+          "why": "Fed Governor Waller said a half-point hike should be considered if core inflation keeps running near 0.3%.",
+          "sourceName": "CNBC",
+          "sourceUrl": "https://www.cnbc.com/2026/11/10/cpi-inflation-report-october-2026.html"
+        },
+        {
+          "emoji": "🤖",
+          "detail": "**Nvidia** slid another 5.53% to $168.80, extending Monday's drop, and Microsoft briefly passed it as the world's second-most valuable company.",
+          "why": "Investors are still weighing the board's investigation into CEO Jensen Huang, and rising rate fears added to the selling.",
+          "sourceName": "Stock Titan",
+          "sourceUrl": "https://stocktitan.net/articles/stock-market-today-live-november-10-2026"
+        }
+      ]
+    },
+    {
+      "key": "emsmallcaps",
+      "label": "Emerging Markets and Small Caps",
+      "items": [
+        {
+          "emoji": "🌏",
+          "detail": "South Korea's **Kospi** rose about 1.7% to near 5,330 Wednesday afternoon, while the tech-heavy KOSDAQ jumped about 5%, despite Wall Street's slide.",
+          "why": "AI chip stocks such as SK Hynix kept rebounding, while Hong Kong and mainland China fell.",
+          "sourceName": "investingLive",
+          "sourceUrl": "https://investinglive.com/stock-market-update/asia-midday-nikkei-up-for-third-day-kosdaq-jumps-5-as-ai-stocks-rebound"
+        },
+        {
+          "emoji": "🇮🇳",
+          "detail": "After Tuesday's Diwali holiday, the **Sensex** jumped 1,257 points, or 1.55%, to 82,363.95 by late morning Wednesday.",
+          "why": "Lower oil prices and the recovery in global chip stocks improved the outlook for Indian stocks, especially IT.",
+          "sourceName": "Business Standard",
+          "sourceUrl": "https://www.business-standard.com/markets/news/stock-market-live-november-11-nse-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-126111100079_1.html"
+        },
+        {
+          "emoji": "📊",
+          "detail": "The US **Russell 2000** fell 0.65% to 2,822.39 Tuesday, giving back a small part of Monday's 3% jump.",
+          "why": "Higher odds of a Fed hike lifted borrowing costs, which matter more for smaller companies that rely on loans.",
+          "sourceName": "Investing.com",
+          "sourceUrl": "https://www.investing.com/indices/smallcap-2000-historical-data"
+        }
+      ]
+    },
+    {
+      "key": "crypto",
+      "label": "Crypto",
+      "items": [
+        {
+          "emoji": "₿",
+          "detail": "**Bitcoin** slipped to about $73,730 after the inflation report, briefly testing its August low, as $724 million of crypto bets were forcibly closed.",
+          "why": "The hot inflation report made rate hikes more likely, and spot bitcoin ETFs lost another $201 million Monday.",
+          "sourceName": "The Crypto Times",
+          "sourceUrl": "https://cryptotimes.io/2026/11/11/crypto-market-down-today-btc-eth-xrp-prices-fall-after-cpi-724m-longs-liquidated"
+        },
+        {
+          "emoji": "🔻",
+          "detail": "**Ether** fell 5.2% to about $2,028, closing in on $2,000 and extending this week's slide.",
+          "why": "Ether ETFs lost $184.6 million Monday, their worst day this month, and forced selling of bullish bets followed the inflation report.",
+          "sourceName": "crypto.news",
+          "sourceUrl": "https://crypto.news/why-is-ethereum-price-down-today-cpi-etf-liquidations"
+        },
+        {
+          "emoji": "☀️",
+          "detail": "**Solana** fell more than 6% Tuesday, one of the biggest losers among large coins after the inflation report.",
+          "why": "Solana ETFs had another $31.9 million of outflows over two days, adding to weeks of withdrawals.",
+          "sourceName": "Digital Today",
+          "sourceUrl": "https://www.digitaltoday.co.kr/en/view/124031/solana-losses-widen-etf-outflows-continue"
+        }
+      ]
+    },
+    {
+      "key": "commodities",
+      "label": "Commodities",
+      "items": [
+        {
+          "emoji": "🥇",
+          "detail": "**Gold** fell 2.5% to $4,035.15 Tuesday, wiping out Monday's rebound above $4,130.",
+          "why": "The hot inflation report lifted the dollar and Treasury yields, which raise the cost of holding gold.",
+          "sourceName": "CNBC",
+          "sourceUrl": "https://www.cnbc.com/2026/11/10/gold-edges-lower-as-focus-shifts-to-us-inflation-data.html"
+        }
+      ]
+    }
+  ],
+  "crossCuttingTheme": "Hotter October inflation made a December Fed hike near-certain, and the stronger dollar and higher yields hit gold, crypto and US tech; Asian chipmakers and India rallied anyway on cheaper oil."
+}
