@@ -1,0 +1,94 @@
+{
+  "date": "2026-11-12",
+  "generatedAt": "2026-11-12T08:30:00+02:00",
+  "sections": [
+    {
+      "key": "usa",
+      "label": "USA",
+      "items": [
+        {
+          "emoji": "📈",
+          "detail": "The **S&P 500** jumped 1.31% to 7,619.38 Wednesday and the Nasdaq rose 1.60% to 25,466.19, more than recovering Tuesday's inflation-driven dip.",
+          "why": "CoreWeave soared about 25% on a raised revenue outlook, reviving confidence in AI spending.",
+          "sourceName": "Investing.com",
+          "sourceUrl": "https://investing.com/news/stock-market-news/us-stock-futures-tick-higher-after-wall-st-slips-on-hot-cpi-nvidia-losses-5017417"
+        },
+        {
+          "emoji": "🏢",
+          "detail": "**Nvidia** closed up 2.87% at $173.73, then sank more than 8% after hours to about $159.51, dragging US futures lower.",
+          "why": "The Wall Street Journal reported the board is preparing to oust CEO Jensen Huang, and directors met late Wednesday.",
+          "sourceName": "CNBC",
+          "sourceUrl": "https://www.cnbc.com/2026/11/11/nvidia-jensen-huang-affair-employee.html"
+        }
+      ]
+    },
+    {
+      "key": "emsmallcaps",
+      "label": "Emerging Markets and Small Caps",
+      "items": [
+        {
+          "emoji": "🇹🇼",
+          "detail": "Taiwan's **Taiex** fell 2.63% to 43,091.87 Thursday, the worst major market in Asia, with TSMC down 2.3%, while Japan's Nikkei lost 0.7%.",
+          "why": "Reports that Nvidia may oust its CEO hit the chip and AI hardware stocks that supply it.",
+          "sourceName": "AP via KSAT",
+          "sourceUrl": "https://www.ksat.com/business/2026/11/12/asian-shares-mostly-slip-as-nvidias-troubles-weigh-on-ai-stocks-despite-a-rally-on-wall-st/"
+        },
+        {
+          "emoji": "🇮🇳",
+          "detail": "The Sensex closed Wednesday up 773 points at 81,879.40 and the **Nifty** rose 0.84% to 25,255.05, its highest close in nearly nine months. Both edged higher early Thursday.",
+          "why": "Foreign investors kept buying, crude oil stayed soft and September-quarter results beat forecasts.",
+          "sourceName": "Business Standard",
+          "sourceUrl": "https://www.business-standard.com/markets/news/stock-market-live-november-11-nse-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-126111100079_1.html"
+        },
+        {
+          "emoji": "🔼",
+          "detail": "The US **Russell 2000** rose 0.88% to 2,846.26 Wednesday, more than reversing Tuesday's drop but trailing the Nasdaq.",
+          "why": "CoreWeave's strong outlook lifted AI and tech names across the market, including smaller companies.",
+          "sourceName": "ad-hoc-news",
+          "sourceUrl": "https://www.ad-hoc-news.de/boerse/news/marktberichte/russell-2000-closes-at-2-846-26-up-0-9-percent-on-ai-rebound/70494414"
+        }
+      ]
+    },
+    {
+      "key": "crypto",
+      "label": "Crypto",
+      "items": [
+        {
+          "emoji": "₿",
+          "detail": "**Bitcoin** stayed stuck near $73,640 early Thursday and missed out on Wednesday's stock rally.",
+          "why": "Spot bitcoin ETFs lost $299.9 million Wednesday, their fifth straight day of outflows, led by BlackRock's IBIT.",
+          "sourceName": "TokenPost",
+          "sourceUrl": "https://www.tokenpost.com/news/investing/55014"
+        },
+        {
+          "emoji": "💎",
+          "detail": "**Ether** held around $2,060, down about 11% over the past week and just above the $2,000 level.",
+          "why": "Ether ETFs lost $145 million Wednesday, their fifth straight day of outflows, bringing November withdrawals near $700 million.",
+          "sourceName": "Bloomingbit",
+          "sourceUrl": "https://en.bloomingbit.io/feed/news/124260"
+        },
+        {
+          "emoji": "☀️",
+          "detail": "**Solana** slipped to about $83, down nearly 12% over seven days.",
+          "why": "Solana ETFs had $5.85 million of outflows Wednesday, extending weeks of withdrawals.",
+          "sourceName": "TokenPost",
+          "sourceUrl": "https://www.tokenpost.com/news/investing/54869"
+        }
+      ]
+    },
+    {
+      "key": "commodities",
+      "label": "Commodities",
+      "items": [
+        {
+          "emoji": "🥇",
+          "detail": "**Gold** fell back below $4,000 Wednesday to about $3,984, down 1.2%, after losing nearly 4% over two days.",
+          "why": "High Treasury yields after the hot inflation report increased bets on a December Fed hike.",
+          "sourceName": "FXStreet",
+          "sourceUrl": "https://fxstreet.com/news/gold-drifts-below-4-000-as-high-us-yields-fuel-december-fed-hike-odds-202611111838"
+        }
+      ]
+    }
+  ],
+  "crossCuttingTheme": "Nvidia's leadership crisis is now the main market driver: its after-hours drop hit Taiwan's chipmakers and US futures. Separately, December rate-hike bets keep pressure on gold and crypto, while cheaper oil supports India."
+}
