@@ -1,0 +1,94 @@
+{
+  "date": "2026-11-13",
+  "generatedAt": "2026-11-13T08:30:00+02:00",
+  "sections": [
+    {
+      "key": "usa",
+      "label": "USA",
+      "items": [
+        {
+          "emoji": "📉",
+          "detail": "The **S&P 500** fell 0.35% to 7,592.40 Thursday and the Nasdaq slipped 0.39% to 25,366.09, after recovering most of an early drop of nearly 1%.",
+          "why": "Nvidia's CEO exit shook tech, while rising Treasury yields and oil prices weighed on the wider market.",
+          "sourceName": "NTD / Reuters",
+          "sourceUrl": "https://www.ntd.com/wall-street-ends-lower-as-nvidia-ceo-resigns-us-yields-up_1185109.html"
+        },
+        {
+          "emoji": "🤖",
+          "detail": "**Nvidia** closed down 4.34% at $166.19 after a 14% plunge at the open, while rivals AMD and Broadcom gained nearly 6%. It reports earnings Tuesday.",
+          "why": "Jensen Huang resigned as CEO, effective immediately, and CFO Colette Kress became interim chief.",
+          "sourceName": "TechFlow",
+          "sourceUrl": "https://www.techflowpost.com/en-US/article/35340"
+        }
+      ]
+    },
+    {
+      "key": "emsmallcaps",
+      "label": "Emerging Markets and Small Caps",
+      "items": [
+        {
+          "emoji": "🔄",
+          "detail": "Korea's **Kospi** jumped nearly 3% to about 5,501 early Friday and Taiwan's chipmakers bounced, though Hong Kong's Hang Seng fell 0.9%.",
+          "why": "Nvidia's smaller-than-feared loss and gains at AMD and Broadcom eased worries about chip demand.",
+          "sourceName": "MLQ.ai",
+          "sourceUrl": "https://mlq.ai/news/kospi-jumps-nearly-3-as-asian-chip-stocks-rebound-after-nvidias-ceo-exit/"
+        },
+        {
+          "emoji": "🏦",
+          "detail": "The **Nifty** fell 86.15 points to 25,213.20 Friday and the Sensex lost 156 points to 81,754.66, ending a three-day rally.",
+          "why": "October retail inflation of 6.09% raised bets on a December RBI rate hike and prompted profit-taking.",
+          "sourceName": "ETV Bharat",
+          "sourceUrl": "https://www.etvbharat.com/en/business/stock-market-on-november-13-2026-sensex-nifty-retail-inflation-fii-buying-enn26111301333"
+        },
+        {
+          "emoji": "🔻",
+          "detail": "The US **Russell 2000** fell about 1.7% to 2,799.06 Thursday, the weakest major US index and more than four times the S&P 500's loss.",
+          "why": "Rising yields and Fed hike bets hit smaller, debt-reliant companies harder than the megacaps.",
+          "sourceName": "The Market Breakdown",
+          "sourceUrl": "https://www.themarketbreakdown.com/p/nvidia-shakes-the-market-the-damage"
+        }
+      ]
+    },
+    {
+      "key": "crypto",
+      "label": "Crypto",
+      "items": [
+        {
+          "emoji": "₿",
+          "detail": "**Bitcoin** dropped to about $71,400 Friday, down around 4% in a day and its lowest level since August.",
+          "why": "Nvidia's CEO exit hit risk appetite, and spot bitcoin ETFs kept seeing outflows.",
+          "sourceName": "Cointelegraph",
+          "sourceUrl": "https://cointelegraph.com/markets/bitcoin-price-drops-71k-stocks-nvidia-huang-resignation"
+        },
+        {
+          "emoji": "💧",
+          "detail": "**Ether** fell below **$2,000** for the first time since August, touching about $1,983.",
+          "why": "About $259 million of leveraged ETH bets were liquidated as ETF outflows and inflation worries continued.",
+          "sourceName": "The Crypto Times",
+          "sourceUrl": "https://www.cryptotimes.io/2026/11/13/why-is-ethereum-price-down-today-eth-crashes-below-2000-as-259m-liquidated/"
+        },
+        {
+          "emoji": "☀️",
+          "detail": "**Solana** slid to about **$79** Friday, down 3.4% in a day, and has lost roughly 14% over the past week.",
+          "why": "It fell with the wider crypto selloff that followed Nvidia's CEO exit.",
+          "sourceName": "OKX",
+          "sourceUrl": "https://www.okx.com/en-us/price/solana-sol"
+        }
+      ]
+    },
+    {
+      "key": "commodities",
+      "label": "Commodities",
+      "items": [
+        {
+          "emoji": "🥇",
+          "detail": "**Gold** fell 2.76% Thursday to $3,877.41, its first close below $3,900 in over a year, before edging back above $3,900 ahead of Friday's PPI report.",
+          "why": "The dollar near a 19-month high and 89% odds of a December Fed hike hurt non-yielding bullion.",
+          "sourceName": "FXStreet",
+          "sourceUrl": "https://www.fxstreet.com/news/gold-falls-to-over-one-year-low-below-3-900-amid-inflation-concerns-us-ppi-data-looms-202611122321"
+        }
+      ]
+    }
+  ],
+  "crossCuttingTheme": "Nvidia's CEO exit coincided with a near-certain December Fed hike, pushing markets away from risk: a firm dollar and rising yields pushed gold below $3,900 and crypto to August lows, and hit small caps harder than megacaps."
+}
