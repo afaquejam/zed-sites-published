@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tech News — 2026-11-14</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400..700&display=swap" rel="stylesheet" />
+<style>
+  /* ---------- Material Design 3 — dark by default, light on OS preference ----------
+     Same system as the finance brief; violet primary so the two sites read as
+     siblings but are never confused. Each topic has its own accent (--topic). */
+  :root {
+    --md-sys-color-surface: #0f0f15;
+    --md-sys-color-surface-container-low: #17171f;
+    --md-sys-color-surface-container: #1d1d27;
+    --md-sys-color-surface-container-high: #272733;
+    --md-sys-color-surface-container-highest: #323240;
+    --md-sys-color-on-surface: #e6e4ee;
+    --md-sys-color-on-surface-variant: #c6c3d3;
+    --md-sys-color-outline: #918ea0;
+    --md-sys-color-outline-variant: #3d3b4b;
+    --md-sys-color-primary: #b39dff;
+    --md-sys-color-primary-container: #4b2fa8;
+    --md-sys-color-on-primary-container: #ebe3ff;
+    --md-sys-color-secondary-container: #2c2645;
+    --md-sys-color-on-secondary-container: #e6defc;
+    --topic-ai: #b39dff;
+    --topic-swe: #57d9a3;
+    --topic-cloud: #5bb4ff;
+    --topic-consumer: #ffb35c;
+    --topic-business: #e3c35a;
+    --topic-other: #918ea0;
+    color-scheme: dark;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --md-sys-color-surface: #fcfbff;
+      --md-sys-color-surface-container-low: #f3f1fa;
+      --md-sys-color-surface-container: #ebe8f5;
+      --md-sys-color-surface-container-high: #e5e2f0;
+      --md-sys-color-surface-container-highest: #dfdbec;
+      --md-sys-color-on-surface: #1b1a22;
+      --md-sys-color-on-surface-variant: #46444f;
+      --md-sys-color-outline: #77748a;
+      --md-sys-color-outline-variant: #c8c4d6;
+      --md-sys-color-primary: #6a3fd6;
+      --md-sys-color-primary-container: #e8deff;
+      --md-sys-color-on-primary-container: #22005d;
+      --md-sys-color-secondary-container: #e6defc;
+      --md-sys-color-on-secondary-container: #1e1636;
+      --topic-ai: #6a3fd6;
+      --topic-swe: #0f7a52;
+      --topic-cloud: #0b5fb0;
+    --topic-consumer: #b35a00;
+      --topic-business: #876600;
+      --topic-other: #77748a;
+      color-scheme: light;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+    font-family: "Roboto Flex", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-optical-sizing: auto;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 840px; margin: 0 auto; padding: 0 16px 56px; }
+
+  /* ---------- Top app bar ---------- */
+  .app-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--md-sys-color-surface);
+    padding: 28px 0 0;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+  }
+  .app-bar-inner { max-width: 840px; margin: 0 auto; padding: 0 16px; }
+  .eyebrow {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--md-sys-color-primary);
+    margin: 0 0 4px;
+  }
+  h1 {
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  h1 .date { color: var(--md-sys-color-primary); }
+
+  /* ---------- Topic jump nav (inside the app bar) ----------
+     Chips wrap onto a second row instead of scrolling sideways, so every topic
+     stays visible and clickable at any width. */
+  nav.topic-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 12px 0;
+  }
+  .topic-chip {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .topic-chip::before {
+    content: "";
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--topic);
+  }
+  .topic-chip:hover { background: var(--md-sys-color-surface-container-high); }
+
+  /* ---------- Week nav (the last 8 weekly briefs, MD3 chips like the finance brief) ---------- */
+  nav.chip-nav {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 16px 0 4px;
+    margin: 0 0 8px;
+    scrollbar-width: none;
+  }
+  nav.chip-nav::-webkit-scrollbar { display: none; }
+  .chip {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 64px;
+    padding: 8px 14px;
+    border-radius: 16px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    color: var(--md-sys-color-on-surface-variant);
+    text-decoration: none;
+  }
+  .chip:hover { background: var(--md-sys-color-surface-container-high); }
+  .chip .dow { font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+  .chip .dom { font-size: 0.9375rem; font-weight: 600; white-space: nowrap; }
+  .chip .dow { white-space: nowrap; }
+  .chip.active {
+    background: var(--md-sys-color-primary-container);
+    border-color: transparent;
+    color: var(--md-sys-color-on-primary-container);
+    pointer-events: none;
+  }
+
+  /* ---------- The day's thread (lead banner) ---------- */
+  .thread {
+    display: flex;
+    gap: 12px;
+    background: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+    border-radius: 20px;
+    padding: 18px 20px;
+    margin: 8px 0 20px;
+    font-size: 0.9375rem;
+  }
+  .thread .ct-label {
+    font-weight: 700;
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding-top: 3px;
+  }
+  .thread strong { font-weight: 700; }
+
+  /* ---------- Topic sections ---------- */
+  section.topic {
+    background: var(--md-sys-color-surface-container-low);
+    border-radius: 24px;
+    padding: 20px 24px 8px;
+    margin-bottom: 16px;
+    /* Clear the sticky app bar when jumped to from a topic chip. */
+    scroll-margin-top: 168px;
+  }
+  section.topic h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.375rem;
+    font-weight: 600;
+    margin: 0 0 4px;
+  }
+  section.topic h2::before {
+    content: "";
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--topic);
+  }
+  section.topic h2 .count {
+    margin-left: auto;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--md-sys-color-outline);
+  }
+  ul.items { list-style: none; margin: 0; padding: 0; }
+  ul.items li {
+    padding: 16px 0;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+  }
+  ul.items li:first-child { border-top: none; }
+  .headline {
+    font-size: 1.0625rem;
+    font-weight: 650;
+    line-height: 1.35;
+    margin: 0 0 6px;
+  }
+  .detail {
+    font-size: 0.9375rem;
+    color: var(--md-sys-color-on-surface-variant);
+    line-height: 1.5;
+    font-variant-numeric: tabular-nums;
+  }
+  .detail strong { font-weight: 650; color: var(--md-sys-color-on-surface); }
+  .why {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    background: var(--md-sys-color-surface-container-high);
+    font-size: 0.875rem;
+    color: var(--md-sys-color-on-surface-variant);
+  }
+  .why-label {
+    flex: 0 0 auto;
+    color: var(--topic);
+    font-weight: 700;
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding-top: 2px;
+  }
+  .sources {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 12px;
+    margin-top: 8px;
+    font-size: 0.75rem;
+  }
+  .sources a {
+    color: var(--md-sys-color-primary);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .sources a::after { content: " ↗"; opacity: 0.6; }
+  .sources a:hover { text-decoration: underline; }
+
+  footer {
+    margin-top: 32px;
+    color: var(--md-sys-color-outline);
+    font-size: 0.75rem;
+    text-align: center;
+    line-height: 1.7;
+  }
+
+  /* ---------- Mobile ---------- */
+  @media (max-width: 600px) {
+    /* On phones the chips wrap to 2–3 rows; a sticky bar that tall would eat
+       the screen, so it scrolls away and sections need no offset. */
+    .app-bar { padding-top: 20px; position: static; }
+    section.topic { scroll-margin-top: 12px; }
+    .wrap { padding: 0 14px 40px; }
+    .app-bar-inner { padding: 0 14px; }
+    section.topic { padding: 16px 16px 4px; border-radius: 20px; }
+    section.topic h2 { font-size: 1.25rem; }
+    .thread { flex-direction: column; gap: 6px; }
+    .why { flex-direction: column; gap: 2px; }
+  }
+</style>
+</head>
+<body>
+  <div class="app-bar">
+    <div class="app-bar-inner">
+      <p class="eyebrow">Weekly Tech Brief</p>
+      <h1>Tech News: <span class="date">Nov 7 – 13, 2026</span></h1>
+      <nav class="topic-nav" aria-label="Topics">
+        <a class="topic-chip" style="--topic: var(--topic-ai)" href="#ai">AI</a>
+        <a class="topic-chip" style="--topic: var(--topic-consumer)" href="#consumer">Consumer Tech</a>
+        <a class="topic-chip" style="--topic: var(--topic-business)" href="#business">Business &amp; Policy</a>
+        <a class="topic-chip" style="--topic: var(--topic-swe)" href="#swe">Software Engineering</a>
+        <a class="topic-chip" style="--topic: var(--topic-cloud)" href="#cloud">Cloud &amp; Infrastructure</a>
+        <a class="topic-chip" style="--topic: var(--topic-other)" href="#other">Other</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <nav class="chip-nav" aria-label="Recent weeks">
+      <span class="chip active" aria-current="page"><span class="dow">Week of</span><span class="dom">Nov 7–13</span></span>
+      <a class="chip" href="tech-brief-2026-11-07.html"><span class="dow">Week of</span><span class="dom">Oct 31–Nov 6</span></a>
+      <a class="chip" href="tech-brief-2026-10-31.html"><span class="dow">Week of</span><span class="dom">Oct 24–30</span></a>
+    </nav>
+
+    <div class="thread"><span class="ct-label">This week's thread</span><span>Trust in the people and systems behind tech was tested this week: Jensen Huang quit Nvidia over a spy scandal, a Microsoft outage took down Outlook and Teams worldwide, and a bad software update grounded every US flight.</span></div>
+
+    <section class="topic" id="ai" style="--topic: var(--topic-ai)">
+      <h2>AI <span class="count">3 stories</span></h2>
+      <ul class="items">
+        <li>
+          <p class="headline">Anthropic releases Fable 5.2 and Mythos 5.2 with record scores and lower prices</p>
+          <div class="detail">Anthropic&#39;s new top models run up to <strong>30% faster</strong> than 5.1. API prices fall <strong>20%</strong> to <strong>$8/$40</strong> per million input/output tokens. In testing, about <strong>1,000 Fable 5.2 agents</strong> turned the proof of Fermat&#39;s Last Theorem into a computer-checkable one in 30 hours. Mythos remains limited to vetted Project Glasswing users.</div>
+          <div class="why"><span class="why-label">Why it matters</span><span>A frontier model that is faster and cheaper at the same time pushes rivals on price and makes long-running agent work more affordable.</span></div>
+          <div class="sources"><a href="https://www.anthropic.com/claude-fable-and-mythos-5-2" target="_blank" rel="noopener noreferrer">Anthropic</a><a href="https://venturebeat.com/technology/anthropic-releases-claude-fable-5-2-and-mythos-5-2-pairing-new-record-high-benchmarks-with-20-api-cost-reduction" target="_blank" rel="noopener noreferrer">VentureBeat</a><a href="https://www.theverge.com/ai-artificial-intelligence/1030005/anthropic-claude-fable-mythos-5-2" target="_blank" rel="noopener noreferrer">The Verge</a></div>
+        </li>
+        <li>
+          <p class="headline">Google&#39;s Gemini 4 Hydrogen replaces 3.8 Flash across its products</p>
+          <div class="detail"><strong>Gemini 4 Hydrogen</strong> is now Google&#39;s fast default model, including in Search&#39;s AI Mode. Google says it runs <strong>2.5x faster</strong> in high mode and makes <strong>5x fewer</strong> made-up claims. It costs <strong>$1.50/$7.50</strong> per million input/output tokens and has a 1M-token context window.</div>
+          <div class="why"><span class="why-label">Why it matters</span><span>The model that billions of people now meet in Google Search got faster and more reliable overnight.</span></div>
+          <div class="sources"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/" target="_blank" rel="noopener noreferrer">Google</a><a href="https://arstechnica.com/google/2026/11/google-rolls-out-gemini-4-hydrogen-finally-replacing-3-8-flash/" target="_blank" rel="noopener noreferrer">Ars Technica</a><a href="https://techcrunch.com/2026/11/12/googles-latest-search-upgrade-promises-better-answers-to-your-most-complicated-questions/" target="_blank" rel="noopener noreferrer">TechCrunch</a></div>
+        </li>
+        <li>
+          <p class="headline">Anthropic launches its own office suite to take on Microsoft and Google</p>
+          <div class="detail">Anthropic unveiled <strong>Claude Meetings</strong>, <strong>Claude Sheets</strong> and <strong>Claude Whiteboards</strong>. It also added interactive connectors that put apps like <strong>HubSpot</strong>, <strong>Adobe</strong> and <strong>Atlassian</strong> inside Claude, and made Claude Data generally available.</div>
+          <div class="why"><span class="why-label">Why it matters</span><span>AI labs are now going after the workplace software that makes Microsoft and Google most of their enterprise money.</span></div>
+          <div class="sources"><a href="https://www.theverge.com/ai-artificial-intelligence/1030709/anthropic-has-its-own-ai-powered-office-suite-now" target="_blank" rel="noopener noreferrer">The Verge</a><a href="https://www.bloomberg.com/news/articles/2026-11-10/anthropic-unveils-office-tools-ahead-of-ipo-taking-on-microsoft" target="_blank" rel="noopener noreferrer">Bloomberg</a></div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="topic" id="consumer" style="--topic: var(--topic-consumer)">
+      <h2>Consumer Tech <span class="count">3 stories</span></h2>
+      <ul class="items">
+        <li>
+          <p class="headline">ChatGPT Wallet lets OpenAI&#39;s agents shop and pay on your behalf</p>
+          <div class="detail">OpenAI is rolling out <strong>ChatGPT Wallet</strong>, which lets its <strong>Dots</strong> agents buy things and check out for you. It starts with <strong>US ChatGPT Pro</strong> subscribers aged 18 and over.</div>
+          <div class="why"><span class="why-label">Why it matters</span><span>If people get comfortable letting AI agents spend their money, online shopping could move away from search results and store websites.</span></div>
+          <div class="sources"><a href="https://www.theverge.com/ai-artificial-intelligence/1033425/openai-chatgpt-wallet" target="_blank" rel="noopener noreferrer">The Verge</a><a href="https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/" target="_blank" rel="noopener noreferrer">TechCrunch</a></div>
+        </li>
+        <li>
+          <p class="headline">Ring launches a $249 indoor security drone and a $999 roving robot</p>
+          <div class="detail">Amazon&#39;s Ring started a new <strong>Ring Robotics</strong> brand. The <strong>$249 Ring Drone Cam</strong> flies from room to room, and the <strong>$999 Ring Rover Cam</strong> patrols on wheels. Both find their way around using Ring&#39;s <strong>AI Pilot</strong> system.</div>
+          <div class="why"><span class="why-label">Why it matters</span><span>Home robots that move around and film inside people&#39;s homes will raise new privacy questions for Amazon&#39;s huge Ring customer base.</span></div>
+          <div class="sources"><a href="https://techcrunch.com/2026/11/10/ring-known-for-its-doorbell-cameras-launches-a-home-security-drone-and-an-enterprise-security-robot/" target="_blank" rel="noopener noreferrer">TechCrunch</a><a href="https://www.zdnet.com/home-and-office/ring-drone-cam-rover-cam-security-robots/" target="_blank" rel="noopener noreferrer">ZDNET</a></div>
+        </li>
+        <li>
+          <p class="headline">Families in seven US cities protest Google&#39;s Gemini push into schools</p>
+          <div class="detail">Families rallied in <strong>seven cities</strong> on Wednesday against Google&#39;s <strong>Gemini</strong> pilot on school-issued Chromebooks and called for <strong>AI moratoriums</strong> in schools. The protests follow Google&#39;s warning that schools blocking its AI tools would also lose Search.</div>
+          <div class="why"><span class="why-label">Why it matters</span><span>Pushback from parents could lead districts or lawmakers to limit AI tools for children before they spread further.</span></div>
+          <div class="sources"><a href="https://arstechnica.com/tech-policy/2026/11/families-fight-to-keep-googles-disturbing-ai-off-school-issued-chromebooks/" target="_blank" rel="noopener noreferrer">Ars Technica</a></div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="topic" id="business" style="--topic: var(--topic-business)">
+      <h2>Business &amp; Policy <span class="count">3 stories</span></h2>
+      <ul class="items">
+        <li>
+          <p class="headline">Jensen Huang resigns as Nvidia CEO after alleged Chinese spy affair</p>
+          <div class="detail">Huang stepped down as <strong>CEO, president and board member</strong> after US officials alleged a woman he had a relationship with was a Chinese spy. CFO <strong>Colette Kress</strong> is interim CEO, and the stock fell <strong>more than 5%</strong>. The FBI and two congressional probes are looking at Nvidia&#39;s China chip sales.</div>
+          <div class="why"><span class="why-label">Why it matters</span><span>The company at the center of the AI boom has lost its founder with no clear successor, while Washington looks into its China sales.</span></div>
+          <div class="sources"><a href="https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition" target="_blank" rel="noopener noreferrer">Nvidia</a><a href="https://www.bloomberg.com/news/articles/2026-11-12/nvidia-drama-triggers-difficult-search-for-huang-s-successor" target="_blank" rel="noopener noreferrer">Bloomberg</a><a href="https://techcrunch.com/2026/11/13/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/" target="_blank" rel="noopener noreferrer">TechCrunch</a></div>
+        </li>
+        <li>
+          <p class="headline">Anthropic starts its IPO roadshow, aiming to list on Nasdaq as ANT</p>
+          <div class="detail">Anthropic and its shareholders plan to sell <strong>825 million shares</strong> at <strong>$70 to $78</strong> each, and trading could start next week. The Financial Times says strong demand may push the price higher, which would value the company at <strong>$1.5 trillion</strong> or more.</div>
+          <div class="why"><span class="why-label">Why it matters</span><span>It would be one of the largest IPOs ever and the first real public-market price for a frontier AI lab.</span></div>
+          <div class="sources"><a href="https://www.anthropic.com/news/roadshow-launch" target="_blank" rel="noopener noreferrer">Anthropic</a><a href="https://www.ft.com/content/68bcba57-0575-44ee-80f4-2e5ea23a431e" target="_blank" rel="noopener noreferrer">Financial Times</a><a href="https://www.wsj.com/finance/stocks/anthropic-prepares-to-push-ahead-with-ipo-despite-market-jitters-843dd16c" target="_blank" rel="noopener noreferrer">Wall Street Journal</a></div>
+        </li>
+        <li>
+          <p class="headline">Research finds China&#39;s strongest AI models were trained on banned Nvidia chips</p>
+          <div class="detail">New research shows China&#39;s most advanced AI models were trained on <strong>Nvidia chips</strong> that are barred from export under <strong>US export controls</strong>. Separately, The Information reports that Huang&#39;s ties to the alleged spy helped enable <strong>$7.5 billion+</strong> in chip shipments through Chinese companies.</div>
+          <div class="why"><span class="why-label">Why it matters</span><span>It suggests US chip controls are leaking badly, which makes tighter enforcement and penalties for Nvidia more likely.</span></div>
+          <div class="sources"><a href="https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen/" target="_blank" rel="noopener noreferrer">TechCrunch</a><a href="https://www.theinformation.com/articles/jensen-huangs-yearslong-ties-alice-huang-enabled-nvidia-chip-sales-china" target="_blank" rel="noopener noreferrer">The Information</a></div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="topic" id="swe" style="--topic: var(--topic-swe)">
+      <h2>Software Engineering <span class="count">3 stories</span></h2>
+      <ul class="items">
+        <li>
+          <p class="headline">Researcher drops a second Windows zero-day that grants full System rights</p>
+          <div class="detail">A researcher using the name <strong>Nightmare Eclipse</strong>, who is in a public feud with Microsoft, released <strong>SignDrop</strong>. It is a Windows flaw that lets attackers who already have a foothold on a PC gain full <strong>System</strong> rights. It is not the researcher&#39;s first unpatched Windows exploit.</div>
+          <div class="why"><span class="why-label">Why it matters</span><span>Attackers can use the published exploit right away, and defenders have no patch until Microsoft releases one.</span></div>
+          <div class="sources"><a href="https://arstechnica.com/security/2026/11/windows-0-day-dropped-by-disgruntled-researcher-hands-hackers-system-rights/" target="_blank" rel="noopener noreferrer">Ars Technica</a></div>
+        </li>
+        <li>
+          <p class="headline">Forward-deployed engineers now earn up to $1.45 million a year</p>
+          <div class="detail">Companies are bringing in-house the <strong>forward-deployed engineer</strong> role Palantir made famous, in which engineers work directly with customers to put AI to use. Pay ranges from <strong>$586,000 to $1.45 million</strong> a year.</div>
+          <div class="why"><span class="why-label">Why it matters</span><span>It shows that companies now value engineers who can get AI working in real businesses far more than pure coding skill.</span></div>
+          <div class="sources"><a href="https://www.wsj.com/cio-journal/demand-for-forward-deployed-engineers-is-leading-to-1-5-million-paychecks-c1cd713a" target="_blank" rel="noopener noreferrer">Wall Street Journal</a></div>
+        </li>
+        <li>
+          <p class="headline">LangChain reaches a $3 billion valuation as agent tooling takes off</p>
+          <div class="detail"><strong>LangChain</strong> is now valued at <strong>$3 billion</strong>. It says <strong>7,000 customers</strong> use <strong>LangSmith</strong>, its tool for managing AI agents that works with any model or platform.</div>
+          <div class="why"><span class="why-label">Why it matters</span><span>Investors are betting that developers want tools for running agents that don&#39;t tie them to any single AI lab.</span></div>
+          <div class="sources"><a href="https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/" target="_blank" rel="noopener noreferrer">TechCrunch</a></div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="topic" id="cloud" style="--topic: var(--topic-cloud)">
+      <h2>Cloud &amp; Infrastructure <span class="count">3 stories</span></h2>
+      <ul class="items">
+        <li>
+          <p class="headline">Microsoft outage takes down Outlook, Teams and much of its cloud for nearly two days</p>
+          <div class="detail">The outage began <strong>Thursday midday</strong> with <strong>Outlook</strong> and <strong>Teams</strong> and spread to much of Microsoft&#39;s cloud, hitting <strong>millions</strong> of users worldwide. Microsoft blamed failed server health checks, not hackers. One expert says it may be worse than the <strong>CrowdStrike</strong> and Amazon outages.</div>
+          <div class="why"><span class="why-label">Why it matters</span><span>It shows how much the world&#39;s offices depend on a single cloud provider and adds weight to calls for backup systems.</span></div>
+          <div class="sources"><a href="https://arstechnica.com/tech-policy/2026/11/microsoft-blames-failed-server-health-checks-not-hackers-for-global-outage/" target="_blank" rel="noopener noreferrer">Ars Technica</a><a href="https://techcrunch.com/2026/11/13/microsoft-latest-email-outage-turned-into-a-full-blown-global-cloud-crisis/" target="_blank" rel="noopener noreferrer">TechCrunch</a><a href="https://www.theverge.com/tech/1032862/microsoft-outlook-down-outage" target="_blank" rel="noopener noreferrer">The Verge</a></div>
+        </li>
+        <li>
+          <p class="headline">AWS releases a free local emulator for testing apps without the cloud</p>
+          <div class="detail"><strong>AWS Emulator</strong> runs on a laptop and handles the same API calls as real AWS, covering <strong>438 API models</strong> across <strong>more than 200 services</strong>. AWS built it for coding agents such as <strong>Kiro</strong> and <strong>Claude Code</strong>, and says AI agents wrote all of its code.</div>
+          <div class="why"><span class="why-label">Why it matters</span><span>Developers and agents can test cloud code instantly and for free, and AWS takes on popular third-party tools like LocalStack.</span></div>
+          <div class="sources"><a href="https://aws.amazon.com/blogs/aws/test-your-applications-against-aws-locally-with-aws-emulator/" target="_blank" rel="noopener noreferrer">AWS News Blog</a><a href="https://www.infoworld.com/article/4247383/aws-unveils-local-emulator-service-to-help-enterprises-accelerate-app-development-and-testing.html" target="_blank" rel="noopener noreferrer">InfoWorld</a></div>
+        </li>
+        <li>
+          <p class="headline">Nebius plans $40 billion of AI infrastructure spending funded by customer prepayments</p>
+          <div class="detail">Neocloud <strong>Nebius</strong> plans to pay for a <strong>$40 billion</strong> expansion mainly with <strong>customer prepayments</strong> and loans. Delays at a <strong>Microsoft</strong> data center it is building are raising doubts about that model.</div>
+          <div class="why"><span class="why-label">Why it matters</span><span>With neoclouds shut out of the bond market, Nebius is testing whether AI data centers can still be funded another way.</span></div>
+          <div class="sources"><a href="https://techcrunch.com/2026/11/12/nebius-tests-the-neocloud-playbook-with-40-billion-in-planned-spending/" target="_blank" rel="noopener noreferrer">TechCrunch</a></div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="topic" id="other" style="--topic: var(--topic-other)">
+      <h2>Other <span class="count">1 story</span></h2>
+      <ul class="items">
+        <li>
+          <p class="headline">Software update crash grounds every US flight for over four hours</p>
+          <div class="detail">The FAA ordered only its <strong>third nationwide ground stop</strong> ever after communication failures hit several air traffic control centers. Flights resumed at <strong>8:35 pm EST</strong>. Sources say an update to the network linking the system made it reboot and crash, and the <strong>FBI</strong> doesn&#39;t suspect a cyberattack.</div>
+          <div class="why"><span class="why-label">Why it matters</span><span>One bad update froze US air travel, which will raise pressure to modernize the FAA&#39;s aging systems.</span></div>
+          <div class="sources"><a href="https://arstechnica.com/tech-policy/2026/11/faa-orders-third-nationwide-ground-stop-in-its-history/" target="_blank" rel="noopener noreferrer">Ars Technica</a><a href="https://www.techmeme.com/261113/p35#a261113p35" target="_blank" rel="noopener noreferrer">CBS News via Techmeme</a><a href="https://techcrunch.com/2026/11/13/u-s-government-grounds-all-flights-across-the-united-states-due-to-extraordinary-cirumstances/" target="_blank" rel="noopener noreferrer">TechCrunch</a></div>
+        </li>
+      </ul>
+    </section>
+
+    <footer>
+      Sources: Techmeme Ride Home · The Verge · AWS News Blog · Ars Technica · TechCrunch · Techmeme · Hacker News<br />
+      Generated automatically by the tech-brief pipeline &middot; 2026-11-14T08:02:32.009Z
+    </footer>
+  </div>
+</body>
+</html>
