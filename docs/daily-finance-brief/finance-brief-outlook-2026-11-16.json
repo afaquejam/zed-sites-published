@@ -1,0 +1,101 @@
+{
+  "date": "2026-11-16",
+  "generatedAt": "2026-11-16T08:30:00Z",
+  "sections": [
+    {
+      "key": "usa",
+      "label": "USA",
+      "items": [
+        {
+          "emoji": "🤖",
+          "detail": "**Nvidia reports Tuesday after the close**. It is the first report since Jensen Huang resigned, and analysts expect about **$109 billion** in sales.",
+          "why": "Its forecast will show whether the AI trade can steady after six losing weeks, with options pricing a move near 8%.",
+          "sourceName": "NVIDIA Investor Relations",
+          "sourceUrl": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Third-Quarter-Financial-Results/"
+        },
+        {
+          "emoji": "🏦",
+          "detail": "**Wednesday's Fed minutes** and Chair Warsh's Monday remarks arrive with markets pricing about **90% odds** of a December rate hike.",
+          "why": "Hawkish minutes would keep the 10-year yield above 5% and test the S&P 500's rally from 7,561.",
+          "sourceName": "FXStreet",
+          "sourceUrl": "https://www.fxstreet.com/analysis/week-ahead-fed-minutes-inflation-data-and-nvidia-earnings-to-guide-investors-202611131033"
+        },
+        {
+          "emoji": "🛒",
+          "detail": "**Tuesday's October retail sales** and **Walmart's Thursday results** test the US shopper after September sales jumped 0.8%.",
+          "why": "Strong spending supports a December hike, while a weak reading would ease rate fears but raise growth worries.",
+          "sourceName": "JournalArta Global",
+          "sourceUrl": "https://journalarta.com/en/2026/11/15/stocks-to-watch-this-week-nvidia-walmart-and-retail-sales/"
+        }
+      ]
+    },
+    {
+      "key": "emsmallcaps",
+      "label": "Emerging Markets and Small Caps",
+      "items": [
+        {
+          "emoji": "🌏",
+          "detail": "With the dollar at a **19-month high**, China sets its **loan prime rate on Friday**, after holding it at 3.0% for 17 months.",
+          "why": "A strong dollar pressures EM currencies, and Nvidia's results decide whether the Korea and Taiwan chip rally holds.",
+          "sourceName": "FinanceCalendar",
+          "sourceUrl": "https://www.financecalendar.com/?p=2443"
+        },
+        {
+          "emoji": "🇮🇳",
+          "detail": "**Monday's October WPI** follows September's **11.39%**. The NIFTY starts the week at 25,144 after three straight weekly gains on foreign buying.",
+          "why": "A hot reading would revive talk of a December RBI hike, which could cool the foreign buying behind the gains.",
+          "sourceName": "The Financial Economy",
+          "sourceUrl": "https://www.thefinancialeconomy.com/nifty-outlook-next-week/"
+        },
+        {
+          "emoji": "📉",
+          "detail": "The US **Russell 2000** starts the week near **2,799**, and Wednesday's Fed minutes are its main test while December hike odds sit near 90%.",
+          "why": "Small firms carry more floating-rate debt, so higher rates cut into their profits faster than big companies'.",
+          "sourceName": "The Sunrise Investor",
+          "sourceUrl": "https://thesunriseinvestor.com/articles/russell-2000-rebound-waller-50-basis-point-hike-october-cpi-november-2026"
+        }
+      ]
+    },
+    {
+      "key": "crypto",
+      "label": "Crypto",
+      "items": [
+        {
+          "emoji": "₿",
+          "detail": "**Bitcoin** touched about **$62,000** on Sunday, a four-month low, and faces Tuesday's Nvidia results after US spot ETFs lost $1.07 billion last week.",
+          "why": "A hawkish Fed or a tech selloff could extend ETF outflows, while a tech rebound would ease them.",
+          "sourceName": "FXStreet",
+          "sourceUrl": "https://www.fxstreet.com/cryptocurrencies/news/bitcoin-price-forecast-etf-outflows-hit-107-billion-as-btc-struggles-to-recover-from-oversold-levels-202611160520"
+        },
+        {
+          "emoji": "💎",
+          "detail": "**Ether** is trading below $2,000, and US spot ETFs have lost about **$696 million** in November going into Wednesday's Fed minutes.",
+          "why": "Higher rate-hike odds keep ETF buyers away, and record staking demand is the main support underneath.",
+          "sourceName": "CryptoTicker",
+          "sourceUrl": "https://cryptoticker.io/en/ethereum-price-below-2000-record-staking-etf-outflows/"
+        },
+        {
+          "emoji": "☀️",
+          "detail": "**Solana** is at a four-month low and below its 200-day average, with its ETFs losing money for **six straight weeks**.",
+          "why": "It moves with bitcoin but swings harder, so Nvidia and the Fed minutes will likely set its direction.",
+          "sourceName": "FXStreet",
+          "sourceUrl": "https://fxstreet.com/cryptocurrencies/news/solana-price-forecast-sol-drops-to-a-four-month-low-as-etf-outflows-extend-to-six-straight-weeks-202611160406"
+        }
+      ]
+    },
+    {
+      "key": "commodities",
+      "label": "Commodities",
+      "items": [
+        {
+          "emoji": "🥇",
+          "detail": "**Spot gold** opened the week near **$3,867**, and Wednesday's Fed minutes are its biggest test while the dollar sits at a 19-month high.",
+          "why": "Hawkish minutes would lift yields and could push gold toward $3,800, while a divided Fed would help it.",
+          "sourceName": "MarketScreener (Reuters)",
+          "sourceUrl": "https://www.marketscreener.com/news/gold-dips-on-firmer-dollar-ahead-of-warsh-comments-ce785edede8af721"
+        }
+      ]
+    }
+  ],
+  "crossCuttingTheme": "Markets price about a 90% chance of a December Fed hike. Wednesday's minutes and Tuesday's Nvidia results will move Treasury yields and the dollar, and those will steer tech, emerging markets, crypto and gold."
+}
