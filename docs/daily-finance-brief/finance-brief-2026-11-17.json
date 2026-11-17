@@ -1,0 +1,94 @@
+{
+  "date": "2026-11-17",
+  "generatedAt": "2026-11-17T09:00:00Z",
+  "sections": [
+    {
+      "key": "usa",
+      "label": "USA",
+      "items": [
+        {
+          "emoji": "📉",
+          "detail": "The **S&P 500** fell 1.89% to 7,418.41 Monday, and the Nasdaq dropped **2.47%** to 24,516.11. The selling deepened Thursday's Nvidia-led wobble.",
+          "why": "Investors cut AI exposure before Nvidia's results and this week's Anthropic IPO, with 10-year yields above 5%.",
+          "sourceName": "Reuters via MarketScreener",
+          "sourceUrl": "https://www.marketscreener.com/news/wall-street-slumps-on-ai-jitters-ahead-of-nvidia-results-anthropic-ipo-ce785edfdd8ef425"
+        },
+        {
+          "emoji": "🤖",
+          "detail": "**Nvidia** slid another 4.1% to about $156, its lowest since July 2025, and the chip index sank **5.3%**. Results land after today's close, its first without Jensen Huang.",
+          "why": "A new US rule tightening China's access to advanced AI chips came on top of the leadership uncertainty.",
+          "sourceName": "CNN",
+          "sourceUrl": "https://www.cnn.com/2026/11/16/business/stocks-nvidia-ai-anthropic"
+        }
+      ]
+    },
+    {
+      "key": "emsmallcaps",
+      "label": "Emerging Markets and Small Caps",
+      "items": [
+        {
+          "emoji": "🌏",
+          "detail": "Korea's **Kospi** fell about 2.5% to 4,968 Tuesday, its fourth straight drop and lowest close since February, and Taiwan's Taiex lost **2.3%**.",
+          "why": "The new US curbs on AI chip sales to China and nerves before Nvidia's results hit Asian chipmakers.",
+          "sourceName": "FXStreet",
+          "sourceUrl": "https://www.fxstreet.com/news/asian-stocks-slide-as-us-tech-curbs-weigh-on-sentiment-nvidia-earnings-awaited-202611170501"
+        },
+        {
+          "emoji": "🏦",
+          "detail": "India bucked Asia's slide: the **Nifty** rose 0.38% to 25,387.40 Tuesday for a second day of gains, and Bank Nifty hit a 52-week high.",
+          "why": "Foreign investors bought Rs 4,865 crore of shares Monday, and cooler crude prices lifted banks and realty stocks.",
+          "sourceName": "Business Standard",
+          "sourceUrl": "https://www.business-standard.com/amp/markets/news/stock-market-live-november-17-nse-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-bse-share-price-126111700071_1.html"
+        },
+        {
+          "emoji": "🔻",
+          "detail": "The US **Russell 2000** closed Monday at about **2,763**, extending its slide below Thursday's 2,799 as the selloff spread beyond tech.",
+          "why": "A 10-year Treasury yield above 5% raises borrowing costs for smaller companies that depend on debt.",
+          "sourceName": "Yahoo Finance",
+          "sourceUrl": "https://finance.yahoo.com/quote/%5ERUT/history/"
+        }
+      ]
+    },
+    {
+      "key": "crypto",
+      "label": "Crypto",
+      "items": [
+        {
+          "emoji": "₿",
+          "detail": "**Bitcoin** steadied near $64,800 after briefly falling to about $62,000 over the weekend, and is still down **12.7%** on the week.",
+          "why": "US spot bitcoin ETFs lost about $1.07 billion last week, and the fear index fell to an extreme 10.",
+          "sourceName": "Crypto Briefing",
+          "sourceUrl": "https://cryptobriefing.com/bitcoin-bounces-weekend-lows-extreme-fear/"
+        },
+        {
+          "emoji": "📉",
+          "detail": "**Ether** dropped below **$1,850**, extending last week's break under $2,000, and is down about 19% over seven days.",
+          "why": "Ether ETFs saw about $400 million in outflows as money moved toward bitcoin.",
+          "sourceName": "CryptoTicker",
+          "sourceUrl": "https://cryptoticker.io/en/ethereum-whales-buy-dip-etf-outflows"
+        },
+        {
+          "emoji": "☀️",
+          "detail": "**Solana** recovered to about **$71** after touching a four-month low of $67.41 over the weekend.",
+          "why": "Spot Solana ETFs have now had outflows for six weeks in a row, adding to the wider crypto selloff.",
+          "sourceName": "crypto.news",
+          "sourceUrl": "https://crypto.news/why-is-solana-price-down-today-sol-etf-outflows"
+        }
+      ]
+    },
+    {
+      "key": "commodities",
+      "label": "Commodities",
+      "items": [
+        {
+          "emoji": "🥇",
+          "detail": "**Gold** rose 0.7% to $3,881.59 Tuesday after falling to **$3,832.20** Monday, its lowest in about a year.",
+          "why": "Buyers stepped in at the low, but a firm dollar and a December Fed hike seen as certain are holding gold back.",
+          "sourceName": "FX Leaders",
+          "sourceUrl": "https://www.fxleaders.com/news/2026/11/17/gold-price-forecast-xau-usd-holds-3841-floor-ahead-of-us-retail-sales/"
+        }
+      ]
+    }
+  ],
+  "crossCuttingTheme": "With 10-year yields above 5% and a December Fed hike fully priced, the new US chip curbs before Nvidia's results knocked chip stocks from New York to Seoul, drove crypto into extreme fear and kept gold near one-year lows."
+}
