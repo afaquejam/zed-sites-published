@@ -1,0 +1,100 @@
+{
+  "date": "2026-11-18",
+  "generatedAt": "2026-11-18T09:30:00Z",
+  "sections": [
+    {
+      "key": "usa",
+      "label": "USA",
+      "items": [
+        {
+          "emoji": "📉",
+          "detail": "The **S&P 500** fell 1.03% to 7,341 Tuesday, its lowest close since late July, and the Nasdaq slipped 0.74% to 24,328, a third straight loss.",
+          "why": "Investors cut risk before Nvidia's results and Anthropic's IPO, with a December Fed hike priced at about 95%.",
+          "sourceName": "Reuters via MarketScreener",
+          "sourceUrl": "https://www.marketscreener.com/news/wall-street-ends-lower-ahead-of-nvidia-results-focus-turns-to-anthropic-debut-ce785edcdc81fe2d"
+        },
+        {
+          "emoji": "🤖",
+          "detail": "**Nvidia** posted record revenue of **$115.8 billion**, up 103%, and guided to about $130 billion, lifting the stock roughly 4% after hours from $155.46.",
+          "why": "Data-center sales of $107.6 billion showed AI demand holding up despite Jensen Huang's exit.",
+          "sourceName": "CNBC",
+          "sourceUrl": "https://www.cnbc.com/2026/11/17/stock-market-today-live-updates.html"
+        },
+        {
+          "emoji": "🚀",
+          "detail": "Anthropic's IPO debuts today at a valuation of up to **$1.4 trillion**, the next test of whether Nvidia's beat can revive AI appetite.",
+          "sourceName": "Reuters via MarketScreener",
+          "sourceUrl": "https://www.marketscreener.com/news/wall-street-ends-lower-ahead-of-nvidia-earnings-anthropic-debut-ce785edcdc8df226"
+        }
+      ]
+    },
+    {
+      "key": "emsmallcaps",
+      "label": "Emerging Markets and Small Caps",
+      "items": [
+        {
+          "emoji": "🇰🇷",
+          "detail": "Korea's **Kospi** jumped **2.62%** to 5,098.54 Wednesday, snapping a four-day losing streak, as SK Hynix rose about 5% and Samsung nearly 4%.",
+          "why": "Nvidia's strong results and outlook eased fears about AI chip demand and slowed foreign selling of Korean chipmakers.",
+          "sourceName": "MoneyToday",
+          "sourceUrl": "https://www.mt.co.kr/en/stock/2026/11/18/2026111809365349968"
+        },
+        {
+          "emoji": "🇮🇳",
+          "detail": "India's two-day rally stalled: the **Sensex** fell about 300 points in early trade Wednesday from 82,532, with metal stocks like NALCO and SAIL leading losses.",
+          "why": "Weak Asian cues, rising US Treasury yields and Middle East tensions outweighed Nvidia's upbeat results.",
+          "sourceName": "Business Standard",
+          "sourceUrl": "https://www.business-standard.com/markets/news/stock-market-live-november-18-nse-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-bond-yields-hero-motocorp-share-price-hcltech-stock-price-today-ipo-today-126111800134_1.html"
+        },
+        {
+          "emoji": "🔻",
+          "detail": "The US **Russell 2000** fell about **1.5%** Tuesday, lagging the S&P 500 as small caps took the brunt of the selloff.",
+          "why": "A 10-year yield near 5.1% raises borrowing costs for smaller, debt-reliant companies.",
+          "sourceName": "HNGN",
+          "sourceUrl": "https://www.hngn.com/articles/273858/20261117/dow-sinks-848-points-tech-selloff-deepens-before-nvidia.htm"
+        }
+      ]
+    },
+    {
+      "key": "crypto",
+      "label": "Crypto",
+      "items": [
+        {
+          "emoji": "₿",
+          "detail": "**Bitcoin** slipped back below **$64,000** Tuesday and barely moved after Nvidia's record quarter, with support seen near $61,000 to $62,100.",
+          "why": "The tech selloff and near-certain Fed hike bets kept risk appetite thin, so Nvidia's beat did not spill over.",
+          "sourceName": "Crypto Briefing",
+          "sourceUrl": "https://cryptobriefing.com/tech-sell-off-impact-on-bitcoin/"
+        },
+        {
+          "emoji": "🔷",
+          "detail": "**Ether** fell 2.7% to about **$1,775**, sliding further below last week's $1,850 level.",
+          "why": "It tracked bitcoin lower as the stock selloff and a strong dollar kept buyers away.",
+          "sourceName": "FXStreet",
+          "sourceUrl": "https://www.fxstreet.com/cryptocurrencies/news/nvidia-posts-record-1158b-q3-revenue-but-crypto-stays-muted-202611172316"
+        },
+        {
+          "emoji": "🟣",
+          "detail": "**Solana** held near **$72**, the only top-10 token in the green Tuesday, though it is still down about 27% over the past month.",
+          "why": "Buyers kept defending the weekend's four-month low, even as the wider crypto market stayed weak.",
+          "sourceName": "FXStreet",
+          "sourceUrl": "https://www.fxstreet.com/cryptocurrencies/news/nvidia-posts-record-1158b-q3-revenue-but-crypto-stays-muted-202611172316"
+        }
+      ]
+    },
+    {
+      "key": "commodities",
+      "label": "Commodities",
+      "items": [
+        {
+          "emoji": "🥇",
+          "detail": "**Gold** fell 1.4% to **$3,796.37** Wednesday, breaking below $3,800 for its lowest level since September 2025 and wiping out Tuesday's bounce.",
+          "why": "The dollar sits near a 19-month high and Fed officials are signaling more rate hikes.",
+          "sourceName": "Business Recorder",
+          "sourceUrl": "https://www.brecorder.com/news/40449503/gold-slides-to-over-one-year-low-on-firm-dollar-us-rate-outlook?v=Y8bPKUdEq06V4X9l2GQw1gxt"
+        }
+      ]
+    }
+  ],
+  "crossCuttingTheme": "Nvidia's record quarter lifted Asian chipmakers, but a dollar near a 19-month high and an almost certain December Fed hike kept pushing gold, crypto and US small caps lower."
+}
