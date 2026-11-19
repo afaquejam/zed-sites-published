@@ -1,0 +1,101 @@
+{
+  "date": "2026-11-19",
+  "generatedAt": "2026-11-19T08:00:00Z",
+  "sections": [
+    {
+      "key": "usa",
+      "label": "USA",
+      "items": [
+        {
+          "emoji": "📉",
+          "detail": "The **S&P 500** fell 0.23% to 7,323.63 Wednesday, a fifth straight loss that took it below its 200-day average, while the Nasdaq rose 0.42% to 24,429.89.",
+          "why": "Hawkish Fed minutes and Nvidia's fading post-earnings rally kept pressure on the broader market.",
+          "sourceName": "The Motley Fool",
+          "sourceUrl": "https://www.fool.com/coverage/stock-market-today/2026/11/18/stock-market-today-nov-18-s-and-p-500-breaks-key-support-as-fed-minutes-signal-more-rate-hikes-ahead/"
+        },
+        {
+          "emoji": "🏦",
+          "detail": "Minutes from the October Fed meeting showed nearly every official leaning toward **more rate hikes**, pushing the 10-year Treasury yield above 5%.",
+          "why": "Officials saw a growing risk that they will have to tighten further to bring inflation under control.",
+          "sourceName": "MarketScreener",
+          "sourceUrl": "https://www.marketscreener.com/news/gold-drops-to-14-month-low-as-dollar-yields-rise-on-hawkish-fed-rhetoric-ce785edddd8cf126"
+        },
+        {
+          "emoji": "🤖",
+          "detail": "Anthropic priced its IPO at **$83 a share**, above its target range, raising about $81 billion at a roughly $1.5 trillion valuation before trading starts today on Nasdaq.",
+          "why": "Orders came in about seven times the shares on offer, a sign that appetite for AI stocks is still strong.",
+          "sourceName": "Reuters via Investing.com",
+          "sourceUrl": "https://www.investing.com/news/economy-news/stocks-rise-after-anthropic-ipo-pricing-sets-stage-for-blockbuster-debut-5037540"
+        }
+      ]
+    },
+    {
+      "key": "emsmallcaps",
+      "label": "Emerging Markets and Small Caps",
+      "items": [
+        {
+          "emoji": "🌏",
+          "detail": "MSCI's Asia-Pacific index outside Japan slipped 0.3% Thursday and is on track for a weekly drop of **more than 4%**, with Taiwan down about 1%.",
+          "why": "A stronger dollar and higher yields after the Fed minutes outweighed the lift from Anthropic's IPO pricing.",
+          "sourceName": "Reuters via Business Recorder",
+          "sourceUrl": "https://www.brecorder.com/news/40449681/stocks-rise-after-anthropic-ipo-pricing-sets-stage-for-blockbuster-debut?v=8zOfz2t32i45C242zWj9ywx6"
+        },
+        {
+          "emoji": "🚗",
+          "detail": "The **Sensex** rose about 300 points to 82,339 early Thursday after Wednesday's 500-point drop, as auto stocks jumped 3.3%.",
+          "why": "Autos and banks bounced back from the midweek slump, while IT stocks stayed weak on worries about more Fed hikes.",
+          "sourceName": "The Week",
+          "sourceUrl": "https://www.theweek.in/news/biz-tech/2026/11/19/indian-shares-recovery-sensex-nifty.html"
+        },
+        {
+          "emoji": "🔄",
+          "detail": "US small caps beat the large caps Wednesday: the **S&P SmallCap 600** rose 0.68% and the Russell 2000 gained 0.46%, while the S&P 500 fell.",
+          "why": "Small caps recovered part of Tuesday's 1.5% slide as selling hit megacaps and the Dow instead.",
+          "sourceName": "Stock Titan",
+          "sourceUrl": "https://www.stocktitan.net/articles/stock-market-today-live-november-18-2026"
+        }
+      ]
+    },
+    {
+      "key": "crypto",
+      "label": "Crypto",
+      "items": [
+        {
+          "emoji": "₿",
+          "detail": "**Bitcoin** fell 3.84% to $62,386.56 Wednesday, slipping back toward Sunday's low near $62,000.",
+          "why": "The Fed minutes made a December hike look nearly certain and pushed yields above 5%, which hurt risk assets.",
+          "sourceName": "The Motley Fool",
+          "sourceUrl": "https://www.fool.com/coverage/stock-market-today/2026/11/18/crypto-market-today-nov-18-bitcoin-s-12-weekly-plunge-has-triggered-a-rare-signal-with-a-surprising-history/"
+        },
+        {
+          "emoji": "🔻",
+          "detail": "**Ether** dropped 3.80% to $1,753.33, extending its slide further below $1,800.",
+          "why": "It followed bitcoin lower as the hawkish Fed minutes and a strong dollar kept buyers away.",
+          "sourceName": "The Motley Fool",
+          "sourceUrl": "https://www.fool.com/coverage/stock-market-today/2026/11/18/crypto-market-today-nov-18-bitcoin-s-12-weekly-plunge-has-triggered-a-rare-signal-with-a-surprising-history/"
+        },
+        {
+          "emoji": "🟣",
+          "detail": "**Solana** lost its recent edge, falling 2.88% to $72.94, though it is still holding above last weekend's four-month low.",
+          "why": "The selloff after the Fed minutes hit the whole crypto market, which ended Solana's run as the lone gainer.",
+          "sourceName": "The Motley Fool",
+          "sourceUrl": "https://www.fool.com/coverage/stock-market-today/2026/11/18/crypto-market-today-nov-18-bitcoin-s-12-weekly-plunge-has-triggered-a-rare-signal-with-a-surprising-history/"
+        }
+      ]
+    },
+    {
+      "key": "commodities",
+      "label": "Commodities",
+      "items": [
+        {
+          "emoji": "🥇",
+          "detail": "**Gold** plunged 3.24% to $3,724.71 Wednesday, adding to its break below $3,800 and setting a new low since September 2025.",
+          "why": "The hawkish Fed minutes lifted the dollar and Treasury yields, which makes gold less attractive.",
+          "sourceName": "MarketScreener",
+          "sourceUrl": "https://www.marketscreener.com/news/gold-drops-to-14-month-low-as-dollar-yields-rise-on-hawkish-fed-rhetoric-ce785edddd8cf126"
+        }
+      ]
+    }
+  ],
+  "crossCuttingTheme": "Fed minutes showing nearly every official leaning toward more hikes lifted the dollar and yields, sinking gold more than 3% and dragging down crypto and Asian stocks, while Anthropic's record IPO pricing was tech's only support."
+}
