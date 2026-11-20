@@ -1,0 +1,101 @@
+{
+  "date": "2026-11-20",
+  "generatedAt": "2026-11-20T09:30:00Z",
+  "sections": [
+    {
+      "key": "usa",
+      "label": "USA",
+      "items": [
+        {
+          "emoji": "📉",
+          "detail": "The **S&P 500** fell about 2% to 7,175.83 Thursday, a sixth straight loss and its longest losing streak since 2024, while the Nasdaq sank 2.3% to 23,879.20.",
+          "why": "Investors grew more worried that the AI boom is over, and Nvidia went from a 4.7% early gain to a loss.",
+          "sourceName": "AP via The Washington Post",
+          "sourceUrl": "https://www.washingtonpost.com/business/2026/11/19/wall-street-stocks-dow-nasdaq/6aaf39d0-e463-11f1-a99e-b3e3805c6b8b_story.html"
+        },
+        {
+          "emoji": "🤖",
+          "detail": "In its first day of trading, **Anthropic** closed at **$97.17**, 17% above its $83 IPO price but well below its $111.50 opening trade.",
+          "why": "The broad tech selloff took back much of the early jump and kept the debut from lifting other AI stocks.",
+          "sourceName": "Forbes",
+          "sourceUrl": "https://www.forbes.com/sites/fionariley/2026/11/19/anthropic-ipo-live-stock-closes-day-at-97-up-more-than-17/"
+        },
+        {
+          "emoji": "🏦",
+          "detail": "The Dow dropped about **1,100 points**, or 2.2%, and only one of its 30 stocks closed higher, as more than 90% of S&P 500 members fell.",
+          "why": "With traders all but certain of a December Fed hike, the AI selling spread to the rest of the market.",
+          "sourceName": "BNN Bloomberg",
+          "sourceUrl": "https://www.bnnbloomberg.ca/markets/2026/11/19/wall-street-looks-set-to-halt-its-losing-streak-after-anthropics-ipo-revives-ai-stocks/"
+        }
+      ]
+    },
+    {
+      "key": "emsmallcaps",
+      "label": "Emerging Markets and Small Caps",
+      "items": [
+        {
+          "emoji": "🌏",
+          "detail": "Taiwan's stocks fell about 5% Friday and are on track for a **16% weekly drop**, the biggest since 1991, while South Korea's KOSPI slid about 4.7%.",
+          "why": "Wall Street's AI reversal hit Asia's chipmakers hard, with SK Hynix and Samsung each down more than 5%.",
+          "sourceName": "MarketScreener",
+          "sourceUrl": "https://www.marketscreener.com/news/asian-shares-head-for-worst-week-since-2020-as-ai-trade-gloom-fails-to-abate-ce785ed2de8ef627"
+        },
+        {
+          "emoji": "🇮🇳",
+          "detail": "The **Sensex** opened down about 450 points Friday but recovered to 83,190.82 by late morning, while the Nifty climbed back above 25,550.",
+          "why": "Banks and IT stocks led the recovery as foreign funds kept buying, which cushioned the hit from Asia's selloff.",
+          "sourceName": "Business Standard",
+          "sourceUrl": "https://www.business-standard.com/markets/news/stock-market-live-november-20-nse-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-126112000118_1.html"
+        },
+        {
+          "emoji": "🔻",
+          "detail": "In the US, the **Russell 2000** gave back Wednesday's bounce, falling 2.2% to 2,655.11 Thursday, and is down 4.9% for the week.",
+          "why": "Thursday's selloff was broad, and with a December Fed hike nearly certain, rate-sensitive small caps had little shelter.",
+          "sourceName": "AP via myMotherLode",
+          "sourceUrl": "https://mymotherlode.com/news/national/11324998/how-major-us-stock-indexes-fared-thursday-11-19-2026.html"
+        }
+      ]
+    },
+    {
+      "key": "crypto",
+      "label": "Crypto",
+      "items": [
+        {
+          "emoji": "₿",
+          "detail": "**Bitcoin** fell another 2.15% to $61,635 Thursday evening and briefly touched **$60,000**, before bouncing.",
+          "why": "Spot bitcoin ETFs have lost more than $2.5 billion this month, and money leaving AI stocks went to cash, not crypto.",
+          "sourceName": "The Motley Fool",
+          "sourceUrl": "https://fool.com/coverage/stock-market-today/2026/11/19/crypto-market-today-nov-19-bitcoin-approaches-usd60-000-as-etf-outflows-surpass-usd2-5-billion-in-2026"
+        },
+        {
+          "emoji": "💎",
+          "detail": "**Ether** dipped as low as about $1,717 Thursday before steadying near **$1,760** Friday, still below the $1,800 level it lost earlier this week.",
+          "why": "Bets on Fed hikes, higher Treasury yields and ETF outflows kept pressure on the coin.",
+          "sourceName": "Traders Union",
+          "sourceUrl": "https://tradersunion.com/news/cryptocurrency-news/show/4325741-ethereum-falls-on-us-rate/"
+        },
+        {
+          "emoji": "☀️",
+          "detail": "**Solana** held roughly flat at about **$72.75** Friday, down just 0.29% over 24 hours and still above last weekend's four-month low.",
+          "why": "It moved sideways as bitcoin's bounce off $60,000 calmed the wider crypto market for now.",
+          "sourceName": "LiteFinance",
+          "sourceUrl": "https://www.litefinance.org/blog/analysts-opinions/solana-price-prediction/"
+        }
+      ]
+    },
+    {
+      "key": "commodities",
+      "label": "Commodities",
+      "items": [
+        {
+          "emoji": "🥇",
+          "detail": "**Gold** slid toward $3,525 Friday, a new 14-month low, and is heading for a weekly loss of about **9%**, its worst since March.",
+          "why": "Traders now see a December Fed hike as about 97% likely, and some sold gold to raise cash during the AI selloff.",
+          "sourceName": "Investing.com",
+          "sourceUrl": "https://uk.investing.com/news/commodities-news/gold-slides-to-14mth-low-set-for-weekly-drop-amid-fed-hike-bets-4994902"
+        }
+      ]
+    }
+  ],
+  "crossCuttingTheme": "Doubts about the AI boom turned into a global selloff, and with a December Fed hike nearly certain, investors fled to cash, sinking US and Asian chip stocks, small caps, bitcoin and even gold together."
+}
