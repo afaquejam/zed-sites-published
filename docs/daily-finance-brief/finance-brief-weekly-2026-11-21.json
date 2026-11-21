@@ -1,0 +1,101 @@
+{
+  "date": "2026-11-21",
+  "generatedAt": "2026-11-21T10:00:00Z",
+  "sections": [
+    {
+      "key": "usa",
+      "label": "USA",
+      "items": [
+        {
+          "emoji": "📉",
+          "detail": "The **S&P 500** fell **8.6%** to 6,910.39 in its worst week since April 2025, while the Nasdaq dropped about 10% to 22,617.73.",
+          "why": "A deep sell-off in AI stocks, led by chipmakers, wiped out the Nasdaq's gains for 2026.",
+          "sourceName": "AP via Yakima Herald-Republic",
+          "sourceUrl": "https://www.yakimaherald.com/news/nation_and_world/business/how-major-us-stock-indexes-fared-friday-11-20-2026/article_963ce6d2-85a3-5fd6-981d-e60b72a58fbb.html"
+        },
+        {
+          "emoji": "🤖",
+          "detail": "**Nvidia** beat forecasts on Tuesday but then slid all week, ending with a **14%** plunge on Friday to its lowest close in 18 months.",
+          "why": "Jensen Huang's planned exit as CEO and doubts about AI profits outweighed strong results and a big buyback.",
+          "sourceName": "Yahoo Finance",
+          "sourceUrl": "https://finance.yahoo.com/markets/stocks/article/nvidia-stock-erases-earnings-pop-as-investors-face-life-after-jensen-huang-173547783.html"
+        },
+        {
+          "emoji": "🏦",
+          "detail": "The S&P 500 and Dow both closed in a **correction**, more than 10% below their records, after seven straight losing days for the S&P.",
+          "why": "Rising bets on a Fed rate hike and Treasury yields near 5% made pricey tech stocks harder to justify.",
+          "sourceName": "CNBC",
+          "sourceUrl": "https://www.cnbc.com/amp/2026/11/19/stock-market-today-live-updates.html"
+        }
+      ]
+    },
+    {
+      "key": "emsmallcaps",
+      "label": "Emerging Markets and Small Caps",
+      "items": [
+        {
+          "emoji": "🌏",
+          "detail": "The **MSCI Emerging Markets** index fell into a bear market, more than **20%** below its June high, as Taiwan had its worst week since 1990.",
+          "why": "Asian chipmakers such as Samsung and SK Hynix tracked the US AI sell-off, and EM funds saw heavy outflows.",
+          "sourceName": "Finimize",
+          "sourceUrl": "https://finimize.com/content/emerging-market-stocks-stumble-as-ai-worries-hit-asia"
+        },
+        {
+          "emoji": "🇮🇳",
+          "detail": "The **Sensex** rose **2.85%** to 83,919.71 and the Nifty gained 2.61% for a fourth straight weekly gain, closing near nine-month highs.",
+          "why": "Banks led as Bank Nifty hit a record, helped by record November foreign buying of Indian shares.",
+          "sourceName": "The Indian Awaaz",
+          "sourceUrl": "https://theindianawaaz.com/stock-market-weekly-round-up-16-20-november-2026/"
+        },
+        {
+          "emoji": "🔻",
+          "detail": "The US **Russell 2000** fell about 7% on the week, ending Friday at **2,581.79** after a 2.8% drop that day.",
+          "why": "Small caps could not escape the AI rout, and higher rate-hike bets raise borrowing costs for smaller firms.",
+          "sourceName": "AP via Yakima Herald-Republic",
+          "sourceUrl": "https://www.yakimaherald.com/news/nation_and_world/business/how-major-us-stock-indexes-fared-friday-11-20-2026/article_963ce6d2-85a3-5fd6-981d-e60b72a58fbb.html"
+        }
+      ]
+    },
+    {
+      "key": "crypto",
+      "label": "Crypto",
+      "items": [
+        {
+          "emoji": "₿",
+          "detail": "**Bitcoin** fell below $60,000 and touched **$57,799** on Friday, its lowest in over two years, after losing about 15% on the week.",
+          "why": "The AI stock rout spread into crypto, setting off over $1.5 billion in forced selling of leveraged bets.",
+          "sourceName": "Bitcoin.com News",
+          "sourceUrl": "https://news.bitcoin.com/market-updates/strategy-coinbase-shares-battered-bitcoin-price-2-year-low-ai-stocks-bleed/"
+        },
+        {
+          "emoji": "💎",
+          "detail": "**Ether** slid to about **$1,740** by Friday, taking its November loss to nearly 23%.",
+          "why": "Steady outflows from spot ether ETFs, close to $1 billion this month, left buyers scarce as risk appetite collapsed.",
+          "sourceName": "crypto.news",
+          "sourceUrl": "https://crypto.news/ethereum-price-outlook-november-etf-outflows/"
+        },
+        {
+          "emoji": "☀️",
+          "detail": "**Solana** dropped below $70 and fell **6.1%** on Friday alone to $68.68.",
+          "why": "Money had been flowing into Solana ETFs but turned to withdrawals as the broader crypto sell-off deepened.",
+          "sourceName": "crypto.news",
+          "sourceUrl": "https://crypto.news/solana-price-below-70-etf-rebound"
+        }
+      ]
+    },
+    {
+      "key": "commodities",
+      "label": "Commodities",
+      "items": [
+        {
+          "emoji": "🪙",
+          "detail": "Spot **gold** fell **8.7%** to about $3,544 an ounce, its worst week in eight months, after briefly hitting its lowest level since September 2025.",
+          "why": "Growing bets on a Fed hike, surging Treasury yields and a stronger dollar made gold, which pays no interest, less attractive.",
+          "sourceName": "Kitco",
+          "sourceUrl": "http://www.kitco.com/news/article/2026-11-20/wall-street-stays-bearish-after-golds-slide-3500-main-street-pessimism"
+        }
+      ]
+    }
+  ],
+  "crossCuttingTheme": "Doubts about AI profits and rising bets on a Fed rate hike, with Treasury yields near 5%, pulled down stocks, crypto and even gold worldwide; India's bank-led rally on foreign buying was the lone exception."
+}
