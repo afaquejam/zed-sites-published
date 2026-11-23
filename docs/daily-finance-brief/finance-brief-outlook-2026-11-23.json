@@ -1,0 +1,101 @@
+{
+  "date": "2026-11-23",
+  "generatedAt": "2026-11-23T08:00:00Z",
+  "sections": [
+    {
+      "key": "usa",
+      "label": "USA",
+      "items": [
+        {
+          "emoji": "📉",
+          "detail": "**Wednesday's October PCE inflation** is the main event, with **core PCE** expected to rise to 3.2% from 3.1%. Q3 GDP and the Fed's Beige Book come out the same day.",
+          "why": "It is the last inflation reading before the December Fed meeting, so a hot print would firm up bets on a rate hike.",
+          "sourceName": "FXEmpire",
+          "sourceUrl": "https://www.fxempire.com/forecasts/article/the-week-ahead-pce-in-focus-after-ai-sell-off-in-holiday-shortened-week-1646337"
+        },
+        {
+          "emoji": "🤖",
+          "detail": "**Dell** reports after the close on **Tuesday**, with analysts expecting about **$6.63 a share** in earnings. Workday and HP also report this week.",
+          "why": "Dell's AI-server orders are the week's main test of whether AI demand still justifies Nasdaq prices after the chip rout.",
+          "sourceName": "Finviz",
+          "sourceUrl": "https://finviz.com/news/423394/dell-must-prove-its-95-billion-ai-backlog-can-convert-despite-memory-constraints"
+        },
+        {
+          "emoji": "🦃",
+          "detail": "The **S&P 500** starts the week in a correction at **6,910**. US markets are shut Thursday for Thanksgiving and close early, at 1 p.m., on Friday.",
+          "why": "With fewer traders around, a surprise in Wednesday's data could cause outsized swings in either direction.",
+          "sourceName": "CNBC",
+          "sourceUrl": "https://www.cnbc.com/investingclub/2026/11/22/3-big-things-were-watching-in-the-market-this-thanksgiving-week.html"
+        }
+      ]
+    },
+    {
+      "key": "emsmallcaps",
+      "label": "Emerging Markets and Small Caps",
+      "items": [
+        {
+          "emoji": "🏦",
+          "detail": "The **Bank of Korea** decides rates on **Thursday**, and most analysts expect a hike to **3.25%** from 3%. The MSCI EM index starts the week in a bear market.",
+          "why": "A hike while Korean chip stocks are falling could push more money out of Asia unless the dollar eases.",
+          "sourceName": "The Korea Times",
+          "sourceUrl": "https://www.koreatimes.co.kr/economy/20261022/bok-keeps-rate-steady-at-3-but-further-hikes-remain-on-table"
+        },
+        {
+          "emoji": "🇮🇳",
+          "detail": "India has a short week. Indian markets are closed **Tuesday** for Guru Nanak Jayanti, and the monthly F&O expiry was moved to Monday. The Nifty is just below **26,000**.",
+          "why": "Record November foreign buying drove the rally, so any sign of foreign funds pulling out would hit banks first.",
+          "sourceName": "Business Today",
+          "sourceUrl": "https://www.businesstoday.in/markets/stocks/story/markets-next-week-nifty-eyes-26000-as-fiis-pour-in-record-rs-1-12-lakh-crore-will-banking-rally-extend-key-triggers-to-watch-568918-2026-11-22"
+        },
+        {
+          "emoji": "🏢",
+          "detail": "The US **Russell 2000** starts the week at **2,581.79** with Wednesday's PCE ahead. In India, smallcaps have been slipping while large caps rally.",
+          "why": "Smaller US firms carry far more floating-rate debt, so a firmer December hike would raise their borrowing costs quickly.",
+          "sourceName": "The Globe and Mail",
+          "sourceUrl": "https://www.theglobeandmail.com/investing/markets/indices/TTIN/pressreleases/8935556/russell-2000-futures-crack-key-support-is-2600-the-next-target/"
+        }
+      ]
+    },
+    {
+      "key": "crypto",
+      "label": "Crypto",
+      "items": [
+        {
+          "emoji": "₿",
+          "detail": "**Bitcoin** starts the week near **$60,000** after briefly hitting about $55,000 on Saturday. US spot bitcoin ETFs have lost about $3.5 billion in November.",
+          "why": "Unless ETF selling slows, a hot PCE print on Wednesday could send bitcoin back toward its weekend low.",
+          "sourceName": "Startup Fortune",
+          "sourceUrl": "https://startupfortune.com/bitcoin-etfs-lose-359-billion-in-november-as-blackrocks-ibit-bleeds/"
+        },
+        {
+          "emoji": "💎",
+          "detail": "**Ether** starts the week near **$1,740**, and US ether ETFs have had eight straight weeks of outflows.",
+          "why": "No scheduled upgrade is coming to help, so ether depends on ETF flows and Wednesday's inflation data.",
+          "sourceName": "Blockchain Reporter",
+          "sourceUrl": "https://blockchainreporter.net/crypto-etf-flows/"
+        },
+        {
+          "emoji": "☀️",
+          "detail": "**Solana** starts the week near **$68.68**, below $70. Its ETFs took in small amounts of money last week while bitcoin and ether funds lost money.",
+          "why": "If that ETF buying holds through the PCE print, it could support Solana better than its peers in a weak market.",
+          "sourceName": "crypto.news",
+          "sourceUrl": "https://crypto.news/bitcoin-ether-etf-outflows-nov-16-20-2026/"
+        }
+      ]
+    },
+    {
+      "key": "commodities",
+      "label": "Commodities",
+      "items": [
+        {
+          "emoji": "🥇",
+          "detail": "**Gold** starts the week near **$3,544** an ounce, and Wednesday's PCE and GDP data are its biggest test.",
+          "why": "A hot print would firm bets on a December hike and lift the dollar, which tends to push gold down.",
+          "sourceName": "FX Leaders",
+          "sourceUrl": "https://www.fxleaders.com/news/2026/11/22/gold-price-forecast-gdp-and-pce-inflation-could-determine-next-move-for-xau-usd/"
+        }
+      ]
+    }
+  ],
+  "crossCuttingTheme": "Wednesday's US PCE inflation report, the last before the December Fed meeting, decides whether rate-hike bets and near-5% Treasury yields keep climbing, and with them the dollar pressure on tech, EM, crypto and gold."
+}
