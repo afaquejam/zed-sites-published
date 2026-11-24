@@ -1,0 +1,101 @@
+{
+  "date": "2026-11-24",
+  "generatedAt": "2026-11-24T06:30:00Z",
+  "sections": [
+    {
+      "key": "usa",
+      "label": "USA",
+      "items": [
+        {
+          "emoji": "📈",
+          "detail": "The **S&P 500** jumped 4.73% to 7,237.17 Monday, its best day since April 2025, while the Nasdaq soared 6.5% to 24,089.56.",
+          "why": "Nvidia's board brought Jensen Huang back as CEO before the open, which sparked a sharp rally across AI stocks.",
+          "sourceName": "CNN",
+          "sourceUrl": "https://www.cnn.com/2026/11/23/markets/us-stocks-rebound-intl"
+        },
+        {
+          "emoji": "🤖",
+          "detail": "**Nvidia** rose 31.48% Monday, its best day since 2003, adding about $952 billion in market value after a 23% drop last week.",
+          "why": "The board unanimously reinstated Huang, which undid his November 12 exit, though export-control questions are still open.",
+          "sourceName": "Fortune",
+          "sourceUrl": "https://fortune.com/2026/11/23/wall-street-1-trillion-jensen-huang-nvidia-stock-market-cap/"
+        },
+        {
+          "emoji": "📉",
+          "detail": "Monday's rally followed Friday's 3.7% drop to 6,910.39, which put the S&P 500 in a correction and capped an **8.6%** weekly loss. Wednesday's PCE inflation report comes next.",
+          "why": "A report that the SEC was examining Nvidia's accounting sank the stock 14% and dragged chipmakers down with it.",
+          "sourceName": "Cappnotes",
+          "sourceUrl": "https://cappnotes.substack.com/p/closing-look-friday-november-20-2026"
+        }
+      ]
+    },
+    {
+      "key": "emsmallcaps",
+      "label": "Emerging Markets and Small Caps",
+      "items": [
+        {
+          "emoji": "🚀",
+          "detail": "Taiwan's stocks rebounded about **9%** Tuesday after their worst week in decades, while South Korea's KOSPI gained about 7% and Japan's Nikkei rose about 4%.",
+          "why": "Nvidia's Huang-driven rally lifted Asian chipmakers, with TSMC, Samsung and SK Hynix all up sharply.",
+          "sourceName": "Investing.com",
+          "sourceUrl": "https://au.investing.com/news/stock-market-news/asian-stocks-rally-as-taiwan-leads-with-9-rebound-in-ai-trade-4791935"
+        },
+        {
+          "emoji": "🏦",
+          "detail": "The **Sensex** fell 1,483.72 points, or 1.77%, to 82,435.99 Monday, and the Nifty dropped to 25,349.65, with Bank Nifty down more than 3%.",
+          "why": "Investors took profits in banks near record highs, foreign selling picked up, and AI-bubble fears weighed on the market.",
+          "sourceName": "DD News",
+          "sourceUrl": "https://ddnews.gov.in/en/sensex-sheds-1484-points-nifty-drops-below-25400-amid-heavy-selling-in-banking-metal-stocks/"
+        },
+        {
+          "emoji": "🔄",
+          "detail": "In the US, the **Russell 2000** rose 3.4% to 2,669.66 Monday, recovering last week's losses but trailing the Nasdaq's 6.5% gain.",
+          "why": "The broad rebound and fading bets on a half-point December Fed hike gave rate-sensitive small caps some relief.",
+          "sourceName": "Yahoo Finance",
+          "sourceUrl": "https://finance.yahoo.com/markets/world-indices/articles/major-us-stock-indexes-fared-213053319.html"
+        }
+      ]
+    },
+    {
+      "key": "crypto",
+      "label": "Crypto",
+      "items": [
+        {
+          "emoji": "₿",
+          "detail": "**Bitcoin** slid back to about $60,400 early Tuesday after rebounding to near $63,900 Monday from a weekend low of about **$55,500**, its lowest in over two years.",
+          "why": "The Nvidia relief rally faded for crypto as spot bitcoin ETFs kept losing money, with about $570 million in outflows.",
+          "sourceName": "crypto.news",
+          "sourceUrl": "https://crypto.news/bitcoin-price-prediction-etf-outflows-60k-support/"
+        },
+        {
+          "emoji": "💎",
+          "detail": "**Ether** recovered about 17% from Saturday's low of $1,559 to about **$1,825** Monday, getting back above the $1,800 level it lost last week.",
+          "why": "Forced selling over the weekend ran its course, and the rebound in stocks pulled buyers back in.",
+          "sourceName": "KuCoin",
+          "sourceUrl": "https://www.kucoin.com/news/flash/bitcoin-rises-to-63-888-ether-gains-7-2-amid-market-rebound"
+        },
+        {
+          "emoji": "☀️",
+          "detail": "**Solana** rebounded to about **$76** Monday after a weekend drop to near $65, outpacing both bitcoin and ether.",
+          "why": "Solana ETFs kept attracting money while bitcoin and ether funds lost it, though $80 remains its key resistance level.",
+          "sourceName": "crypto.news",
+          "sourceUrl": "https://crypto.news/solana-price-rebounds-76-weekend-drop/"
+        }
+      ]
+    },
+    {
+      "key": "commodities",
+      "label": "Commodities",
+      "items": [
+        {
+          "emoji": "🥇",
+          "detail": "**Gold** rebounded about 2.75% to near **$3,635** Monday, bouncing from Friday's 14-month low of $3,513 after its worst week since March.",
+          "why": "Treasury yields fell and traders dropped bets on a half-point December Fed hike before Wednesday's PCE inflation report.",
+          "sourceName": "Kitco",
+          "sourceUrl": "https://www.kitco.com/news/article/2026-11-23/gold-silver-prices-see-sharp-rebounds-ai-shares-rally-renewed-fed"
+        }
+      ]
+    }
+  ],
+  "crossCuttingTheme": "Huang's return to Nvidia reversed Friday's AI rout and set off rallies in US and Asian chip stocks, while fading bets on a half-point Fed hike lifted gold too, but crypto lagged as ETF outflows continued."
+}
