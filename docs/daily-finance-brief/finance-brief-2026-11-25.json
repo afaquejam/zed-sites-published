@@ -1,0 +1,101 @@
+{
+  "date": "2026-11-25",
+  "generatedAt": "2026-11-25T08:00:00Z",
+  "sections": [
+    {
+      "key": "usa",
+      "label": "USA",
+      "items": [
+        {
+          "emoji": "📉",
+          "detail": "Monday's rebound faded as the **Nasdaq** fell 1.48% to 23,733.54 Tuesday, and the S&P 500 slipped 0.50% to 7,201.09, its eighth loss in nine sessions.",
+          "why": "Chip and server stocks gave back much of Monday's Nvidia-led surge as doubts about AI spending returned.",
+          "sourceName": "Investrade",
+          "sourceUrl": "https://investrade.com/market-review-november-24-2026/"
+        },
+        {
+          "emoji": "🤖",
+          "detail": "**Nvidia** fell about 7% Tuesday, a day after its 31% jump, and the Philadelphia Semiconductor Index dropped roughly 9% after Monday's 14% surge.",
+          "why": "Traders took quick profits on Huang's return because the export-control and accounting questions have not gone away.",
+          "sourceName": "Yahoo Finance",
+          "sourceUrl": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-24-dow-sp-500-nasdaq-chip-stocks-nvidia-140629923.html"
+        },
+        {
+          "emoji": "🏛️",
+          "detail": "The **Dow** rose 0.85% to 50,018.70, its first close above 50,000, and Wednesday's October PCE inflation report is up next.",
+          "why": "Money moved out of chips into healthcare and consumer staples, which make up more of the Dow than tech does.",
+          "sourceName": "Startup Fortune",
+          "sourceUrl": "https://startupfortune.com/the-dow-closes-at-50019-while-nasdaq-drops-148-on-an-ai-chip-selloff/"
+        }
+      ]
+    },
+    {
+      "key": "emsmallcaps",
+      "label": "Emerging Markets and Small Caps",
+      "items": [
+        {
+          "emoji": "🌏",
+          "detail": "Asian chip markets erased Tuesday's rebound Wednesday, with Taiwan's Taiex down about **8%** early on and South Korea's KOSPI down about 5.6%.",
+          "why": "Wall Street's renewed AI chip selloff and fresh US tariff threats hit TSMC, Samsung and SK Hynix hard.",
+          "sourceName": "National Herald",
+          "sourceUrl": "https://www.nationalheraldindia.com/business/asian-stocks-slide-as-ai-sell-off-deepens-taiwan-falls-more-than-6-per-cent"
+        },
+        {
+          "emoji": "🇮🇳",
+          "detail": "Indian markets reopened higher Wednesday after a Tuesday holiday, with the **Sensex** near 83,734 and the Nifty back around 25,729 by mid-morning.",
+          "why": "Markets were shut for Guru Nanak Jayanti, so Wednesday's open caught up with Monday's global rebound.",
+          "sourceName": "Goodreturns",
+          "sourceUrl": "https://www.goodreturns.in/news/dalal-street-roars-back-sensex-jumps-1-400-points-nifty-reclaims-25-700-why-stock-market-is-rally-1549389.html"
+        },
+        {
+          "emoji": "🔄",
+          "detail": "In the US, the **Russell 2000** rose 0.57% to 2,684.94 Tuesday, beating the Nasdaq by about two percentage points.",
+          "why": "Investors moved out of AI chip stocks and into cheaper, more domestic companies, the same shift that lifted the Dow.",
+          "sourceName": "Yahoo Finance",
+          "sourceUrl": "https://finance.yahoo.com/quote/%5ERUT/history/"
+        }
+      ]
+    },
+    {
+      "key": "crypto",
+      "label": "Crypto",
+      "items": [
+        {
+          "emoji": "₿",
+          "detail": "**Bitcoin** slipped below $60,000 Tuesday, and November's spot ETF outflows hit a record **$4.71 billion**.",
+          "why": "A fifth straight day of ETF withdrawals, led by BlackRock's IBIT, plus the tech selloff kept sellers in charge.",
+          "sourceName": "FinScans",
+          "sourceUrl": "https://finscans.com/news/2026/11/25/bitcoin-slips-below-60000-as-november-etf-outflows-hit-2"
+        },
+        {
+          "emoji": "🔻",
+          "detail": "**Ether** fell below **$1,690** Tuesday, giving up much of Monday's rebound above $1,800.",
+          "why": "Spot ether ETFs posted a seventh straight day of outflows, and BTCS disclosed selling 27,300 ETH.",
+          "sourceName": "The Crypto Times",
+          "sourceUrl": "https://www.cryptotimes.io/2026/11/24/ethereum-price-slips-below-1690-amid-etf-outflows-btcs-discloses-27300-eth-sale/"
+        },
+        {
+          "emoji": "☀️",
+          "detail": "**Solana** slipped to about **$72** as Monday's rally from near $65 faded well short of $80 resistance.",
+          "why": "Solana ETFs had outflows again on Monday, which undercut the fund demand that had supported its outperformance.",
+          "sourceName": "crypto.news",
+          "sourceUrl": "https://crypto.news/solana-price-72-rebound-fades-etf-outflows/"
+        }
+      ]
+    },
+    {
+      "key": "commodities",
+      "label": "Commodities",
+      "items": [
+        {
+          "emoji": "🥇",
+          "detail": "**Gold** gave up Monday's bounce, falling about 2% Tuesday and trading near **$3,550** early Wednesday, close to its 14-month low.",
+          "why": "Consumer confidence jumped to 103.3, so traders fully priced in a December Fed hike, and AI losses forced some selling.",
+          "sourceName": "Kitco",
+          "sourceUrl": "https://www.kitco.com/news/article/2026-11-24/gold-silver-extend-losses-tech-stocks-slide-fed-inflation-test-looms-kitco"
+        }
+      ]
+    }
+  ],
+  "crossCuttingTheme": "Monday's Nvidia relief rally unwound within a day, and the renewed chip selloff spread from Wall Street to Asia, while a surprise jump in consumer confidence locked in December hike bets and dragged gold down."
+}
