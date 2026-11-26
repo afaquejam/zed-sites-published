@@ -1,0 +1,101 @@
+{
+  "date": "2026-11-26",
+  "generatedAt": "2026-11-26T08:00:00Z",
+  "sections": [
+    {
+      "key": "usa",
+      "label": "USA",
+      "items": [
+        {
+          "emoji": "🔥",
+          "detail": "Core PCE inflation rose to **3.3%** in October, above the 3.2% forecast, and the S&P 500 edged down 0.25% to 7,182.78 Wednesday.",
+          "why": "Hotter inflation, plus third-quarter GDP growth of 4.3%, strengthened bets that the Fed keeps raising rates.",
+          "sourceName": "Yahoo Finance",
+          "sourceUrl": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-november-25-dow-sp-500-nasdaq-pce-inflation-data-091428237.html"
+        },
+        {
+          "emoji": "🤖",
+          "detail": "The **Nasdaq** recovered from a drop of about 3.5% in the morning to close down 0.62% at 23,585.80, though Nvidia lost nearly 4% more.",
+          "why": "A US plan for tariffs of up to 20% on 14 trading partners hit chips before buyers came back late.",
+          "sourceName": "FXStreet",
+          "sourceUrl": "https://www.fxstreet.com/news/us-stocks-crater-again-on-wednesday-on-hot-inflation-new-trump-tariffs-202611251543"
+        },
+        {
+          "emoji": "🦃",
+          "detail": "The **Dow** rose 0.33% to a record close of 50,182.95, and US stock markets are shut Thursday for Thanksgiving, with a half-day session Friday.",
+          "why": "Investors kept moving money out of AI stocks and into defensive blue chips ahead of the holiday.",
+          "sourceName": "Yahoo Finance",
+          "sourceUrl": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-november-25-dow-sp-500-nasdaq-pce-inflation-data-091428237.html"
+        }
+      ]
+    },
+    {
+      "key": "emsmallcaps",
+      "label": "Emerging Markets and Small Caps",
+      "items": [
+        {
+          "emoji": "🌏",
+          "detail": "Asian markets bounced back Thursday after Wednesday's rout, with Taiwan's Taiex up about **2.6%** and Hong Kong's Hang Seng up 1.9%.",
+          "why": "Wall Street's late recovery eased panic over AI chips, though TSMC itself gained only 0.2%.",
+          "sourceName": "AP via La Nación",
+          "sourceUrl": "https://www.lanacion.com.ar/usa/asian-shares-rebound-led-by-ai-stocks-after-wall-street-pares-sharp-losses-nid26112026/"
+        },
+        {
+          "emoji": "🇮🇳",
+          "detail": "The **Sensex** jumped 1,502 points to 83,938.28 Wednesday and added another 0.7% to around 84,520 by late Thursday morning, led by IT stocks.",
+          "why": "Foreign buying, a stronger rupee and cheaper crude oil kept the rally going after the holiday break.",
+          "sourceName": "Business Standard",
+          "sourceUrl": "https://www.business-standard.com/amp/markets/news/stock-market-live-november-26-nse-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-ipo-today-126112600049_1.html"
+        },
+        {
+          "emoji": "🏘️",
+          "detail": "The US **Russell 2000** rose 0.71% to 2,704.06 Wednesday, closing higher for a second day while the Nasdaq fell.",
+          "why": "Easing pressure on AI stocks and the move into cheaper domestic companies offset worries about inflation and tariffs.",
+          "sourceName": "ad-hoc-news (AP)",
+          "sourceUrl": "https://www.ad-hoc-news.de/boerse/news/marktberichte/russell-2000-closes-higher-as-ai-losses-ease-ahead-of-holiday/70555315"
+        }
+      ]
+    },
+    {
+      "key": "crypto",
+      "label": "Crypto",
+      "items": [
+        {
+          "emoji": "₿",
+          "detail": "**Bitcoin** got back above $60,000 late Wednesday, even as November's spot ETF outflows rose to a record **$4.94 billion**.",
+          "why": "Traders betting on further falls were forced to buy back, while another $453 million left the ETFs.",
+          "sourceName": "crypto.news",
+          "sourceUrl": "https://crypto.news/bitcoin-price-prediction-btc-recovery-etf-outflows/"
+        },
+        {
+          "emoji": "🔷",
+          "detail": "**Ether** hovered around **$1,685** Wednesday evening, holding near Tuesday's lows without recovering.",
+          "why": "Spot ether ETFs keep losing money, with $314 million in outflows last week, which leaves little new demand.",
+          "sourceName": "The Motley Fool",
+          "sourceUrl": "https://www.fool.com/coverage/stock-market-today/2026/11/25/crypto-market-today-nov-25-bitcoin-ethereum-and-solana-as-short-liquidations-fuel-fragile-rebound/"
+        },
+        {
+          "emoji": "🟣",
+          "detail": "**Solana** rose about 1.2% to **$70.47** Wednesday, still holding above its $65 low.",
+          "why": "Solana ETFs went back to small inflows, $0.7 million on Tuesday, while bitcoin and ether funds kept losing money.",
+          "sourceName": "CoinCentral",
+          "sourceUrl": "https://coincentral.com/solana-sol-price-reclaims-72-as-etf-inflows-defy-bitcoin-and-ethereum-fund-losses"
+        }
+      ]
+    },
+    {
+      "key": "commodities",
+      "label": "Commodities",
+      "items": [
+        {
+          "emoji": "🥇",
+          "detail": "**Gold** fell to $3,426.71 Wednesday, its lowest in over a year, then rebounded about $160 to close near **$3,588**.",
+          "why": "Hot inflation data fed rate-hike bets, then bargain hunters and the late stock recovery lifted gold before the holiday.",
+          "sourceName": "CNBC",
+          "sourceUrl": "https://www.cnbc.com/2026/11/25/gold-metals-federal-reserve-inflation.html"
+        }
+      ]
+    }
+  ],
+  "crossCuttingTheme": "Hotter inflation and new US tariff threats hit chips, stocks and gold early Wednesday, then a late Wall Street recovery spread to Asian stocks, bitcoin and gold before Thanksgiving."
+}
