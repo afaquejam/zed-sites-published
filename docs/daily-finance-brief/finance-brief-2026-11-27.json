@@ -1,0 +1,101 @@
+{
+  "date": "2026-11-27",
+  "generatedAt": "2026-11-27T08:30:00+02:00",
+  "sections": [
+    {
+      "key": "usa",
+      "label": "USA",
+      "items": [
+        {
+          "emoji": "📈",
+          "detail": "**S&P 500 futures** rose 0.54% to 7,234.50 in Thursday's shortened holiday session, pointing to a higher open for Friday's half-day of trading, which ends at 1 p.m. ET.",
+          "why": "Buyers came back to AI and chip stocks after Wednesday's late recovery calmed fears over the tariff plan.",
+          "sourceName": "BeInCrypto",
+          "sourceUrl": "https://beincrypto.com/sp-500-futures-black-friday-nvidia/"
+        },
+        {
+          "emoji": "🤖",
+          "detail": "**Nvidia** heads into Friday's session under a cloud after S&P Global Ratings put its AA credit rating on **negative watch** over governance concerns.",
+          "why": "The warning brings back doubts about the AI leader just as chip stocks try to recover from this week's rout.",
+          "sourceName": "Mitrade",
+          "sourceUrl": "https://www.mitrade.com/au/insights/Economics/news-of-the-day/beincrypto-NVDA-202611271126"
+        },
+        {
+          "emoji": "🏦",
+          "detail": "Traders now treat a quarter-point Fed rate hike at the **December 8–9** meeting as close to certain, and that is the main hurdle for stocks next week.",
+          "why": "October's hot core inflation reading convinced markets the Fed has to keep raising rates.",
+          "sourceName": "Kitco",
+          "sourceUrl": "https://www.kitco.com/news/article/2026-11-26/gold-slips-silver-steadies-fed-rate-hike-expectations-persist-holiday"
+        }
+      ]
+    },
+    {
+      "key": "emsmallcaps",
+      "label": "Emerging Markets and Small Caps",
+      "items": [
+        {
+          "emoji": "🌏",
+          "detail": "The **MSCI Emerging Markets** index is up **2.5%** this week, cutting its November loss to 7%, as Asian tech shares kept recovering Friday.",
+          "why": "Investors went back into AI and chip stocks after Wednesday's rout, though EM is still set for a third straight monthly loss.",
+          "sourceName": "Bloomberg",
+          "sourceUrl": "https://bloomberg.com/news/articles/2026-11-27/em-asia-stocks-set-for-weekly-gain-as-markets-regain-footing"
+        },
+        {
+          "emoji": "🇮🇳",
+          "detail": "The **Sensex** fell **0.75%** to 83,694 by midday Friday, giving back Thursday's IT-led gains as TCS, HCL Tech and Infosys dropped.",
+          "why": "Brent crude above $96 on Middle East tensions and worries about US tariffs outweighed firmer Asian markets.",
+          "sourceName": "Business Standard",
+          "sourceUrl": "https://www.business-standard.com/markets/news/stock-market-live-november-27-nse-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-mahanadi-coalfields-share-price-ipo-today-126112700100_1.html"
+        },
+        {
+          "emoji": "🚀",
+          "detail": "South Korea's small-cap-heavy **Kosdaq** jumped **6.07%** Friday morning, well ahead of the Kospi, while India's Nifty Smallcap 100 also rose as the Sensex fell.",
+          "why": "Bargain hunters went back into battered Korean growth stocks after the chip rout, and Indian buyers chose smaller companies over IT.",
+          "sourceName": "AJP",
+          "sourceUrl": "https://www.ajupress.com/view/20261127112522141"
+        }
+      ]
+    },
+    {
+      "key": "crypto",
+      "label": "Crypto",
+      "items": [
+        {
+          "emoji": "₿",
+          "detail": "**Bitcoin** climbed to about **$61,400** Friday ahead of a $6.8 billion options expiry, though the market's fear gauge is still at extreme lows.",
+          "why": "Rising stock futures lifted risk appetite, but record ETF outflows of $5.39 billion this month are holding back the rebound.",
+          "sourceName": "crypto.news",
+          "sourceUrl": "https://crypto.news/bitcoin-price-rebounds-68b-options-expiry-november-27/"
+        },
+        {
+          "emoji": "⛓️",
+          "detail": "**Ether** edged back above **$1,700** Friday, its first move up from this week's lows, as about $600 million of options expired on Deribit.",
+          "why": "Nine straight sessions of withdrawals from ether ETFs, about $1.3 billion this month, are keeping buyers cautious.",
+          "sourceName": "Proactive Investors",
+          "sourceUrl": "https://www.proactiveinvestors.com/companies/news/1102549/on-the-chain-bitcoin-steadies-above-us-60-000-as-traders-brace-for-us-7-billion-options-expiry-1102549.html"
+        },
+        {
+          "emoji": "☀️",
+          "detail": "**Solana** rose to about **$73** early Friday, adding to its bounce after holding the $65 level for a third time.",
+          "why": "Solana ETFs ended a six-week run of outflows with $4.38 million of weekly inflows while bitcoin and ether funds kept losing money.",
+          "sourceName": "Crypto Briefing",
+          "sourceUrl": "https://cryptobriefing.com/solana-etfs-inflow-bitcoin-ether-xrp-outflows/"
+        }
+      ]
+    },
+    {
+      "key": "commodities",
+      "label": "Commodities",
+      "items": [
+        {
+          "emoji": "🥇",
+          "detail": "**Gold** rose about 1.3% to **$3,615** Friday, back above $3,600 and extending its recovery from Wednesday's 15-month low.",
+          "why": "A weaker dollar and bargain hunting in thin holiday trading lifted gold, though bets on a December rate hike limit the gains.",
+          "sourceName": "FXStreet",
+          "sourceUrl": "https://www.fxstreet.com/news/gold-extends-recovery-above-3-600-on-weaker-usd-fed-bets-warrant-caution-for-bulls-202611270432"
+        }
+      ]
+    }
+  ],
+  "crossCuttingTheme": "A recovery in AI and chip stocks after Wednesday's rout is lifting US futures, Asian tech shares and crypto together, and a softer dollar is helping gold, but a near-certain December Fed hike limits every rally."
+}
